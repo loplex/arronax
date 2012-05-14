@@ -178,6 +178,18 @@ class ColorChooserWidget(WidgetBase):
                                rgba.blue*255)
         return s
 
+class FilePropertyWidget(WidgetBase):
+    """ widget that has a "file" property
+    """
+    __wraps__ = (Gtk.Image,)
+
+    def set_data(self, value):
+        self.widget.set_property('file', value)
+
+    def get_data(self):
+        return self.widget.get_property('file')
+
+    
                 
 class WidgetFactory(object):
 

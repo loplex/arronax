@@ -5,7 +5,7 @@ from gi.repository import Gtk, GdkPixbuf, GLib
 import os, os.path, time
 from gettext import gettext as _
 
-import settings, connection, desktopfile, widgets
+import settings, connection, desktopfile, widgets, clipboard
 
 
 class Editor(object):
@@ -18,6 +18,12 @@ class Editor(object):
         
         self.win = self.obj('window1')
 
+        self.clip = clipboard.ContainerClipboard(self.obj('box_main'))
+        self.clip.add_actions(cut=self.obj('ac_cut'),
+                              copy=self.obj('ac_copy'),
+                              paste=self.obj('ac_paste'),
+                              delete=self.obj('ac_delete'))
+
         self.dfile = desktopfile.DesktopFile(file)
         self.factory = widgets.WidgetFactory(self.builder)
 
@@ -27,7 +33,8 @@ class Editor(object):
         self.conn.add('Exec', self.factory.get('e_command'))
         self.conn.add('Hidden', self.factory.get('sw_hidden'))
         self.conn.add('Terminal', self.factory.get('sw_run_in_terminal'))
-
+        self.conn.add('Icon', self.factory.get('img_icon'))
+        self.conn.add('Path', self.factory.get('e_working_dir'))
         self.win.show()
 
 
@@ -90,8 +97,40 @@ class Editor(object):
 ## main window
 
     def on_window1_delete_event(self, *args):
-        print 'DEL'
         self.quit()
+        
+
+###############
+## buttons
+
+    def on_bt_working_dir_clicked(self, *args):
+        dialog = self.obj('dlg_working_dir')
+        response = dialog.run()
+        path = dialog.get_filename()
+        dialog.hide()
+        if response != Gtk.ResponseType.OK:
+            return
+        self.obj('e_working_dir').set_text(path)
+
+    def on_bt_command_clicked(self, *args):
+        dialog = self.obj('dlg_command')
+        response = dialog.run()
+        path = dialog.get_filename()
+        dialog.hide()
+        if response != Gtk.ResponseType.OK:
+            return
+        self.obj('e_command').set_text(path) 
+
+
+    def on_bt_filename_clicked(self, *args):
+        dialog = self.obj('dlg_filename')
+        response = dialog.run()
+        path = dialog.get_filename()
+        dialog.hide()
+        if response != Gtk.ResponseType.OK:
+            return
+        self.obj('e_filename').set_text(path) 
+
 
 ###############
 ## actions
@@ -101,7 +140,7 @@ class Editor(object):
 
     def on_ac_save_activate(self, action, *args):
         self.conn.store()
-        path=''
+        path=self.obj('e_filename').get_text()
         self.dfile.save(path)
 
     def on_ac_quit_activate(self, action, *args):

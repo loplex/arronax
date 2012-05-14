@@ -4,7 +4,7 @@
 
 from gi.repository import Gtk, Gio, GLib
 
-
+import os.path
 
 
 class DesktopFile(object):
@@ -36,7 +36,15 @@ class DesktopFile(object):
             self.keyfile.set_value(self.group, key, s)
 
     def save(self, path):
-        print self.keyfile.to_data()
+        path = os.path.abspath(path)
+        if not path.endswith('.desktop'):
+            path = '%s.desktop' % path
+        print path
+        content = self.keyfile.to_data()[0]
+        print content, type(content)
+        with open(path, 'w') as _file:
+            _file.write(content)
+
 
     def __getitem__(self, key):
         return self.get_from_key(key)
