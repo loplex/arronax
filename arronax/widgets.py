@@ -178,7 +178,7 @@ class ColorChooserWidget(WidgetBase):
                                rgba.blue*255)
         return s
 
-class FilePropertyWidget(WidgetBase):
+class FileOrIconNamePropertyWidget(WidgetBase):
     """ widget that has a "file" property
     """
     __wraps__ = (Gtk.Image,)
@@ -187,7 +187,11 @@ class FilePropertyWidget(WidgetBase):
         self.widget.set_property('file', value)
 
     def get_data(self):
-        return self.widget.get_property('file')
+        print 'PROP:',  self.widget.get_property('file'), self.widget.get_property('icon-name')
+        prop = self.widget.get_property('file')
+        if prop is not None:
+            return prop
+        return self.widget.get_property('icon-name')
 
     
                 

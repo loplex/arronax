@@ -2,10 +2,12 @@
 #-*- coding: utf-8-*-
 
 from gi.repository import Gtk, GdkPixbuf, GLib
-import os, os.path, time
+import os, os.path, time, sys
 from gettext import gettext as _
 
 import settings, connection, desktopfile, widgets, clipboard
+
+IS_STANDALONE = False
 
 
 class Editor(object):
@@ -24,8 +26,10 @@ class Editor(object):
                               paste=self.obj('ac_paste'),
                               delete=self.obj('ac_delete'))
 
-        self.dfile = desktopfile.DesktopFile(file)
+        self.dfile = desktopfile.DesktopFile(self.win, file)
         self.factory = widgets.WidgetFactory(self.builder)
+
+        self.obj('img_icon').set_from_file(settings.DEFAULT_ICON)
 
         self.conn = connection.ConnectionGroup(self.dfile)
         self.conn.add('Name', self.factory.get('e_title'))
@@ -35,6 +39,17 @@ class Editor(object):
         self.conn.add('Terminal', self.factory.get('sw_run_in_terminal'))
         self.conn.add('Icon', self.factory.get('img_icon'))
         self.conn.add('Path', self.factory.get('e_working_dir'))
+        
+        self.conn.view()
+
+        if file is not None:            
+            self.obj('e_filename').set_text(file)
+            if self.obj('e_title').get_text() == '' and os.path.isfile(file):
+                title = os.path.basename(file)
+                if title.endswith('.desktop'):
+                    title=title[:-len('.desktop')]
+                self.obj('e_title').set_text(title.title())
+
         self.win.show()
 
 
@@ -42,7 +57,10 @@ class Editor(object):
         return self.builder.get_object(name)
 
     def quit(self):
-        Gtk.main_quit()
+        if IS_STANDALONE:
+            Gtk.main_quit()
+        else:
+            self.win.destroy()
 
 
     def select_icon(self):
@@ -131,6 +149,21 @@ class Editor(object):
             return
         self.obj('e_filename').set_text(path) 
 
+    def on_bt_filename_dlg_user_app_clicked(self, *args):
+        dialog = self.obj('dlg_filename')
+        dir = settings.USER_APPLICATIONS_DIR
+        if not os.path.isdir(dir):
+            try:
+                os.makedirs(dir)
+            except Exception, e:
+                print e
+                return
+        dialog.set_current_folder(settings.USER_APPLICATIONS_DIR)
+        
+    def on_bt_filename_dlg_desktop_clicked(self, *args):
+        dialog = self.obj('dlg_filename')
+        dialog.set_current_folder(settings.USER_DESKTOP_DIR)
+
 
 ###############
 ## actions
@@ -147,7 +180,10 @@ class Editor(object):
         self.quit()
 
 if __name__ == '__main__':
-    editor = Editor()
+    IS_STANDALONE = True
+    if len(sys.argv) < 2:
+        sys.argv.append(None)
+    editor = Editor(sys.argv[1])
     try:
         Gtk.main()
     except KeyboardInterrupt:

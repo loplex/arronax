@@ -92,11 +92,6 @@
       <action-widget response="-5">bt_command_dlg_open</action-widget>
     </action-widgets>
   </object>
-  <object class="GtkFileFilter" id="ffilter_desktop">
-    <patterns>
-      <pattern>*.desktop</pattern>
-    </patterns>
-  </object>
   <object class="GtkFileChooserDialog" id="dlg_filename">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
@@ -278,6 +273,11 @@
       <action-widget response="-5">bt_working_dir_dlg_open</action-widget>
     </action-widgets>
   </object>
+  <object class="GtkFileFilter" id="ffilter_desktop">
+    <patterns>
+      <pattern>*.desktop</pattern>
+    </patterns>
+  </object>
   <object class="GtkWindow" id="window1">
     <property name="width_request">600</property>
     <property name="can_focus">False</property>
@@ -378,6 +378,7 @@
                         <property name="related_action">ac_cut</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                       </object>
                     </child>
@@ -386,6 +387,7 @@
                         <property name="related_action">ac_copy</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                       </object>
                     </child>
@@ -394,6 +396,7 @@
                         <property name="related_action">ac_paste</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                       </object>
                     </child>
@@ -402,6 +405,7 @@
                         <property name="related_action">ac_delete</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                       </object>
                     </child>
@@ -460,27 +464,25 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton" id="tb_quit">
-                <property name="related_action">ac_quit</property>
+              <object class="GtkSeparatorToolItem" id="tb_seperator">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="halign">end</property>
                 <property name="hexpand">True</property>
-                <property name="related_action">ac_quit</property>
-                <property name="label" translatable="yes">toolbutton1</property>
-                <property name="use_underline">True</property>
+                <property name="use_action_appearance">False</property>
               </object>
               <packing>
-                <property name="expand">False</property>
+                <property name="expand">True</property>
                 <property name="homogeneous">True</property>
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton" id="toolbutton1">
-                <property name="use_action_appearance">False</property>
+              <object class="GtkToolButton" id="tb_quit">
+                <property name="related_action">ac_quit</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="use_action_appearance">False</property>
+                <property name="hexpand">True</property>
+                <property name="related_action">ac_quit</property>
                 <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
               </object>
@@ -522,8 +524,8 @@
                     <property name="height_request">48</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="pixbuf">/usr/share/icons/hicolor/32x32/apps/gnome-panel-launcher.png</property>
                     <property name="pixel_size">48</property>
-                    <property name="icon_name">application-x-executable</property>
                   </object>
                 </child>
               </object>
