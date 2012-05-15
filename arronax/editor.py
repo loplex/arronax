@@ -29,8 +29,6 @@ class Editor(object):
         self.dfile = desktopfile.DesktopFile(self.win, file)
         self.factory = widgets.WidgetFactory(self.builder)
 
-        self.obj('img_icon').set_from_file(settings.DEFAULT_ICON)
-
         self.conn = connection.ConnectionGroup(self.dfile)
         self.conn.add('Name', self.factory.get('e_title'))
         self.conn.add('Comment', self.factory.get('e_comment'))
@@ -42,6 +40,7 @@ class Editor(object):
         
         self.conn.view()
 
+        self.obj('img_icon').set_from_file(settings.DEFAULT_ICON)
         if file is not None:            
             self.obj('e_filename').set_text(file)
             if self.obj('e_title').get_text() == '' and os.path.isfile(file):
@@ -51,6 +50,7 @@ class Editor(object):
                 self.obj('e_title').set_text(title.title())
 
         self.win.show()
+        print self.obj('img_icon').get_property('file')
 
 
     def obj(self, name):

@@ -6,15 +6,15 @@ from gi.repository import Nautilus, GObject
 import gettext, locale
 from gettext import gettext as _
 
-from arronax import edit
+from arronax import editor
 
 class ColumnExtension(GObject.GObject, Nautilus.MenuProvider):
     def __init__(self):
-        pass
+        print 'Initializing Arronax...'
 
 
     def open_editor(self, path=None):
-        editor = edit.Editor(path)
+        ed = editor.Editor(path)
         
 
     def get_file_items(self, window, files):
@@ -33,5 +33,9 @@ class ColumnExtension(GObject.GObject, Nautilus.MenuProvider):
                                          icon='')
         menuitem.connect('activate', lambda *x: self.open_editor())
         return menuitem,
+
+
+
+
 
     

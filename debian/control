@@ -1,0 +1,19 @@
+Source: arronax
+Section: gnome
+Priority: optional
+Maintainer: Florian Diesch <devel@florian-diesch.de>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.2
+Homepage:  http://www.florian-diesch.de/software/arronax/
+X-Python-Version: >= 2.7
+
+
+Package: arronax
+Architecture: all
+Depends:  ${python:Depends}, ${misc:Depends}, gir1.2-glib-2.0,  gir1.2-gtk-3.0, python-gobject (>= 2.90),
+Description: Nautilus plugin to create and modify .desktop files
+ Arronax is a plugin for the Gnome file manager Nautilus. It lets you create 
+ and modify .desktop files.
+ .
+ Arronax adds the often missed "Create strater" menu item to the Desktop's 
+ context menu
