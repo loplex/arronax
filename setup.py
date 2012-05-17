@@ -61,7 +61,10 @@ setup(
         ('/usr/share/nautilus-python/extensions/',
          ['arronax/nautilus-arronax.py']),
         ],
-    keywords = "Nautilus, plugin, starter, desktop", 
+    entry_points = {
+        'console_scripts': ['arronax=arronax.editor:main'],
+        },
+    keywords = "Nautilus, extension, plugin, starter, desktop", 
     classifiers=[
      'Development Status :: 3 - Alpha',
      'Environment :: X11 Applications :: Gnome',

@@ -13,17 +13,27 @@ class ColumnExtension(GObject.GObject, Nautilus.MenuProvider):
         print 'Initializing Arronax...'
 
 
-    def open_editor(self, path=None):
-        ed = editor.Editor(path)
+    def open_editor(self, desktop_path=None, command=None):
+        ed = editor.Editor(desktop_path, command)
         
 
     def get_file_items(self, window, files):
+        try:
+            nfile = files[0]
+        except IndexError:
+            return
+        path = nfile.get_location().get_path()
         menuitem = Nautilus.MenuItem(name='Arronax::FileMenu', 
                                          label=_('Create starter for this file'), 
                                          tip='',
                                          icon='')
 
-        menuitem.connect('activate', lambda *x: self.open_editor())
+        dfile = cmd = None
+        if nfile.is_mime_type('application/x-desktop') or nfile.is_directory():
+            dfile = path
+        else:
+            cmd = path
+        menuitem.connect('activate', lambda *x: self.open_editor(dfile, cmd))
         return menuitem,
 
     def get_background_items(self, window, file):

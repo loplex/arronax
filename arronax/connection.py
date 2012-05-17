@@ -1,9 +1,7 @@
 #-*- coding: utf-8-*-
 
-import widgets, settings
+import widgets, settings, desktopfile
 from converter import Converter as DefaultConverter
-
-BACKEND_DEFAULT=object()
 
 class Connection(object):
     def __init__(self, data_store, data_key, widget, 
@@ -21,12 +19,16 @@ class Connection(object):
     def get_widget(self):
         return self.widget
 
-    def get_value(self):
+    def _get_raw_value(self):
         try:
-            return self.converter.rev_convert(self.data_store[self.data_key])
+            value = self.data_store[self.data_key]
         except Exception, e:
             print 'get_value: %s (%s)'%(e, self.data_key)
-
+        return value
+ 
+    def get_value(self):
+        value = self._get_raw_value()
+        return self.converter.rev_convert(value)
 
     def get_widget_value(self):
         try:
@@ -44,16 +46,17 @@ class Connection(object):
 
     def set_value(self, value):
         try:
-            value =  self.converter.convert(value)
+            value = self.converter.convert(value)
             self.data_store[self.data_key] = value
         except Exception, e:
             print 'set_value: %s (%s)'%(e, value)
 
-    def is_dirty(self):
+    def is_dirty(self):        
         try:
-            return self.data_store[self.data_key] != self.get_widget_value()
+            return self._get_raw_value() != self.get_widget_value()
         except Exception, e:
-            print 'is dirty: %s (%s)'%(e, self.data_key)
+            print 'is dirty: %s (%s=%s [%s])'%(e, self.data_key, self.get_widget_value(), bool(self.get_widget_value()))
+            return None
 
     def has_key(self, key):
         return self.data_key == key
@@ -69,10 +72,15 @@ class Connection(object):
     def store(self):      
         self.set_value(self.get_widget().get_data())
 
-    def set_default(self):
-        value = self.default
-        value = self.converter.rev_convert(value)
-        self.get_widget().set_data(value)
+    def clear(self, store=False):
+        self.get_widget().clear()
+        if store:
+            self.store()
+
+    def __repr__(self):
+        return '<Connection key=%s>'% self.data_key
+                    
+
 
 class ConnectionGroup(object):
     def __init__(self, data_store):
@@ -80,9 +88,11 @@ class ConnectionGroup(object):
         self.connections = []
                     
     def add(self, data_key, widget, converter=None, validator=None, 
-            default=BACKEND_DEFAULT):
+            type=str):
+        self.data_store.set_type_for_key(data_key, type)
         conn = Connection(self.data_store, data_key, widget,
-                          converter, validator)
+                          converter=converter, 
+                          validator=validator)
         self.connections.append(conn)
 
 
@@ -101,8 +111,8 @@ class ConnectionGroup(object):
             conn.store() 
 
 
-    def set_defaults(self):
+    def clear(self, store=False):
         for conn in self.connections:
-            conn.set_default() 
+            conn.clear(store) 
 
 

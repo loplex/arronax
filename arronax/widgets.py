@@ -21,9 +21,57 @@
 
 from gi.repository import Gtk, Gdk, GdkPixbuf
 
-_REGISTRY = {}
+_WIDGET_REGISTRY = {}
+_DEFAULTER_REGISTRY = {}
+
 
 RAW = object()
+
+STANDARD_DEFAULT = object()
+
+class DefaulterMeta(type):
+    def __init__(cls, name, bases, dict):
+        type.__init__(cls, name, bases, dict)
+        wraps = getattr(cls, '__wraps__', ())
+        for w in wraps:
+            _DEFAULTER_REGISTRY[w] = cls
+
+
+class DefaulterBase(object):
+    __metaclass__ = DefaulterMeta
+    __default__ = None  
+    __wraps__ = (Gtk.TreeView, Gtk.IconView, Gtk.Grid)
+
+    def __init__(self, value=STANDARD_DEFAULT):
+        if value == STANDARD_DEFAULT:
+            self.default = self.__default__
+        else:
+            self.default = value
+
+    def get_default(self, owner):
+        return self.default
+
+    def set_default(self, value, owner):
+        self.default = value
+    
+
+class FloatDefaulter(DefaulterBase):
+    __default__ = 0.0
+    __wraps__ =  (Gtk.Scale, Gtk.HScale, Gtk.VScale, Gtk.SpinButton)
+
+class IntDefaulter(DefaulterBase):
+    __default__ = 0
+    __wraps__ =  (Gtk.ComboBox,)
+
+class StringDefaulter(DefaulterBase):
+    __default__ = ''
+    __wraps__ = (Gtk.Label, Gtk.Entry, Gtk.TextView, Gtk.Image,)
+
+class BooleDefaulter(DefaulterBase):
+    __default__ = False
+    __wraps__ = (Gtk.ToggleButton, Gtk.CheckButton, 
+                 Gtk.ComboBoxText, Gtk.Switch)
+
 
 
 class WidgetMeta(type):
@@ -31,15 +79,16 @@ class WidgetMeta(type):
         type.__init__(cls, name, bases, dict)
         wraps = getattr(cls, '__wraps__', ())
         for w in wraps:
-            _REGISTRY[w] = cls
+            _WIDGET_REGISTRY[w] = cls
 
 
 class WidgetBase(object):
     __metaclass__ = WidgetMeta
     __wraps__ = (Gtk.Grid,)
 
-    def __init__(self, widget):
+    def __init__(self, widget, defaulter):
         self.widget = widget
+        self.defaulter = defaulter
 
     def get_data(self, value):
         pass
@@ -52,6 +101,16 @@ class WidgetBase(object):
 
     def show(self):
         self.widget.show_all()
+
+    def get_default_value(self):
+        return self.defaulter.get_default(self)
+
+    def set_default_value(self, value):
+        self.defaulter.set_default(value, self)
+
+    def clear(self):
+        self.set_data(self.get_default_value())
+    
 
       
 
@@ -186,8 +245,7 @@ class FileOrIconNamePropertyWidget(WidgetBase):
     def set_data(self, value):
         self.widget.set_property('file', value)
 
-    def get_data(self):
-        print 'PROP:',  self.widget.get_property('file'), self.widget.get_property('icon-name')
+    def get_data(self):        
         prop = self.widget.get_property('file')
         if prop is not None:
             return prop
@@ -197,12 +255,11 @@ class FileOrIconNamePropertyWidget(WidgetBase):
                 
 class WidgetFactory(object):
 
-    def __init__(self, builder, help_func=None):
+    def __init__(self, builder):
         self.builder = builder
-        self.help_func = help_func
         self._cache = {}
         
-    def get(self, name, help=None, klass=None):
+    def get(self, name, klass=None, defaulter=None):
 
         if name not in self._cache:
             widget = self.builder.get_object(name)
@@ -210,16 +267,13 @@ class WidgetFactory(object):
                 return widget
             if klass is None:
                 try:
-                    klass = _REGISTRY[type(widget)]
+                    klass = _WIDGET_REGISTRY[type(widget)]
                 except KeyError:
                     raise KeyError("'%s': Class %s not registered."%(name, type(widget)))
-            if help:
-                widget.set_property("has-tooltip", True)
-                def func(w, e, *args):
-                    self.help_func(help)
-                    return False
-                widget.connect('query-tooltip', func)
-            self._cache[name]=klass(widget)
+            if defaulter is None:
+                defaulter = _DEFAULTER_REGISTRY[type(widget)]()
+            
+            self._cache[name]=klass(widget, defaulter)
         return  self._cache[name]
         
     def __getitem__(self, index):

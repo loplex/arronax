@@ -5,15 +5,23 @@
 from gi.repository import Gtk, Gio, GLib
 from gettext import gettext as _
 
-import os.path
+import os, os.path, stat
 
 import dialogs
 
+class KeyNotSetException(Exception):
+    pass
+
 class DesktopFile(object):
 
-    def __init__(self, win, path=None):
+    def __init__(self, win):
         self.win = win
-        self.keyfile = GLib.KeyFile() 
+        self.keyfile = GLib.KeyFile()
+        self.types = {}
+        self.load(None)
+
+
+    def load(self, path):
         if path is not None:
             try:
                 self.keyfile.load_from_file(path,
@@ -21,63 +29,52 @@ class DesktopFile(object):
                                             GLib.KeyFileFlags.KEEP_TRANSLATIONS)
             except Exception, e:
                 print e
-        
+                
         self.path = path
         self.group = 'Desktop Entry'
         self['Type'] = 'Application'
         self['Version'] = '1.0'
 
 
+    def set_type_for_key(self, key, type):
+        self.types[key] = type
+
+    def has_key(self, key):
+        return key in self.keyfile.get_keys(self.group)
+
     def get_from_key(self, key):
         try:
-            return self.keyfile.get_value(self.group, key)
+            if self.types.get(key, str) == bool:
+                return self.keyfile.get_boolean(self.group, key) 
+            else:
+                return self.keyfile.get_value(self.group, key)
         except Exception, e:
-            return ''
+            if self.types.get(key, str) == bool:
+                return False
+            else:
+                return ''
         
 
     def set_to_key(self, key, value):
-        if isinstance(value, bool):
-            s = str(value).lower()
-        else:
-            s = str(value)
         if value == '':
             self.keyfile.remove_key(self.group, key)
         else:
-            self.keyfile.set_value(self.group, key, s)
+            if self.types.get(key, str) == bool:
+                self.keyfile.set_boolean(self.group, key, value)
+            else:
+                self.keyfile.set_value(self.group, key, str(value))
+                                
 
 
-    def check_data(self, filename):
-        msg=''
-        # if self['Name'] == '':
-        #     msg = '%s\n%s' % (msg, _("You neede to provide a name."))
-        if filename.strip() == '':
-            msg = '%s\n%s' % (msg, _("You neede to provide a file name."))
-        if self['Exec'] == '':
-            msg = '%s\n%s' % (msg, _("You neede to provide a command."))
-        return msg
-
-    def check_filename(self, filename):
-        if filename == '':
-            return None
-        path = os.path.abspath(filename)
-        if not path.endswith('.desktop'):
-            if dialogs.yes_no_question(self.win, _("Append '.desktop'?"),
-                                       _("The file name doesn't end with '.desktop'.\n Should I add it?")) == Gtk.ResponseType.YES:
-                path = '%s.desktop' % path  
-        return path
-        
+ 
     def save(self, path):
-        msg = self.check_data(path)
-        if msg != '':
-            dialogs.error(self.win, _('Error'), msg)
-            return
-
-        path = self.check_filename(path)
-        
+  
         content = self.keyfile.to_data()[0]
         try:
             with open(path, 'w') as _file:
                 _file.write(content)
+            mode = os.stat(path).st_mode
+            os.chmod(path, mode | stat.S_IEXEC)
         except Exception, e:
            dialogs.error(self.win, _('Error'), str(e))
 
@@ -88,10 +85,6 @@ class DesktopFile(object):
     def __setitem__(self, key, value):
         self.set_to_key(key, value)
                 
-        
-            
-
-        
 
 
 if __name__ == '__main__':

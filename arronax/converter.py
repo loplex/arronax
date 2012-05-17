@@ -91,7 +91,7 @@ class DictConverter(object):
 
 class ListConverter(object):
     def convert(self, value):        
-        return [x for x in value.splitlines() if x.strip() != '']
+        return ';'.join([x for x in value.splitlines() if x.strip() != ''])
 
     def rev_convert(self, value):
-        return "\n".join(value)
+        return "\n".join(value.split(';'))
