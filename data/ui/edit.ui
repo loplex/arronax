@@ -21,10 +21,12 @@
     <signal name="activate" handler="on_ac_icon_activate" swapped="no"/>
   </object>
   <object class="GtkAction" id="ac_new">
+    <property name="tooltip" translatable="yes">Start a new .desktop file</property>
     <property name="stock_id">gtk-new</property>
     <signal name="activate" handler="on_ac_new_activate" swapped="no"/>
   </object>
   <object class="GtkAction" id="ac_open">
+    <property name="tooltip" translatable="yes">Open a .desktop file</property>
     <property name="stock_id">gtk-open</property>
     <signal name="activate" handler="on_ac_open_activate" swapped="no"/>
   </object>
@@ -32,14 +34,17 @@
     <property name="stock_id">gtk-paste</property>
   </object>
   <object class="GtkAction" id="ac_quit">
+    <property name="tooltip" translatable="yes">Quit Arronax</property>
     <property name="stock_id">gtk-quit</property>
     <signal name="activate" handler="on_ac_quit_activate" swapped="no"/>
   </object>
   <object class="GtkAction" id="ac_save">
+    <property name="tooltip" translatable="yes">Save to .desktop file</property>
     <property name="stock_id">gtk-save</property>
     <signal name="activate" handler="on_ac_save_activate" swapped="no"/>
   </object>
   <object class="GtkAction" id="ac_save_as">
+    <property name="tooltip" translatable="yes">Save as another .desktop file</property>
     <property name="stock_id">gtk-save-as</property>
     <signal name="activate" handler="on_ac_save_as_activate" swapped="no"/>
   </object>
@@ -109,7 +114,123 @@
       <action-widget response="-5">bt_command_dlg_open</action-widget>
     </action-widgets>
   </object>
-  <object class="GtkFileChooserDialog" id="dlg_filename">
+  <object class="GtkFileChooserDialog" id="dlg_open">
+    <property name="can_focus">False</property>
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Open File</property>
+    <property name="window_position">center</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="type_hint">dialog</property>
+    <property name="action">save</property>
+    <property name="filter">ffilter_desktop</property>
+    <property name="preview_widget_active">False</property>
+    <property name="use_preview_label">False</property>
+    <child internal-child="vbox">
+      <object class="GtkBox" id="filechooserdialog-vbox6">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox" id="filechooserdialog-action_area6">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="bt_command_dlg_cancel2">
+                <property name="label">gtk-cancel</property>
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+                <property name="use_stock">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="bt_command_dlg_open2">
+                <property name="label">gtk-apply</property>
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+                <property name="use_stock">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButtonBox" id="buttonbox2">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin_left">6</property>
+            <property name="margin_right">6</property>
+            <property name="margin_top">6</property>
+            <property name="margin_bottom">6</property>
+            <property name="spacing">6</property>
+            <property name="layout_style">start</property>
+            <child>
+              <object class="GtkButton" id="bt_dlg_open_desktop">
+                <property name="label" translatable="yes">Desktop</property>
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+                <signal name="clicked" handler="on_bt_dlg_open_desktop_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="bt_dlg_open_user_app">
+                <property name="label" translatable="yes">User App Folder</property>
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+                <signal name="clicked" handler="on_bt_dlg_open_user_app_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="-6">bt_command_dlg_cancel2</action-widget>
+      <action-widget response="-5">bt_command_dlg_open2</action-widget>
+    </action-widgets>
+  </object>
+  <object class="GtkFileChooserDialog" id="dlg_save">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Select File Name</property>
@@ -468,6 +589,7 @@
                 <property name="related_action">ac_new</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Start a new .desktop file</property>
                 <property name="related_action">ac_new</property>
                 <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
@@ -482,6 +604,7 @@
                 <property name="related_action">ac_open</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Open a .desktop file</property>
                 <property name="related_action">ac_open</property>
                 <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
@@ -508,6 +631,7 @@
                 <property name="related_action">ac_save</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Save current .desktop file</property>
                 <property name="related_action">ac_save</property>
                 <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
@@ -522,6 +646,7 @@
                 <property name="related_action">ac_save_as</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Save as another .desktop file</property>
                 <property name="related_action">ac_save_as</property>
                 <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
@@ -550,6 +675,7 @@
                 <property name="related_action">ac_quit</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Quit Arronax</property>
                 <property name="hexpand">True</property>
                 <property name="related_action">ac_quit</property>
                 <property name="label" translatable="yes">toolbutton1</property>
@@ -566,6 +692,9 @@
             <property name="fill">True</property>
             <property name="position">1</property>
           </packing>
+        </child>
+        <child>
+          <placeholder/>
         </child>
         <child>
           <object class="GtkBox" id="box4">
@@ -1017,7 +1146,7 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">2</property>
+            <property name="position">3</property>
           </packing>
         </child>
       </object>

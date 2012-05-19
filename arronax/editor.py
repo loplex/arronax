@@ -9,10 +9,15 @@ import settings, connection, desktopfile, widgets, clipboard, about, dialogs, co
 
 IS_STANDALONE = False
 
+MODE_EDIT = 'edit'
+MODE_NEW = 'new'
+MODE_CREATE_FOR = 'create for'
+MODE_CREATE_IN = 'create_in'
+
 
 class Editor(object):
 
-    def __init__(self, desktop_path=None, command=None):
+    def __init__(self, path, mode):
         self.builder = Gtk.Builder()
         self.builder.set_translation_domain(settings.GETTEXT_DOMAIN)
 
@@ -21,7 +26,6 @@ class Editor(object):
         self.builder.connect_signals(self)
         
         self.win = self.obj('window1')
-
 
         self.clip = clipboard.ContainerClipboard(self.obj('box_main'))
         self.clip.add_actions(cut=self.obj('ac_cut'),
@@ -54,14 +58,14 @@ class Editor(object):
                       )
         self.conn.clear(store=True)
 
-        if desktop_path is None:
+        if mode is MODE_EDIT:
+            self.read_desktop_file(path)
+        elif mode is MODE_CREATE_FOR:
             self.filename = None
+            self.obj('e_command').set_text(path)
+            self.create_title_from_command(path)
         else:
-            self.read_desktop_file(desktop_path)
-
-        if command is not None:
-            self.obj('e_command').set_text(command)
-            self.create_title_from_command(command)
+            self.filename = path
       
         self.win.show()
 
@@ -154,7 +158,10 @@ class Editor(object):
             if path is None or not os.path.isfile(path):
                 return
             try:
-                pixbuf = GdkPixbuf.Pixbuf.new_from_file(path)
+                pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(
+                    path,
+                    settings.DEFAULT_ICON_SIZE,
+                    settings.DEFAULT_ICON_SIZE)
             except GLib.GError, e:
                 print e
                 return
@@ -174,8 +181,8 @@ class Editor(object):
         self.set_icon(path)
 
     def set_icon(self, path):
-        settings.LAST_ICON = path
-        self.obj('img_icon').set_from_file(path)
+        settings.LAST_ICON = path        
+        self.factory.get('img_icon').set_data(path)
 
     def about(self):
         about.show_about_dialog()
@@ -187,8 +194,13 @@ class Editor(object):
             dialogs.error(self.win, _('Error'), msg)
             return
         
-        if self.filename is None:
-            filename = self.ask_for_filename()
+        if self.filename is None or os.path.isdir(self.filename):
+            default = '%s.desktop' % self.obj('e_title').get_text()
+
+            if self.filename is not None:  # folder
+                default = os.path.join(self.filename, default)
+
+            filename = self.ask_for_filename('dlg_save', True, default)
             if filename is None:
                 return
             else:
@@ -197,14 +209,23 @@ class Editor(object):
         self.dfile.save(self.filename)
 
                            
-    def ask_for_filename(self):
-        dialog = self.obj('dlg_filename')
+    def ask_for_filename(self, dlg, add_ext=False, default=None):
+        dialog = self.obj(dlg)
+        if default is not None:
+            folder = os.path.dirname(default)
+            if folder == '':
+                folder = settings.USER_DESKTOP_DIR
+            dialog.set_current_folder(folder)
+
+            file = os.path.basename(default)
+            dialog.set_current_name(file)
+
         response = dialog.run()
         path = dialog.get_filename()
         dialog.hide()
         if response != Gtk.ResponseType.OK:
             return
-        if not path.endswith('.desktop'):
+        if add_ext and not path.endswith('.desktop'):
             path='%s.desktop' % path
         return path
 
@@ -223,26 +244,35 @@ class Editor(object):
 ## buttons
 
     def on_bt_working_dir_clicked(self, *args):
-        dialog = self.obj('dlg_working_dir')
-        response = dialog.run()
-        path = dialog.get_filename()
-        dialog.hide()
-        if response != Gtk.ResponseType.OK:
-            return
+        path = self.ask_for_filename('dlg_working_dir', False)
         self.obj('e_working_dir').set_text(path)
 
     def on_bt_command_clicked(self, *args):
-        dialog = self.obj('dlg_command')
-        response = dialog.run()
-        path = dialog.get_filename()
-        dialog.hide()
-        if response != Gtk.ResponseType.OK:
-            return
+        path = self.ask_for_filename('dlg_command', False)
         self.obj('e_command').set_text(path) 
 
 
     def on_bt_filename_dlg_user_app_clicked(self, *args):
-        dialog = self.obj('dlg_filename')
+        dialog = self.obj('dlg_save')
+        dir = settings.USER_APPLICATIONS_DIR
+        if not os.path.isdir(dir):
+            try:
+                os.makedirs(dir)
+            except Exception, e:
+                print e
+                return
+        dialog.set_current_folder(settings.USER_APPLICATIONS_DIR)
+
+    def on_bt_filename_dlg_desktop_clicked(self, *args):
+        dialog = self.obj('dlg_save')
+        dialog.set_current_folder(settings.USER_DESKTOP_DIR)
+        
+    def on_bt_dlg_open_desktop_clicked(self, *args):
+        dialog = self.obj('dlg_open')
+        dialog.set_current_folder(settings.USER_DESKTOP_DIR)
+
+    def on_bt_dlg_open_user_app_clicked(self, *args):
+        dialog = self.obj('dlg_open')
         dir = settings.USER_APPLICATIONS_DIR
         if not os.path.isdir(dir):
             try:
@@ -252,9 +282,8 @@ class Editor(object):
                 return
         dialog.set_current_folder(settings.USER_APPLICATIONS_DIR)
         
-    def on_bt_filename_dlg_desktop_clicked(self, *args):
-        dialog = self.obj('dlg_filename')
-        dialog.set_current_folder(settings.USER_DESKTOP_DIR)
+
+     
 
 
 ###############
@@ -273,7 +302,7 @@ class Editor(object):
         self.about()
 
     def on_ac_save_as_activate(self, action, *args):
-        filename = self.ask_for_filename()
+        filename = self.ask_for_filename('dlg_save', True)
         if filename is not None:
             self.filename = filename
             self.update_window_title()
@@ -281,7 +310,7 @@ class Editor(object):
 
     def on_ac_open_activate(self, action, *args):
         self.check_dirty()
-        filename = self.ask_for_filename()
+        filename = self.ask_for_filename('dlg_open', True)
         if filename is not None:
             self.read_desktop_file(filename)
 
@@ -296,9 +325,22 @@ class Editor(object):
 def main():
     global IS_STANDALONE
     IS_STANDALONE = True
-    if len(sys.argv) < 2:
-        sys.argv.append(None)
-    editor = Editor(desktop_path = sys.argv[1])
+    if len(sys.argv) > 1:
+        path = sys.argv[1]
+        if os.path.isfile(path):
+            if os.path.splitext(path)[1] == '.desktop':                
+                editor = Editor(path=path, mode=MODE_EDIT)
+            else:
+                editor = Editor(path=path, mode=MODE_CREATE_FOR)
+        elif os.path.isdir(path):
+            editor = Editor(path=path, mode=MODE_CREATE_IN)
+        else:
+            editor = Editor(path=path, mode=MODE_NEW) 
+    else:
+        editor = Editor(path=None, mode=MODE_NEW) 
+
+
+
     try:
         Gtk.main()
     except KeyboardInterrupt:

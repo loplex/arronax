@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-17 01:47+0200\n"
+"POT-Creation-Date: 2012-05-20 01:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,36 +17,40 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../arronax/editor.py:106 ../arronax/editor.py:108
+#: ../arronax/editor.py:110 ../arronax/editor.py:112
 msgid "You need to provide a name."
 msgstr ""
 
-#: ../arronax/editor.py:112 ../arronax/editor.py:114
+#: ../arronax/editor.py:116 ../arronax/editor.py:118
 msgid "You need to provide a command."
 msgstr ""
 
-#: ../arronax/editor.py:122
+#: ../arronax/editor.py:126
 msgid "Save now?"
 msgstr ""
 
-#: ../arronax/editor.py:123
+#: ../arronax/editor.py:127
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
 
-#: ../arronax/editor.py:142 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:146 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr ""
 
-#: ../arronax/editor.py:187 ../arronax/desktopfile.py:79
+#: ../arronax/editor.py:194 ../arronax/desktopfile.py:79
 msgid "Error"
 msgstr ""
 
-#: ../arronax/nautilus-arronax.py:27
+#: ../arronax/nautilus-arronax.py:19
 msgid "Create starter for this file"
 msgstr ""
 
-#: ../arronax/nautilus-arronax.py:41
-msgid "Create starter"
+#: ../arronax/nautilus-arronax.py:25
+msgid "Modify this starter"
+msgstr ""
+
+#: ../arronax/nautilus-arronax.py:31
+msgid "Create starter here"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:1
@@ -58,91 +62,119 @@ msgid "Select an icon for this starter"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:4
-msgid "Select Program"
+msgid "Start a new .desktop file"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:5
-msgid "Select File Name"
+msgid "Open a .desktop file"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:6
-msgid "Desktop"
+msgid "Quit Arronax"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:7
-msgid "User App Folder"
+msgid "Save to .desktop file"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:8
-msgid "Select Folder"
+msgid "Save as another .desktop file"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:9
-msgid "Arronax"
+msgid "Select Program"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:10
-msgid "_File"
+msgid "Open File"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:11
-msgid "_Edit"
+msgid "Desktop"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:12
-msgid "_Help"
+msgid "User App Folder"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:13
-msgid "toolbutton1"
+msgid "Select File Name"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:14
-msgid "Title:"
+msgid "Select Folder"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:15
-msgid "Command:"
+msgid "Arronax"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:16
-msgid "Select..."
+msgid "_File"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:17
-msgid "Start in folder:"
+msgid "_Edit"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:18
-msgid "Run in Terminal:"
+msgid "_Help"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:19
-msgid "Comment:"
+msgid "toolbutton1"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:20
-msgid "Basic"
+msgid "Save current .desktop file"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:21
-msgid "Hidden:"
+msgid "Title:"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:22
-msgid "Window Class:"
+msgid "Command:"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:23
-msgid "Categories:"
+msgid "Select..."
 msgstr ""
 
 #: ../data/ui/edit.ui.h:24
+msgid "Start in folder:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:25
+msgid "Run in Terminal:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:26
+msgid "Comment:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:27
+msgid "Basic"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:28
+msgid "Hidden:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:29
+msgid "Window Class:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:30
+msgid "Categories:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:31
 msgid ""
 "MIME types:\n"
 "(one per line)"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:26
+#: ../data/ui/edit.ui.h:33
 msgid "Advanced"
 msgstr ""

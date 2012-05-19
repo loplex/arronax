@@ -1,0 +1,11 @@
+
+[Desktop Entry]
+Type=Application
+Version=1.0
+Hidden=false
+Terminal=false
+Icon=/home/diesch/projects/arronax/trunk/data/icon/arronax.svg
+Name=Arronax
+Exec=arronax %f
+Categories=Utility;GNOME
+MimeType=application/x-desktop

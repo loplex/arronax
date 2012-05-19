@@ -57,8 +57,10 @@ setup(
         ('share/arronax/ui/',
          glob.glob('data/ui/*.ui')),
         ('share/arronax/icons/',
-         glob.glob('data/icons/*.png')),
-        ('/usr/share/nautilus-python/extensions/',
+         glob.glob('data/icons/*.svg')),
+        ('share/applications',
+         glob.glob('data/desktop/*.desktop')),
+        ('share/nautilus-python/extensions/',
          ['arronax/nautilus-arronax.py']),
         ],
     entry_points = {

@@ -19,6 +19,7 @@ USER_APPLICATIONS_DIR = os.path.join(GLib.get_user_data_dir(), 'applications/')
 USER_DESKTOP_DIR = GLib.get_user_special_dir(GLib.USER_DIRECTORY_DESKTOP)
 
 DEFAULT_ICON = '/usr/share/icons/hicolor/scalable/apps/gnome-panel-launcher.svg'
+DEFAULT_ICON_SIZE = 48
 DEFAULT_FILENAME = os.path.join(USER_DESKTOP_DIR, 'noname.desktop')
 
 LAST_ICON = DEFAULT_ICON 

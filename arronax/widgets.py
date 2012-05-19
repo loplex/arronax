@@ -20,6 +20,8 @@
 #
 
 from gi.repository import Gtk, Gdk, GdkPixbuf
+import os.path
+import settings
 
 _WIDGET_REGISTRY = {}
 _DEFAULTER_REGISTRY = {}
@@ -242,16 +244,44 @@ class FileOrIconNamePropertyWidget(WidgetBase):
     """
     __wraps__ = (Gtk.Image,)
 
+
+    def _search_icon(self, icon):
+        nx_icon = os.path.splitext(icon)[0]
+        icon_theme = Gtk.IconTheme.get_for_screen(self.widget.get_screen())
+           
+        if (icon_theme.has_icon(nx_icon)):
+            return icon_theme.lookup_icon(nx_icon, 
+                                          settings.DEFAULT_ICON_SIZE,
+                                          0).get_filename()
+        else:
+            return settings.DEFAULT_ICON        
+        self.widget.set_from_file(_icon)
+
+    def _set_icon(self, path):
+        pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(path, 
+                                                  settings.DEFAULT_ICON_SIZE,
+                                                  settings.DEFAULT_ICON_SIZE)
+        if pixbuf is not None:
+            self.widget.set_from_pixbuf(pixbuf)
+            
+
     def set_data(self, value):
-        self.widget.set_property('file', value)
+        self._real_value = value
+        if '/' in value:
+            path = value
+            self.widget.set_from_file(value)
+        else:
+            path = self._search_icon(value)
+        self._set_icon(path)
 
-    def get_data(self):        
-        prop = self.widget.get_property('file')
-        if prop is not None:
-            return prop
-        return self.widget.get_property('icon-name')
-
-    
+    def get_data(self):
+        if hasattr(self, '_real_value'):
+            return self._real_value
+        else:
+            prop = self.widget.get_property('file')
+            if prop is not None:
+                return prop
+            return self.widget.get_property('icon-name')    
                 
 class WidgetFactory(object):
 
