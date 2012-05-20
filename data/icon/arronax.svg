@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="64px"
@@ -16,7 +17,64 @@
    inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="arronax.svg">
   <defs
-     id="defs2987" />
+     id="defs2987">
+    <linearGradient
+       id="linearGradient3847">
+      <stop
+         id="stop3849"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:1;" />
+      <stop
+         id="stop3851"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3825">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3827" />
+      <stop
+         id="stop3859"
+         offset="0.0625"
+         style="stop-color:#f50000;stop-opacity:0.93725491;" />
+      <stop
+         id="stop3857"
+         offset="0.125"
+         style="stop-color:#000000;stop-opacity:0.8745098;" />
+      <stop
+         id="stop3855"
+         offset="0.25"
+         style="stop-color:#000000;stop-opacity:0.74901961;" />
+      <stop
+         id="stop3853"
+         offset="0.5"
+         style="stop-color:#000000;stop-opacity:0.49803922;" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3829" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3825"
+       id="linearGradient3831"
+       x1="0.1337513"
+       y1="0.20062695"
+       x2="63.933125"
+       y2="63.732498"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3825"
+       id="linearGradient3845"
+       x1="0"
+       y1="31.030304"
+       x2="62.194359"
+       y2="31.030304"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -65,7 +123,7 @@
          y="63.899212"
          style="font-size:100.78739929px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;fill:#d40000;font-family:Inconsolata;-inkscape-font-specification:Inconsolata Medium">A</tspan></text>
     <rect
-       style="opacity:0.74900004;fill:none;stroke:#000000;stroke-width:4.42433977;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="opacity:0.74900003999999998;fill:url(#linearGradient3831);stroke:#000000;stroke-width:4.42433976999999956;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
        id="rect3823"
        width="30.575661"
        height="30.575661"

@@ -5,7 +5,8 @@ from gi.repository import Gtk, GdkPixbuf, GLib
 import os, os.path, time, sys
 from gettext import gettext as _
 
-import settings, connection, desktopfile, widgets, clipboard, about, dialogs, converter
+import settings, connection, desktopfile, widgets, clipboard, about, dialogs
+import converter, statusbar
 
 IS_STANDALONE = False
 
@@ -35,6 +36,8 @@ class Editor(object):
 
         self.dfile = desktopfile.DesktopFile(self.win)
         self.factory = widgets.WidgetFactory(self.builder)
+
+        statusbar.init(self.obj('statusbar'))
 
         self.conn = connection.ConnectionGroup(self.dfile)
         self.conn.add('Name', self.factory.get('e_title'))
@@ -71,12 +74,15 @@ class Editor(object):
 
 
     def read_desktop_file(self, path):
-        self.filename = path
-        self.conn.clear(store=True)
-        self.dfile.load(self.filename)
+        with statusbar.Status(_("Loading file '%s' ...") % path,
+                              _("Loaded file '%s' ...") % path):
+            self.filename = path
+            self.conn.clear(store=True)
+            self.dfile.load(self.filename)
+            
+            self.update_window_title()
+            self.conn.view()
 
-        self.update_window_title()
-        self.conn.view()
 
         
     def update_window_title(self): 
@@ -206,7 +212,11 @@ class Editor(object):
             else:
                 self.filename = filename
                 self.update_window_title()
-        self.dfile.save(self.filename)
+        
+        with statusbar.Status("Saved file 'self.filename'."):
+            self.dfile.save(self.filename)
+
+
 
                            
     def ask_for_filename(self, dlg, add_ext=False, default=None):

@@ -28,7 +28,7 @@ class DesktopFile(object):
                                             GLib.KeyFileFlags.KEEP_COMMENTS | 
                                             GLib.KeyFileFlags.KEEP_TRANSLATIONS)
             except Exception, e:
-                print e
+                dialogs.error(self.win, _('Error'), str(e))
                 
         self.path = path
         self.group = 'Desktop Entry'
