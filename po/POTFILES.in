@@ -1,10 +1,12 @@
+arronax/statusbar.py
 arronax/__init__.py
 arronax/editor.py
 arronax/widgets.py
 arronax/converter.py
 arronax/settings.py
-arronax/connection.py
 arronax/nautilus-arronax.py
+arronax/about.py
+arronax/connection.py
 arronax/dialogs.py
 arronax/desktopfile.py
 arronax/clipboard.py
