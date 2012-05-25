@@ -2,7 +2,8 @@ Source: arronax
 Section: gnome
 Priority: optional
 Maintainer: Florian Diesch <devel@florian-diesch.de>
-Build-Depends: debhelper (>= 8.0.0)
+Build-Depends: debhelper (>= 8.0.0), gettext, intltool, python, 
+ python-distutils-extra, python-setuptools,
 Standards-Version: 3.9.2
 Homepage:  http://www.florian-diesch.de/software/arronax/
 X-Python-Version: >= 2.7
@@ -10,10 +11,10 @@ X-Python-Version: >= 2.7
 
 Package: arronax
 Architecture: all
-Depends:  ${python:Depends}, ${misc:Depends}, gir1.2-glib-2.0,  gir1.2-gtk-3.0, python-gobject (>= 2.90),
-Description: Nautilus plugin to create and modify .desktop files
+Depends:  ${python:Depends}, ${misc:Depends}, gir1.2-glib-2.0,  gir1.2-gtk-3.0, python-gobject (>= 2.90), nautilus (>= 3.4.1), python-nautilus, gir1.2-gdkpixbuf-2.0
+Description: Nautilus plugin to create and modify application starters.
  Arronax is a plugin for the Gnome file manager Nautilus. It lets you create 
- and modify .desktop files.
+ and modify application starters (*.desktop files).
  .
- Arronax adds the often missed "Create strater" menu item to the Desktop's 
- context menu
+ Arronax adds a "Create starter" menu item to the Desktop's context menu and 
+ to the file context menu in Nautilus

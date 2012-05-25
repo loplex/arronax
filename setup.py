@@ -33,20 +33,21 @@ from setuptools import setup, find_packages
 
 from DistUtilsExtra.command import *
 
+from deb_setup_helpers import (get_deb_version, get_deb_description)
+
 require_python(0x20600f0)
-__version__ = '0.01'
 
 
 setup(
     name='arronax',
-    version=__version__,
+    version=get_deb_version(full=False),
     packages=find_packages(),
     include_package_data=True,
     maintainer='Florian Diesch',
     maintainer_email='devel@florian-diesch.de',
     author = "Florian Diesch",
     author_email = "devel@florian-diesch.de",    
-    description='Nautilus plugin to create and modify .desktop files',
+    description=get_deb_description(),
     long_description=long_description(
         'README.txt',
         ),
@@ -54,14 +55,14 @@ setup(
     url='http://www.florian-diesch.de/software/arronax/',
     download_url='http://www.florian-diesch.de/software/arronax/',
     data_files=[
-        ('share/arronax/ui/',
+        ('/usr/share/arronax/ui/',
          glob.glob('data/ui/*.ui')),
-        ('share/arronax/icons/',
+        ('/usr/share/arronax/icons/',
          glob.glob('data/icons/*.svg')),
-        ('share/applications',
+        ('/usr/share/applications',
          glob.glob('data/desktop/*.desktop')),
-        ('share/nautilus-python/extensions/',
-         ['arronax/nautilus-arronax.py']),
+        ('/usr/share/nautilus-python/extensions/',
+         glob.glob('nautilus/*.py')),
         ],
     entry_points = {
         'console_scripts': ['arronax=arronax.editor:main'],

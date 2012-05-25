@@ -21,12 +21,12 @@
     <signal name="activate" handler="on_ac_icon_activate" swapped="no"/>
   </object>
   <object class="GtkAction" id="ac_new">
-    <property name="tooltip" translatable="yes">Start a new .desktop file</property>
+    <property name="tooltip" translatable="yes">Start a new application starter</property>
     <property name="stock_id">gtk-new</property>
     <signal name="activate" handler="on_ac_new_activate" swapped="no"/>
   </object>
   <object class="GtkAction" id="ac_open">
-    <property name="tooltip" translatable="yes">Open a .desktop file</property>
+    <property name="tooltip" translatable="yes">Open a application starter</property>
     <property name="stock_id">gtk-open</property>
     <signal name="activate" handler="on_ac_open_activate" swapped="no"/>
   </object>
@@ -39,12 +39,12 @@
     <signal name="activate" handler="on_ac_quit_activate" swapped="no"/>
   </object>
   <object class="GtkAction" id="ac_save">
-    <property name="tooltip" translatable="yes">Save to .desktop file</property>
+    <property name="tooltip" translatable="yes">Save to application starter</property>
     <property name="stock_id">gtk-save</property>
     <signal name="activate" handler="on_ac_save_activate" swapped="no"/>
   </object>
   <object class="GtkAction" id="ac_save_as">
-    <property name="tooltip" translatable="yes">Save as another .desktop file</property>
+    <property name="tooltip" translatable="yes">Save as another application starter</property>
     <property name="stock_id">gtk-save-as</property>
     <signal name="activate" handler="on_ac_save_as_activate" swapped="no"/>
   </object>
@@ -589,7 +589,7 @@
                 <property name="related_action">ac_new</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="tooltip_text" translatable="yes">Start a new .desktop file</property>
+                <property name="tooltip_text" translatable="yes">Start a new application starter</property>
                 <property name="related_action">ac_new</property>
                 <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
@@ -604,7 +604,7 @@
                 <property name="related_action">ac_open</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="tooltip_text" translatable="yes">Open a .desktop file</property>
+                <property name="tooltip_text" translatable="yes">Open a application starter</property>
                 <property name="related_action">ac_open</property>
                 <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
@@ -631,7 +631,7 @@
                 <property name="related_action">ac_save</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="tooltip_text" translatable="yes">Save current .desktop file</property>
+                <property name="tooltip_text" translatable="yes">Save current application starter</property>
                 <property name="related_action">ac_save</property>
                 <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
@@ -646,7 +646,7 @@
                 <property name="related_action">ac_save_as</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="tooltip_text" translatable="yes">Save as another .desktop file</property>
+                <property name="tooltip_text" translatable="yes">Save as another application starter</property>
                 <property name="related_action">ac_save_as</property>
                 <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>

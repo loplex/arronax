@@ -1,6 +1,7 @@
 NAME=arronax
-VERSION=0.01
-DEBVERSION=${VERSION}
+DEBVERSION=$(shell awk -F '[()]' '/^${NAME}/ {print $$2}'  debian/changelog|head -1)
+VERSION=$(shell echo '$DEBVERSION' | grep -o '[0-9.-]+')
+
 PPA=diesch/testing
 
 DEBUILD=debuild -sa  -v${DEBVERSION} -kB57F5641 -i'icon|.bzr'
@@ -11,11 +12,12 @@ initdeb:
 	dh_make -e  devel@florian-diesch.de -p ${NAME}_${DEBVERSION} -c gpl -i --native
 
 clean:
-	rm -rf *.pyc build dist  ../${NAME}_${DEBVERSION}* ${NAME}-${VERSION}.egg-info
+	rm -rf *.pyc build dist  ../*.deb ../*.changes ../*.build ${NAME}-${VERSION}.egg-info
 
 
 potfiles:
-	find arronax -type f -name \*.py > po/POTFILES.in
+	find ${NAME} -type f -name \*.py > po/POTFILES.in
+	find data -type f -name \*.desktop.in >> po/POTFILES.in
 	find data -type f -name \*.ui -printf '[type: gettext/glade]%p\n'  >> po/POTFILES.in
 
 sdist:

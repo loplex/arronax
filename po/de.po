@@ -7,26 +7,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-21 16:57+0200\n"
-"PO-Revision-Date: 2012-05-20 01:21+0000\n"
+"POT-Creation-Date: 2012-05-25 09:07+0200\n"
+"PO-Revision-Date: 2012-05-22 02:51+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: German <de@li.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-05-20 04:12+0000\n"
-"X-Generator: Launchpad (build 15259)\n"
+"X-Launchpad-Export-Date: 2012-05-22 03:20+0000\n"
+"X-Generator: Launchpad (build 15275)\n"
 
 #: ../arronax/editor.py:77
 #, python-format
 msgid "Loading file '%s' ..."
-msgstr ""
+msgstr "Lade Datei '%s' ..."
 
 #: ../arronax/editor.py:78
 #, python-format
 msgid "Loaded file '%s' ..."
-msgstr ""
+msgstr "Datei '%s' geladen."
 
 #: ../arronax/editor.py:116 ../arronax/editor.py:118
 msgid "You need to provide a name."
@@ -54,21 +54,23 @@ msgstr "Symbol auswählen"
 msgid "Error"
 msgstr "Fehler"
 
-#: ../arronax/nautilus-arronax.py:19
-msgid "Create starter for this file"
-msgstr "Für diese Datei einen Starter anlegen"
-
-#: ../arronax/nautilus-arronax.py:25
-msgid "Modify this starter"
-msgstr "Diesen Starter bearbeiten"
-
-#: ../arronax/nautilus-arronax.py:31
-msgid "Create starter here"
-msgstr "Hier einen neuen Starter erstellen"
-
 #: ../arronax/about.py:18
 msgid "translator-credits"
 msgstr ""
+"Launchpad Contributions:\n"
+"  Florian Diesch https://launchpad.net/~diesch"
+
+#: ../nautilus/nautilus-arronax.py:19
+msgid "Create starter for this file"
+msgstr "Für diese Datei einen Starter anlegen"
+
+#: ../nautilus/nautilus-arronax.py:25
+msgid "Modify this starter"
+msgstr "Diesen Starter bearbeiten"
+
+#: ../nautilus/nautilus-arronax.py:31
+msgid "Create starter here"
+msgstr "Hier einen neuen Starter erstellen"
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
@@ -79,23 +81,24 @@ msgid "Select an icon for this starter"
 msgstr "Wählen Sie einen Symbol für diesen Starter"
 
 #: ../data/ui/edit.ui.h:4
-msgid "Start a new .desktop file"
-msgstr "Eine neue .desktop Datei erzeugen"
+msgid "Start a new application starter"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:5
-msgid "Open a .desktop file"
-msgstr "Eine .desktop-Datei öffnen"
+msgid "Open a application starter"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:6
 msgid "Quit Arronax"
 msgstr "Arronax Beenden"
 
 #: ../data/ui/edit.ui.h:7
-msgid "Save to .desktop file"
-msgstr "Die .desktop-Datei speichern"
+msgid "Save to application starter"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:8
-msgid "Save as another .desktop file"
+#, fuzzy
+msgid "Save as another application starter"
 msgstr "Als eine andere .desktop-Datei speichern"
 
 #: ../data/ui/edit.ui.h:9
@@ -122,7 +125,7 @@ msgstr "Wählen Sie einen Dateinamen"
 msgid "Select Folder"
 msgstr "Ordner wählen"
 
-#: ../data/ui/edit.ui.h:15
+#: ../data/ui/edit.ui.h:15 ../data/desktop/arronax.desktop.in.h:1
 msgid "Arronax"
 msgstr "Arronax"
 
@@ -143,8 +146,8 @@ msgid "toolbutton1"
 msgstr "Werkzeugknopf1"
 
 #: ../data/ui/edit.ui.h:20
-msgid "Save current .desktop file"
-msgstr "Aktuelle .desktop-Datei speichern"
+msgid "Save current application starter"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:21
 msgid "Title:"
@@ -197,6 +200,22 @@ msgstr ""
 #: ../data/ui/edit.ui.h:33
 msgid "Advanced"
 msgstr "Erweitert"
+
+#: ../data/desktop/arronax.desktop.in.h:2
+msgid "Create and edit application starters"
+msgstr ""
+
+#~ msgid "Start a new .desktop file"
+#~ msgstr "Eine neue .desktop Datei erzeugen"
+
+#~ msgid "Open a .desktop file"
+#~ msgstr "Eine .desktop-Datei öffnen"
+
+#~ msgid "Save to .desktop file"
+#~ msgstr "Die .desktop-Datei speichern"
+
+#~ msgid "Save current .desktop file"
+#~ msgstr "Aktuelle .desktop-Datei speichern"
 
 #~ msgid "Create starter"
 #~ msgstr "Starter anlegen"

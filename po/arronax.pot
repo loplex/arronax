@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-21 16:57+0200\n"
+"POT-Creation-Date: 2012-05-25 09:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,20 +52,20 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-#: ../arronax/nautilus-arronax.py:19
+#: ../arronax/about.py:18
+msgid "translator-credits"
+msgstr ""
+
+#: ../nautilus/nautilus-arronax.py:19
 msgid "Create starter for this file"
 msgstr ""
 
-#: ../arronax/nautilus-arronax.py:25
+#: ../nautilus/nautilus-arronax.py:25
 msgid "Modify this starter"
 msgstr ""
 
-#: ../arronax/nautilus-arronax.py:31
+#: ../nautilus/nautilus-arronax.py:31
 msgid "Create starter here"
-msgstr ""
-
-#: ../arronax/about.py:18
-msgid "translator-credits"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:1
@@ -77,11 +77,11 @@ msgid "Select an icon for this starter"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:4
-msgid "Start a new .desktop file"
+msgid "Start a new application starter"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:5
-msgid "Open a .desktop file"
+msgid "Open a application starter"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:6
@@ -89,11 +89,11 @@ msgid "Quit Arronax"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:7
-msgid "Save to .desktop file"
+msgid "Save to application starter"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:8
-msgid "Save as another .desktop file"
+msgid "Save as another application starter"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:9
@@ -120,7 +120,7 @@ msgstr ""
 msgid "Select Folder"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:15
+#: ../data/ui/edit.ui.h:15 ../data/desktop/arronax.desktop.in.h:1
 msgid "Arronax"
 msgstr ""
 
@@ -141,7 +141,7 @@ msgid "toolbutton1"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:20
-msgid "Save current .desktop file"
+msgid "Save current application starter"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:21
@@ -192,4 +192,8 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:33
 msgid "Advanced"
+msgstr ""
+
+#: ../data/desktop/arronax.desktop.in.h:2
+msgid "Create and edit application starters"
 msgstr ""

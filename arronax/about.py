@@ -18,7 +18,7 @@ def show_about_dialog():
     dlg.set_translator_credits(_("translator-credits"));
     dlg.set_license(textwrap.dedent(
             """
-            Arronax - A Nautilus plugin to create and modify .desktop files
+            Arronax - Nautilus plugin to create and modify application starters
 
             Copyright (c) 2011 Florian Diesch <devel@florian-diesch.de>
            
