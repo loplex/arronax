@@ -21,7 +21,7 @@
     <signal name="activate" handler="on_ac_icon_activate" swapped="no"/>
   </object>
   <object class="GtkAction" id="ac_new">
-    <property name="tooltip" translatable="yes">Start a new application starter</property>
+    <property name="tooltip" translatable="yes">Create a new application starter</property>
     <property name="stock_id">gtk-new</property>
     <signal name="activate" handler="on_ac_new_activate" swapped="no"/>
   </object>
@@ -589,7 +589,7 @@
                 <property name="related_action">ac_new</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="tooltip_text" translatable="yes">Start a new application starter</property>
+                <property name="tooltip_text" translatable="yes">Create a new application starter</property>
                 <property name="related_action">ac_new</property>
                 <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
