@@ -1,4 +1,4 @@
-# German translation for arronax
+# Italian translation for arronax
 # Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
 # This file is distributed under the same license as the arronax package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
@@ -8,82 +8,80 @@ msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-25 22:49+0200\n"
-"PO-Revision-Date: 2012-05-22 02:51+0000\n"
-"Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
-"Language-Team: German <de@li.org>\n"
-"Language: de\n"
+"PO-Revision-Date: 2012-05-23 15:10+0000\n"
+"Last-Translator: Guybrush88 <Unknown>\n"
+"Language-Team: Italian <it@li.org>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-05-22 03:20+0000\n"
-"X-Generator: Launchpad (build 15275)\n"
+"X-Launchpad-Export-Date: 2012-05-25 20:00+0000\n"
+"X-Generator: Launchpad (build 15288)\n"
 
 #: ../arronax/editor.py:77
 #, python-format
 msgid "Loading file '%s' ..."
-msgstr "Lade Datei '%s' ..."
+msgstr "Caricamento del file '%s' in corso..."
 
 #: ../arronax/editor.py:78
 #, python-format
 msgid "Loaded file '%s' ..."
-msgstr "Datei '%s' geladen."
+msgstr "Caricato il file '%s'..."
 
 #: ../arronax/editor.py:116 ../arronax/editor.py:118
 msgid "You need to provide a name."
-msgstr "Sie müssen einen Namen angeben."
+msgstr "Devi fornire un nome."
 
 #: ../arronax/editor.py:122 ../arronax/editor.py:124
 msgid "You need to provide a command."
-msgstr "Sie müssen einen Befehl angeben."
+msgstr "Devi fornire un comando."
 
 #: ../arronax/editor.py:132
 msgid "Save now?"
-msgstr "Jetzt speichern?"
+msgstr "Salvare ora?"
 
 #: ../arronax/editor.py:133
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
-"Einige Änderungen wurden noch nicht gespeichert. Wollen Sie jetzt speichern?"
 
 #: ../arronax/editor.py:152 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
-msgstr "Symbol auswählen"
+msgstr "Seleziona un'icona"
 
 #: ../arronax/editor.py:200 ../arronax/desktopfile.py:31
 #: ../arronax/desktopfile.py:79
 msgid "Error"
-msgstr "Fehler"
+msgstr "Errore"
 
 #: ../arronax/about.py:18
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Florian Diesch https://launchpad.net/~diesch"
+"  Guybrush88 https://launchpad.net/~guybrush"
 
 #: ../nautilus/nautilus-arronax.py:23
 msgid "Create starter for this file"
-msgstr "Für diese Datei einen Starter anlegen"
+msgstr ""
 
 #: ../nautilus/nautilus-arronax.py:29
 msgid "Modify this starter"
-msgstr "Diesen Starter bearbeiten"
+msgstr ""
 
 #: ../nautilus/nautilus-arronax.py:35
 msgid "Create starter here"
-msgstr "Hier einen neuen Starter anlegen"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
-msgstr "Zeige Informationen über Arronax"
+msgstr "Mostra informazioni su Arronax"
 
 #: ../data/ui/edit.ui.h:3
 msgid "Select an icon for this starter"
-msgstr "Wählen Sie einen Symbol für diesen Starter"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:4
-#, fuzzy
 msgid "Create a new application starter"
-msgstr "Starter anlegen"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:5
 msgid "Open a application starter"
@@ -91,40 +89,39 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:6
 msgid "Quit Arronax"
-msgstr "Arronax Beenden"
+msgstr "Esci da Arronax"
 
 #: ../data/ui/edit.ui.h:7
 msgid "Save to application starter"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:8
-#, fuzzy
 msgid "Save as another application starter"
-msgstr "Als eine andere .desktop-Datei speichern"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:9
 msgid "Select Program"
-msgstr "Ein Programm auswählen"
+msgstr "Seleziona un programma"
 
 #: ../data/ui/edit.ui.h:10
 msgid "Open File"
-msgstr "Datei öffnen"
+msgstr "Apri un file"
 
 #: ../data/ui/edit.ui.h:11
 msgid "Desktop"
-msgstr "Arbeitsfläche"
+msgstr "Scrivania"
 
 #: ../data/ui/edit.ui.h:12
 msgid "User App Folder"
-msgstr "Ordner für Benutzer-Programme"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:13
 msgid "Select File Name"
-msgstr "Wählen Sie einen Dateinamen"
+msgstr "Seleziona un nome per un file"
 
 #: ../data/ui/edit.ui.h:14
 msgid "Select Folder"
-msgstr "Ordner wählen"
+msgstr "Seleziona una cartella"
 
 #: ../data/ui/edit.ui.h:15 ../data/desktop/arronax.desktop.in.h:1
 msgid "Arronax"
@@ -132,19 +129,19 @@ msgstr "Arronax"
 
 #: ../data/ui/edit.ui.h:16
 msgid "_File"
-msgstr "_Datei"
+msgstr "_File"
 
 #: ../data/ui/edit.ui.h:17
 msgid "_Edit"
-msgstr "_Bearbeiten"
+msgstr "_Modifica"
 
 #: ../data/ui/edit.ui.h:18
 msgid "_Help"
-msgstr "_Hilfe"
+msgstr "_Aiuto"
 
 #: ../data/ui/edit.ui.h:19
 msgid "toolbutton1"
-msgstr "Werkzeugknopf1"
+msgstr "toolbutton1"
 
 #: ../data/ui/edit.ui.h:20
 msgid "Save current application starter"
@@ -152,74 +149,60 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:21
 msgid "Title:"
-msgstr "Titel:"
+msgstr "Titolo:"
 
 #: ../data/ui/edit.ui.h:22
 msgid "Command:"
-msgstr "Befehl:"
+msgstr "Comando:"
 
 #: ../data/ui/edit.ui.h:23
 msgid "Select..."
-msgstr "Auswählen ..."
+msgstr "Seleziona..."
 
 #: ../data/ui/edit.ui.h:24
 msgid "Start in folder:"
-msgstr "Starte in Ordner:"
+msgstr "Avvia nella cartella:"
 
 #: ../data/ui/edit.ui.h:25
 msgid "Run in Terminal:"
-msgstr "Im Terminal ausführen:"
+msgstr "Esegui nel terminale:"
 
 #: ../data/ui/edit.ui.h:26
 msgid "Comment:"
-msgstr "Kommentar:"
+msgstr "Commento:"
 
 #: ../data/ui/edit.ui.h:27
 msgid "Basic"
-msgstr "Standard"
+msgstr "Base"
 
 #: ../data/ui/edit.ui.h:28
 msgid "Hidden:"
-msgstr "Verborgen:"
+msgstr "Nascosto:"
 
 #: ../data/ui/edit.ui.h:29
 msgid "Window Class:"
-msgstr "Fenster-Klasse"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:30
 msgid "Categories:"
-msgstr "Kategorien:"
+msgstr "Categorie:"
 
 #: ../data/ui/edit.ui.h:31
 msgid ""
 "MIME types:\n"
 "(one per line)"
 msgstr ""
-"MIME-Typen:\n"
-"(einer pro Zeile)"
 
 #: ../data/ui/edit.ui.h:33
 msgid "Advanced"
-msgstr "Erweitert"
+msgstr "Avanzate"
 
 #: ../data/desktop/arronax.desktop.in.h:2
 msgid "Create and edit application starters"
 msgstr ""
 
-#~ msgid "Start a new .desktop file"
-#~ msgstr "Eine neue .desktop Datei anlegen"
-
 #~ msgid "Open a .desktop file"
-#~ msgstr "Eine .desktop-Datei öffnen"
-
-#~ msgid "Save to .desktop file"
-#~ msgstr "Die .desktop-Datei speichern"
+#~ msgstr "Apri un file .desktop"
 
 #~ msgid "Save current .desktop file"
-#~ msgstr "Aktuelle .desktop-Datei speichern"
-
-#~ msgid "Name:"
-#~ msgstr "Name:"
-
-#~ msgid "File name:"
-#~ msgstr "Dateiname:"
+#~ msgstr "Salva il file .desktop corrente"
