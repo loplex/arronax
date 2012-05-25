@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-25 09:07+0200\n"
+"POT-Creation-Date: 2012-05-25 13:17+0200\n"
 "PO-Revision-Date: 2012-05-22 02:51+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -81,8 +81,9 @@ msgid "Select an icon for this starter"
 msgstr "Wählen Sie einen Symbol für diesen Starter"
 
 #: ../data/ui/edit.ui.h:4
-msgid "Start a new application starter"
-msgstr ""
+#, fuzzy
+msgid "Create a new application starter"
+msgstr "Als eine andere .desktop-Datei speichern"
 
 #: ../data/ui/edit.ui.h:5
 msgid "Open a application starter"
