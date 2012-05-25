@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-25 14:19+0200\n"
+"POT-Creation-Date: 2012-05-25 19:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,15 +56,15 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 
-#: ../nautilus/nautilus-arronax.py:19
+#: ../nautilus/nautilus-arronax.py:23
 msgid "Create starter for this file"
 msgstr ""
 
-#: ../nautilus/nautilus-arronax.py:25
+#: ../nautilus/nautilus-arronax.py:29
 msgid "Modify this starter"
 msgstr ""
 
-#: ../nautilus/nautilus-arronax.py:31
+#: ../nautilus/nautilus-arronax.py:35
 msgid "Create starter here"
 msgstr ""
 
