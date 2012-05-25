@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-25 13:17+0200\n"
+"POT-Creation-Date: 2012-05-25 14:19+0200\n"
 "PO-Revision-Date: 2012-05-22 02:51+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -70,7 +70,7 @@ msgstr "Diesen Starter bearbeiten"
 
 #: ../nautilus/nautilus-arronax.py:31
 msgid "Create starter here"
-msgstr "Hier einen neuen Starter erstellen"
+msgstr "Hier einen neuen Starter anlegen"
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
@@ -83,7 +83,7 @@ msgstr "Wählen Sie einen Symbol für diesen Starter"
 #: ../data/ui/edit.ui.h:4
 #, fuzzy
 msgid "Create a new application starter"
-msgstr "Als eine andere .desktop-Datei speichern"
+msgstr "Starter anlegen"
 
 #: ../data/ui/edit.ui.h:5
 msgid "Open a application starter"
@@ -207,7 +207,7 @@ msgid "Create and edit application starters"
 msgstr ""
 
 #~ msgid "Start a new .desktop file"
-#~ msgstr "Eine neue .desktop Datei erzeugen"
+#~ msgstr "Eine neue .desktop Datei anlegen"
 
 #~ msgid "Open a .desktop file"
 #~ msgstr "Eine .desktop-Datei öffnen"
@@ -217,9 +217,6 @@ msgstr ""
 
 #~ msgid "Save current .desktop file"
 #~ msgstr "Aktuelle .desktop-Datei speichern"
-
-#~ msgid "Create starter"
-#~ msgstr "Starter anlegen"
 
 #~ msgid "Name:"
 #~ msgstr "Name:"
