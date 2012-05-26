@@ -32,7 +32,7 @@ class ColumnExtension(GObject.GObject, Nautilus.MenuProvider):
         return label, func
 
     def _create_starter_in(self, path):
-        label = _('Create starter here')
+        label = _('Create starter')
         func =  lambda *x: editor.Editor(path=path, 
                                          mode=editor.MODE_CREATE_IN)
         return label, func
