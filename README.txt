@@ -1,58 +1,71 @@
 .. -*- coding: utf-8 -*-
 
-================================
+==================
  What is Arronax?
-================================
+==================
 
+Arronax is a plugin for Nautilus to create and modify application
+starters (.desktop files).
 
-=============================
- Where can I get Arronax?
-=============================
+Arronax adds a menu item "Create starter for this file" to the context
+menu (that's the menu you get when you right-click a file in the file
+manager). If the file is a application starter you get an item "Modify
+this starter" instead.
 
-Arronax is available at http://www.florian-diesch.de/software/arronax/
+If you have icons on your desktop enabled Arronax adds a menu item
+"Create starter" to your desktop's context menu.
 
 
 ========
  Status
 ========
 
-Arronax is Alpha software. It works for me but I expect it to have quite some bugs. The user interface and the file format may change in future version. **Use it at your own risk.**
+Unsettings is alpha software. So far it seems to work for me but it
+may have severe bugs I didn't noticed yet. **Use it at your own risk**.
 
-If you find a bug in Arronax please report it at the `bugtracker at Launchpad <https://bugs.launchpad.net/arronax/+filebug>`_
-so that I can fix it. Thank you.
+If you find a bug in Arronax please report it at the bugtracker at
+Launchpad so that I can fix it. Thank you.
 
-=================
-Requirements
-=================
+==============
+ Requirements
+==============
 
-Arronax is developed and tested on Ubuntu 11.10 "Oneiric Ocelot" and Ubuntu 12.04 "Precise Pangolin".
+Arronax is beeing developed and tested on Ubuntu 12.04 "Precise Pangolin".
 
-Arronax needs the following packages from the software sources:
+The .deb packages are installable on Debian 7.0 "Wheezy" and Linux
+Mint 13 "Maya", too and seem to work according to a short test.
 
- * gir1.2-glib-2.0
- * gir1.2-gtk-3.0
- * python-gobject
+Arronax needs:
+
+  * Gnome 3.4
+  * Nautilus-Python 1.1
+  * PyGObject
 
 
+=======================
+ Where can you get it?
+=======================
 
-If you install the .deb package this packages will be automatically
-installed if needed.
+Arronax is available from
+
+    http://www.florian-diesch.de/software/arronax/
 
 
 =========
  License
 =========
 
+You can use Arronax under the conditions of GPL v3 or later.
+
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+the Free Software Foundation, either version 3 of the License, or (at
+your option) any later version.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program.  If not, see http://www.gnu.org/licenses/ 
-
+along with this program. If not, see http://www.gnu.org/licenses/

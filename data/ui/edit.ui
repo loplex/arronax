@@ -191,6 +191,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Go to the Desktop folder</property>
                 <property name="use_action_appearance">False</property>
                 <signal name="clicked" handler="on_bt_dlg_open_desktop_clicked" swapped="no"/>
               </object>
@@ -207,6 +208,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Go to the folder that contains user specific application starters</property>
                 <property name="use_action_appearance">False</property>
                 <signal name="clicked" handler="on_bt_dlg_open_user_app_clicked" swapped="no"/>
               </object>
@@ -306,6 +308,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Go to the Desktop folder</property>
                 <property name="use_action_appearance">False</property>
                 <signal name="clicked" handler="on_bt_filename_dlg_desktop_clicked" swapped="no"/>
               </object>
@@ -322,6 +325,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Go to the folder that contains user specific application starters</property>
                 <property name="use_action_appearance">False</property>
                 <signal name="clicked" handler="on_bt_filename_dlg_user_app_clicked" swapped="no"/>
               </object>

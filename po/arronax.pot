@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-27 02:18+0200\n"
+"POT-Creation-Date: 2012-05-28 06:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,88 +109,96 @@ msgid "Desktop"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:12
-msgid "User App Folder"
+msgid "Go to the Desktop folder"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:13
-msgid "Select File Name"
+msgid "User App Folder"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:14
-msgid "Select Folder"
+msgid "Go to the folder that contains user specific application starters"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:15 ../data/desktop/arronax.desktop.in.h:1
-msgid "Arronax"
+#: ../data/ui/edit.ui.h:15
+msgid "Select File Name"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:16
-msgid "_File"
+msgid "Select Folder"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:17
-msgid "_Edit"
+#: ../data/ui/edit.ui.h:17 ../data/desktop/arronax.desktop.in.h:1
+msgid "Arronax"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:18
-msgid "_Help"
+msgid "_File"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:19
-msgid "toolbutton1"
+msgid "_Edit"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:20
-msgid "Save current application starter"
+msgid "_Help"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:21
-msgid "Title:"
+msgid "toolbutton1"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:22
-msgid "Command:"
+msgid "Save current application starter"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:23
-msgid "Select..."
+msgid "Title:"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:24
-msgid "Start in folder:"
+msgid "Command:"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:25
-msgid "Run in Terminal:"
+msgid "Select..."
 msgstr ""
 
 #: ../data/ui/edit.ui.h:26
-msgid "Comment:"
+msgid "Start in folder:"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:27
-msgid "Basic"
+msgid "Run in Terminal:"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:28
-msgid "Hidden:"
+msgid "Comment:"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:29
-msgid "Window Class:"
+msgid "Basic"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:30
-msgid "Categories:"
+msgid "Hidden:"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:31
+msgid "Window Class:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:32
+msgid "Categories:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:33
 msgid ""
 "MIME types:\n"
 "(one per line)"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:33
+#: ../data/ui/edit.ui.h:35
 msgid "Advanced"
 msgstr ""
 
