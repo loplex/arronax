@@ -1,6 +1,6 @@
 NAME=arronax
 DEBVERSION=$(shell awk -F '[()]' '/^${NAME}/ {print $$2}'  debian/changelog|head -1)
-VERSION=$(shell echo '$DEBVERSION' | grep -o '[0-9.-]+')
+VERSION=$(shell echo '${DEBVERSION}' | egrep -o '[0-9.-]+')
 
 PPA=diesch/testing
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-28 07:31+0200\n"
+"POT-Creation-Date: 2012-05-28 09:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,37 +17,37 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../arronax/editor.py:77
+#: ../arronax/editor.py:81
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr ""
 
-#: ../arronax/editor.py:78
+#: ../arronax/editor.py:82
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr ""
 
-#: ../arronax/editor.py:116 ../arronax/editor.py:118
+#: ../arronax/editor.py:120 ../arronax/editor.py:122
 msgid "You need to provide a name."
 msgstr ""
 
-#: ../arronax/editor.py:122 ../arronax/editor.py:124
+#: ../arronax/editor.py:126 ../arronax/editor.py:128
 msgid "You need to provide a command."
 msgstr ""
 
-#: ../arronax/editor.py:132
+#: ../arronax/editor.py:136
 msgid "Save now?"
 msgstr ""
 
-#: ../arronax/editor.py:133
+#: ../arronax/editor.py:137
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
 
-#: ../arronax/editor.py:152 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:156 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr ""
 
-#: ../arronax/editor.py:200 ../arronax/desktopfile.py:31
+#: ../arronax/editor.py:204 ../arronax/desktopfile.py:31
 #: ../arronax/desktopfile.py:79
 msgid "Error"
 msgstr ""

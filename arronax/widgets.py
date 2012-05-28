@@ -19,7 +19,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-from gi.repository import Gtk, Gdk, GdkPixbuf
+from gi.repository import Gtk, Gdk, GdkPixbuf, GLib
 import os.path
 import settings
 
@@ -258,9 +258,15 @@ class FileOrIconNamePropertyWidget(WidgetBase):
         self.widget.set_from_file(_icon)
 
     def _set_icon(self, path):
-        pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(path, 
-                                                  settings.DEFAULT_ICON_SIZE,
-                                                  settings.DEFAULT_ICON_SIZE)
+        try:
+            pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(
+                path, 
+                settings.DEFAULT_ICON_SIZE,
+                settings.DEFAULT_ICON_SIZE)
+        except Exception, e:
+            print e
+            return
+            
         if pixbuf is not None:
             self.widget.set_from_pixbuf(pixbuf)
             

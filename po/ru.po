@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-28 07:31+0200\n"
+"POT-Creation-Date: 2012-05-28 09:10+0200\n"
 "PO-Revision-Date: 2012-05-25 22:12+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -18,37 +18,37 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-05-28 05:24+0000\n"
 "X-Generator: Launchpad (build 15309)\n"
 
-#: ../arronax/editor.py:77
+#: ../arronax/editor.py:81
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Загружается файл «%s» ..."
 
-#: ../arronax/editor.py:78
+#: ../arronax/editor.py:82
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Загружен файл «%s» ..."
 
-#: ../arronax/editor.py:116 ../arronax/editor.py:118
+#: ../arronax/editor.py:120 ../arronax/editor.py:122
 msgid "You need to provide a name."
 msgstr "Нужно указать имя."
 
-#: ../arronax/editor.py:122 ../arronax/editor.py:124
+#: ../arronax/editor.py:126 ../arronax/editor.py:128
 msgid "You need to provide a command."
 msgstr "Нужно указать команду."
 
-#: ../arronax/editor.py:132
+#: ../arronax/editor.py:136
 msgid "Save now?"
 msgstr "Сохранить сейчас?"
 
-#: ../arronax/editor.py:133
+#: ../arronax/editor.py:137
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr "Имеются несохранённые изменения. Сохранить их сейчас?"
 
-#: ../arronax/editor.py:152 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:156 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr ""
 
-#: ../arronax/editor.py:200 ../arronax/desktopfile.py:31
+#: ../arronax/editor.py:204 ../arronax/desktopfile.py:31
 #: ../arronax/desktopfile.py:79
 msgid "Error"
 msgstr "Oшибка"
