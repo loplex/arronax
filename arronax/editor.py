@@ -4,6 +4,7 @@
 from gi.repository import Gtk, GdkPixbuf, GLib
 import os, os.path, time, sys
 from gettext import gettext as _
+import gettext
 
 import settings, connection, desktopfile, widgets, clipboard, about, dialogs
 import converter, statusbar
@@ -21,6 +22,9 @@ class Editor(object):
     def __init__(self, path, mode):
         self.builder = Gtk.Builder()
         self.builder.set_translation_domain(settings.GETTEXT_DOMAIN)
+        gettext.bindtextdomain(settings.GETTEXT_DOMAIN)
+        gettext.textdomain(settings.GETTEXT_DOMAIN)
+        gettext.bind_textdomain_codeset(settings.GETTEXT_DOMAIN, 'UTF-8')
 
         self.builder.add_from_file(os.path.join(settings.UI_DIR, 
                                                 'edit.ui'))
