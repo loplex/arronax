@@ -229,7 +229,7 @@ class Editor(object):
                 self.filename = filename
                 self.update_window_title()
         
-        with statusbar.Status("Saved file '%s'." % self.filename):
+        with statusbar.Status(_("Saved file '%s'.")% self.filename):
             self.dfile.save(self.filename)
 
 
