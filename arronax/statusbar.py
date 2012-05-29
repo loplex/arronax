@@ -5,7 +5,7 @@ statusbar = None
 
 class Status(object):
 
-    def __init__(self, msg, end_msg=None, delay=2000):
+    def __init__(self, msg, end_msg=None, delay=3000):
         self.msg = msg
         self.end_msg = end_msg
         self.delay = delay
@@ -23,12 +23,6 @@ class Status(object):
                          lambda *args: statusbar.pop(self.context))
 
             
-
-
-
-
-
-
 
 
 def init(widget):

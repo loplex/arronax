@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-28 09:10+0200\n"
+"POT-Creation-Date: 2012-05-28 13:03+0200\n"
 "PO-Revision-Date: 2012-05-28 05:07+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -18,38 +18,38 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-05-28 05:24+0000\n"
 "X-Generator: Launchpad (build 15309)\n"
 
-#: ../arronax/editor.py:81
+#: ../arronax/editor.py:86
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Lade Datei '%s' ..."
 
-#: ../arronax/editor.py:82
+#: ../arronax/editor.py:87
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Datei '%s' geladen."
 
-#: ../arronax/editor.py:120 ../arronax/editor.py:122
+#: ../arronax/editor.py:125 ../arronax/editor.py:127
 msgid "You need to provide a name."
 msgstr "Sie müssen einen Namen angeben."
 
-#: ../arronax/editor.py:126 ../arronax/editor.py:128
+#: ../arronax/editor.py:131 ../arronax/editor.py:133
 msgid "You need to provide a command."
 msgstr "Sie müssen einen Befehl angeben."
 
-#: ../arronax/editor.py:136
+#: ../arronax/editor.py:141
 msgid "Save now?"
 msgstr "Jetzt speichern?"
 
-#: ../arronax/editor.py:137
+#: ../arronax/editor.py:142
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
 "Einige Änderungen wurden noch nicht gespeichert. Wollen Sie jetzt speichern?"
 
-#: ../arronax/editor.py:156 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:161 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Wählen Sie ein Symbol"
 
-#: ../arronax/editor.py:204 ../arronax/desktopfile.py:31
+#: ../arronax/editor.py:209 ../arronax/desktopfile.py:31
 #: ../arronax/desktopfile.py:79
 msgid "Error"
 msgstr "Fehler"
@@ -60,15 +60,15 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Florian Diesch https://launchpad.net/~diesch"
 
-#: ../nautilus/nautilus-arronax.py:23
+#: ../nautilus/nautilus-arronax.py:23 ../nautilus/nautilus-arronax.py:29
 msgid "Create starter for this file"
 msgstr "Für diese Datei einen Starter anlegen"
 
-#: ../nautilus/nautilus-arronax.py:29
+#: ../nautilus/nautilus-arronax.py:35
 msgid "Modify this starter"
 msgstr "Diesen Starter bearbeiten"
 
-#: ../nautilus/nautilus-arronax.py:35
+#: ../nautilus/nautilus-arronax.py:41
 msgid "Create starter"
 msgstr "Starter anlegen"
 

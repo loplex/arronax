@@ -25,6 +25,12 @@ class ColumnExtension(GObject.GObject, Nautilus.MenuProvider):
                                          mode=editor.MODE_CREATE_FOR)
         return label, func
 
+    def _create_starter_open(self, path):
+        label = _('Create starter for this file')
+        func =  lambda *x: editor.Editor(path=path, 
+                                         mode=editor.MODE_OPEN)
+        return label, func
+
     def _create_starter_edit(self, path):
         label = _('Modify this starter')
         func =  lambda *x: editor.Editor(path=path, 
@@ -66,7 +72,7 @@ class ColumnExtension(GObject.GObject, Nautilus.MenuProvider):
         elif finfo.get_attribute_boolean(Gio.FILE_ATTRIBUTE_ACCESS_CAN_EXECUTE):
             label, func = self._create_starter_for(path)
         else:
-            label, func = self._create_starter_for(path)
+            label, func = self._create_starter_open(path)
 
         return self._create_menu_item(label, func),
 

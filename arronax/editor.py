@@ -15,6 +15,7 @@ MODE_EDIT = 'edit'
 MODE_NEW = 'new'
 MODE_CREATE_FOR = 'create for'
 MODE_CREATE_IN = 'create_in'
+MODE_OPEN = 'open'
 
 
 class Editor(object):
@@ -71,6 +72,10 @@ class Editor(object):
             self.filename = None
             self.obj('e_command').set_text(path)
             self.create_title_from_command(path)
+        elif mode is MODE_OPEN:
+            self.filename = None
+            self.create_title_from_command(path)
+            self.obj('e_command').set_text("xdg-open '%s'" % path)
         else:
             self.filename = path
       
@@ -217,7 +222,7 @@ class Editor(object):
                 self.filename = filename
                 self.update_window_title()
         
-        with statusbar.Status("Saved file 'self.filename'."):
+        with statusbar.Status("Saved file '%s'." % self.filename):
             self.dfile.save(self.filename)
 
 
@@ -345,7 +350,7 @@ def main():
             if os.path.splitext(path)[1] == '.desktop':                
                 editor = Editor(path=path, mode=MODE_EDIT)
             else:
-                editor = Editor(path=path, mode=MODE_CREATE_FOR)
+                editor = Editor(path=path, mode=MODE_OPEN)
         elif os.path.isdir(path):
             editor = Editor(path=path, mode=MODE_CREATE_IN)
         else:

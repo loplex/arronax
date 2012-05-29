@@ -1,3 +1,16 @@
+arronax (0.01ubuntu2) precise; urgency=low
+
+  * minor fixes
+
+ -- Florian Diesch <devel@florian-diesch.de>  Mon, 28 May 2012 09:51:28 +0200
+
+arronax (0.01ubuntu1) precise; urgency=low
+
+  * changed default icon for .desktop files
+  * fixed crash when trying to set a non-existing icon
+
+ -- Florian Diesch <devel@florian-diesch.de>  Mon, 28 May 2012 09:49:14 +0200
+
 arronax (0.01) precise; urgency=low
 
   * Initial Release. 

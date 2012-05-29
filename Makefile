@@ -1,6 +1,6 @@
 NAME=arronax
 DEBVERSION=$(shell awk -F '[()]' '/^${NAME}/ {print $$2}'  debian/changelog|head -1)
-VERSION=$(shell echo '${DEBVERSION}' | egrep -o '[0-9.-]+')
+VERSION=$(shell echo '${DEBVERSION}' | egrep -o '[0-9.-]{3,}')
 
 PPA=diesch/testing
 
@@ -28,6 +28,7 @@ egg:
 
 
 predeb: sdist
+	echo "|${DEBVERSION}|${VERSION}"
 	cp dist/${NAME}-${VERSION}.tar.gz ../${NAME}_${VERSION}.orig.tar.gz
 	rm -r dist
 	python setup.py build_i18n
