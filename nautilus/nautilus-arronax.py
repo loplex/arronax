@@ -77,12 +77,9 @@ class ColumnExtension(GObject.GObject, Nautilus.MenuProvider):
         return self._create_menu_item(label, func),
 
 
-    def get_background_items(self, window, path):
+    def get_background_items(self, window, file):
+        gfile = file.get_location()  # a Gio.GFile 
+        path = gfile.get_path()       # a str
+
         label, func = self._create_starter_in(path)
         return self._create_menu_item(label, func), 
-
-
-
-
-
-    

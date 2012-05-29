@@ -30,10 +30,13 @@ class DesktopFile(object):
             except Exception, e:
                 dialogs.error(self.win, _('Error'), str(e))
                 
+        if self['Type'] not in ('', 'Application'):
+            return False
         self.path = path
         self.group = 'Desktop Entry'
         self['Type'] = 'Application'
         self['Version'] = '1.0'
+        return True
 
 
     def set_type_for_key(self, key, type):

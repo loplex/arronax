@@ -12,8 +12,12 @@ class Status(object):
         self.context = statusbar.get_context_id('')
 
 
+    def set_end_msg(self, msg):
+        self.end_msg = msg
+        
     def __enter__(self):
         statusbar.push(self.context, self.msg)
+        return self
 
     def __exit__(self, *args):
         if self.end_msg is not None:

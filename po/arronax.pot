@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-28 13:03+0200\n"
+"POT-Creation-Date: 2012-05-29 16:43+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,28 +27,40 @@ msgstr ""
 msgid "Loaded file '%s' ..."
 msgstr ""
 
-#: ../arronax/editor.py:125 ../arronax/editor.py:127
+#: ../arronax/editor.py:91
+msgid "Can not load started"
+msgstr ""
+
+#: ../arronax/editor.py:92
+msgid "Arronax doesn't support this kind of starter yet"
+msgstr ""
+
+#: ../arronax/editor.py:94
+msgid "File not loaded."
+msgstr ""
+
+#: ../arronax/editor.py:132 ../arronax/editor.py:134
 msgid "You need to provide a name."
 msgstr ""
 
-#: ../arronax/editor.py:131 ../arronax/editor.py:133
+#: ../arronax/editor.py:138 ../arronax/editor.py:140
 msgid "You need to provide a command."
 msgstr ""
 
-#: ../arronax/editor.py:141
+#: ../arronax/editor.py:148
 msgid "Save now?"
 msgstr ""
 
-#: ../arronax/editor.py:142
+#: ../arronax/editor.py:149
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
 
-#: ../arronax/editor.py:161 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:168 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr ""
 
-#: ../arronax/editor.py:209 ../arronax/desktopfile.py:31
-#: ../arronax/desktopfile.py:79
+#: ../arronax/editor.py:216 ../arronax/desktopfile.py:31
+#: ../arronax/desktopfile.py:82
 msgid "Error"
 msgstr ""
 

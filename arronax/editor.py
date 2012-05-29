@@ -84,11 +84,18 @@ class Editor(object):
 
     def read_desktop_file(self, path):
         with statusbar.Status(_("Loading file '%s' ...") % path,
-                              _("Loaded file '%s' ...") % path):
-            self.filename = path
+                              _("Loaded file '%s' ...") % path) as status:
             self.conn.clear(store=True)
-            self.dfile.load(self.filename)
-            
+            if not self.dfile.load(path):
+                dialogs.error(
+                    self.win, _('Can not load started'),
+                    _("Arronax doesn't support this kind of starter yet")
+                    )
+                status.set_end_msg(_("File not loaded."))
+                self.conn.clear(store=True)
+                return
+                
+            self.filename = path
             self.update_window_title()
             self.conn.view()
 
@@ -264,11 +271,13 @@ class Editor(object):
 
     def on_bt_working_dir_clicked(self, *args):
         path = self.ask_for_filename('dlg_working_dir', False)
-        self.obj('e_working_dir').set_text(path)
+        if path is not None:
+            self.obj('e_working_dir').set_text(path)
 
     def on_bt_command_clicked(self, *args):
         path = self.ask_for_filename('dlg_command', False)
-        self.obj('e_command').set_text(path) 
+        if path is not None:
+            self.obj('e_command').set_text(path) 
 
 
     def on_bt_filename_dlg_user_app_clicked(self, *args):
