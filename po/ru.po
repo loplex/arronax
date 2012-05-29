@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-29 16:43+0200\n"
+"POT-Creation-Date: 2012-05-29 17:05+0200\n"
 "PO-Revision-Date: 2012-05-25 22:12+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -29,7 +29,7 @@ msgid "Loaded file '%s' ..."
 msgstr "Загружен файл «%s» ..."
 
 #: ../arronax/editor.py:91
-msgid "Can not load started"
+msgid "Can not load starter"
 msgstr ""
 
 #: ../arronax/editor.py:92

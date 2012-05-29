@@ -88,7 +88,7 @@ class Editor(object):
             self.conn.clear(store=True)
             if not self.dfile.load(path):
                 dialogs.error(
-                    self.win, _('Can not load started'),
+                    self.win, _('Can not load starter'),
                     _("Arronax doesn't support this kind of starter yet")
                     )
                 status.set_end_msg(_("File not loaded."))
