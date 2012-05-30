@@ -207,29 +207,32 @@ class Editor(object):
     def about(self):
         about.show_about_dialog()
 
-    def save(self):
+        
+    def save(self, is_save_as=False):        
         self.conn.store()
         msg = self.check_data()
         if msg != '':
             dialogs.error(self.win, _('Error'), msg)
             return
         
-        if self.filename is None or os.path.isdir(self.filename):
-            default = '%s.desktop' % self.obj('e_title').get_text()
+        with statusbar.Status(_("Saving file '%s'...")% self.filename,
+                              (_("Saved file '%s'.")% self.filename)) as status:
+            
+            if (is_save_as or (self.filename is None or 
+                               os.path.isdir(self.filename))):
+                default = '%s.desktop' % self.obj('e_title').get_text()
 
-            if self.filename is not None:  # folder
-                default = os.path.join(self.filename, default)
+                if self.filename is not None:  # folder
+                    default = os.path.join(self.filename, default)
 
-            filename = self.ask_for_filename('dlg_save', True, default)
-            if filename is None:
-                return
-            else:
-                self.filename = filename
-                self.update_window_title()
+                filename = self.ask_for_filename('dlg_save', True, default)
+                if filename is None:
+                    status.set_end_msg(_("File not saved."))
+                    return
+                else:
+                    self.filename = filename
+                    self.update_window_title()
         
-        with statusbar.Status(
-                _("Saving file '%s'...")% self.filename,
-                (_("Saved file '%s'.")% self.filename)) as status:
             msg = self.dfile.save(self.filename)
             if msg is not None:
                 dialogs.error(self.win, _('Can not save starter'), msg)
@@ -331,11 +334,7 @@ class Editor(object):
         self.about()
 
     def on_ac_save_as_activate(self, action, *args):
-        filename = self.ask_for_filename('dlg_save', True)
-        if filename is not None:
-            self.filename = filename
-            self.update_window_title()
-            self.save()            
+        self.save(True)
 
     def on_ac_open_activate(self, action, *args):
         self.check_dirty()

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-30 11:52+0200\n"
+"POT-Creation-Date: 2012-05-30 14:22+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,26 +55,26 @@ msgstr ""
 msgid "Select Icon"
 msgstr ""
 
-#: ../arronax/editor.py:214
+#: ../arronax/editor.py:215
 msgid "Error"
 msgstr ""
 
-#: ../arronax/editor.py:231
+#: ../arronax/editor.py:218
 #, python-format
 msgid "Saving file '%s'..."
 msgstr ""
 
-#: ../arronax/editor.py:232
+#: ../arronax/editor.py:219
 #, python-format
 msgid "Saved file '%s'."
 msgstr ""
 
-#: ../arronax/editor.py:235
-msgid "Can not save starter"
+#: ../arronax/editor.py:230 ../arronax/editor.py:239
+msgid "File not saved."
 msgstr ""
 
-#: ../arronax/editor.py:236
-msgid "File not saved."
+#: ../arronax/editor.py:238
+msgid "Can not save starter"
 msgstr ""
 
 #: ../arronax/about.py:18
