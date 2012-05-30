@@ -48,3 +48,6 @@ ppa: sdeb
 
 install: deb
 	sudo dpkg -i ../${NAME}_${DEBVERSION}_all.deb
+
+share: deb
+	cp ../${NAME}_${DEBVERSION}_all.deb ~/Shared/

@@ -86,11 +86,9 @@ class Editor(object):
         with statusbar.Status(_("Loading file '%s' ...") % path,
                               _("Loaded file '%s' ...") % path) as status:
             self.conn.clear(store=True)
-            if not self.dfile.load(path):
-                dialogs.error(
-                    self.win, _('Can not load starter'),
-                    _("Arronax doesn't support this kind of starter yet")
-                    )
+            msg = self.dfile.load(path)
+            if msg is not None:
+                dialogs.error(self.win, _('Can not load starter'), msg)
                 status.set_end_msg(_("File not loaded."))
                 self.conn.clear(store=True)
                 return
@@ -229,10 +227,13 @@ class Editor(object):
                 self.filename = filename
                 self.update_window_title()
         
-        with statusbar.Status(_("Saved file '%s'.")% self.filename):
-            self.dfile.save(self.filename)
-
-
+        with statusbar.Status(
+                _("Saving file '%s'...")% self.filename,
+                (_("Saved file '%s'.")% self.filename)) as status:
+            msg = self.dfile.save(self.filename)
+            if msg is not None:
+                dialogs.error(self.win, _('Can not save starter'), msg)
+                status.set_end_msg(_("File not saved."))
 
                            
     def ask_for_filename(self, dlg, add_ext=False, default=None):

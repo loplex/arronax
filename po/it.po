@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-29 21:04+0200\n"
+"POT-Creation-Date: 2012-05-30 11:52+0200\n"
 "PO-Revision-Date: 2012-05-25 23:31+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-05-29 15:20+0000\n"
+"X-Launchpad-Export-Date: 2012-05-29 19:40+0000\n"
 "X-Generator: Launchpad (build 15316)\n"
 
 #: ../arronax/editor.py:86
@@ -33,42 +33,50 @@ msgid "Can not load starter"
 msgstr ""
 
 #: ../arronax/editor.py:92
-msgid "Arronax doesn't support this kind of starter yet"
-msgstr ""
-
-#: ../arronax/editor.py:94
 msgid "File not loaded."
 msgstr ""
 
-#: ../arronax/editor.py:132 ../arronax/editor.py:134
+#: ../arronax/editor.py:130 ../arronax/editor.py:132
 msgid "You need to provide a name."
 msgstr "Devi fornire un nome."
 
-#: ../arronax/editor.py:138 ../arronax/editor.py:140
+#: ../arronax/editor.py:136 ../arronax/editor.py:138
 msgid "You need to provide a command."
 msgstr "Devi fornire un comando."
 
-#: ../arronax/editor.py:148
+#: ../arronax/editor.py:146
 msgid "Save now?"
 msgstr "Salvare ora?"
 
-#: ../arronax/editor.py:149
+#: ../arronax/editor.py:147
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
 
-#: ../arronax/editor.py:168 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:166 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Seleziona un'icona"
 
-#: ../arronax/editor.py:216 ../arronax/desktopfile.py:31
-#: ../arronax/desktopfile.py:82
+#: ../arronax/editor.py:214
 msgid "Error"
 msgstr "Errore"
 
-#: ../arronax/editor.py:232
+#: ../arronax/editor.py:231
 #, fuzzy, python-format
+msgid "Saving file '%s'..."
+msgstr "Caricamento del file '%s' in corso..."
+
+#: ../arronax/editor.py:232
+#, python-format
 msgid "Saved file '%s'."
-msgstr "Caricato il file '%s'..."
+msgstr ""
+
+#: ../arronax/editor.py:235
+msgid "Can not save starter"
+msgstr ""
+
+#: ../arronax/editor.py:236
+msgid "File not saved."
+msgstr ""
 
 #: ../arronax/about.py:18
 msgid "translator-credits"
@@ -76,6 +84,10 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Florian Diesch https://launchpad.net/~diesch\n"
 "  Guybrush88 https://launchpad.net/~guybrush"
+
+#: ../arronax/desktopfile.py:34
+msgid "Arronax doesn't support this kind of starter yet"
+msgstr ""
 
 #: ../nautilus/nautilus-arronax.py:23 ../nautilus/nautilus-arronax.py:29
 msgid "Create starter for this file"

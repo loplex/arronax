@@ -58,7 +58,7 @@ setup(
         ('/usr/share/arronax/ui/',
          glob.glob('data/ui/*.ui')),
         ('/usr/share/arronax/icons/',
-         glob.glob('data/icons/*.svg')),
+         glob.glob('data/icons/*.png')),
         ('/usr/share/applications',
          glob.glob('data/desktop/*.desktop')),
         ('/usr/share/nautilus-python/extensions/',

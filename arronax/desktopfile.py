@@ -28,15 +28,15 @@ class DesktopFile(object):
                                             GLib.KeyFileFlags.KEEP_COMMENTS | 
                                             GLib.KeyFileFlags.KEEP_TRANSLATIONS)
             except Exception, e:
-                dialogs.error(self.win, _('Error'), str(e))
+                return str(e)
                 
         if self['Type'] not in ('', 'Application'):
-            return False
+            return _("Arronax doesn't support this kind of starter yet")
         self.path = path
         self.group = 'Desktop Entry'
         self['Type'] = 'Application'
         self['Version'] = '1.0'
-        return True
+        return None
 
 
     def set_type_for_key(self, key, type):
@@ -79,7 +79,9 @@ class DesktopFile(object):
             mode = os.stat(path).st_mode
             os.chmod(path, mode | stat.S_IEXEC)
         except Exception, e:
-           dialogs.error(self.win, _('Error'), str(e))
+           return str(e)
+
+        return None
 
 
     def __getitem__(self, key):

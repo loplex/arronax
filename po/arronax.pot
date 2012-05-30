@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-29 21:04+0200\n"
+"POT-Creation-Date: 2012-05-30 11:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,36 +32,36 @@ msgid "Can not load starter"
 msgstr ""
 
 #: ../arronax/editor.py:92
-msgid "Arronax doesn't support this kind of starter yet"
-msgstr ""
-
-#: ../arronax/editor.py:94
 msgid "File not loaded."
 msgstr ""
 
-#: ../arronax/editor.py:132 ../arronax/editor.py:134
+#: ../arronax/editor.py:130 ../arronax/editor.py:132
 msgid "You need to provide a name."
 msgstr ""
 
-#: ../arronax/editor.py:138 ../arronax/editor.py:140
+#: ../arronax/editor.py:136 ../arronax/editor.py:138
 msgid "You need to provide a command."
 msgstr ""
 
-#: ../arronax/editor.py:148
+#: ../arronax/editor.py:146
 msgid "Save now?"
 msgstr ""
 
-#: ../arronax/editor.py:149
+#: ../arronax/editor.py:147
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
 
-#: ../arronax/editor.py:168 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:166 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr ""
 
-#: ../arronax/editor.py:216 ../arronax/desktopfile.py:31
-#: ../arronax/desktopfile.py:82
+#: ../arronax/editor.py:214
 msgid "Error"
+msgstr ""
+
+#: ../arronax/editor.py:231
+#, python-format
+msgid "Saving file '%s'..."
 msgstr ""
 
 #: ../arronax/editor.py:232
@@ -69,8 +69,20 @@ msgstr ""
 msgid "Saved file '%s'."
 msgstr ""
 
+#: ../arronax/editor.py:235
+msgid "Can not save starter"
+msgstr ""
+
+#: ../arronax/editor.py:236
+msgid "File not saved."
+msgstr ""
+
 #: ../arronax/about.py:18
 msgid "translator-credits"
+msgstr ""
+
+#: ../arronax/desktopfile.py:34
+msgid "Arronax doesn't support this kind of starter yet"
 msgstr ""
 
 #: ../nautilus/nautilus-arronax.py:23 ../nautilus/nautilus-arronax.py:29
