@@ -2,6 +2,8 @@ NAME=arronax
 DEBVERSION=$(shell awk -F '[()]' '/^${NAME}/ {print $$2}'  debian/changelog|head -1)
 VERSION=$(shell echo '${DEBVERSION}' | egrep -o '[0-9.-]{3,}')
 
+WEBDIR=/home/diesch/florian-diesch.de/sphinx/neu/source/software/${NAME}/dist
+
 PPA=diesch/testing
 
 DEBUILD=debuild -sa  -v${DEBVERSION} -kB57F5641 -i'icon|.bzr'
@@ -51,3 +53,7 @@ install: deb
 
 share: deb
 	cp ../${NAME}_${DEBVERSION}_all.deb ~/Shared/
+
+web: deb sdist
+	mkdir -p ${WEBDIR}
+	cp ../${NAME}_${DEBVERSION}_all.deb dist/${NAME}-${VERSION}.tar.gz ${WEBDIR}

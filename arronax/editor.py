@@ -244,11 +244,12 @@ class Editor(object):
         if default is not None:
             folder = os.path.dirname(default)
             if folder == '':
-                folder = settings.USER_DESKTOP_DIR
+                folder = settings.USER_DESKTOP_DIR                
             dialog.set_current_folder(folder)
 
             file = os.path.basename(default)
-            dialog.set_current_name(file)
+            if file != '':
+                dialog.set_current_name(file)
 
         response = dialog.run()
         path = dialog.get_filename()
@@ -274,7 +275,16 @@ class Editor(object):
 ## buttons
 
     def on_bt_working_dir_clicked(self, *args):
-        path = self.ask_for_filename('dlg_working_dir', False)
+        default =  self.obj('e_working_dir').get_text()
+        if default =='':  
+            cmd = self.obj('e_command').get_text()
+            cmd_dir=os.path.dirname(cmd)
+            if os.path.isdir(cmd_dir):
+                default = '%s/' % cmd_dir
+            else:
+                default = None
+
+        path = self.ask_for_filename('dlg_working_dir', False, default)
         if path is not None:
             self.obj('e_working_dir').set_text(path)
 

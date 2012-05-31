@@ -1,3 +1,9 @@
+arronax (0.01ubuntu3) precise; urgency=low
+
+  * lots of bugfixes and improvements
+
+ -- Florian Diesch <devel@florian-diesch.de>  Thu, 31 May 2012 09:50:53 +0200
+
 arronax (0.01ubuntu2) precise; urgency=low
 
   * minor fixes
