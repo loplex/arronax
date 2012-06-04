@@ -215,8 +215,13 @@ class Editor(object):
             dialogs.error(self.win, _('Error'), msg)
             return
         
-        with statusbar.Status(_("Saving file '%s'...")% self.filename,
-                              (_("Saved file '%s'.")% self.filename)) as status:
+        if self.filename is None:
+            status_msg = _("Saving file ...")
+            end_msg = _("File saved.")
+        else:
+            status_msg = _("Saving file '%s'...")% self.filename
+            end_msg = _("Saved file '%s'.")% self.filename
+        with statusbar.Status(status_msg, end_msg) as status:
             
             if (is_save_as or (self.filename is None or 
                                os.path.isdir(self.filename))):
@@ -231,6 +236,7 @@ class Editor(object):
                     return
                 else:
                     self.filename = filename
+                    status.set_end_msg(_("Saved file '%s'.")% self.filename)
                     self.update_window_title()
         
             msg = self.dfile.save(self.filename)
