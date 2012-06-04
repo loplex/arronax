@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-31 09:48+0200\n"
+"POT-Creation-Date: 2012-06-04 18:49+0200\n"
 "PO-Revision-Date: 2012-05-30 10:16+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -37,7 +37,8 @@ msgid "File not loaded."
 msgstr "Datei nicht geladen."
 
 #: ../arronax/editor.py:130 ../arronax/editor.py:132
-msgid "You need to provide a name."
+#, fuzzy
+msgid "You need to provide a title."
 msgstr "Sie müssen einen Namen angeben."
 
 #: ../arronax/editor.py:136 ../arronax/editor.py:138

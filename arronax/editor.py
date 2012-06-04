@@ -127,9 +127,9 @@ class Editor(object):
         msg=''
         try:
             if self.dfile['Name'] == '':
-                msg = '%s\n%s' % (msg, _("You need to provide a name."))
+                msg = '%s\n%s' % (msg, _("You need to provide a title."))
         except desktopfile.KeyNotSetException:
-            msg = '%s\n%s' % (msg, _("You need to provide a name."))
+            msg = '%s\n%s' % (msg, _("You need to provide a title."))
         
         try:    
             if self.dfile['Exec'] == '':
