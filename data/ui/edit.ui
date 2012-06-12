@@ -420,6 +420,7 @@
       <pattern>*.desktop</pattern>
     </patterns>
   </object>
+  <object class="GtkTextBuffer" id="tbuf_keywords"/>
   <object class="GtkWindow" id="window1">
     <property name="width_request">600</property>
     <property name="height_request">400</property>
@@ -969,6 +970,51 @@
                         <property name="height">1</property>
                       </packing>
                     </child>
+                    <child>
+                      <object class="GtkScrolledWindow" id="swin_keywords">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="margin_top">12</property>
+                        <property name="hexpand">True</property>
+                        <property name="vexpand">True</property>
+                        <property name="shadow_type">in</property>
+                        <child>
+                          <object class="GtkTextView" id="tview_keywords">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="hexpand">True</property>
+                            <property name="vexpand">True</property>
+                            <property name="left_margin">1</property>
+                            <property name="right_margin">1</property>
+                            <property name="buffer">tbuf_keywords</property>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="top_attach">5</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="l_keywords">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="margin_right">6</property>
+                        <property name="margin_top">12</property>
+                        <property name="xalign">1</property>
+                        <property name="yalign">0</property>
+                        <property name="label" translatable="yes">Keywords:
+(one per line)</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">5</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
+                      </packing>
+                    </child>
                   </object>
                 </child>
                 <child type="tab">
@@ -1089,6 +1135,7 @@
                         <property name="margin_right">6</property>
                         <property name="margin_top">18</property>
                         <property name="xalign">1</property>
+                        <property name="yalign">0</property>
                         <property name="label" translatable="yes">MIME types:
 (one per line)</property>
                       </object>

@@ -53,7 +53,8 @@ class Connection(object):
 
     def is_dirty(self):        
         try:
-            return self._get_raw_value() != self.get_widget_value()
+            old_value = self.get_value()
+            return self.converter.convert(old_value) != self.get_widget_value()
         except Exception, e:
             print 'is dirty: %s (%s=%s [%s])'%(e, self.data_key, self.get_widget_value(), bool(self.get_widget_value()))
             return None
@@ -99,6 +100,7 @@ class ConnectionGroup(object):
     def is_dirty(self):
         for conn in self.connections:
             if conn.is_dirty():
+                print 'DIRTY:', conn.data_key, conn._get_raw_value(), conn.get_widget_value()
                 return True
         return False
 

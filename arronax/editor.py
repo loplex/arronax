@@ -56,6 +56,9 @@ class Editor(object):
                 'img_icon',
                 defaulter=widgets.StringDefaulter(settings.DEFAULT_ICON)),
                       )
+        self.conn.add('Keywords', self.factory.get('tview_keywords'),
+                      converter=converter.ListConverter()
+                      )
         self.conn.add('Path', self.factory.get('e_working_dir'))
         self.conn.add('Categories', self.factory.get('e_advanced_categories'))
         self.conn.add('StartupWMClass', self.factory.get('e_advanced_wm_class'))

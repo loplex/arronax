@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-04 20:24+0200\n"
+"POT-Creation-Date: 2012-06-12 17:30+0200\n"
 "PO-Revision-Date: 2012-05-25 22:12+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -18,71 +18,71 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-06-04 18:20+0000\n"
 "X-Generator: Launchpad (build 15353)\n"
 
-#: ../arronax/editor.py:86
+#: ../arronax/editor.py:89
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Загружается файл «%s» ..."
 
-#: ../arronax/editor.py:87
+#: ../arronax/editor.py:90
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Загружен файл «%s» ..."
 
-#: ../arronax/editor.py:91
+#: ../arronax/editor.py:94
 msgid "Can not load starter"
 msgstr ""
 
-#: ../arronax/editor.py:92
+#: ../arronax/editor.py:95
 msgid "File not loaded."
 msgstr ""
 
-#: ../arronax/editor.py:130 ../arronax/editor.py:132
+#: ../arronax/editor.py:133 ../arronax/editor.py:135
 msgid "You need to provide a title."
 msgstr ""
 
-#: ../arronax/editor.py:136 ../arronax/editor.py:138
+#: ../arronax/editor.py:139 ../arronax/editor.py:141
 msgid "You need to provide a command."
 msgstr "Нужно указать команду."
 
-#: ../arronax/editor.py:146
+#: ../arronax/editor.py:149
 msgid "Save now?"
 msgstr "Сохранить сейчас?"
 
-#: ../arronax/editor.py:147
+#: ../arronax/editor.py:150
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr "Имеются несохранённые изменения. Сохранить их сейчас?"
 
-#: ../arronax/editor.py:166 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:169 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr ""
 
-#: ../arronax/editor.py:215
+#: ../arronax/editor.py:218
 msgid "Error"
 msgstr "Oшибка"
 
-#: ../arronax/editor.py:219
+#: ../arronax/editor.py:222
 msgid "Saving file ..."
 msgstr ""
 
-#: ../arronax/editor.py:220
+#: ../arronax/editor.py:223
 msgid "File saved."
 msgstr ""
 
-#: ../arronax/editor.py:222
+#: ../arronax/editor.py:225
 #, python-format
 msgid "Saving file '%s'..."
 msgstr ""
 
-#: ../arronax/editor.py:223 ../arronax/editor.py:239
+#: ../arronax/editor.py:226 ../arronax/editor.py:242
 #, python-format
 msgid "Saved file '%s'."
 msgstr ""
 
-#: ../arronax/editor.py:235 ../arronax/editor.py:245
+#: ../arronax/editor.py:238 ../arronax/editor.py:248
 msgid "File not saved."
 msgstr ""
 
-#: ../arronax/editor.py:244
+#: ../arronax/editor.py:247
 msgid "Can not save starter"
 msgstr ""
 
@@ -218,22 +218,31 @@ msgid "Comment:"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:29
+#, fuzzy
+msgid ""
+"Keywords:\n"
+"(one per line)"
+msgstr ""
+"MIME-типы:\n"
+"(по одному в строке)"
+
+#: ../data/ui/edit.ui.h:31
 msgid "Basic"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:30
+#: ../data/ui/edit.ui.h:32
 msgid "Hidden:"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:31
+#: ../data/ui/edit.ui.h:33
 msgid "Window Class:"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:32
+#: ../data/ui/edit.ui.h:34
 msgid "Categories:"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:33
+#: ../data/ui/edit.ui.h:35
 msgid ""
 "MIME types:\n"
 "(one per line)"
@@ -241,7 +250,7 @@ msgstr ""
 "MIME-типы:\n"
 "(по одному в строке)"
 
-#: ../data/ui/edit.ui.h:35
+#: ../data/ui/edit.ui.h:37
 msgid "Advanced"
 msgstr ""
 
