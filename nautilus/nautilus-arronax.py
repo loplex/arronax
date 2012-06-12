@@ -3,20 +3,19 @@
 
 
 from gi.repository import Nautilus, GObject, Gio
-import gettext, locale
-from gettext import gettext as _
 import gettext
-
+from gettext import gettext as _
+from arronax import editor, settings
 import os.path
 
-from arronax import editor, settings
 
-class ColumnExtension(GObject.GObject, Nautilus.MenuProvider):
+class ArronaxExtension(GObject.GObject, Nautilus.MenuProvider):
     def __init__(self):
         gettext.bindtextdomain(settings.GETTEXT_DOMAIN)
         gettext.textdomain(settings.GETTEXT_DOMAIN)
         gettext.bind_textdomain_codeset(settings.GETTEXT_DOMAIN, 'UTF-8')
         print 'Initializing Arronax...'
+
 
 
     def _create_starter_for(self, path):

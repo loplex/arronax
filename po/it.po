@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-12 17:30+0200\n"
+"POT-Creation-Date: 2012-06-12 22:47+0200\n"
 "PO-Revision-Date: 2012-05-25 23:31+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -97,15 +97,15 @@ msgstr ""
 msgid "Arronax doesn't support this kind of starter yet"
 msgstr ""
 
-#: ../nautilus/nautilus-arronax.py:23 ../nautilus/nautilus-arronax.py:29
+#: ../nautilus/nautilus-arronax.py:22 ../nautilus/nautilus-arronax.py:28
 msgid "Create starter for this file"
 msgstr ""
 
-#: ../nautilus/nautilus-arronax.py:35
+#: ../nautilus/nautilus-arronax.py:34
 msgid "Modify this starter"
 msgstr ""
 
-#: ../nautilus/nautilus-arronax.py:41
+#: ../nautilus/nautilus-arronax.py:40
 msgid "Create starter"
 msgstr ""
 
