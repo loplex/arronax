@@ -1,3 +1,12 @@
+arronax (0.01ubuntu5) precise; urgency=low
+
+  * arronax/settings.py
+    - use xxdg, dgapp instead ob GLib to get USER_APPLICATIONS_DIR, 
+      USER_DESKTOP_DIR (closes bug #1010447)
+  
+
+ -- Florian Diesch <devel@florian-diesch.de>  Tue, 12 Jun 2012 23:18:11 +0200
+
 arronax (0.01ubuntu4) precise; urgency=low
 
   * fixed some messages
