@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-12 23:19+0200\n"
+"POT-Creation-Date: 2012-06-13 03:32+0200\n"
 "PO-Revision-Date: 2012-05-25 23:31+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -218,36 +218,44 @@ msgid "Comment:"
 msgstr "Commento:"
 
 #: ../data/ui/edit.ui.h:29
-msgid ""
-"Keywords:\n"
-"(one per line)"
-msgstr ""
-
-#: ../data/ui/edit.ui.h:31
 msgid "Basic"
 msgstr "Base"
 
-#: ../data/ui/edit.ui.h:32
+#: ../data/ui/edit.ui.h:30
 msgid "Hidden:"
 msgstr "Nascosto:"
 
-#: ../data/ui/edit.ui.h:33
+#: ../data/ui/edit.ui.h:31
 msgid "Window Class:"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:34
+#: ../data/ui/edit.ui.h:32
 msgid "Categories:"
 msgstr "Categorie:"
 
-#: ../data/ui/edit.ui.h:35
+#: ../data/ui/edit.ui.h:33
+msgid "Advanced"
+msgstr "Avanzate"
+
+#: ../data/ui/edit.ui.h:34
 msgid ""
 "MIME types:\n"
 "(one per line)"
 msgstr ""
 
+#: ../data/ui/edit.ui.h:36
+msgid "MIME types"
+msgstr ""
+
 #: ../data/ui/edit.ui.h:37
-msgid "Advanced"
-msgstr "Avanzate"
+msgid ""
+"Keywords:\n"
+"(one per line)"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:39
+msgid "Keywords"
+msgstr ""
 
 #: ../data/desktop/arronax.desktop.in.h:2
 msgid "Create and edit application starters"

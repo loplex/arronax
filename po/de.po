@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-12 23:19+0200\n"
+"POT-Creation-Date: 2012-06-13 03:32+0200\n"
 "PO-Revision-Date: 2012-06-04 18:14+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -218,6 +218,38 @@ msgid "Comment:"
 msgstr "Bemerkung:"
 
 #: ../data/ui/edit.ui.h:29
+msgid "Basic"
+msgstr "Grundeinstellungen"
+
+#: ../data/ui/edit.ui.h:30
+msgid "Hidden:"
+msgstr "Verborgen:"
+
+#: ../data/ui/edit.ui.h:31
+msgid "Window Class:"
+msgstr "Fenster-Klasse:"
+
+#: ../data/ui/edit.ui.h:32
+msgid "Categories:"
+msgstr "Kategorien:"
+
+#: ../data/ui/edit.ui.h:33
+msgid "Advanced"
+msgstr "Erweitert"
+
+#: ../data/ui/edit.ui.h:34
+msgid ""
+"MIME types:\n"
+"(one per line)"
+msgstr ""
+"MIME-Typen:\n"
+"(einer pro Zeile)"
+
+#: ../data/ui/edit.ui.h:36
+msgid "MIME types"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:37
 #, fuzzy
 msgid ""
 "Keywords:\n"
@@ -226,33 +258,9 @@ msgstr ""
 "MIME-Typen:\n"
 "(einer pro Zeile)"
 
-#: ../data/ui/edit.ui.h:31
-msgid "Basic"
-msgstr "Grundeinstellungen"
-
-#: ../data/ui/edit.ui.h:32
-msgid "Hidden:"
-msgstr "Verborgen:"
-
-#: ../data/ui/edit.ui.h:33
-msgid "Window Class:"
-msgstr "Fenster-Klasse:"
-
-#: ../data/ui/edit.ui.h:34
-msgid "Categories:"
-msgstr "Kategorien:"
-
-#: ../data/ui/edit.ui.h:35
-msgid ""
-"MIME types:\n"
-"(one per line)"
+#: ../data/ui/edit.ui.h:39
+msgid "Keywords"
 msgstr ""
-"MIME-Typen:\n"
-"(einer pro Zeile)"
-
-#: ../data/ui/edit.ui.h:37
-msgid "Advanced"
-msgstr "Erweitert"
 
 #: ../data/desktop/arronax.desktop.in.h:2
 msgid "Create and edit application starters"
