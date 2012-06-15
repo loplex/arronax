@@ -1,3 +1,9 @@
+arronax (0.02ubuntu1) precise; urgency=low
+
+  * fixed version number
+
+ -- Florian Diesch <devel@florian-diesch.de>  Fri, 15 Jun 2012 21:21:15 +0200
+
 arronax (0.02) precise; urgency=low
 
   * added Chinese (Simplified), Spanish translations

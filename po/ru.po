@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-14 23:49+0200\n"
+"POT-Creation-Date: 2012-06-15 21:22+0200\n"
 "PO-Revision-Date: 2012-06-13 18:43+0000\n"
 "Last-Translator: Eugene Marshal <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -73,16 +73,16 @@ msgstr "Файл сохранён."
 msgid "Saving file '%s'..."
 msgstr "Сохранение файла '%s'..."
 
-#: ../arronax/editor.py:226 ../arronax/editor.py:242
+#: ../arronax/editor.py:226 ../arronax/editor.py:246
 #, python-format
 msgid "Saved file '%s'."
 msgstr "Сохранённый файл '%s'."
 
-#: ../arronax/editor.py:238 ../arronax/editor.py:248
+#: ../arronax/editor.py:242 ../arronax/editor.py:252
 msgid "File not saved."
 msgstr "Файл не сохранён."
 
-#: ../arronax/editor.py:247
+#: ../arronax/editor.py:251
 msgid "Can not save starter"
 msgstr "Невозможно сохранить ярлык запуска"
 

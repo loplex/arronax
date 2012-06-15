@@ -5,7 +5,7 @@ import xdgapp
 import xdg.BaseDirectory
 
 APP_NAME = 'Arronax'
-APP_VERSION  = '0.01'
+APP_VERSION  = '0.02'
 
 if os.path.isfile('.is-devel-dir'):
     DATA_DIR = 'data'
