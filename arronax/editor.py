@@ -228,12 +228,16 @@ class Editor(object):
             
             if (is_save_as or (self.filename is None or 
                                os.path.isdir(self.filename))):
-                default = '%s.desktop' % self.obj('e_title').get_text()
+                fname_from_title = '%s.desktop' % self.obj('e_title').get_text()
+                if self.filename is None:
+                    default = fname_from_title
+                elif os.path.isdir(self.filename):
+                    default = os.path.join(self.filename, fname_from_title)
+                else:
+                    default = self.filename
 
-                if self.filename is not None:  # folder
-                    default = os.path.join(self.filename, default)
-
-                filename = self.ask_for_filename('dlg_save', True, default)
+                filename = self.ask_for_filename('dlg_save', True, default, 
+                                                 Gtk.FileChooserAction.SAVE)
                 if filename is None:
                     status.set_end_msg(_("File not saved."))
                     return
@@ -248,8 +252,10 @@ class Editor(object):
                 status.set_end_msg(_("File not saved."))
 
                            
-    def ask_for_filename(self, dlg, add_ext=False, default=None):
+    def ask_for_filename(self, dlg, add_ext=False, default=None, action=None):
         dialog = self.obj(dlg)
+        if action  is not None:
+            dialog.set_action(action)
         if default is not None:
             folder = os.path.dirname(default)
             if folder == '':
@@ -357,7 +363,8 @@ class Editor(object):
 
     def on_ac_open_activate(self, action, *args):
         self.check_dirty()
-        filename = self.ask_for_filename('dlg_open', True)
+        filename = self.ask_for_filename('dlg_open', True, default=None,
+                                         action=Gtk.FileChooserAction.OPEN)
         if filename is not None:
             self.read_desktop_file(filename)
 
