@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-15 21:22+0200\n"
+"POT-Creation-Date: 2012-06-30 01:49+0200\n"
 "PO-Revision-Date: 2012-05-25 23:31+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -18,71 +18,71 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-06-14 20:04+0000\n"
 "X-Generator: Launchpad (build 15414)\n"
 
-#: ../arronax/editor.py:89
+#: ../arronax/editor.py:91
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Caricamento del file '%s' in corso..."
 
-#: ../arronax/editor.py:90
+#: ../arronax/editor.py:92
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Caricato il file '%s'..."
 
-#: ../arronax/editor.py:94
+#: ../arronax/editor.py:96
 msgid "Can not load starter"
 msgstr ""
 
-#: ../arronax/editor.py:95
+#: ../arronax/editor.py:97
 msgid "File not loaded."
 msgstr ""
 
-#: ../arronax/editor.py:133 ../arronax/editor.py:135
+#: ../arronax/editor.py:135 ../arronax/editor.py:137
 msgid "You need to provide a title."
 msgstr ""
 
-#: ../arronax/editor.py:139 ../arronax/editor.py:141
+#: ../arronax/editor.py:141 ../arronax/editor.py:143
 msgid "You need to provide a command."
 msgstr "Devi fornire un comando."
 
-#: ../arronax/editor.py:149
+#: ../arronax/editor.py:151
 msgid "Save now?"
 msgstr "Salvare ora?"
 
-#: ../arronax/editor.py:150
+#: ../arronax/editor.py:152
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
 
-#: ../arronax/editor.py:169 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:171 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Seleziona un'icona"
 
-#: ../arronax/editor.py:218
+#: ../arronax/editor.py:220
 msgid "Error"
 msgstr "Errore"
 
-#: ../arronax/editor.py:222
+#: ../arronax/editor.py:224
 msgid "Saving file ..."
 msgstr ""
 
-#: ../arronax/editor.py:223
+#: ../arronax/editor.py:225
 msgid "File saved."
 msgstr ""
 
-#: ../arronax/editor.py:225
+#: ../arronax/editor.py:227
 #, python-format
 msgid "Saving file '%s'..."
 msgstr ""
 
-#: ../arronax/editor.py:226 ../arronax/editor.py:246
+#: ../arronax/editor.py:228 ../arronax/editor.py:248
 #, python-format
 msgid "Saved file '%s'."
 msgstr ""
 
-#: ../arronax/editor.py:242 ../arronax/editor.py:252
+#: ../arronax/editor.py:244 ../arronax/editor.py:254
 msgid "File not saved."
 msgstr ""
 
-#: ../arronax/editor.py:251
+#: ../arronax/editor.py:253
 msgid "Can not save starter"
 msgstr ""
 
@@ -240,20 +240,23 @@ msgstr "Avanzate"
 #: ../data/ui/edit.ui.h:34
 msgid ""
 "MIME types:\n"
-"(one per line)"
+"\n"
+"seperated by \n"
+"line breaks or\n"
+"semicolons (\";\")"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:36
+#: ../data/ui/edit.ui.h:39
 msgid "MIME types"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:37
+#: ../data/ui/edit.ui.h:40
 msgid ""
 "Keywords:\n"
 "(one per line)"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:39
+#: ../data/ui/edit.ui.h:42
 msgid "Keywords"
 msgstr ""
 
