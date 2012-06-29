@@ -1,3 +1,9 @@
+arronax (0.03) precise; urgency=low
+
+  * added drag&drop support
+
+ -- Florian Diesch <devel@florian-diesch.de>  Sat, 30 Jun 2012 00:08:26 +0200
+
 arronax (0.02ubuntu1) precise; urgency=low
 
   * fixed version number

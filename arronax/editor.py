@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 #-*- coding: utf-8-*-
 
-from gi.repository import Gtk, GdkPixbuf, GLib
-import os, os.path, time, sys
+from gi.repository import Gtk, Gdk, GdkPixbuf, GLib
+import os, os.path, time, sys, urllib, urlparse
 from gettext import gettext as _
 import gettext
 
@@ -32,6 +32,8 @@ class Editor(object):
         self.builder.connect_signals(self)
         
         self.win = self.obj('window1')
+        self.win.drag_dest_set(Gtk.DestDefaults.ALL, [],  Gdk.DragAction.COPY)
+        self.win.drag_dest_add_uri_targets()
 
         self.clip = clipboard.ContainerClipboard(self.obj('box_main'))
         self.clip.add_actions(cut=self.obj('ac_cut'),
@@ -284,7 +286,18 @@ class Editor(object):
 
     def on_window1_delete_event(self, *args):
         self.quit()
-        
+
+    def on_window1_drag_data_received(self, widget, drag_context, x, y, data,
+                                      info, time):
+        uris = data.get_uris()
+        if info == 0 and len(uris) > 0:
+            uris = data.get_uris()
+            uri = urlparse.urlparse(uris[0])
+            if uri.scheme == 'file':
+                filename = urllib.url2pathname(uri.path)
+                self.check_dirty()
+                self.read_desktop_file(filename)
+
 
 ###############
 ## buttons
