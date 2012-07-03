@@ -5,7 +5,7 @@ statusbar = None
 
 class Status(object):
 
-    def __init__(self, msg, end_msg=None, delay=3000):
+    def __init__(self, msg=None, end_msg=None, delay=3000):
         self.msg = msg
         self.end_msg = end_msg
         self.delay = delay
@@ -16,7 +16,8 @@ class Status(object):
         self.end_msg = msg
         
     def __enter__(self):
-        statusbar.push(self.context, self.msg)
+        if self.msg is not None:
+            statusbar.push(self.context, self.msg)
         return self
 
     def __exit__(self, *args):
