@@ -1,4 +1,4 @@
-# Russian translation for arronax
+# Galician translation for arronax
 # Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
 # This file is distributed under the same license as the arronax package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
@@ -6,169 +6,167 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-06-30 01:49+0200\n"
-"PO-Revision-Date: 2012-06-13 18:43+0000\n"
-"Last-Translator: Eugene Marshal <Unknown>\n"
-"Language-Team: Russian <ru@li.org>\n"
+"PO-Revision-Date: 2012-06-20 23:33+0000\n"
+"Last-Translator: oterobueu <oterobueu@gmail.com>\n"
+"Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2012-07-03 17:44+0000\n"
 "X-Generator: Launchpad (build 15531)\n"
-"Language: ru\n"
 
 #: ../arronax/editor.py:91
 #, python-format
 msgid "Loading file '%s' ..."
-msgstr "Загружается файл «%s» ..."
+msgstr "Cargando arquivo '%s' ..."
 
 #: ../arronax/editor.py:92
 #, python-format
 msgid "Loaded file '%s' ..."
-msgstr "Загружен файл «%s» ..."
+msgstr "Arquivo cargado '%s' ..."
 
 #: ../arronax/editor.py:96
 msgid "Can not load starter"
-msgstr "Невозможно загрузить ярлык запуска"
+msgstr "Non se pode cargar o lanzador"
 
 #: ../arronax/editor.py:97
 msgid "File not loaded."
-msgstr "Файл не загружен."
+msgstr "Arquivo non cargado"
 
 #: ../arronax/editor.py:135 ../arronax/editor.py:137
 msgid "You need to provide a title."
-msgstr "Вам необходимо ввести название."
+msgstr "Necesitas propocionar un título"
 
 #: ../arronax/editor.py:141 ../arronax/editor.py:143
 msgid "You need to provide a command."
-msgstr "Нужно указать команду."
+msgstr "Necesitas proporcionar un comando"
 
 #: ../arronax/editor.py:151
 msgid "Save now?"
-msgstr "Сохранить сейчас?"
+msgstr "¿Gardar agora?"
 
 #: ../arronax/editor.py:152
 msgid "You have unsaved changes.  Do you want to save them now?"
-msgstr "Имеются несохранённые изменения. Сохранить их сейчас?"
+msgstr "Hai cambios que non foron gardados. ¿Queres gardalos agora?"
 
 #: ../arronax/editor.py:171 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
-msgstr "Выберите значок"
+msgstr "Escoller unha icona"
 
 #: ../arronax/editor.py:220
 msgid "Error"
-msgstr "Oшибка"
+msgstr "Erro"
 
 #: ../arronax/editor.py:224
 msgid "Saving file ..."
-msgstr "Сохранение файла ..."
+msgstr "Gardando ficheiro ..."
 
 #: ../arronax/editor.py:225
 msgid "File saved."
-msgstr "Файл сохранён."
+msgstr "Ficheiro gardado."
 
 #: ../arronax/editor.py:227
 #, python-format
 msgid "Saving file '%s'..."
-msgstr "Сохранение файла '%s'..."
+msgstr "Gardando ficheiro '%s' ..."
 
 #: ../arronax/editor.py:228 ../arronax/editor.py:248
 #, python-format
 msgid "Saved file '%s'."
-msgstr "Сохранённый файл '%s'."
+msgstr "Ficheiro gardado '%s' ..."
 
 #: ../arronax/editor.py:244 ../arronax/editor.py:254
 msgid "File not saved."
-msgstr "Файл не сохранён."
+msgstr "Ficheiro non gardado."
 
 #: ../arronax/editor.py:253
 msgid "Can not save starter"
-msgstr "Невозможно сохранить ярлык запуска"
+msgstr "Non se pode gardar o lanzador"
 
 #: ../arronax/about.py:18
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Aleksey Kabanov https://launchpad.net/~ak099\n"
-"  Eugene Marshal https://launchpad.net/~lowrider\n"
-"  Florian Diesch https://launchpad.net/~diesch"
+"  oterobueu https://launchpad.net/~oterobueu"
 
 #: ../arronax/desktopfile.py:34
 msgid "Arronax doesn't support this kind of starter yet"
-msgstr "Arronax не поддерживает этот тип ярлыков запуска"
+msgstr "Arronax todavía non soporta este tipo de lanzadores"
 
 #: ../nautilus/nautilus-arronax.py:22 ../nautilus/nautilus-arronax.py:28
 msgid "Create starter for this file"
-msgstr "Создать ярлык запуска для этого файла"
+msgstr "Crear lanzador para este ficheiro"
 
 #: ../nautilus/nautilus-arronax.py:34
 msgid "Modify this starter"
-msgstr "Свойства ярлыка запуска"
+msgstr "Modificar este lanzador"
 
 #: ../nautilus/nautilus-arronax.py:40
 msgid "Create starter"
-msgstr "Создать ярлык запуска"
+msgstr "Crear lanzador"
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
-msgstr "Показать информацию об Arronax"
+msgstr "Amosar información acerca de Arronax"
 
 #: ../data/ui/edit.ui.h:3
 msgid "Select an icon for this starter"
-msgstr "Выберите значок для этого ярлыка запуска"
+msgstr "Selecciona unha icona para este lanzador"
 
 #: ../data/ui/edit.ui.h:4
 msgid "Create a new application starter"
-msgstr "Создать новый ярлык запуска приложения"
+msgstr "Crear un lanzador para unha nova aplicación"
 
 #: ../data/ui/edit.ui.h:5
 msgid "Open a application starter"
-msgstr "Открыть ярлык запуска приложения"
+msgstr "Abrir un lanzador de aplicación"
 
 #: ../data/ui/edit.ui.h:6
 msgid "Quit Arronax"
-msgstr "Выйти из Arronax"
+msgstr "Sair de Aarronax"
 
 #: ../data/ui/edit.ui.h:7
 msgid "Save to application starter"
-msgstr "Сохранить в ярлык запуска приложения"
+msgstr "Gardar lanzador de aplicación"
 
 #: ../data/ui/edit.ui.h:8
 msgid "Save as another application starter"
-msgstr "Сохранить как ярлык запуска другого приложения"
+msgstr "Gardar como outro lanzador de aplicación"
 
 #: ../data/ui/edit.ui.h:9
 msgid "Select Program"
-msgstr "Выберите программу"
+msgstr "Seleccione programa"
 
 #: ../data/ui/edit.ui.h:10
 msgid "Open File"
-msgstr "Открыть файл"
+msgstr "Abrir ficheiro"
 
 #: ../data/ui/edit.ui.h:11
 msgid "Desktop"
-msgstr "Рабочий стол"
+msgstr "Escritorio"
 
 #: ../data/ui/edit.ui.h:12
 msgid "Go to the Desktop folder"
-msgstr "Перейти в папку рабочего стола"
+msgstr "Ir á carpeta de Escritorio"
 
 #: ../data/ui/edit.ui.h:13
 msgid "User App Folder"
-msgstr "Папка приложений пользователя"
+msgstr "Carpeta de aplicacións do usuario"
 
 #: ../data/ui/edit.ui.h:14
 msgid "Go to the folder that contains user specific application starters"
-msgstr "Перейти в папку содержащую особые ярлыки запуска приложений"
+msgstr ""
+"Ir ó directorio que contén os lanzadores de aplicación específicos do usuario"
 
 #: ../data/ui/edit.ui.h:15
 msgid "Select File Name"
-msgstr "Выберите имя файла"
+msgstr "Seleccione nome de ficheiro"
 
 #: ../data/ui/edit.ui.h:16
 msgid "Select Folder"
-msgstr "Выберите папку"
+msgstr "Seleccionar cartafol"
 
 #: ../data/ui/edit.ui.h:17 ../data/desktop/arronax.desktop.in.h:1
 msgid "Arronax"
@@ -176,67 +174,67 @@ msgstr "Arronax"
 
 #: ../data/ui/edit.ui.h:18
 msgid "_File"
-msgstr "_Файл"
+msgstr "_Ficheiro"
 
 #: ../data/ui/edit.ui.h:19
 msgid "_Edit"
-msgstr "_Правка"
+msgstr "_Editar"
 
 #: ../data/ui/edit.ui.h:20
 msgid "_Help"
-msgstr "_Справка"
+msgstr "_Axuda"
 
 #: ../data/ui/edit.ui.h:21
 msgid "toolbutton1"
-msgstr "toolbutton1"
+msgstr "botón1"
 
 #: ../data/ui/edit.ui.h:22
 msgid "Save current application starter"
-msgstr "Сохранить текущий ярлык запуска приложения"
+msgstr "Gardar lanzador de aplicación actual"
 
 #: ../data/ui/edit.ui.h:23
 msgid "Title:"
-msgstr "Название"
+msgstr "Título:"
 
 #: ../data/ui/edit.ui.h:24
 msgid "Command:"
-msgstr "Команда:"
+msgstr "Comando:"
 
 #: ../data/ui/edit.ui.h:25
 msgid "Select..."
-msgstr "Обзор..."
+msgstr "Escoller..."
 
 #: ../data/ui/edit.ui.h:26
 msgid "Start in folder:"
-msgstr "Запустить в папке:"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:27
 msgid "Run in Terminal:"
-msgstr "Запустить в терминале:"
+msgstr "Executar nun Terminal:"
 
 #: ../data/ui/edit.ui.h:28
 msgid "Comment:"
-msgstr "Описание:"
+msgstr "Comentario:"
 
 #: ../data/ui/edit.ui.h:29
 msgid "Basic"
-msgstr "Базовый"
+msgstr "Básico"
 
 #: ../data/ui/edit.ui.h:30
 msgid "Hidden:"
-msgstr "Скрытый:"
+msgstr "Agochado"
 
 #: ../data/ui/edit.ui.h:31
 msgid "Window Class:"
-msgstr "Класс окна:"
+msgstr "Clase Ventana:"
 
 #: ../data/ui/edit.ui.h:32
 msgid "Categories:"
-msgstr "Категории:"
+msgstr "Categorías:"
 
 #: ../data/ui/edit.ui.h:33
 msgid "Advanced"
-msgstr "Дополнительно"
+msgstr "Avanzado"
 
 #: ../data/ui/edit.ui.h:34
 msgid ""
@@ -249,20 +247,18 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:39
 msgid "MIME types"
-msgstr "MIME-типы"
+msgstr "tipos MIME"
 
 #: ../data/ui/edit.ui.h:40
 msgid ""
 "Keywords:\n"
 "(one per line)"
-msgstr ""
-"Ключевые слова:\n"
-"(по одному в каждой строке)"
+msgstr "Palabras Clave:"
 
 #: ../data/ui/edit.ui.h:42
 msgid "Keywords"
-msgstr "Ключевые слова"
+msgstr "Palabras clave"
 
 #: ../data/desktop/arronax.desktop.in.h:2
 msgid "Create and edit application starters"
-msgstr "Создание и изменение ярлыков запуска приложений"
+msgstr "Crear e editar lanzadores de aplicacion"
