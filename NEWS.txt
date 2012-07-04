@@ -1,3 +1,26 @@
+
+
+=======
+Changes
+=======
+
+0.03 (2012-07-04)
+=================
+
+* added drag & drop support
+* dropped dependency xdgapp as that is not available in Debian
+* added Galician translations
+
+
+0.02 (2012-06-15
+================
+
+* fixed a bug that could cause Nautilus to crash or hang 
+  when started with gksu
+* added support for 'Keywords' field
+* added Chinese (Simplified) and Spanish translations
+* some GUI changes
+
 ===================
  0.01 (2012-06-04)
 ===================
