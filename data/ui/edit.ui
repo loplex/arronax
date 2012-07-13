@@ -1138,6 +1138,7 @@ semicolons (";")</property>
                             <property name="can_focus">True</property>
                             <property name="hexpand">True</property>
                             <property name="vexpand">True</property>
+                            <signal name="drag-data-received" handler="on_tview_advanced_mime_types_drag_data_received" swapped="no"/>
                           </object>
                         </child>
                       </object>

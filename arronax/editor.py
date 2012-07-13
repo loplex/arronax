@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #-*- coding: utf-8-*-
 
-from gi.repository import Gtk, Gdk, GdkPixbuf, GLib
+from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio
 import os, os.path, time, sys, urllib, urlparse
 from gettext import gettext as _
 import gettext
@@ -32,8 +32,15 @@ class Editor(object):
         self.builder.connect_signals(self)
         
         self.win = self.obj('window1')
-        self.win.drag_dest_set(Gtk.DestDefaults.ALL, [],  Gdk.DragAction.COPY)
+        self.win.drag_dest_set(Gtk.DestDefaults.ALL, [],  
+                               Gdk.DragAction.COPY)
         self.win.drag_dest_add_uri_targets()
+
+
+        self.tview_mime = self.obj('tview_advanced_mime_types')
+        self.tview_mime.drag_dest_set(Gtk.DestDefaults.ALL, [],  
+                                      Gdk.DragAction.COPY)
+        self.tview_mime.drag_dest_add_uri_targets()
 
         self.clip = clipboard.ContainerClipboard(self.obj('box_main'))
         self.clip.add_actions(cut=self.obj('ac_cut'),
@@ -298,6 +305,27 @@ class Editor(object):
                 self.check_dirty()
                 self.read_desktop_file(filename)
 
+    def on_tview_advanced_mime_types_drag_data_received(self, widget, 
+                                                       drag_context, x, y, data,
+                                                       info, time):
+        mime_types = set()
+        uris = data.get_uris()
+        for uri in uris:
+            try:
+                gfile = Gio.File.new_for_uri(uri)
+                info = gfile.query_info("standard::*", 
+                                        Gio.FileQueryInfoFlags.NONE, None)
+                mime_types.add(info.get_content_type())
+            except GLib.GError as e:
+                print e
+        tview = self.factory.get('tview_advanced_mime_types')
+        data = tview.get_data()
+        current = [x for x in data.splitlines() if x.strip() != '']
+        mime_types.update(current)
+        tview.set_data('\n'.join(sorted(mime_types)))
+
+            
+        
 
 ###############
 ## buttons
