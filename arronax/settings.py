@@ -16,6 +16,8 @@ UI_DIR = os.path.join(DATA_DIR, 'ui')
 USER_APPLICATIONS_DIR = os.path.join(xdg.BaseDirectory.xdg_data_home, 
                                      'applications/')
 
+SYS_APPLICATIONS_DIR = '/usr/share/applications/'
+
 USER_DESKTOP_DIR = xdgpath.get_user_dir( 'desktop', '~/Desktop' )
 
 DEFAULT_ICON = '/usr/share/icons/hicolor/scalable/apps/nautilus.svg'

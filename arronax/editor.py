@@ -447,7 +447,7 @@ class Editor(object):
             except Exception, e:
                 print e
                 return
-        dialog.set_current_folder(settings.USER_APPLICATIONS_DIR)
+        dialog.set_current_folder(dir)
 
     def on_bt_filename_dlg_desktop_clicked(self, *args):
         dialog = self.obj('dlg_save')
@@ -468,6 +468,11 @@ class Editor(object):
                 return
         dialog.set_current_folder(settings.USER_APPLICATIONS_DIR)
         
+    def on_bt_dlg_open_system_app_clicked(self, *args):      
+        dialog = self.obj('dlg_open')
+        dir = settings.SYS_APPLICATIONS_DIR
+        dialog.set_current_folder(dir)
+
 
      
     def on_bt_icon_drag_data_received(self, widget, drag_context, x, y, data,
