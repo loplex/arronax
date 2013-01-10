@@ -3,9 +3,11 @@ from gi.repository import Gtk, GdkPixbuf, GLib
 
 statusbar = None
 
+DELAY = 3000
+
 class Status(object):
 
-    def __init__(self, msg=None, end_msg=None, delay=3000):
+    def __init__(self, msg=None, end_msg=None, delay=DELAY):
         self.msg = msg
         self.end_msg = end_msg
         self.delay = delay
@@ -28,6 +30,14 @@ class Status(object):
                          lambda *args: statusbar.pop(self.context))
 
             
+
+def show_msg(msg, delay=DELAY):
+    context = statusbar.get_context_id('')
+    if msg is not None:
+        statusbar.push(context, msg)
+        GLib.timeout_add(delay, 
+                         lambda *args: statusbar.pop(context))
+
 
 
 def init(widget):

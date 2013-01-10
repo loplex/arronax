@@ -9,6 +9,8 @@ import os, os.path, stat
 
 import dialogs
 
+FIELD_NOT_USED=object()
+
 class KeyNotSetException(Exception):
     pass
 
@@ -22,6 +24,10 @@ class DesktopFile(object):
 
 
     def load(self, path):
+        self.path = path
+        self.group = 'Desktop Entry'
+        self['Version'] = '1.0'
+
         if path is not None:
             try:
                 self.keyfile.load_from_file(path,
@@ -30,12 +36,10 @@ class DesktopFile(object):
             except Exception, e:
                 return str(e)
                 
-        if self['Type'] not in ('', 'Application'):
+        if self['Type'] not in ('', 'Application', 'Link'):
             return _("Arronax doesn't support this kind of starter yet")
-        self.path = path
-        self.group = 'Desktop Entry'
-        self['Type'] = 'Application'
-        self['Version'] = '1.0'
+        if self['Type'] == '':   ## Do we really need this?
+            self['Type'] = 'Application'
         return None
 
 
@@ -59,7 +63,7 @@ class DesktopFile(object):
         
 
     def set_to_key(self, key, value):
-        if value == '':
+        if value in ('', FIELD_NOT_USED):
             self.keyfile.remove_key(self.group, key)
         else:
             if self.types.get(key, str) == bool:
@@ -70,9 +74,12 @@ class DesktopFile(object):
 
 
  
-    def save(self, path):
-  
+    def save(self, path): 
         content = self.keyfile.to_data()[0]
+        try:
+            os.rename(path, '%s~' % path)
+        except Exception, e:
+            print e
         try:
             with open(path, 'w') as _file:
                 _file.write(content)

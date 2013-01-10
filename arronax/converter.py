@@ -53,6 +53,9 @@ class Converter(object):
     def rev_convert(self, value):
         return value
 
+    def is_equal(self, a, b):
+        return a == b
+
 class FloatConverter(Converter):
 
     def __init__(self, factor=1.0, offset=0.0):
@@ -78,7 +81,7 @@ class IntConverter(Converter):
     def rev_convert(self, value):
         return (value - self.offset) / (self.factor * 1.0)
 
-class DictConverter(object):
+class DictConverter(Converter):
     def __init__(self, adict):
         self.dict = adict
         self.rev_dict = dict((v, k) for k,v in adict.iteritems())
@@ -89,9 +92,33 @@ class DictConverter(object):
     def rev_convert(self, value):
         return self.rev_dict.get(value, value)
 
-class ListConverter(object):
+class ListConverter(Converter):
     def convert(self, value):        
         return ';'.join([x for x in value.splitlines() if x.strip() != ''])
 
     def rev_convert(self, value):
         return "\n".join(value.split(';'))
+
+    def is_equal(self, a, b):
+        a = a.strip(';\n \t')
+        b = b.strip(';\n \t')      
+        return self.rev_convert(a) == self.rev_convert(b)
+
+
+class OneLineListConverter(ListConverter):
+
+
+    def __init__(self, sep=';', sep_at_end=True):
+        ListConverter.__init__(self)
+        self.sep = sep
+        self.sep_at_end = sep_at_end
+
+    def rev_convert(self, value): 
+        return [i.strip() for i in value.split(self.sep) if  i.strip() != '']
+
+    def convert(self, value):
+        v = self.sep.join(i.strip() for i  in value if  i.strip() != '')
+        if self.sep_at_end and v != '':
+            v = v+';'
+        return v
+

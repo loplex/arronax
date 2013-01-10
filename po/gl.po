@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-04 14:18+0200\n"
+"POT-Creation-Date: 2012-09-25 20:36+0200\n"
 "PO-Revision-Date: 2012-06-20 23:33+0000\n"
 "Last-Translator: oterobueu <oterobueu@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
@@ -18,71 +18,71 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-07-03 17:44+0000\n"
 "X-Generator: Launchpad (build 15531)\n"
 
-#: ../arronax/editor.py:91
+#: ../arronax/editor.py:98
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Cargando arquivo '%s' ..."
 
-#: ../arronax/editor.py:92
+#: ../arronax/editor.py:99
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Arquivo cargado '%s' ..."
 
-#: ../arronax/editor.py:96
+#: ../arronax/editor.py:103
 msgid "Can not load starter"
 msgstr "Non se pode cargar o lanzador"
 
-#: ../arronax/editor.py:97
+#: ../arronax/editor.py:104
 msgid "File not loaded."
 msgstr "Arquivo non cargado"
 
-#: ../arronax/editor.py:135 ../arronax/editor.py:137
+#: ../arronax/editor.py:142 ../arronax/editor.py:144
 msgid "You need to provide a title."
 msgstr "Necesitas propocionar un título"
 
-#: ../arronax/editor.py:141 ../arronax/editor.py:143
+#: ../arronax/editor.py:148 ../arronax/editor.py:150
 msgid "You need to provide a command."
 msgstr "Necesitas proporcionar un comando"
 
-#: ../arronax/editor.py:151
+#: ../arronax/editor.py:158
 msgid "Save now?"
 msgstr "¿Gardar agora?"
 
-#: ../arronax/editor.py:152
+#: ../arronax/editor.py:159
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr "Hai cambios que non foron gardados. ¿Queres gardalos agora?"
 
-#: ../arronax/editor.py:171 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:178 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Escoller unha icona"
 
-#: ../arronax/editor.py:220
+#: ../arronax/editor.py:227
 msgid "Error"
 msgstr "Erro"
 
-#: ../arronax/editor.py:224
+#: ../arronax/editor.py:231
 msgid "Saving file ..."
 msgstr "Gardando ficheiro ..."
 
-#: ../arronax/editor.py:225
+#: ../arronax/editor.py:232
 msgid "File saved."
 msgstr "Ficheiro gardado."
 
-#: ../arronax/editor.py:227
+#: ../arronax/editor.py:234
 #, python-format
 msgid "Saving file '%s'..."
 msgstr "Gardando ficheiro '%s' ..."
 
-#: ../arronax/editor.py:228 ../arronax/editor.py:248
+#: ../arronax/editor.py:235 ../arronax/editor.py:255
 #, python-format
 msgid "Saved file '%s'."
 msgstr "Ficheiro gardado '%s' ..."
 
-#: ../arronax/editor.py:244 ../arronax/editor.py:254
+#: ../arronax/editor.py:251 ../arronax/editor.py:261
 msgid "File not saved."
 msgstr "Ficheiro non gardado."
 
-#: ../arronax/editor.py:253
+#: ../arronax/editor.py:260
 msgid "Can not save starter"
 msgstr "Non se pode gardar o lanzador"
 

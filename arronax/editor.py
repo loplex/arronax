@@ -17,10 +17,12 @@ MODE_CREATE_FOR = 'create for'
 MODE_CREATE_IN = 'create_in'
 MODE_OPEN = 'open'
 
+TYPE_APPLICATION = 0
+TYPE_LINK = 1
 
 class Editor(object):
 
-    def __init__(self, path, mode):
+    def __init__(self, path, mode, type=TYPE_APPLICATION):
         self.builder = Gtk.Builder()
         self.builder.set_translation_domain(settings.GETTEXT_DOMAIN)
         gettext.bindtextdomain(settings.GETTEXT_DOMAIN)
@@ -36,6 +38,11 @@ class Editor(object):
                                Gdk.DragAction.COPY)
         self.win.drag_dest_add_uri_targets()
 
+
+        bt_icon = self.obj('bt_icon')
+        bt_icon.drag_dest_set(Gtk.DestDefaults.ALL, [],  
+                               Gdk.DragAction.COPY)
+        bt_icon.drag_dest_add_uri_targets()
 
         self.tview_mime = self.obj('tview_advanced_mime_types')
         self.tview_mime.drag_dest_set(Gtk.DestDefaults.ALL, [],  
@@ -54,13 +61,32 @@ class Editor(object):
         statusbar.init(self.obj('statusbar'))
 
         self.conn = connection.ConnectionGroup(self.dfile)
+
+        self.conn.add('Type', self.factory.get('cbox_type'),
+                      converter=converter.DictConverter({0: 'Application',
+                                                         1: 'Link'})
+                      )
+ 
         self.conn.add('Name', self.factory.get('e_title'))
         self.conn.add('Comment', self.factory.get('e_comment'))
-        self.conn.add('Exec', self.factory.get('e_command'))
+        self.conn.add('Exec', self.factory.get('e_command'), 
+                      tags=['application'], 
+                      related=(self.factory.get('l_command'),
+                               self.factory.get('bt_command')
+                               )
+                      )
+        self.conn.add('URL', self.factory.get('e_uri'), 
+                      tags=['link'], 
+                      related=(self.factory.get('l_uri'),
+                               self.factory.get('bt_uri')
+                               )
+                      )
         self.conn.add('Hidden', self.factory.get('sw_advanced_hidden'),
-                      type=bool)
+                      type=bool, tags=['application'], 
+                      related=self.factory.get('l_advanced_hidden'))
         self.conn.add('Terminal', self.factory.get('sw_run_in_terminal'),
-                      type=bool)
+                      type=bool, tags=['application'],
+                      related=self.factory.get('l_run_in_terminal'))
         self.conn.add('Icon', self.factory.get(
                 'img_icon',
                 defaulter=widgets.StringDefaulter(settings.DEFAULT_ICON)),
@@ -68,15 +94,58 @@ class Editor(object):
         self.conn.add('Keywords', self.factory.get('tview_keywords'),
                       converter=converter.ListConverter()
                       )
-        self.conn.add('Path', self.factory.get('e_working_dir'))
+        self.conn.add('Path', self.factory.get('e_working_dir'), 
+                      tags=['application'],
+                      related=(self.factory.get('l_working_dir'),
+                               self.factory.get('bt_working_dir')
+                               )
+                      )
         self.conn.add('Categories', self.factory.get('e_advanced_categories'))
-        self.conn.add('StartupWMClass', self.factory.get('e_advanced_wm_class'))
+        self.conn.add('StartupWMClass', self.factory.get('e_advanced_wm_class'),
+                      tags=['application'],
+                      related=self.factory.get('l_advanced_wm_class'))
 
         self.conn.add('MimeType', 
                       self.factory.get('tview_advanced_mime_types'),
-                      converter=converter.ListConverter()
+                      converter=converter.ListConverter(),
+                      tags=['application']
                       )
+        self.conn.add_no_data(self.factory.get('notebook', 
+                                               klass=widgets.NotebookPageWidget,
+                                               page_num=3),
+                              tags=['application']
+                              )
+        self.conn.add('OnlyShowIn',
+                      self.factory.get('tview_advanced_show_in',
+                                       klass=widgets.SelectionListWidget,
+                                       items={'GNOME': _('GNOME'),
+                                              'KDE': _('KDE'), 
+                                              'LXDE': _('LXDE'),
+                                              'MATE': _('MATE'),
+                                              'Razor': _('Razor-qt'),
+                                              'ROX': _('ROX'),
+                                              'TDE': _('Trinity Desktop'),
+                                              'Unity': _('Unity'), 
+                                              'XFCE': _('XFCE'),
+                                              'Old': _('Legacy environments'),
+                                              },
+                                       ),
+                      converter=converter.OneLineListConverter(),
+                      )
+                      
         self.conn.clear(store=True)
+
+        self.type_watcher = widgets.get_watcher(
+            self.factory.get('cbox_type'),
+            connection_groups=[self.conn],
+            tags={'application': lambda x: x == 0,
+                  'link': lambda x: x == 1
+                  }
+            )
+
+        ## make sure the type is changed so we get the signal
+        self.factory.get('cbox_type').set_data(-1) 
+        self.factory.get('cbox_type').set_data(type)
 
         if mode is MODE_EDIT:
             self.read_desktop_file(path)
@@ -139,15 +208,25 @@ class Editor(object):
         msg=''
         try:
             if self.dfile['Name'] == '':
-                msg = '%s\n%s' % (msg, _("You need to provide a title."))
+                raise desktopfile.KeyNotSetException()
         except desktopfile.KeyNotSetException:
             msg = '%s\n%s' % (msg, _("You need to provide a title."))
         
         try:    
-            if self.dfile['Exec'] == '':
-                msg = '%s\n%s' % (msg, _("You need to provide a command."))
+            if (self.dfile['Type'] == 'Application' and 
+                self.dfile['Exec'] == ''):
+                raise desktopfile.KeyNotSetException()  
         except desktopfile.KeyNotSetException:
             msg = '%s\n%s' % (msg, _("You need to provide a command."))
+
+        try:    
+            if (self.dfile['Type'] == 'Link' and 
+                self.dfile['URL'] == ''):
+                raise desktopfile.KeyNotSetException()  
+        except desktopfile.KeyNotSetException:
+            msg = '%s\n%s' % (msg, _("You need to provide a URL or file name."))
+
+        
         return msg
 
         
@@ -212,9 +291,12 @@ class Editor(object):
         
         self.set_icon(path)
 
-    def set_icon(self, path):
-        settings.LAST_ICON = path        
-        self.factory.get('img_icon').set_data(path)
+    def set_icon(self, path):             
+        msg = self.factory.get('img_icon').set_data(path)
+        if msg is not None:
+            statusbar.show_msg(msg)
+        else:
+            settings.LAST_ICON = path
 
     def about(self):
         about.show_about_dialog()
@@ -305,6 +387,7 @@ class Editor(object):
                 self.check_dirty()
                 self.read_desktop_file(filename)
 
+
     def on_tview_advanced_mime_types_drag_data_received(self, widget, 
                                                        drag_context, x, y, data,
                                                        info, time):
@@ -330,6 +413,7 @@ class Editor(object):
 ###############
 ## buttons
 
+
     def on_bt_working_dir_clicked(self, *args):
         default =  self.obj('e_working_dir').get_text()
         if default =='':  
@@ -349,6 +433,10 @@ class Editor(object):
         if path is not None:
             self.obj('e_command').set_text(path) 
 
+    def on_bt_uri_clicked(self, *args):
+        path = self.ask_for_filename('dlg_command', False)
+        if path is not None:
+            self.obj('e_uri').set_text(path) 
 
     def on_bt_filename_dlg_user_app_clicked(self, *args):
         dialog = self.obj('dlg_save')
@@ -382,6 +470,24 @@ class Editor(object):
         
 
      
+    def on_bt_icon_drag_data_received(self, widget, drag_context, x, y, data,
+                                      info, time):
+        uris = data.get_uris()
+        if info == 0 and len(uris) > 0:
+            uri = data.get_uris()[0]
+            gfile = Gio.File.new_for_uri(uri)
+            path = gfile.get_path()
+            if path is None:
+               statusbar.show_msg(_('This is not a local file. Icon not changed.'))
+               return
+            info = gfile.query_info("standard::*", 
+                                    Gio.FileQueryInfoFlags.NONE, None)
+            mime = info.get_content_type()
+            if not mime.startswith('image/'):
+                statusbar.show_msg(_('This is not an image. Icon not changed.'))
+                return
+            self.set_icon(path)
+
 
 
 ###############
@@ -410,6 +516,7 @@ class Editor(object):
             self.read_desktop_file(filename)
 
     def on_ac_new_activate(self, action, *args):
+        statusbar.show_msg(_('Created new starter.'))
         self.check_dirty()
         self.filename = None
         self.conn.clear(True)
@@ -426,7 +533,11 @@ def main():
             if os.path.splitext(path)[1] == '.desktop':                
                 editor = Editor(path=path, mode=MODE_EDIT)
             else:
-                editor = Editor(path=path, mode=MODE_OPEN)
+                if os.access(path, os.X_OK):
+                    type=TYPE_APPLICATION
+                else:
+                    type=TYPE_LINK
+                editor = Editor(path=path, mode=MODE_OPEN, type=type) 
         elif os.path.isdir(path):
             editor = Editor(path=path, mode=MODE_CREATE_IN)
         else:

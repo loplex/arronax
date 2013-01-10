@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-04 14:18+0200\n"
+"POT-Creation-Date: 2012-09-25 20:36+0200\n"
 "PO-Revision-Date: 2012-06-13 18:43+0000\n"
 "Last-Translator: Eugene Marshal <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -18,71 +18,71 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-07-03 17:44+0000\n"
 "X-Generator: Launchpad (build 15531)\n"
 
-#: ../arronax/editor.py:91
+#: ../arronax/editor.py:98
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Загружается файл «%s» ..."
 
-#: ../arronax/editor.py:92
+#: ../arronax/editor.py:99
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Загружен файл «%s» ..."
 
-#: ../arronax/editor.py:96
+#: ../arronax/editor.py:103
 msgid "Can not load starter"
 msgstr "Невозможно загрузить ярлык запуска"
 
-#: ../arronax/editor.py:97
+#: ../arronax/editor.py:104
 msgid "File not loaded."
 msgstr "Файл не загружен."
 
-#: ../arronax/editor.py:135 ../arronax/editor.py:137
+#: ../arronax/editor.py:142 ../arronax/editor.py:144
 msgid "You need to provide a title."
 msgstr "Вам необходимо ввести название."
 
-#: ../arronax/editor.py:141 ../arronax/editor.py:143
+#: ../arronax/editor.py:148 ../arronax/editor.py:150
 msgid "You need to provide a command."
 msgstr "Нужно указать команду."
 
-#: ../arronax/editor.py:151
+#: ../arronax/editor.py:158
 msgid "Save now?"
 msgstr "Сохранить сейчас?"
 
-#: ../arronax/editor.py:152
+#: ../arronax/editor.py:159
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr "Имеются несохранённые изменения. Сохранить их сейчас?"
 
-#: ../arronax/editor.py:171 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:178 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Выберите значок"
 
-#: ../arronax/editor.py:220
+#: ../arronax/editor.py:227
 msgid "Error"
 msgstr "Oшибка"
 
-#: ../arronax/editor.py:224
+#: ../arronax/editor.py:231
 msgid "Saving file ..."
 msgstr "Сохранение файла ..."
 
-#: ../arronax/editor.py:225
+#: ../arronax/editor.py:232
 msgid "File saved."
 msgstr "Файл сохранён."
 
-#: ../arronax/editor.py:227
+#: ../arronax/editor.py:234
 #, python-format
 msgid "Saving file '%s'..."
 msgstr "Сохранение файла '%s'..."
 
-#: ../arronax/editor.py:228 ../arronax/editor.py:248
+#: ../arronax/editor.py:235 ../arronax/editor.py:255
 #, python-format
 msgid "Saved file '%s'."
 msgstr "Сохранённый файл '%s'."
 
-#: ../arronax/editor.py:244 ../arronax/editor.py:254
+#: ../arronax/editor.py:251 ../arronax/editor.py:261
 msgid "File not saved."
 msgstr "Файл не сохранён."
 
-#: ../arronax/editor.py:253
+#: ../arronax/editor.py:260
 msgid "Can not save starter"
 msgstr "Невозможно сохранить ярлык запуска"
 
