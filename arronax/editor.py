@@ -7,7 +7,7 @@ from gettext import gettext as _
 import gettext
 
 import settings, connection, desktopfile, widgets, clipboard, about, dialogs
-import converter, statusbar
+import converter, statusbar, filechooser
 
 IS_STANDALONE = False
 
@@ -343,23 +343,38 @@ class Editor(object):
                 status.set_end_msg(_("File not saved."))
 
                            
-    def ask_for_filename(self, dlg, add_ext=False, default=None, action=None):
-        dialog = self.obj(dlg)
-        if action  is not None:
-            dialog.set_action(action)
+    def ask_for_filename(self, defname, add_ext=False, default=None):
+        dlgdef = settings.FILE_DLG_DEF[defname]
+        dialog = filechooser.create_dir_buttons_filechooser_dlg(
+            title=dlgdef['title'],
+            action=dlgdef['action'],
+            patterns=dlgdef.get('patterns', None),
+            mime_types=dlgdef.get('mime_types', None),
+            dir_buttons=dlgdef.get('buttons', None)
+            )
+
+        is_save_action = (dlgdef['action'] in 
+                          (Gtk.FileChooserAction.SAVE,
+                           Gtk.FileChooserAction.CREATE_FOLDER))
         if default is not None:
-            folder = os.path.dirname(default)
+            if os.path.isdir(default) or default=='':
+                folder = default
+            else:
+                folder = os.path.dirname(default)
             if folder == '':
-                folder = settings.USER_DESKTOP_DIR                
+                folder = settings.USER_DESKTOP_DIR   
             dialog.set_current_folder(folder)
 
             file = os.path.basename(default)
             if file != '':
-                dialog.set_current_name(file)
+                if is_save_action:
+                    dialog.set_current_name(file)
+                else:
+                    dialog.select_filename(default)
 
         response = dialog.run()
         path = dialog.get_filename()
-        dialog.hide()
+        dialog.destroy()
         if response != Gtk.ResponseType.OK:
             return
         if add_ext and not path.endswith('.desktop'):
@@ -429,49 +444,19 @@ class Editor(object):
             self.obj('e_working_dir').set_text(path)
 
     def on_bt_command_clicked(self, *args):
-        path = self.ask_for_filename('dlg_command', False)
+        cmd = self.obj('e_command').get_text()
+        path = self.ask_for_filename('dlg_command', False, default=cmd)
         if path is not None:
             self.obj('e_command').set_text(path) 
 
     def on_bt_uri_clicked(self, *args):
-        path = self.ask_for_filename('dlg_command', False)
+        uri = self.obj('e_uri').get_text()
+        if uri == '':
+            uri = None            
+        path = self.ask_for_filename('dlg_file', False, default=uri)
+        print 'PATH:', path
         if path is not None:
             self.obj('e_uri').set_text(path) 
-
-    def on_bt_filename_dlg_user_app_clicked(self, *args):
-        dialog = self.obj('dlg_save')
-        dir = settings.USER_APPLICATIONS_DIR
-        if not os.path.isdir(dir):
-            try:
-                os.makedirs(dir)
-            except Exception, e:
-                print e
-                return
-        dialog.set_current_folder(dir)
-
-    def on_bt_filename_dlg_desktop_clicked(self, *args):
-        dialog = self.obj('dlg_save')
-        dialog.set_current_folder(settings.USER_DESKTOP_DIR)
-        
-    def on_bt_dlg_open_desktop_clicked(self, *args):
-        dialog = self.obj('dlg_open')
-        dialog.set_current_folder(settings.USER_DESKTOP_DIR)
-
-    def on_bt_dlg_open_user_app_clicked(self, *args):
-        dialog = self.obj('dlg_open')
-        dir = settings.USER_APPLICATIONS_DIR
-        if not os.path.isdir(dir):
-            try:
-                os.makedirs(dir)
-            except Exception, e:
-                print e
-                return
-        dialog.set_current_folder(settings.USER_APPLICATIONS_DIR)
-        
-    def on_bt_dlg_open_system_app_clicked(self, *args):      
-        dialog = self.obj('dlg_open')
-        dir = settings.SYS_APPLICATIONS_DIR
-        dialog.set_current_folder(dir)
 
 
      

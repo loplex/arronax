@@ -69,7 +69,7 @@ class DesktopFile(object):
             if self.types.get(key, str) == bool:
                 self.keyfile.set_boolean(self.group, key, value)
             else:
-                self.keyfile.set_value(self.group, key, str(value))
+                self.keyfile.set_string(self.group, key, str(value))
                                 
 
 

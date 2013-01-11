@@ -1,6 +1,8 @@
 import os, os.path
 import xdgpath
 import xdg.BaseDirectory
+from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio
+from gettext import gettext as _
 
 APP_NAME = 'Arronax'
 APP_VERSION  = '0.03'
@@ -28,4 +30,31 @@ LAST_ICON = DEFAULT_ICON
 LAST_FILENAME = DEFAULT_FILENAME
 
 GETTEXT_DOMAIN='arronax'
+
+
+FILE_DLG_DEF = {
+    'dlg_open': {'title': _('Open File'),
+                 'action':  Gtk.FileChooserAction.OPEN,
+                 'patterns': ['*.desktop'],
+                 'buttons': [(_('Desktop'), USER_DESKTOP_DIR),
+                             (_('User App Folder'), USER_APPLICATIONS_DIR),
+                             (_('System App Folder'), SYS_APPLICATIONS_DIR),
+                             ],
+             },
+    'dlg_save': {'title': _('Save File'),
+             'action':  Gtk.FileChooserAction.SAVE,
+             'buttons': [(_('Desktop'), USER_DESKTOP_DIR),
+                         (_('User App Folder'), USER_APPLICATIONS_DIR),
+                         ],
+             },
+    'dlg_working_dir': {'title': _('Select Folder'),
+                     'action':  Gtk.FileChooserAction.SELECT_FOLDER,
+                    },
+    'dlg_command': {'title': _('Select Program'),
+                'action':  Gtk.FileChooserAction.OPEN,
+                },
+    'dlg_file': {'title': _('Select File'),
+             'action':  Gtk.FileChooserAction.OPEN,
+                },
+    }
 
