@@ -5,7 +5,7 @@ from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio
 from gettext import gettext as _
 
 APP_NAME = 'Arronax'
-APP_VERSION  = '0.03'
+APP_VERSION  = '0.04'
 
 if os.path.isfile('.is-devel-dir'):
     DATA_DIR = 'data'

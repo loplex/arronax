@@ -15,7 +15,6 @@ MODE_EDIT = 'edit'
 MODE_NEW = 'new'
 MODE_CREATE_FOR = 'create for'
 MODE_CREATE_IN = 'create_in'
-MODE_OPEN = 'open'
 
 TYPE_APPLICATION = 0
 TYPE_LINK = 1
@@ -153,10 +152,6 @@ class Editor(object):
             self.filename = None
             self.obj('e_command').set_text(path)
             self.create_title_from_command(path)
-        elif mode is MODE_OPEN:
-            self.filename = None
-            self.create_title_from_command(path)
-            self.obj('e_command').set_text("xdg-open '%s'" % path)
         else:
             self.filename = path
       
@@ -233,10 +228,11 @@ class Editor(object):
 
     def check_dirty(self):
         if self.conn.is_dirty():
-            answer = dialogs.yes_no_cancel_question(self.win,
-                                                    _('Save now?'),
-                                                    _('You have unsaved changes.  Do you want to save them now?')
-                                                    )
+            answer = dialogs.yes_no_cancel_question(
+                self.win,
+                _('Save now?'),
+                _('You have unsaved changes.  Do you want to save them now?')
+                )
             if answer == Gtk.ResponseType.YES:
                 self.save()
             elif answer == Gtk.ResponseType.CANCEL:
@@ -527,7 +523,8 @@ def main():
                     type=TYPE_APPLICATION
                 else:
                     type=TYPE_LINK
-                editor = Editor(path=path, mode=MODE_OPEN, type=type) 
+                editor = Editor(path=path, mode=MODE_CREATE_FOR, 
+                                type=type) 
         elif os.path.isdir(path):
             editor = Editor(path=path, mode=MODE_CREATE_IN)
         else:
