@@ -323,8 +323,7 @@ class Editor(object):
                 else:
                     default = self.filename
 
-                filename = self.ask_for_filename('dlg_save', True, default, 
-                                                 Gtk.FileChooserAction.SAVE)
+                filename = self.ask_for_filename('dlg_save', default=default)
                 if filename is None:
                     status.set_end_msg(_("File not saved."))
                     return

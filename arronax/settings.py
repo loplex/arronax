@@ -23,6 +23,9 @@ SYS_APPLICATIONS_DIR = '/usr/share/applications/'
 USER_DESKTOP_DIR = xdgpath.get_user_dir( 'desktop', '~/Desktop' )
 
 DEFAULT_ICON = '/usr/share/icons/hicolor/scalable/apps/nautilus.svg'
+if not os.path.isfile(DEFAULT_ICON):
+    DEFAULT_ICON='system-file-manager'
+
 DEFAULT_ICON_SIZE = 48
 DEFAULT_FILENAME = os.path.join(USER_DESKTOP_DIR, 'noname.desktop')
 
