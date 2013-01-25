@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-25 18:09+0100\n"
+"POT-Creation-Date: 2013-01-25 23:23+0100\n"
 "PO-Revision-Date: 2012-06-30 00:41+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -141,7 +141,7 @@ msgstr ""
 msgid "This is not an image. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:506
+#: ../arronax/editor.py:509
 #, fuzzy
 msgid "Created new starter."
 msgstr "Starter anlegen"

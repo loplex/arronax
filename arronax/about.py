@@ -17,7 +17,16 @@ def add_help_menu(submenu):
 
     menu_item = Gtk.SeparatorMenuItem()
     submenu.append(menu_item)
-            
+
+    menu_item = Gtk.ImageMenuItem(_('Ask a Question'))
+    menu_item.set_image(Gtk.Image.new_from_stock(Gtk.STOCK_JUMP_TO, 
+                                                 Gtk.IconSize.MENU))
+    menu_item.connect('activate', on_menuitem_goto_question_page)
+    submenu.append(menu_item)
+
+    menu_item = Gtk.SeparatorMenuItem()
+    submenu.append(menu_item)
+                   
     menu_item = Gtk.ImageMenuItem(_('Report a Bug'))
     menu_item.set_image(Gtk.Image.new_from_stock(Gtk.STOCK_JUMP_TO, 
                                                  Gtk.IconSize.MENU))
@@ -57,6 +66,9 @@ def on_menuitem_docs(menuitem):
 
 def on_menuitem_goto_webpage(menuitem):
     open_url(settings.WEB_URL)
+
+def on_menuitem_goto_question_page(menuitem):
+    open_url(settings.QUESTION_URL)
 
 def on_menuitem_donate(menuitem):
     open_url(settings.PAYPAL_URL)

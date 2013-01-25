@@ -37,13 +37,11 @@ LAST_FILENAME = DEFAULT_FILENAME
 GETTEXT_DOMAIN='arronax'
 
 WEB_URL = 'http://www.florian-diesch.de/software/%s/' % app_name
-
 PAYPAL_URL = 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DJCGEPS4746PU'
 FLATTR_URL = 'https://flattr.com/thing/712282/Arronax'
-
 TRANSLATIONS_URL = 'https://translations.launchpad.net/%s' % app_name
-
 BUGREPORT_URL = 'https://bugs.launchpad.net/%s/+filebug' % app_name
+QUESTION_URL = 'https://answers.launchpad.net/%s/+addquestion' % app_name
 
 FILE_DLG_DEF = {
     'dlg_open': {'title': _('Open File'),

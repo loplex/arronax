@@ -1,3 +1,9 @@
+arronax (0.04~pre2) precise; urgency=low
+
+  * split into multiple packages
+
+ -- Florian Diesch <devel@florian-diesch.de>  Fri, 25 Jan 2013 23:22:59 +0100
+
 arronax (0.04~pre1) precise; urgency=low
 
   * added drag&drop support for MIME types

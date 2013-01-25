@@ -45,15 +45,15 @@ pypi:
 	python setup.py register
 
 ppa: sdeb
-	dput ppa:${PPA} ../${NAME}_${DEBVERSION}_source.changes
+	dput ppa:${PPA} ../${NAME}*_${DEBVERSION}_source.changes
 
 
 install: deb
-	sudo dpkg -i ../${NAME}_${DEBVERSION}_all.deb
+	sudo dpkg -i ../${NAME}*_${DEBVERSION}_all.deb
 
 share: deb
-	cp ../${NAME}_${DEBVERSION}_all.deb ~/Shared/
+	cp ../${NAME}*_${DEBVERSION}_all.deb ~/Shared/
 
 web: deb sdist
 	mkdir -p ${WEBDIR}
-	cp ../${NAME}_${DEBVERSION}_all.deb dist/${NAME}-${VERSION}.tar.gz ${WEBDIR}
+	cp ../${NAME}*_${DEBVERSION}_all.deb dist/${NAME}-${VERSION}.tar.gz ${WEBDIR}

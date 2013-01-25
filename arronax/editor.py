@@ -503,10 +503,10 @@ class Editor(object):
             self.read_desktop_file(filename)
 
     def on_ac_new_activate(self, action, *args):
-        statusbar.show_msg(_('Created new starter.'))
         self.check_dirty()
         self.filename = None
         self.conn.clear(True)
+        statusbar.show_msg(_('Created new starter.'))
         self.update_window_title()
         
 
