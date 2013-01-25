@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-25 20:36+0200\n"
+"POT-Creation-Date: 2013-01-25 17:47+0100\n"
 "PO-Revision-Date: 2012-06-07 08:11+0000\n"
 "Last-Translator: Wang Dianjin <Unknown>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -18,73 +18,167 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-07-03 17:44+0000\n"
 "X-Generator: Launchpad (build 15531)\n"
 
-#: ../arronax/editor.py:98
+#: ../arronax/editor.py:120
+msgid "GNOME"
+msgstr ""
+
+#: ../arronax/editor.py:121
+msgid "KDE"
+msgstr ""
+
+#: ../arronax/editor.py:122
+msgid "LXDE"
+msgstr ""
+
+#: ../arronax/editor.py:123
+msgid "MATE"
+msgstr ""
+
+#: ../arronax/editor.py:124
+msgid "Razor-qt"
+msgstr ""
+
+#: ../arronax/editor.py:125
+msgid "ROX"
+msgstr ""
+
+#: ../arronax/editor.py:126
+#, fuzzy
+msgid "Trinity Desktop"
+msgstr "桌面"
+
+#: ../arronax/editor.py:127
+msgid "Unity"
+msgstr ""
+
+#: ../arronax/editor.py:128
+msgid "XFCE"
+msgstr ""
+
+#: ../arronax/editor.py:129
+msgid "Legacy environments"
+msgstr ""
+
+#: ../arronax/editor.py:162
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "加载文件“%s”中..."
 
-#: ../arronax/editor.py:99
+#: ../arronax/editor.py:163
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "已加载文件“%s”..."
 
-#: ../arronax/editor.py:103
+#: ../arronax/editor.py:167
 msgid "Can not load starter"
 msgstr "无法加载启动器"
 
-#: ../arronax/editor.py:104
+#: ../arronax/editor.py:168
 msgid "File not loaded."
 msgstr "文件未加载。"
 
-#: ../arronax/editor.py:142 ../arronax/editor.py:144
+#: ../arronax/editor.py:208
 msgid "You need to provide a title."
 msgstr "您需要提供一个标题。"
 
-#: ../arronax/editor.py:148 ../arronax/editor.py:150
+#: ../arronax/editor.py:215
 msgid "You need to provide a command."
 msgstr "您需要提供一个命令。"
 
-#: ../arronax/editor.py:158
+#: ../arronax/editor.py:222
+#, fuzzy
+msgid "You need to provide a URL or file name."
+msgstr "您需要提供一个标题。"
+
+#: ../arronax/editor.py:233
 msgid "Save now?"
 msgstr "保存？"
 
-#: ../arronax/editor.py:159
+#: ../arronax/editor.py:234
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr "您还未保存更改。您现在要保存吗？"
 
-#: ../arronax/editor.py:178 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:253 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "选择图标"
 
-#: ../arronax/editor.py:227
+#: ../arronax/editor.py:305
 msgid "Error"
 msgstr "错误"
 
-#: ../arronax/editor.py:231
+#: ../arronax/editor.py:309
 msgid "Saving file ..."
 msgstr "正在保存文件..."
 
-#: ../arronax/editor.py:232
+#: ../arronax/editor.py:310
 msgid "File saved."
 msgstr "文件已保存。"
 
-#: ../arronax/editor.py:234
+#: ../arronax/editor.py:312
 #, python-format
 msgid "Saving file '%s'..."
 msgstr "正在保存文件“%s”..."
 
-#: ../arronax/editor.py:235 ../arronax/editor.py:255
+#: ../arronax/editor.py:313 ../arronax/editor.py:332
 #, python-format
 msgid "Saved file '%s'."
 msgstr "已保存文件“%s”。"
 
-#: ../arronax/editor.py:251 ../arronax/editor.py:261
+#: ../arronax/editor.py:328 ../arronax/editor.py:338
 msgid "File not saved."
 msgstr "文件未保存。"
 
-#: ../arronax/editor.py:260
+#: ../arronax/editor.py:337
 msgid "Can not save starter"
 msgstr "无法保存启动器"
+
+#: ../arronax/editor.py:466
+msgid "This is not a local file. Icon not changed."
+msgstr ""
+
+#: ../arronax/editor.py:472
+msgid "This is not an image. Icon not changed."
+msgstr ""
+
+#: ../arronax/editor.py:504
+#, fuzzy
+msgid "Created new starter."
+msgstr "创建启动器"
+
+#: ../arronax/settings.py:39
+msgid "Open File"
+msgstr "打开文件"
+
+#: ../arronax/settings.py:42 ../arronax/settings.py:49
+msgid "Desktop"
+msgstr "桌面"
+
+#: ../arronax/settings.py:43 ../arronax/settings.py:50
+msgid "User App Folder"
+msgstr "用户应用文件夹"
+
+#: ../arronax/settings.py:44
+#, fuzzy
+msgid "System App Folder"
+msgstr "用户应用文件夹"
+
+#: ../arronax/settings.py:47
+#, fuzzy
+msgid "Save File"
+msgstr "打开文件"
+
+#: ../arronax/settings.py:53
+msgid "Select Folder"
+msgstr "选择文件夹"
+
+#: ../arronax/settings.py:56
+msgid "Select Program"
+msgstr "选择程序"
+
+#: ../arronax/settings.py:59
+#, fuzzy
+msgid "Select File"
+msgstr "选择文件夹"
 
 #: ../arronax/about.py:18
 msgid "translator-credits"
@@ -92,19 +186,19 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Wang Dianjin https://launchpad.net/~tuhaihe"
 
-#: ../arronax/desktopfile.py:34
+#: ../arronax/desktopfile.py:40
 msgid "Arronax doesn't support this kind of starter yet"
 msgstr "Arronax 还不支持该种启动器"
 
-#: ../nautilus/nautilus-arronax.py:22 ../nautilus/nautilus-arronax.py:28
+#: ../nautilus/nautilus-arronax.py:22 ../nautilus/nautilus-arronax.py:41
 msgid "Create starter for this file"
 msgstr "创建该文件的启动器"
 
-#: ../nautilus/nautilus-arronax.py:34
+#: ../nautilus/nautilus-arronax.py:28
 msgid "Modify this starter"
 msgstr "修改该启动器"
 
-#: ../nautilus/nautilus-arronax.py:40
+#: ../nautilus/nautilus-arronax.py:34
 msgid "Create starter"
 msgstr "创建启动器"
 
@@ -136,107 +230,134 @@ msgstr "保存到应用启动器"
 msgid "Save as another application starter"
 msgstr "另存为其他应用启动器"
 
-#: ../data/ui/edit.ui.h:9
-msgid "Select Program"
-msgstr "选择程序"
-
-#: ../data/ui/edit.ui.h:10
-msgid "Open File"
-msgstr "打开文件"
-
-#: ../data/ui/edit.ui.h:11
-msgid "Desktop"
-msgstr "桌面"
-
-#: ../data/ui/edit.ui.h:12
-msgid "Go to the Desktop folder"
-msgstr "转到桌面文件夹"
-
-#: ../data/ui/edit.ui.h:13
-msgid "User App Folder"
-msgstr "用户应用文件夹"
-
-#: ../data/ui/edit.ui.h:14
-msgid "Go to the folder that contains user specific application starters"
-msgstr "转到包含用户特殊应用程序启动器的文件夹"
-
-#: ../data/ui/edit.ui.h:15
-msgid "Select File Name"
-msgstr "选择文件名"
-
-#: ../data/ui/edit.ui.h:16
-msgid "Select Folder"
-msgstr "选择文件夹"
-
-#: ../data/ui/edit.ui.h:17 ../data/desktop/arronax.desktop.in.h:1
+#: ../data/ui/edit.ui.h:9 ../data/desktop/arronax.desktop.in.h:1
 msgid "Arronax"
 msgstr "Arronax"
 
-#: ../data/ui/edit.ui.h:18
+#: ../data/ui/edit.ui.h:10
 msgid "_File"
 msgstr "文件(_F)"
 
-#: ../data/ui/edit.ui.h:19
+#: ../data/ui/edit.ui.h:11
 msgid "_Edit"
 msgstr "编辑(_E)"
 
-#: ../data/ui/edit.ui.h:20
+#: ../data/ui/edit.ui.h:12
 msgid "_Help"
 msgstr "帮助(_H)"
 
-#: ../data/ui/edit.ui.h:21
+#: ../data/ui/edit.ui.h:13
 msgid "toolbutton1"
 msgstr "工具按钮1"
 
-#: ../data/ui/edit.ui.h:22
+#: ../data/ui/edit.ui.h:14
 msgid "Save current application starter"
 msgstr "保存当前应用启动器"
 
-#: ../data/ui/edit.ui.h:23
+#: ../data/ui/edit.ui.h:15
+msgid "What kind of starter do you want?"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:16
+msgid "This is a starter for an application"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:17
+msgid "This is a starter for a file or a location"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:18
+msgid "The icon displayed for this starter. Click to select another one."
+msgstr ""
+
+#: ../data/ui/edit.ui.h:19
 msgid "Title:"
 msgstr "标题："
 
-#: ../data/ui/edit.ui.h:24
+#: ../data/ui/edit.ui.h:20
+#, fuzzy
+msgid "Title that is displayed for this starter file"
+msgstr "为该启动器选择一个图标"
+
+#: ../data/ui/edit.ui.h:21
 msgid "Command:"
 msgstr "命令："
 
-#: ../data/ui/edit.ui.h:25
+#: ../data/ui/edit.ui.h:22
 msgid "Select..."
 msgstr "选择..."
 
-#: ../data/ui/edit.ui.h:26
+#: ../data/ui/edit.ui.h:23
+msgid "Browse the file system to select a command"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:24
 msgid "Start in folder:"
 msgstr "启动文件夹中的："
 
+#: ../data/ui/edit.ui.h:25
+msgid ""
+"Path to a folder that is used as the \n"
+"working folder for the program"
+msgstr ""
+
 #: ../data/ui/edit.ui.h:27
+msgid "Browse the file system to select a folder"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:28
 msgid "Run in Terminal:"
 msgstr "在终端运行："
 
-#: ../data/ui/edit.ui.h:28
-msgid "Comment:"
-msgstr "注释："
-
 #: ../data/ui/edit.ui.h:29
+msgid "If switched on the command is run in a Terminal window"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:30
+msgid "File or URL:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:31
+msgid "The file or URL you want to open"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:32
+msgid "Browse the file system to select a file"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:33
 msgid "Basic"
 msgstr "基本"
 
-#: ../data/ui/edit.ui.h:30
+#: ../data/ui/edit.ui.h:34
 msgid "Hidden:"
 msgstr "隐藏："
 
-#: ../data/ui/edit.ui.h:31
+#: ../data/ui/edit.ui.h:35
 msgid "Window Class:"
 msgstr "窗口类别："
 
-#: ../data/ui/edit.ui.h:32
+#: ../data/ui/edit.ui.h:36
 msgid "Categories:"
 msgstr "类别："
 
-#: ../data/ui/edit.ui.h:33
+#: ../data/ui/edit.ui.h:37
+msgid "Comment:"
+msgstr "注释："
+
+#: ../data/ui/edit.ui.h:38
 msgid "Advanced"
 msgstr "高级"
 
-#: ../data/ui/edit.ui.h:34
+#: ../data/ui/edit.ui.h:39
+msgid "Show in:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:40
+msgid "Show in"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:41
 msgid ""
 "MIME types:\n"
 "\n"
@@ -245,20 +366,29 @@ msgid ""
 "semicolons (\";\")"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:39
+#: ../data/ui/edit.ui.h:46
 msgid "MIME types"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:40
+#: ../data/ui/edit.ui.h:47
 msgid ""
 "Keywords:\n"
 "(one per line)"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:42
+#: ../data/ui/edit.ui.h:49
 msgid "Keywords"
 msgstr ""
 
 #: ../data/desktop/arronax.desktop.in.h:2
 msgid "Create and edit application starters"
 msgstr "创建并编辑应用启动器"
+
+#~ msgid "Go to the Desktop folder"
+#~ msgstr "转到桌面文件夹"
+
+#~ msgid "Go to the folder that contains user specific application starters"
+#~ msgstr "转到包含用户特殊应用程序启动器的文件夹"
+
+#~ msgid "Select File Name"
+#~ msgstr "选择文件名"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-25 20:36+0200\n"
+"POT-Creation-Date: 2013-01-25 17:47+0100\n"
 "PO-Revision-Date: 2012-07-01 18:41+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -18,73 +18,167 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-07-03 17:44+0000\n"
 "X-Generator: Launchpad (build 15531)\n"
 
-#: ../arronax/editor.py:98
+#: ../arronax/editor.py:120
+msgid "GNOME"
+msgstr ""
+
+#: ../arronax/editor.py:121
+msgid "KDE"
+msgstr ""
+
+#: ../arronax/editor.py:122
+msgid "LXDE"
+msgstr ""
+
+#: ../arronax/editor.py:123
+msgid "MATE"
+msgstr ""
+
+#: ../arronax/editor.py:124
+msgid "Razor-qt"
+msgstr ""
+
+#: ../arronax/editor.py:125
+msgid "ROX"
+msgstr ""
+
+#: ../arronax/editor.py:126
+#, fuzzy
+msgid "Trinity Desktop"
+msgstr "Escritorio"
+
+#: ../arronax/editor.py:127
+msgid "Unity"
+msgstr ""
+
+#: ../arronax/editor.py:128
+msgid "XFCE"
+msgstr ""
+
+#: ../arronax/editor.py:129
+msgid "Legacy environments"
+msgstr ""
+
+#: ../arronax/editor.py:162
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Cargando el archivo «%s»…"
 
-#: ../arronax/editor.py:99
+#: ../arronax/editor.py:163
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Se cargó el archivo «%s»…"
 
-#: ../arronax/editor.py:103
+#: ../arronax/editor.py:167
 msgid "Can not load starter"
 msgstr "No se puede cargar el acceso directo"
 
-#: ../arronax/editor.py:104
+#: ../arronax/editor.py:168
 msgid "File not loaded."
 msgstr "No se cargó el archivo."
 
-#: ../arronax/editor.py:142 ../arronax/editor.py:144
+#: ../arronax/editor.py:208
 msgid "You need to provide a title."
 msgstr "Necesita proporcionar un título."
 
-#: ../arronax/editor.py:148 ../arronax/editor.py:150
+#: ../arronax/editor.py:215
 msgid "You need to provide a command."
 msgstr "Necesita proporcionar una orden."
 
-#: ../arronax/editor.py:158
+#: ../arronax/editor.py:222
+#, fuzzy
+msgid "You need to provide a URL or file name."
+msgstr "Necesita proporcionar un título."
+
+#: ../arronax/editor.py:233
 msgid "Save now?"
 msgstr "¿Guardar ahora?"
 
-#: ../arronax/editor.py:159
+#: ../arronax/editor.py:234
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr "Tiene cambios sin guardar. ¿Quiere guardarlos ahora?"
 
-#: ../arronax/editor.py:178 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:253 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Seleccionar icono"
 
-#: ../arronax/editor.py:227
+#: ../arronax/editor.py:305
 msgid "Error"
 msgstr "Error"
 
-#: ../arronax/editor.py:231
+#: ../arronax/editor.py:309
 msgid "Saving file ..."
 msgstr "Guardando el archivo…"
 
-#: ../arronax/editor.py:232
+#: ../arronax/editor.py:310
 msgid "File saved."
 msgstr "Se ha guardado el archivo."
 
-#: ../arronax/editor.py:234
+#: ../arronax/editor.py:312
 #, python-format
 msgid "Saving file '%s'..."
 msgstr "Guardando el archivo «%s»…"
 
-#: ../arronax/editor.py:235 ../arronax/editor.py:255
+#: ../arronax/editor.py:313 ../arronax/editor.py:332
 #, python-format
 msgid "Saved file '%s'."
 msgstr "Se ha guardado el archivo «%s»."
 
-#: ../arronax/editor.py:251 ../arronax/editor.py:261
+#: ../arronax/editor.py:328 ../arronax/editor.py:338
 msgid "File not saved."
 msgstr "El archivo no ha sido guardado."
 
-#: ../arronax/editor.py:260
+#: ../arronax/editor.py:337
 msgid "Can not save starter"
 msgstr "No se puede guardar el acceso directo"
+
+#: ../arronax/editor.py:466
+msgid "This is not a local file. Icon not changed."
+msgstr ""
+
+#: ../arronax/editor.py:472
+msgid "This is not an image. Icon not changed."
+msgstr ""
+
+#: ../arronax/editor.py:504
+#, fuzzy
+msgid "Created new starter."
+msgstr "Crear acceso directo"
+
+#: ../arronax/settings.py:39
+msgid "Open File"
+msgstr "Abrir archivo"
+
+#: ../arronax/settings.py:42 ../arronax/settings.py:49
+msgid "Desktop"
+msgstr "Escritorio"
+
+#: ../arronax/settings.py:43 ../arronax/settings.py:50
+msgid "User App Folder"
+msgstr "Carpeta de aplicaciones del usuario"
+
+#: ../arronax/settings.py:44
+#, fuzzy
+msgid "System App Folder"
+msgstr "Carpeta de aplicaciones del usuario"
+
+#: ../arronax/settings.py:47
+#, fuzzy
+msgid "Save File"
+msgstr "Abrir archivo"
+
+#: ../arronax/settings.py:53
+msgid "Select Folder"
+msgstr "Seleccionar carpeta"
+
+#: ../arronax/settings.py:56
+msgid "Select Program"
+msgstr "Seleccionar programa"
+
+#: ../arronax/settings.py:59
+#, fuzzy
+msgid "Select File"
+msgstr "Seleccionar carpeta"
 
 #: ../arronax/about.py:18
 msgid "translator-credits"
@@ -92,19 +186,19 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Adolfo Jayme Barrientos https://launchpad.net/~fitoschido"
 
-#: ../arronax/desktopfile.py:34
+#: ../arronax/desktopfile.py:40
 msgid "Arronax doesn't support this kind of starter yet"
 msgstr "Arronax aún no es compatible con este tipo de accesos directos"
 
-#: ../nautilus/nautilus-arronax.py:22 ../nautilus/nautilus-arronax.py:28
+#: ../nautilus/nautilus-arronax.py:22 ../nautilus/nautilus-arronax.py:41
 msgid "Create starter for this file"
 msgstr "Crear acceso directo para este archivo"
 
-#: ../nautilus/nautilus-arronax.py:34
+#: ../nautilus/nautilus-arronax.py:28
 msgid "Modify this starter"
 msgstr "Modificar este acceso directo"
 
-#: ../nautilus/nautilus-arronax.py:40
+#: ../nautilus/nautilus-arronax.py:34
 msgid "Create starter"
 msgstr "Crear acceso directo"
 
@@ -136,109 +230,134 @@ msgstr "Guardar al acceso directo a aplicación"
 msgid "Save as another application starter"
 msgstr "Guardar como otro acceso directo a aplicación"
 
-#: ../data/ui/edit.ui.h:9
-msgid "Select Program"
-msgstr "Seleccionar programa"
-
-#: ../data/ui/edit.ui.h:10
-msgid "Open File"
-msgstr "Abrir archivo"
-
-#: ../data/ui/edit.ui.h:11
-msgid "Desktop"
-msgstr "Escritorio"
-
-#: ../data/ui/edit.ui.h:12
-msgid "Go to the Desktop folder"
-msgstr "Ir a la carpeta Escritorio"
-
-#: ../data/ui/edit.ui.h:13
-msgid "User App Folder"
-msgstr "Carpeta de aplicaciones del usuario"
-
-#: ../data/ui/edit.ui.h:14
-msgid "Go to the folder that contains user specific application starters"
-msgstr ""
-"Ir a la carpeta que contiene accesos directos a aplicaciones específicos del "
-"usuario"
-
-#: ../data/ui/edit.ui.h:15
-msgid "Select File Name"
-msgstr "Seleccionar nombre de archivo"
-
-#: ../data/ui/edit.ui.h:16
-msgid "Select Folder"
-msgstr "Seleccionar carpeta"
-
-#: ../data/ui/edit.ui.h:17 ../data/desktop/arronax.desktop.in.h:1
+#: ../data/ui/edit.ui.h:9 ../data/desktop/arronax.desktop.in.h:1
 msgid "Arronax"
 msgstr "Arronax"
 
-#: ../data/ui/edit.ui.h:18
+#: ../data/ui/edit.ui.h:10
 msgid "_File"
 msgstr "_Archivo"
 
-#: ../data/ui/edit.ui.h:19
+#: ../data/ui/edit.ui.h:11
 msgid "_Edit"
 msgstr "_Editar"
 
-#: ../data/ui/edit.ui.h:20
+#: ../data/ui/edit.ui.h:12
 msgid "_Help"
 msgstr "Ay_uda"
 
-#: ../data/ui/edit.ui.h:21
+#: ../data/ui/edit.ui.h:13
 msgid "toolbutton1"
 msgstr "toolbutton1"
 
-#: ../data/ui/edit.ui.h:22
+#: ../data/ui/edit.ui.h:14
 msgid "Save current application starter"
 msgstr "Guardar acceso directo a aplicación actual"
 
-#: ../data/ui/edit.ui.h:23
+#: ../data/ui/edit.ui.h:15
+msgid "What kind of starter do you want?"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:16
+msgid "This is a starter for an application"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:17
+msgid "This is a starter for a file or a location"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:18
+msgid "The icon displayed for this starter. Click to select another one."
+msgstr ""
+
+#: ../data/ui/edit.ui.h:19
 msgid "Title:"
 msgstr "Título:"
 
-#: ../data/ui/edit.ui.h:24
+#: ../data/ui/edit.ui.h:20
+#, fuzzy
+msgid "Title that is displayed for this starter file"
+msgstr "Seleccione un icono para este acceso directo"
+
+#: ../data/ui/edit.ui.h:21
 msgid "Command:"
 msgstr "Orden:"
 
-#: ../data/ui/edit.ui.h:25
+#: ../data/ui/edit.ui.h:22
 msgid "Select..."
 msgstr "Seleccionar…"
 
-#: ../data/ui/edit.ui.h:26
+#: ../data/ui/edit.ui.h:23
+msgid "Browse the file system to select a command"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:24
 msgid "Start in folder:"
 msgstr "Iniciar en carpeta:"
 
+#: ../data/ui/edit.ui.h:25
+msgid ""
+"Path to a folder that is used as the \n"
+"working folder for the program"
+msgstr ""
+
 #: ../data/ui/edit.ui.h:27
+msgid "Browse the file system to select a folder"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:28
 msgid "Run in Terminal:"
 msgstr "Ejecutar en terminal:"
 
-#: ../data/ui/edit.ui.h:28
-msgid "Comment:"
-msgstr "Comentario:"
-
 #: ../data/ui/edit.ui.h:29
+msgid "If switched on the command is run in a Terminal window"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:30
+msgid "File or URL:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:31
+msgid "The file or URL you want to open"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:32
+msgid "Browse the file system to select a file"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:33
 msgid "Basic"
 msgstr "Básico"
 
-#: ../data/ui/edit.ui.h:30
+#: ../data/ui/edit.ui.h:34
 msgid "Hidden:"
 msgstr "Oculto:"
 
-#: ../data/ui/edit.ui.h:31
+#: ../data/ui/edit.ui.h:35
 msgid "Window Class:"
 msgstr "Clase de ventana:"
 
-#: ../data/ui/edit.ui.h:32
+#: ../data/ui/edit.ui.h:36
 msgid "Categories:"
 msgstr "Categorías:"
 
-#: ../data/ui/edit.ui.h:33
+#: ../data/ui/edit.ui.h:37
+msgid "Comment:"
+msgstr "Comentario:"
+
+#: ../data/ui/edit.ui.h:38
 msgid "Advanced"
 msgstr "Avanzado"
 
-#: ../data/ui/edit.ui.h:34
+#: ../data/ui/edit.ui.h:39
+msgid "Show in:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:40
+msgid "Show in"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:41
 msgid ""
 "MIME types:\n"
 "\n"
@@ -252,11 +371,11 @@ msgstr ""
 "saltos de línea o\n"
 "punto y coma (;)"
 
-#: ../data/ui/edit.ui.h:39
+#: ../data/ui/edit.ui.h:46
 msgid "MIME types"
 msgstr "Tipos MIME"
 
-#: ../data/ui/edit.ui.h:40
+#: ../data/ui/edit.ui.h:47
 msgid ""
 "Keywords:\n"
 "(one per line)"
@@ -264,10 +383,21 @@ msgstr ""
 "Palabras clave:\n"
 "(una por línea)"
 
-#: ../data/ui/edit.ui.h:42
+#: ../data/ui/edit.ui.h:49
 msgid "Keywords"
 msgstr "Palabras clave"
 
 #: ../data/desktop/arronax.desktop.in.h:2
 msgid "Create and edit application starters"
 msgstr "Cree y edite accesos directos a aplicaciones"
+
+#~ msgid "Go to the Desktop folder"
+#~ msgstr "Ir a la carpeta Escritorio"
+
+#~ msgid "Go to the folder that contains user specific application starters"
+#~ msgstr ""
+#~ "Ir a la carpeta que contiene accesos directos a aplicaciones específicos "
+#~ "del usuario"
+
+#~ msgid "Select File Name"
+#~ msgstr "Seleccionar nombre de archivo"
