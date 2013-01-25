@@ -495,8 +495,8 @@ class Editor(object):
 
     def on_ac_open_activate(self, action, *args):
         self.check_dirty()
-        filename = self.ask_for_filename('dlg_open', True, default=None,
-                                         action=Gtk.FileChooserAction.OPEN)
+        filename = self.ask_for_filename('dlg_open', True, default=None)
+                                         
         if filename is not None:
             self.read_desktop_file(filename)
 

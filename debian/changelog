@@ -1,3 +1,11 @@
+arronax (0.04pre1) precise; urgency=low
+
+  * added drag&drop support for MIME types
+  * added support for Link type .desktop files
+  * added support for ShowIn field
+
+ -- Florian Diesch <devel@florian-diesch.de>  Fri, 25 Jan 2013 17:33:52 +0100
+
 arronax (0.03) precise; urgency=low
 
   * added drag&drop support
