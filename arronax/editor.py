@@ -58,6 +58,8 @@ class Editor(object):
         self.factory = widgets.WidgetFactory(self.builder)
 
         statusbar.init(self.obj('statusbar'))
+        
+        about.add_help_menu(self.obj('menu_help'))
 
         self.conn = connection.ConnectionGroup(self.dfile)
 

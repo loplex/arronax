@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-25 17:47+0100\n"
+"POT-Creation-Date: 2013-01-25 18:09+0100\n"
 "PO-Revision-Date: 2012-05-25 23:31+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -18,168 +18,188 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-07-03 17:44+0000\n"
 "X-Generator: Launchpad (build 15531)\n"
 
-#: ../arronax/editor.py:120
+#: ../arronax/editor.py:122
 msgid "GNOME"
 msgstr ""
 
-#: ../arronax/editor.py:121
+#: ../arronax/editor.py:123
 msgid "KDE"
 msgstr ""
 
-#: ../arronax/editor.py:122
+#: ../arronax/editor.py:124
 msgid "LXDE"
 msgstr ""
 
-#: ../arronax/editor.py:123
+#: ../arronax/editor.py:125
 msgid "MATE"
 msgstr ""
 
-#: ../arronax/editor.py:124
+#: ../arronax/editor.py:126
 msgid "Razor-qt"
 msgstr ""
 
-#: ../arronax/editor.py:125
+#: ../arronax/editor.py:127
 msgid "ROX"
 msgstr ""
 
-#: ../arronax/editor.py:126
+#: ../arronax/editor.py:128
 #, fuzzy
 msgid "Trinity Desktop"
 msgstr "Scrivania"
 
-#: ../arronax/editor.py:127
+#: ../arronax/editor.py:129
 msgid "Unity"
 msgstr ""
 
-#: ../arronax/editor.py:128
+#: ../arronax/editor.py:130
 msgid "XFCE"
 msgstr ""
 
-#: ../arronax/editor.py:129
+#: ../arronax/editor.py:131
 msgid "Legacy environments"
 msgstr ""
 
-#: ../arronax/editor.py:162
+#: ../arronax/editor.py:164
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Caricamento del file '%s' in corso..."
 
-#: ../arronax/editor.py:163
+#: ../arronax/editor.py:165
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Caricato il file '%s'..."
 
-#: ../arronax/editor.py:167
+#: ../arronax/editor.py:169
 msgid "Can not load starter"
 msgstr ""
 
-#: ../arronax/editor.py:168
+#: ../arronax/editor.py:170
 msgid "File not loaded."
 msgstr ""
 
-#: ../arronax/editor.py:208
+#: ../arronax/editor.py:210
 msgid "You need to provide a title."
 msgstr ""
 
-#: ../arronax/editor.py:215
+#: ../arronax/editor.py:217
 msgid "You need to provide a command."
 msgstr "Devi fornire un comando."
 
-#: ../arronax/editor.py:222
+#: ../arronax/editor.py:224
 #, fuzzy
 msgid "You need to provide a URL or file name."
 msgstr "Devi fornire un comando."
 
-#: ../arronax/editor.py:233
+#: ../arronax/editor.py:235
 msgid "Save now?"
 msgstr "Salvare ora?"
 
-#: ../arronax/editor.py:234
+#: ../arronax/editor.py:236
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
 
-#: ../arronax/editor.py:253 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:255 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Seleziona un'icona"
 
-#: ../arronax/editor.py:305
+#: ../arronax/editor.py:307
 msgid "Error"
 msgstr "Errore"
 
-#: ../arronax/editor.py:309
+#: ../arronax/editor.py:311
 msgid "Saving file ..."
 msgstr ""
 
-#: ../arronax/editor.py:310
+#: ../arronax/editor.py:312
 msgid "File saved."
 msgstr ""
 
-#: ../arronax/editor.py:312
+#: ../arronax/editor.py:314
 #, python-format
 msgid "Saving file '%s'..."
 msgstr ""
 
-#: ../arronax/editor.py:313 ../arronax/editor.py:332
+#: ../arronax/editor.py:315 ../arronax/editor.py:334
 #, python-format
 msgid "Saved file '%s'."
 msgstr ""
 
-#: ../arronax/editor.py:328 ../arronax/editor.py:338
+#: ../arronax/editor.py:330 ../arronax/editor.py:340
 msgid "File not saved."
 msgstr ""
 
-#: ../arronax/editor.py:337
+#: ../arronax/editor.py:339
 msgid "Can not save starter"
 msgstr ""
 
-#: ../arronax/editor.py:466
+#: ../arronax/editor.py:468
 msgid "This is not a local file. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:472
+#: ../arronax/editor.py:474
 msgid "This is not an image. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:504
+#: ../arronax/editor.py:506
 msgid "Created new starter."
 msgstr ""
 
-#: ../arronax/settings.py:39
+#: ../arronax/settings.py:49
 msgid "Open File"
 msgstr "Apri un file"
 
-#: ../arronax/settings.py:42 ../arronax/settings.py:49
+#: ../arronax/settings.py:52 ../arronax/settings.py:59
 msgid "Desktop"
 msgstr "Scrivania"
 
-#: ../arronax/settings.py:43 ../arronax/settings.py:50
+#: ../arronax/settings.py:53 ../arronax/settings.py:60
 msgid "User App Folder"
 msgstr ""
 
-#: ../arronax/settings.py:44
+#: ../arronax/settings.py:54
 #, fuzzy
 msgid "System App Folder"
 msgstr "Seleziona una cartella"
 
-#: ../arronax/settings.py:47
+#: ../arronax/settings.py:57
 #, fuzzy
 msgid "Save File"
 msgstr "Apri un file"
 
-#: ../arronax/settings.py:53
+#: ../arronax/settings.py:63
 msgid "Select Folder"
 msgstr "Seleziona una cartella"
 
-#: ../arronax/settings.py:56
+#: ../arronax/settings.py:66
 msgid "Select Program"
 msgstr "Seleziona un programma"
 
-#: ../arronax/settings.py:59
+#: ../arronax/settings.py:69
 #, fuzzy
 msgid "Select File"
 msgstr "Seleziona una cartella"
 
-#: ../arronax/about.py:18
+#: ../arronax/about.py:12
+msgid "Go to Web Page"
+msgstr ""
+
+#: ../arronax/about.py:21
+msgid "Report a Bug"
+msgstr ""
+
+#: ../arronax/about.py:27
+msgid "Help with Translations"
+msgstr ""
+
+#: ../arronax/about.py:33
+msgid "Donate via Flattr"
+msgstr ""
+
+#: ../arronax/about.py:39
+msgid "Donate via PayPal"
+msgstr ""
+
+#: ../arronax/about.py:82
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
