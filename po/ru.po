@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-01-26 06:44+0100\n"
-"PO-Revision-Date: 2012-06-13 18:43+0000\n"
-"Last-Translator: Eugene Marshal <Unknown>\n"
+"PO-Revision-Date: 2012-09-30 16:27+0000\n"
+"Last-Translator: Ivlev Denis <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
-"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-07-03 17:44+0000\n"
-"X-Generator: Launchpad (build 15531)\n"
+"X-Launchpad-Export-Date: 2013-01-28 11:16+0000\n"
+"X-Generator: Launchpad (build 16451)\n"
+"Language: ru\n"
 
 #: ../arronax/editor.py:122
 msgid "GNOME"
@@ -43,9 +43,8 @@ msgid "ROX"
 msgstr ""
 
 #: ../arronax/editor.py:128
-#, fuzzy
 msgid "Trinity Desktop"
-msgstr "Рабочий стол"
+msgstr ""
 
 #: ../arronax/editor.py:129
 msgid "Unity"
@@ -86,9 +85,8 @@ msgid "You need to provide a command."
 msgstr "Нужно указать команду."
 
 #: ../arronax/editor.py:224
-#, fuzzy
 msgid "You need to provide a URL or file name."
-msgstr "Вам необходимо ввести название."
+msgstr ""
 
 #: ../arronax/editor.py:235
 msgid "Save now?"
@@ -141,9 +139,8 @@ msgid "This is not an image. Icon not changed."
 msgstr ""
 
 #: ../arronax/editor.py:509
-#, fuzzy
 msgid "Created new starter."
-msgstr "Создать ярлык запуска"
+msgstr ""
 
 #: ../arronax/settings.py:47
 msgid "Open File"
@@ -158,14 +155,12 @@ msgid "User App Folder"
 msgstr "Папка приложений пользователя"
 
 #: ../arronax/settings.py:52
-#, fuzzy
 msgid "System App Folder"
-msgstr "Папка приложений пользователя"
+msgstr ""
 
 #: ../arronax/settings.py:55
-#, fuzzy
 msgid "Save File"
-msgstr "Открыть файл"
+msgstr ""
 
 #: ../arronax/settings.py:61
 msgid "Select Folder"
@@ -176,9 +171,8 @@ msgid "Select Program"
 msgstr "Выберите программу"
 
 #: ../arronax/settings.py:67
-#, fuzzy
 msgid "Select File"
-msgstr "Выберите папку"
+msgstr ""
 
 #: ../arronax/about.py:12
 msgid "Go to Web Page"
@@ -210,7 +204,8 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Aleksey Kabanov https://launchpad.net/~ak099\n"
 "  Eugene Marshal https://launchpad.net/~lowrider\n"
-"  Florian Diesch https://launchpad.net/~diesch"
+"  Florian Diesch https://launchpad.net/~diesch\n"
+"  Ivlev Denis https://launchpad.net/~den4ik"
 
 #: ../arronax/desktopfile.py:40
 msgid "Arronax doesn't support this kind of starter yet"
@@ -301,9 +296,8 @@ msgid "Title:"
 msgstr "Название"
 
 #: ../data/ui/edit.ui.h:20
-#, fuzzy
 msgid "Title that is displayed for this starter file"
-msgstr "Выберите значок для этого ярлыка запуска"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:21
 msgid "Command:"
@@ -391,6 +385,10 @@ msgid ""
 "line breaks or\n"
 "semicolons (\";\")"
 msgstr ""
+"MIME типы:\n"
+"разделяются\n"
+"кодом конца строки\n"
+"или символом (\";\")"
 
 #: ../data/ui/edit.ui.h:46
 msgid "MIME types"
@@ -411,12 +409,3 @@ msgstr "Ключевые слова"
 #: ../data/desktop/arronax.desktop.in.h:2
 msgid "Create and edit application starters"
 msgstr "Создание и изменение ярлыков запуска приложений"
-
-#~ msgid "Go to the Desktop folder"
-#~ msgstr "Перейти в папку рабочего стола"
-
-#~ msgid "Go to the folder that contains user specific application starters"
-#~ msgstr "Перейти в папку содержащую особые ярлыки запуска приложений"
-
-#~ msgid "Select File Name"
-#~ msgstr "Выберите имя файла"

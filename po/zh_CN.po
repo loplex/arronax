@@ -6,17 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-01-26 06:44+0100\n"
 "PO-Revision-Date: 2012-06-07 08:11+0000\n"
 "Last-Translator: Wang Dianjin <Unknown>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-07-03 17:44+0000\n"
-"X-Generator: Launchpad (build 15531)\n"
+"X-Launchpad-Export-Date: 2013-01-28 11:16+0000\n"
+"X-Generator: Launchpad (build 16451)\n"
 
 #: ../arronax/editor.py:122
 msgid "GNOME"
@@ -43,9 +42,8 @@ msgid "ROX"
 msgstr ""
 
 #: ../arronax/editor.py:128
-#, fuzzy
 msgid "Trinity Desktop"
-msgstr "桌面"
+msgstr ""
 
 #: ../arronax/editor.py:129
 msgid "Unity"
@@ -86,9 +84,8 @@ msgid "You need to provide a command."
 msgstr "您需要提供一个命令。"
 
 #: ../arronax/editor.py:224
-#, fuzzy
 msgid "You need to provide a URL or file name."
-msgstr "您需要提供一个标题。"
+msgstr ""
 
 #: ../arronax/editor.py:235
 msgid "Save now?"
@@ -141,9 +138,8 @@ msgid "This is not an image. Icon not changed."
 msgstr ""
 
 #: ../arronax/editor.py:509
-#, fuzzy
 msgid "Created new starter."
-msgstr "创建启动器"
+msgstr ""
 
 #: ../arronax/settings.py:47
 msgid "Open File"
@@ -158,14 +154,12 @@ msgid "User App Folder"
 msgstr "用户应用文件夹"
 
 #: ../arronax/settings.py:52
-#, fuzzy
 msgid "System App Folder"
-msgstr "用户应用文件夹"
+msgstr ""
 
 #: ../arronax/settings.py:55
-#, fuzzy
 msgid "Save File"
-msgstr "打开文件"
+msgstr ""
 
 #: ../arronax/settings.py:61
 msgid "Select Folder"
@@ -176,9 +170,8 @@ msgid "Select Program"
 msgstr "选择程序"
 
 #: ../arronax/settings.py:67
-#, fuzzy
 msgid "Select File"
-msgstr "选择文件夹"
+msgstr ""
 
 #: ../arronax/about.py:12
 msgid "Go to Web Page"
@@ -299,9 +292,8 @@ msgid "Title:"
 msgstr "标题："
 
 #: ../data/ui/edit.ui.h:20
-#, fuzzy
 msgid "Title that is displayed for this starter file"
-msgstr "为该启动器选择一个图标"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:21
 msgid "Command:"
@@ -407,12 +399,3 @@ msgstr ""
 #: ../data/desktop/arronax.desktop.in.h:2
 msgid "Create and edit application starters"
 msgstr "创建并编辑应用启动器"
-
-#~ msgid "Go to the Desktop folder"
-#~ msgstr "转到桌面文件夹"
-
-#~ msgid "Go to the folder that contains user specific application starters"
-#~ msgstr "转到包含用户特殊应用程序启动器的文件夹"
-
-#~ msgid "Select File Name"
-#~ msgstr "选择文件名"

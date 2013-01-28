@@ -1,4 +1,4 @@
-# Galician translation for arronax
+# French translation for arronax
 # Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
 # This file is distributed under the same license as the arronax package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-01-26 06:44+0100\n"
-"PO-Revision-Date: 2012-06-20 23:33+0000\n"
-"Last-Translator: oterobueu <oterobueu@gmail.com>\n"
-"Language-Team: Galician <gl@li.org>\n"
+"PO-Revision-Date: 2012-08-17 12:57+0000\n"
+"Last-Translator: Sylvie Gallet <Unknown>\n"
+"Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -60,28 +60,28 @@ msgstr ""
 #: ../arronax/editor.py:164
 #, python-format
 msgid "Loading file '%s' ..."
-msgstr "Cargando arquivo '%s' ..."
+msgstr "Chargement du fichier '%s' ..."
 
 #: ../arronax/editor.py:165
 #, python-format
 msgid "Loaded file '%s' ..."
-msgstr "Arquivo cargado '%s' ..."
+msgstr "Fichier '%s' chargé ..."
 
 #: ../arronax/editor.py:169
 msgid "Can not load starter"
-msgstr "Non se pode cargar o lanzador"
+msgstr "Impossible de charger le lanceur"
 
 #: ../arronax/editor.py:170
 msgid "File not loaded."
-msgstr "Arquivo non cargado"
+msgstr "Fichier non chargé."
 
 #: ../arronax/editor.py:210
 msgid "You need to provide a title."
-msgstr "Necesitas propocionar un título"
+msgstr "Vous devez fournir un titre."
 
 #: ../arronax/editor.py:217
 msgid "You need to provide a command."
-msgstr "Necesitas proporcionar un comando"
+msgstr "Vous devez fournir une commande."
 
 #: ../arronax/editor.py:224
 msgid "You need to provide a URL or file name."
@@ -89,45 +89,47 @@ msgstr ""
 
 #: ../arronax/editor.py:235
 msgid "Save now?"
-msgstr "¿Gardar agora?"
+msgstr "Enregistrer maintenant ?"
 
 #: ../arronax/editor.py:236
 msgid "You have unsaved changes.  Do you want to save them now?"
-msgstr "Hai cambios que non foron gardados. ¿Queres gardalos agora?"
+msgstr ""
+"Vous avez des changements non enregistrés.  Voulez-vous les enregistrer "
+"maintenant ?"
 
 #: ../arronax/editor.py:255 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
-msgstr "Escoller unha icona"
+msgstr "Choisir une icône"
 
 #: ../arronax/editor.py:307
 msgid "Error"
-msgstr "Erro"
+msgstr "Erreur"
 
 #: ../arronax/editor.py:311
 msgid "Saving file ..."
-msgstr "Gardando ficheiro ..."
+msgstr "Enregistrement du fichier ..."
 
 #: ../arronax/editor.py:312
 msgid "File saved."
-msgstr "Ficheiro gardado."
+msgstr "Fichier enregistré."
 
 #: ../arronax/editor.py:314
 #, python-format
 msgid "Saving file '%s'..."
-msgstr "Gardando ficheiro '%s' ..."
+msgstr "Enregistrement de '%s' en cours..."
 
 #: ../arronax/editor.py:315 ../arronax/editor.py:334
 #, python-format
 msgid "Saved file '%s'."
-msgstr "Ficheiro gardado '%s' ..."
+msgstr "Enregistrement de '%s' terminé."
 
 #: ../arronax/editor.py:330 ../arronax/editor.py:340
 msgid "File not saved."
-msgstr "Ficheiro non gardado."
+msgstr "Fichier non enregistré."
 
 #: ../arronax/editor.py:339
 msgid "Can not save starter"
-msgstr "Non se pode gardar o lanzador"
+msgstr "Impossible d'enregistrer le lanceur"
 
 #: ../arronax/editor.py:468
 msgid "This is not a local file. Icon not changed."
@@ -143,15 +145,15 @@ msgstr ""
 
 #: ../arronax/settings.py:47
 msgid "Open File"
-msgstr "Abrir ficheiro"
+msgstr "Ouvrir le fichier"
 
 #: ../arronax/settings.py:50 ../arronax/settings.py:57
 msgid "Desktop"
-msgstr "Escritorio"
+msgstr "Bureau"
 
 #: ../arronax/settings.py:51 ../arronax/settings.py:58
 msgid "User App Folder"
-msgstr "Carpeta de aplicacións do usuario"
+msgstr "Dossier Applications de l'utilisateur"
 
 #: ../arronax/settings.py:52
 msgid "System App Folder"
@@ -163,11 +165,11 @@ msgstr ""
 
 #: ../arronax/settings.py:61
 msgid "Select Folder"
-msgstr "Seleccionar cartafol"
+msgstr "Choisissez un dossier"
 
 #: ../arronax/settings.py:64
 msgid "Select Program"
-msgstr "Seleccione programa"
+msgstr "Choisir le programme"
 
 #: ../arronax/settings.py:67
 msgid "Select File"
@@ -201,51 +203,51 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  oterobueu https://launchpad.net/~oterobueu"
+"  Sylvie Gallet https://launchpad.net/~sylvie-gallet"
 
 #: ../arronax/desktopfile.py:40
 msgid "Arronax doesn't support this kind of starter yet"
-msgstr "Arronax todavía non soporta este tipo de lanzadores"
+msgstr "Arronax ne gère pas encore ce type de lanceur"
 
 #: ../nautilus/nautilus-arronax.py:22 ../nautilus/nautilus-arronax.py:41
 msgid "Create starter for this file"
-msgstr "Crear lanzador para este ficheiro"
+msgstr "Créer un lanceur pour ce fichier"
 
 #: ../nautilus/nautilus-arronax.py:28
 msgid "Modify this starter"
-msgstr "Modificar este lanzador"
+msgstr "Modifier ce lanceur"
 
 #: ../nautilus/nautilus-arronax.py:34
 msgid "Create starter"
-msgstr "Crear lanzador"
+msgstr "Créer un lanceur"
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
-msgstr "Amosar información acerca de Arronax"
+msgstr "Informations à propos d'Arronax"
 
 #: ../data/ui/edit.ui.h:3
 msgid "Select an icon for this starter"
-msgstr "Selecciona unha icona para este lanzador"
+msgstr "Choisur une icône pour ce lanceur"
 
 #: ../data/ui/edit.ui.h:4
 msgid "Create a new application starter"
-msgstr "Crear un lanzador para unha nova aplicación"
+msgstr "Créer un nouveau lanceur d'application"
 
 #: ../data/ui/edit.ui.h:5
 msgid "Open a application starter"
-msgstr "Abrir un lanzador de aplicación"
+msgstr "Ouvrir un lanceur d'application"
 
 #: ../data/ui/edit.ui.h:6
 msgid "Quit Arronax"
-msgstr "Sair de Aarronax"
+msgstr "Quitter Arronax"
 
 #: ../data/ui/edit.ui.h:7
 msgid "Save to application starter"
-msgstr "Gardar lanzador de aplicación"
+msgstr "Enregistrer le lanceur d'application"
 
 #: ../data/ui/edit.ui.h:8
 msgid "Save as another application starter"
-msgstr "Gardar como outro lanzador de aplicación"
+msgstr "Enregistrer comme autre lanceur d'application"
 
 #: ../data/ui/edit.ui.h:9 ../data/desktop/arronax.desktop.in.h:1
 msgid "Arronax"
@@ -253,23 +255,23 @@ msgstr "Arronax"
 
 #: ../data/ui/edit.ui.h:10
 msgid "_File"
-msgstr "_Ficheiro"
+msgstr "_Fichier"
 
 #: ../data/ui/edit.ui.h:11
 msgid "_Edit"
-msgstr "_Editar"
+msgstr "_Edition"
 
 #: ../data/ui/edit.ui.h:12
 msgid "_Help"
-msgstr "_Axuda"
+msgstr "_Aide"
 
 #: ../data/ui/edit.ui.h:13
 msgid "toolbutton1"
-msgstr "botón1"
+msgstr "toolbutton1"
 
 #: ../data/ui/edit.ui.h:14
 msgid "Save current application starter"
-msgstr "Gardar lanzador de aplicación actual"
+msgstr "Enregistrer le lanceur d'application actuel"
 
 #: ../data/ui/edit.ui.h:15
 msgid "What kind of starter do you want?"
@@ -289,7 +291,7 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:19
 msgid "Title:"
-msgstr "Título:"
+msgstr "Titre :"
 
 #: ../data/ui/edit.ui.h:20
 msgid "Title that is displayed for this starter file"
@@ -297,11 +299,11 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:21
 msgid "Command:"
-msgstr "Comando:"
+msgstr "Commande :"
 
 #: ../data/ui/edit.ui.h:22
 msgid "Select..."
-msgstr "Escoller..."
+msgstr "Choisir…"
 
 #: ../data/ui/edit.ui.h:23
 msgid "Browse the file system to select a command"
@@ -309,7 +311,7 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:24
 msgid "Start in folder:"
-msgstr ""
+msgstr "Démarrer dans le dossier :"
 
 #: ../data/ui/edit.ui.h:25
 msgid ""
@@ -323,7 +325,7 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:28
 msgid "Run in Terminal:"
-msgstr "Executar nun Terminal:"
+msgstr "Exécuter dans un terminal :"
 
 #: ../data/ui/edit.ui.h:29
 msgid "If switched on the command is run in a Terminal window"
@@ -343,27 +345,27 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:33
 msgid "Basic"
-msgstr "Básico"
+msgstr "Basique"
 
 #: ../data/ui/edit.ui.h:34
 msgid "Hidden:"
-msgstr "Agochado"
+msgstr "Caché :"
 
 #: ../data/ui/edit.ui.h:35
 msgid "Window Class:"
-msgstr "Clase Ventana:"
+msgstr "Classe de fenêtre :"
 
 #: ../data/ui/edit.ui.h:36
 msgid "Categories:"
-msgstr "Categorías:"
+msgstr "Catégories :"
 
 #: ../data/ui/edit.ui.h:37
 msgid "Comment:"
-msgstr "Comentario:"
+msgstr "Commentaire :"
 
 #: ../data/ui/edit.ui.h:38
 msgid "Advanced"
-msgstr "Avanzado"
+msgstr "Avancé"
 
 #: ../data/ui/edit.ui.h:39
 msgid "Show in:"
@@ -381,21 +383,28 @@ msgid ""
 "line breaks or\n"
 "semicolons (\";\")"
 msgstr ""
+"Types MIME \n"
+"\n"
+"séparés par des \n"
+"sauts de lignes ou \n"
+"points-virgules (\";\")"
 
 #: ../data/ui/edit.ui.h:46
 msgid "MIME types"
-msgstr "tipos MIME"
+msgstr "Types MIME"
 
 #: ../data/ui/edit.ui.h:47
 msgid ""
 "Keywords:\n"
 "(one per line)"
-msgstr "Palabras Clave:"
+msgstr ""
+"Mots clé :\n"
+"(un par ligne)"
 
 #: ../data/ui/edit.ui.h:49
 msgid "Keywords"
-msgstr "Palabras clave"
+msgstr "Mots clé"
 
 #: ../data/desktop/arronax.desktop.in.h:2
 msgid "Create and edit application starters"
-msgstr "Crear e editar lanzadores de aplicacion"
+msgstr "Créer et modifier des lanceurs d'applications"

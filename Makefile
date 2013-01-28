@@ -58,3 +58,11 @@ share: deb
 web: deb sdist
 	mkdir -p ${WEBDIR}
 	cp ../${NAME}*_${DEBVERSION}_all.deb dist/${NAME}-${VERSION}.tar.gz ${WEBDIR}
+
+
+unpackpo:
+	tar xzvf launchpad-export.tar.gz && \
+	cd po && \
+	mmv '${NAME}-*.po' '#1.po' && \
+	cd .. && \
+	rm launchpad-export.tar.gz
