@@ -390,6 +390,7 @@
                       <object class="GtkLabel" id="l_title">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Title that is displayed for this starter file</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">6</property>
                         <property name="xalign">1</property>
@@ -411,7 +412,6 @@
                         <property name="hexpand">True</property>
                         <property name="invisible_char">•</property>
                         <property name="invisible_char_set">True</property>
-                        <signal name="drag-data-received" handler="on_urientry_drag_data_received" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">1</property>
@@ -424,6 +424,7 @@
                       <object class="GtkLabel" id="l_command">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">The command you want to start</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">12</property>
                         <property name="xalign">1</property>
@@ -445,6 +446,7 @@
                           <object class="GtkEntry" id="e_command">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">The command you want to start</property>
                             <property name="margin_top">12</property>
                             <property name="hexpand">True</property>
                             <property name="invisible_char">•</property>
@@ -485,6 +487,8 @@
                       <object class="GtkLabel" id="l_working_dir">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Path to a folder that is used as the 
+working folder for the program</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">6</property>
                         <property name="xalign">1</property>
@@ -548,6 +552,7 @@ working folder for the program</property>
                       <object class="GtkLabel" id="l_run_in_terminal">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">If switched on the command is run in a Terminal window</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">12</property>
                         <property name="xalign">1</property>
@@ -579,6 +584,7 @@ working folder for the program</property>
                       <object class="GtkLabel" id="l_uri">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">The file or URL you want to open</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">12</property>
                         <property name="xalign">1</property>
@@ -601,7 +607,6 @@ working folder for the program</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="has_tooltip">True</property>
-                            <property name="tooltip_markup" translatable="yes">The file or URL you want to open</property>
                             <property name="tooltip_text" translatable="yes">The file or URL you want to open</property>
                             <property name="margin_top">12</property>
                             <property name="hexpand">True</property>
@@ -675,6 +680,7 @@ working folder for the program</property>
                       <object class="GtkLabel" id="l_advanced_hidden">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Pretend system wide starters with the same name as this one don't exist</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">6</property>
                         <property name="xalign">1</property>
@@ -691,6 +697,7 @@ working folder for the program</property>
                       <object class="GtkSwitch" id="sw_advanced_hidden">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Pretend system wide starters with the same name as this one don't exist</property>
                         <property name="halign">start</property>
                         <property name="margin_top">6</property>
                       </object>
@@ -705,6 +712,7 @@ working folder for the program</property>
                       <object class="GtkLabel" id="l_advanced_wm_class">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">The application will show at least one window with the given string as its WM class or WM name hint</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">12</property>
                         <property name="xalign">1</property>
@@ -721,6 +729,7 @@ working folder for the program</property>
                       <object class="GtkEntry" id="e_advanced_wm_class">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">The application will show at least one window with the given string as its WM class or WM name hint</property>
                         <property name="margin_top">12</property>
                         <property name="hexpand">True</property>
                         <property name="invisible_char">•</property>
@@ -736,6 +745,7 @@ working folder for the program</property>
                       <object class="GtkLabel" id="l_advanced_categories">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Categories in which the entry should be shown in a menu</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">12</property>
                         <property name="xalign">1</property>
@@ -752,6 +762,7 @@ working folder for the program</property>
                       <object class="GtkEntry" id="e_advanced_categories">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Categories in which the entry should be shown in a menu</property>
                         <property name="margin_top">12</property>
                         <property name="hexpand">True</property>
                         <property name="invisible_char">•</property>
@@ -767,6 +778,7 @@ working folder for the program</property>
                       <object class="GtkLabel" id="l_comment">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Tooltip for the entry, for example "View sites on the Internet".</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">12</property>
                         <property name="xalign">1</property>
@@ -783,6 +795,7 @@ working folder for the program</property>
                       <object class="GtkEntry" id="e_comment">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Tooltip for the entry, for example "View sites on the Internet".</property>
                         <property name="margin_top">12</property>
                         <property name="hexpand">True</property>
                         <property name="invisible_char">•</property>
@@ -828,6 +841,7 @@ working folder for the program</property>
                           <object class="GtkTreeView" id="tview_advanced_show_in">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Do you want the startert to ber visisbile only in some environments?</property>
                             <property name="margin_top">6</property>
                             <property name="vexpand">True</property>
                             <property name="headers_visible">False</property>
@@ -849,6 +863,7 @@ working folder for the program</property>
                       <object class="GtkLabel" id="l_show_in">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Do you want the startert to ber visisbile only in some environments?</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">15</property>
                         <property name="xalign">1</property>
@@ -889,6 +904,7 @@ working folder for the program</property>
                       <object class="GtkLabel" id="l_advanced_mime_types">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">File types your command can open.</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">6</property>
                         <property name="xalign">1</property>
@@ -918,6 +934,7 @@ semicolons (";")</property>
                           <object class="GtkTextView" id="tview_advanced_mime_types">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">File types your command can open.</property>
                             <property name="hexpand">True</property>
                             <property name="vexpand">True</property>
                             <signal name="drag-data-received" handler="on_tview_advanced_mime_types_drag_data_received" swapped="no"/>
@@ -958,6 +975,11 @@ semicolons (";")</property>
                       <object class="GtkLabel" id="l_keywords">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">A list of keywords which may be used in addition to other metadata 
+to describe this entry. This can be useful e.g. to facilitate searching 
+through entries. 
+
+It's used for example by the Unity dash</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">6</property>
                         <property name="xalign">1</property>
@@ -983,6 +1005,11 @@ semicolons (";")</property>
                           <object class="GtkTextView" id="tview_keywords">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">A list of keywords which may be used in addition to other metadata 
+to describe this entry. This can be useful e.g. to facilitate searching 
+through entries. 
+
+It's used for example by the Unity dash</property>
                             <property name="margin_top">6</property>
                             <property name="hexpand">True</property>
                             <property name="vexpand">True</property>

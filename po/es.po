@@ -6,138 +6,139 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-01-26 06:44+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-28 13:02+0100\n"
 "PO-Revision-Date: 2012-07-01 18:41+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2013-01-28 11:16+0000\n"
 "X-Generator: Launchpad (build 16451)\n"
 
-#: ../arronax/editor.py:122
+#: ../arronax/editor.py:131
 msgid "GNOME"
 msgstr ""
 
-#: ../arronax/editor.py:123
+#: ../arronax/editor.py:132
 msgid "KDE"
 msgstr ""
 
-#: ../arronax/editor.py:124
+#: ../arronax/editor.py:133
 msgid "LXDE"
 msgstr ""
 
-#: ../arronax/editor.py:125
+#: ../arronax/editor.py:134
 msgid "MATE"
 msgstr ""
 
-#: ../arronax/editor.py:126
+#: ../arronax/editor.py:135
 msgid "Razor-qt"
 msgstr ""
 
-#: ../arronax/editor.py:127
+#: ../arronax/editor.py:136
 msgid "ROX"
 msgstr ""
 
-#: ../arronax/editor.py:128
+#: ../arronax/editor.py:137
 msgid "Trinity Desktop"
 msgstr ""
 
-#: ../arronax/editor.py:129
+#: ../arronax/editor.py:138
 msgid "Unity"
 msgstr ""
 
-#: ../arronax/editor.py:130
+#: ../arronax/editor.py:139
 msgid "XFCE"
 msgstr ""
 
-#: ../arronax/editor.py:131
+#: ../arronax/editor.py:140
 msgid "Legacy environments"
 msgstr ""
 
-#: ../arronax/editor.py:164
+#: ../arronax/editor.py:174
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Cargando el archivo «%s»…"
 
-#: ../arronax/editor.py:165
+#: ../arronax/editor.py:175
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Se cargó el archivo «%s»…"
 
-#: ../arronax/editor.py:169
+#: ../arronax/editor.py:179
 msgid "Can not load starter"
 msgstr "No se puede cargar el acceso directo"
 
-#: ../arronax/editor.py:170
+#: ../arronax/editor.py:180
 msgid "File not loaded."
 msgstr "No se cargó el archivo."
 
-#: ../arronax/editor.py:210
+#: ../arronax/editor.py:220
 msgid "You need to provide a title."
 msgstr "Necesita proporcionar un título."
 
-#: ../arronax/editor.py:217
+#: ../arronax/editor.py:227
 msgid "You need to provide a command."
 msgstr "Necesita proporcionar una orden."
 
-#: ../arronax/editor.py:224
+#: ../arronax/editor.py:234
 msgid "You need to provide a URL or file name."
 msgstr ""
 
-#: ../arronax/editor.py:235
+#: ../arronax/editor.py:245
 msgid "Save now?"
 msgstr "¿Guardar ahora?"
 
-#: ../arronax/editor.py:236
+#: ../arronax/editor.py:246
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr "Tiene cambios sin guardar. ¿Quiere guardarlos ahora?"
 
-#: ../arronax/editor.py:255 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:265 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Seleccionar icono"
 
-#: ../arronax/editor.py:307
+#: ../arronax/editor.py:317
 msgid "Error"
 msgstr "Error"
 
-#: ../arronax/editor.py:311
+#: ../arronax/editor.py:321
 msgid "Saving file ..."
 msgstr "Guardando el archivo…"
 
-#: ../arronax/editor.py:312
+#: ../arronax/editor.py:322
 msgid "File saved."
 msgstr "Se ha guardado el archivo."
 
-#: ../arronax/editor.py:314
+#: ../arronax/editor.py:324
 #, python-format
 msgid "Saving file '%s'..."
 msgstr "Guardando el archivo «%s»…"
 
-#: ../arronax/editor.py:315 ../arronax/editor.py:334
+#: ../arronax/editor.py:325 ../arronax/editor.py:344
 #, python-format
 msgid "Saved file '%s'."
 msgstr "Se ha guardado el archivo «%s»."
 
-#: ../arronax/editor.py:330 ../arronax/editor.py:340
+#: ../arronax/editor.py:340 ../arronax/editor.py:350
 msgid "File not saved."
 msgstr "El archivo no ha sido guardado."
 
-#: ../arronax/editor.py:339
+#: ../arronax/editor.py:349
 msgid "Can not save starter"
 msgstr "No se puede guardar el acceso directo"
 
-#: ../arronax/editor.py:468
+#: ../arronax/editor.py:492
 msgid "This is not a local file. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:474
+#: ../arronax/editor.py:498
 msgid "This is not an image. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:509
+#: ../arronax/editor.py:533
 msgid "Created new starter."
 msgstr ""
 
@@ -288,28 +289,28 @@ msgid "The icon displayed for this starter. Click to select another one."
 msgstr ""
 
 #: ../data/ui/edit.ui.h:19
-msgid "Title:"
-msgstr "Título:"
-
-#: ../data/ui/edit.ui.h:20
 msgid "Title that is displayed for this starter file"
 msgstr ""
 
+#: ../data/ui/edit.ui.h:20
+msgid "Title:"
+msgstr "Título:"
+
 #: ../data/ui/edit.ui.h:21
+msgid "The command you want to start"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:22
 msgid "Command:"
 msgstr "Orden:"
 
-#: ../data/ui/edit.ui.h:22
+#: ../data/ui/edit.ui.h:23
 msgid "Select..."
 msgstr "Seleccionar…"
 
-#: ../data/ui/edit.ui.h:23
+#: ../data/ui/edit.ui.h:24
 msgid "Browse the file system to select a command"
 msgstr ""
-
-#: ../data/ui/edit.ui.h:24
-msgid "Start in folder:"
-msgstr "Iniciar en carpeta:"
 
 #: ../data/ui/edit.ui.h:25
 msgid ""
@@ -318,62 +319,92 @@ msgid ""
 msgstr ""
 
 #: ../data/ui/edit.ui.h:27
-msgid "Browse the file system to select a folder"
-msgstr ""
+msgid "Start in folder:"
+msgstr "Iniciar en carpeta:"
 
 #: ../data/ui/edit.ui.h:28
-msgid "Run in Terminal:"
-msgstr "Ejecutar en terminal:"
+msgid "Browse the file system to select a folder"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:29
 msgid "If switched on the command is run in a Terminal window"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:30
-msgid "File or URL:"
-msgstr ""
+msgid "Run in Terminal:"
+msgstr "Ejecutar en terminal:"
 
 #: ../data/ui/edit.ui.h:31
 msgid "The file or URL you want to open"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:32
-msgid "Browse the file system to select a file"
+msgid "File or URL:"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:33
+msgid "Browse the file system to select a file"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:34
 msgid "Basic"
 msgstr "Básico"
 
-#: ../data/ui/edit.ui.h:34
+#: ../data/ui/edit.ui.h:35
+msgid "Pretend system wide starters with the same name as this one don't exist"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:36
 msgid "Hidden:"
 msgstr "Oculto:"
 
-#: ../data/ui/edit.ui.h:35
+#: ../data/ui/edit.ui.h:37
+msgid ""
+"The application will show at least one window with the given string as its "
+"WM class or WM name hint"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:38
 msgid "Window Class:"
 msgstr "Clase de ventana:"
 
-#: ../data/ui/edit.ui.h:36
-msgid "Categories:"
-msgstr "Categorías:"
-
-#: ../data/ui/edit.ui.h:37
-msgid "Comment:"
-msgstr "Comentario:"
-
-#: ../data/ui/edit.ui.h:38
-msgid "Advanced"
-msgstr "Avanzado"
-
 #: ../data/ui/edit.ui.h:39
-msgid "Show in:"
+msgid "Categories in which the entry should be shown in a menu"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:40
+msgid "Categories:"
+msgstr "Categorías:"
+
+#: ../data/ui/edit.ui.h:41
+msgid "Tooltip for the entry, for example \"View sites on the Internet\"."
+msgstr ""
+
+#: ../data/ui/edit.ui.h:42
+msgid "Comment:"
+msgstr "Comentario:"
+
+#: ../data/ui/edit.ui.h:43
+msgid "Advanced"
+msgstr "Avanzado"
+
+#: ../data/ui/edit.ui.h:44
+msgid "Do you want the startert to ber visisbile only in some environments?"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:45
+msgid "Show in:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:46
 msgid "Show in"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:41
+#: ../data/ui/edit.ui.h:47
+msgid "File types your command can open."
+msgstr ""
+
+#: ../data/ui/edit.ui.h:48
 msgid ""
 "MIME types:\n"
 "\n"
@@ -387,11 +418,20 @@ msgstr ""
 "saltos de línea o\n"
 "punto y coma (;)"
 
-#: ../data/ui/edit.ui.h:46
+#: ../data/ui/edit.ui.h:53
 msgid "MIME types"
 msgstr "Tipos MIME"
 
-#: ../data/ui/edit.ui.h:47
+#: ../data/ui/edit.ui.h:54
+msgid ""
+"A list of keywords which may be used in addition to other metadata \n"
+"to describe this entry. This can be useful e.g. to facilitate searching \n"
+"through entries. \n"
+"\n"
+"It's used for example by the Unity dash"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:59
 msgid ""
 "Keywords:\n"
 "(one per line)"
@@ -399,7 +439,7 @@ msgstr ""
 "Palabras clave:\n"
 "(una por línea)"
 
-#: ../data/ui/edit.ui.h:49
+#: ../data/ui/edit.ui.h:61
 msgid "Keywords"
 msgstr "Palabras clave"
 
