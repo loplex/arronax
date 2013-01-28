@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-28 13:02+0100\n"
+"POT-Creation-Date: 2013-01-28 13:20+0100\n"
 "PO-Revision-Date: 2012-09-30 16:27+0000\n"
 "Last-Translator: Ivlev Denis <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -392,7 +392,7 @@ msgid "Advanced"
 msgstr "Дополнительно"
 
 #: ../data/ui/edit.ui.h:44
-msgid "Do you want the startert to ber visisbile only in some environments?"
+msgid "Do you want the starter to be visibile only in some environments?"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:45

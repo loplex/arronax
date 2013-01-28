@@ -841,7 +841,7 @@ working folder for the program</property>
                           <object class="GtkTreeView" id="tview_advanced_show_in">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="tooltip_text" translatable="yes">Do you want the startert to ber visisbile only in some environments?</property>
+                            <property name="tooltip_text" translatable="yes">Do you want the starter to be visibile only in some environments?</property>
                             <property name="margin_top">6</property>
                             <property name="vexpand">True</property>
                             <property name="headers_visible">False</property>
@@ -863,7 +863,7 @@ working folder for the program</property>
                       <object class="GtkLabel" id="l_show_in">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">Do you want the startert to ber visisbile only in some environments?</property>
+                        <property name="tooltip_text" translatable="yes">Do you want the starter to be visibile only in some environments?</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">15</property>
                         <property name="xalign">1</property>

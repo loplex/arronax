@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-28 13:02+0100\n"
+"POT-Creation-Date: 2013-01-28 13:20+0100\n"
 "PO-Revision-Date: 2013-01-28 02:16+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -394,7 +394,7 @@ msgid "Advanced"
 msgstr "Erweitert"
 
 #: ../data/ui/edit.ui.h:44
-msgid "Do you want the startert to ber visisbile only in some environments?"
+msgid "Do you want the starter to be visibile only in some environments?"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:45
