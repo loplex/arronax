@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-25 23:23+0100\n"
+"POT-Creation-Date: 2013-01-26 06:44+0100\n"
 "PO-Revision-Date: 2012-06-13 18:43+0000\n"
 "Last-Translator: Eugene Marshal <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -145,37 +145,37 @@ msgstr ""
 msgid "Created new starter."
 msgstr "Создать ярлык запуска"
 
-#: ../arronax/settings.py:49
+#: ../arronax/settings.py:47
 msgid "Open File"
 msgstr "Открыть файл"
 
-#: ../arronax/settings.py:52 ../arronax/settings.py:59
+#: ../arronax/settings.py:50 ../arronax/settings.py:57
 msgid "Desktop"
 msgstr "Рабочий стол"
 
-#: ../arronax/settings.py:53 ../arronax/settings.py:60
+#: ../arronax/settings.py:51 ../arronax/settings.py:58
 msgid "User App Folder"
 msgstr "Папка приложений пользователя"
 
-#: ../arronax/settings.py:54
+#: ../arronax/settings.py:52
 #, fuzzy
 msgid "System App Folder"
 msgstr "Папка приложений пользователя"
 
-#: ../arronax/settings.py:57
+#: ../arronax/settings.py:55
 #, fuzzy
 msgid "Save File"
 msgstr "Открыть файл"
 
-#: ../arronax/settings.py:63
+#: ../arronax/settings.py:61
 msgid "Select Folder"
 msgstr "Выберите папку"
 
-#: ../arronax/settings.py:66
+#: ../arronax/settings.py:64
 msgid "Select Program"
 msgstr "Выберите программу"
 
-#: ../arronax/settings.py:69
+#: ../arronax/settings.py:67
 #, fuzzy
 msgid "Select File"
 msgstr "Выберите папку"
@@ -185,22 +185,26 @@ msgid "Go to Web Page"
 msgstr ""
 
 #: ../arronax/about.py:21
+msgid "Ask a Question"
+msgstr ""
+
+#: ../arronax/about.py:30
 msgid "Report a Bug"
 msgstr ""
 
-#: ../arronax/about.py:27
+#: ../arronax/about.py:36
 msgid "Help with Translations"
 msgstr ""
 
-#: ../arronax/about.py:33
+#: ../arronax/about.py:42
 msgid "Donate via Flattr"
 msgstr ""
 
-#: ../arronax/about.py:39
+#: ../arronax/about.py:48
 msgid "Donate via PayPal"
 msgstr ""
 
-#: ../arronax/about.py:82
+#: ../arronax/about.py:94
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"

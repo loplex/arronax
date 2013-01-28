@@ -43,6 +43,15 @@ class Editor(object):
                                Gdk.DragAction.COPY)
         bt_icon.drag_dest_add_uri_targets()
 
+        for name in ('e_command', 'e_working_dir', 'e_uri'):
+            entry =  self.obj(name)
+            entry.drag_dest_set(Gtk.DestDefaults.ALL, [],  
+                                Gdk.DragAction.COPY)
+            entry.drag_dest_add_uri_targets()
+            entry.connect('drag-data-received',  
+                          self.on_urientry_drag_data_received)
+
+ 
         self.tview_mime = self.obj('tview_advanced_mime_types')
         self.tview_mime.drag_dest_set(Gtk.DestDefaults.ALL, [],  
                                       Gdk.DragAction.COPY)
@@ -135,6 +144,7 @@ class Editor(object):
                       )
                       
         self.conn.clear(store=True)
+        
 
         self.type_watcher = widgets.get_watcher(
             self.factory.get('cbox_type'),
@@ -389,7 +399,7 @@ class Editor(object):
         self.quit()
 
     def on_window1_drag_data_received(self, widget, drag_context, x, y, data,
-                                      info, time):
+                                      info, time):        
         uris = data.get_uris()
         if info == 0 and len(uris) > 0:
             uris = data.get_uris()
@@ -399,7 +409,21 @@ class Editor(object):
                 self.check_dirty()
                 self.read_desktop_file(filename)
 
+                
+    def on_urientry_drag_data_received(self, widget, drag_context, x, y, data,
+                                      info, time):
+        uris = data.get_uris()
+        if uris:
+            uri = urlparse.urlparse(uris[0])
+            if uri.scheme == 'file':
+                text = urllib.url2pathname(uri.path)
+            else:
+                text = uri
+            widget.set_text(text)
 
+
+
+        
     def on_tview_advanced_mime_types_drag_data_received(self, widget, 
                                                        drag_context, x, y, data,
                                                        info, time):
