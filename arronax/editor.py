@@ -162,7 +162,10 @@ class Editor(object):
             self.read_desktop_file(path)
         elif mode is MODE_CREATE_FOR:
             self.filename = None
-            self.obj('e_command').set_text(path)
+            if type == TYPE_APPLICATION:
+                self.obj('e_command').set_text(path)
+            else:
+                self.obj('e_uri').set_text(path)
             self.create_title_from_command(path)
         else:
             self.filename = path

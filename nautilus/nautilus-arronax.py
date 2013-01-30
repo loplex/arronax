@@ -14,7 +14,7 @@ class ArronaxExtension(GObject.GObject, Nautilus.MenuProvider):
         gettext.bindtextdomain(settings.GETTEXT_DOMAIN)
         gettext.textdomain(settings.GETTEXT_DOMAIN)
         gettext.bind_textdomain_codeset(settings.GETTEXT_DOMAIN, 'UTF-8')
-        print 'Initializing Arronax...'
+        print 'Initializing Arronax v%s...' % settings.APP_VERSION 
 
 
 

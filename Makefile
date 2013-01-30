@@ -20,6 +20,7 @@ clean:
 
 potfiles:
 	find ${NAME} -type f -name \*.py > po/POTFILES.in
+	find nautilus -type f -name \*.py >> po/POTFILES.in
 	find data -type f -name \*.desktop.in >> po/POTFILES.in
 	find data -type f -name \*.ui -printf '[type: gettext/glade]%p\n'  >> po/POTFILES.in
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-30 16:06+0100\n"
+"POT-Creation-Date: 2013-01-30 16:46+0100\n"
 "PO-Revision-Date: 2012-06-20 23:33+0000\n"
 "Last-Translator: oterobueu <oterobueu@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
@@ -58,87 +58,87 @@ msgstr ""
 msgid "Legacy environments"
 msgstr ""
 
-#: ../arronax/editor.py:174
+#: ../arronax/editor.py:177
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Cargando arquivo '%s' ..."
 
-#: ../arronax/editor.py:175
+#: ../arronax/editor.py:178
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Arquivo cargado '%s' ..."
 
-#: ../arronax/editor.py:179
+#: ../arronax/editor.py:182
 msgid "Can not load starter"
 msgstr "Non se pode cargar o lanzador"
 
-#: ../arronax/editor.py:180
+#: ../arronax/editor.py:183
 msgid "File not loaded."
 msgstr "Arquivo non cargado"
 
-#: ../arronax/editor.py:220
+#: ../arronax/editor.py:223
 msgid "You need to provide a title."
 msgstr "Necesitas propocionar un título"
 
-#: ../arronax/editor.py:227
+#: ../arronax/editor.py:230
 msgid "You need to provide a command."
 msgstr "Necesitas proporcionar un comando"
 
-#: ../arronax/editor.py:234
+#: ../arronax/editor.py:237
 msgid "You need to provide a URL or file name."
 msgstr ""
 
-#: ../arronax/editor.py:245
+#: ../arronax/editor.py:248
 msgid "Save now?"
 msgstr "¿Gardar agora?"
 
-#: ../arronax/editor.py:246
+#: ../arronax/editor.py:249
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr "Hai cambios que non foron gardados. ¿Queres gardalos agora?"
 
-#: ../arronax/editor.py:265 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:268 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Escoller unha icona"
 
-#: ../arronax/editor.py:317
+#: ../arronax/editor.py:320
 msgid "Error"
 msgstr "Erro"
 
-#: ../arronax/editor.py:321
+#: ../arronax/editor.py:324
 msgid "Saving file ..."
 msgstr "Gardando ficheiro ..."
 
-#: ../arronax/editor.py:322
+#: ../arronax/editor.py:325
 msgid "File saved."
 msgstr "Ficheiro gardado."
 
-#: ../arronax/editor.py:324
+#: ../arronax/editor.py:327
 #, python-format
 msgid "Saving file '%s'..."
 msgstr "Gardando ficheiro '%s' ..."
 
-#: ../arronax/editor.py:325 ../arronax/editor.py:344
+#: ../arronax/editor.py:328 ../arronax/editor.py:347
 #, python-format
 msgid "Saved file '%s'."
 msgstr "Ficheiro gardado '%s' ..."
 
-#: ../arronax/editor.py:340 ../arronax/editor.py:350
+#: ../arronax/editor.py:343 ../arronax/editor.py:353
 msgid "File not saved."
 msgstr "Ficheiro non gardado."
 
-#: ../arronax/editor.py:349
+#: ../arronax/editor.py:352
 msgid "Can not save starter"
 msgstr "Non se pode gardar o lanzador"
 
-#: ../arronax/editor.py:492
+#: ../arronax/editor.py:495
 msgid "This is not a local file. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:498
+#: ../arronax/editor.py:501
 msgid "This is not an image. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:533
+#: ../arronax/editor.py:536
 msgid "Created new starter."
 msgstr ""
 
@@ -207,6 +207,18 @@ msgstr ""
 #: ../arronax/desktopfile.py:40
 msgid "Arronax doesn't support this kind of starter yet"
 msgstr "Arronax todavía non soporta este tipo de lanzadores"
+
+#: ../nautilus/nautilus-arronax.py:22 ../nautilus/nautilus-arronax.py:42
+msgid "Create starter for this file"
+msgstr "Crear lanzador para este ficheiro"
+
+#: ../nautilus/nautilus-arronax.py:29
+msgid "Modify this starter"
+msgstr "Modificar este lanzador"
+
+#: ../nautilus/nautilus-arronax.py:35
+msgid "Create starter"
+msgstr "Crear lanzador"
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:9
 msgid "Arronax"
@@ -422,12 +434,3 @@ msgstr "Palabras Clave:"
 #: ../data/ui/edit.ui.h:57
 msgid "Keywords"
 msgstr "Palabras clave"
-
-#~ msgid "Create starter for this file"
-#~ msgstr "Crear lanzador para este ficheiro"
-
-#~ msgid "Modify this starter"
-#~ msgstr "Modificar este lanzador"
-
-#~ msgid "Create starter"
-#~ msgstr "Crear lanzador"
