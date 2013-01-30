@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-28 13:20+0100\n"
+"POT-Creation-Date: 2013-01-30 15:17+0100\n"
 "PO-Revision-Date: 2012-08-17 12:57+0000\n"
 "Last-Translator: Sylvie Gallet <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -353,7 +353,7 @@ msgid "Basic"
 msgstr "Basique"
 
 #: ../data/ui/edit.ui.h:35
-msgid "Pretend system wide starters with the same name as this one don't exist"
+msgid "Hide this and any system wide starters with the same name."
 msgstr ""
 
 #: ../data/ui/edit.ui.h:36
@@ -379,7 +379,7 @@ msgid "Categories:"
 msgstr "Catégories :"
 
 #: ../data/ui/edit.ui.h:41
-msgid "Tooltip for the entry, for example \"View sites on the Internet\"."
+msgid "Tooltip for the entry"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:42
@@ -425,15 +425,10 @@ msgid "MIME types"
 msgstr "Types MIME"
 
 #: ../data/ui/edit.ui.h:54
-msgid ""
-"A list of keywords which may be used in addition to other metadata \n"
-"to describe this entry. This can be useful e.g. to facilitate searching \n"
-"through entries. \n"
-"\n"
-"It's used for example by the Unity dash"
+msgid "List of keywords that may be used for searching starters, e.g. in Unity"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:59
+#: ../data/ui/edit.ui.h:55
 msgid ""
 "Keywords:\n"
 "(one per line)"
@@ -441,7 +436,7 @@ msgstr ""
 "Mots clé :\n"
 "(un par ligne)"
 
-#: ../data/ui/edit.ui.h:61
+#: ../data/ui/edit.ui.h:57
 msgid "Keywords"
 msgstr "Mots clé"
 

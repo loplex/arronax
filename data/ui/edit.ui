@@ -680,7 +680,7 @@ working folder for the program</property>
                       <object class="GtkLabel" id="l_advanced_hidden">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">Pretend system wide starters with the same name as this one don't exist</property>
+                        <property name="tooltip_text" translatable="yes">Hide this and any system wide starters with the same name.</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">6</property>
                         <property name="xalign">1</property>
@@ -697,7 +697,7 @@ working folder for the program</property>
                       <object class="GtkSwitch" id="sw_advanced_hidden">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="tooltip_text" translatable="yes">Pretend system wide starters with the same name as this one don't exist</property>
+                        <property name="tooltip_text" translatable="yes">Hide this and any system wide starters with the same name.</property>
                         <property name="halign">start</property>
                         <property name="margin_top">6</property>
                       </object>
@@ -778,7 +778,7 @@ working folder for the program</property>
                       <object class="GtkLabel" id="l_comment">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">Tooltip for the entry, for example "View sites on the Internet".</property>
+                        <property name="tooltip_text" translatable="yes">Tooltip for the entry</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">12</property>
                         <property name="xalign">1</property>
@@ -795,7 +795,7 @@ working folder for the program</property>
                       <object class="GtkEntry" id="e_comment">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="tooltip_text" translatable="yes">Tooltip for the entry, for example "View sites on the Internet".</property>
+                        <property name="tooltip_text" translatable="yes">Tooltip for the entry</property>
                         <property name="margin_top">12</property>
                         <property name="hexpand">True</property>
                         <property name="invisible_char">•</property>
@@ -975,11 +975,7 @@ semicolons (";")</property>
                       <object class="GtkLabel" id="l_keywords">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">A list of keywords which may be used in addition to other metadata 
-to describe this entry. This can be useful e.g. to facilitate searching 
-through entries. 
-
-It's used for example by the Unity dash</property>
+                        <property name="tooltip_text" translatable="yes">List of keywords that may be used for searching starters, e.g. in Unity</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">6</property>
                         <property name="xalign">1</property>
@@ -1005,11 +1001,7 @@ It's used for example by the Unity dash</property>
                           <object class="GtkTextView" id="tview_keywords">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="tooltip_text" translatable="yes">A list of keywords which may be used in addition to other metadata 
-to describe this entry. This can be useful e.g. to facilitate searching 
-through entries. 
-
-It's used for example by the Unity dash</property>
+                            <property name="tooltip_text" translatable="yes">List of keywords that may be used for searching starters, e.g. in Unity</property>
                             <property name="margin_top">6</property>
                             <property name="hexpand">True</property>
                             <property name="vexpand">True</property>
