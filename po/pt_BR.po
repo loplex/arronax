@@ -6,12 +6,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-01-30 16:46+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-30 22:05+0100\n"
 "PO-Revision-Date: 2012-11-12 21:06+0000\n"
-"Last-Translator: Henrique Otavio do Espirito Santo Becker "
-"<rikee8@gmail.com>\n"
+"Last-Translator: Henrique Otavio do Espirito Santo Becker <rikee8@gmail."
+"com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -209,17 +210,24 @@ msgstr ""
 msgid "Arronax doesn't support this kind of starter yet"
 msgstr "Arronax não suporta este tipo de inicializador ainda"
 
-#: ../nautilus/nautilus-arronax.py:22 ../nautilus/nautilus-arronax.py:42
-msgid "Create starter for this file"
+#: ../nautilus/nautilus-arronax.py:22
+#, fuzzy
+msgid "Create a starter for this program"
 msgstr "Criar um inicializador para este arquivo"
 
-#: ../nautilus/nautilus-arronax.py:29
+#: ../nautilus/nautilus-arronax.py:28
 msgid "Modify this starter"
 msgstr "Modificar este inicializador"
 
-#: ../nautilus/nautilus-arronax.py:35
-msgid "Create starter"
+#: ../nautilus/nautilus-arronax.py:34
+#, fuzzy
+msgid "Create a starter"
 msgstr "Criar inicializador"
+
+#: ../nautilus/nautilus-arronax.py:41
+#, fuzzy
+msgid "Create a starter for this file"
+msgstr "Criar um inicializador para este arquivo"
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:9
 msgid "Arronax"
@@ -428,8 +436,7 @@ msgid "MIME types"
 msgstr "Tipos MIME"
 
 #: ../data/ui/edit.ui.h:54
-msgid ""
-"List of keywords that may be used for searching starters, e.g. in Unity"
+msgid "List of keywords that may be used for searching starters, e.g. in Unity"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:55

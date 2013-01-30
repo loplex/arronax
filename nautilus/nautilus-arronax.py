@@ -19,7 +19,7 @@ class ArronaxExtension(GObject.GObject, Nautilus.MenuProvider):
 
 
     def _create_starter_for(self, path):
-        label = _('Create starter for this file')
+        label = _('Create a starter for this program')
         func =  lambda *x: editor.Editor(path=path, 
                                          mode=editor.MODE_CREATE_FOR)
         return label, func
@@ -31,14 +31,14 @@ class ArronaxExtension(GObject.GObject, Nautilus.MenuProvider):
         return label, func
 
     def _create_starter_in(self, path):
-        label = _('Create starter')
+        label = _('Create a starter')
         func =  lambda *x: editor.Editor(path=path, 
                                          mode=editor.MODE_CREATE_IN)
         return label, func
 
 
     def _create_starter_link(self, path):
-        label = _('Create starter for this file')
+        label = _('Create a starter for this file')
         func =  lambda *x: editor.Editor(path=path, 
                                          mode=editor.MODE_CREATE_FOR,
                                          type=editor.TYPE_LINK)
