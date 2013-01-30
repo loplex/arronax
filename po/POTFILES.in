@@ -4,11 +4,12 @@ arronax/editor.py
 arronax/widgets.py
 arronax/converter.py
 arronax/settings.py
+arronax/xdgpath.py
+arronax/filechooser.py
 arronax/about.py
 arronax/connection.py
 arronax/dialogs.py
 arronax/desktopfile.py
 arronax/clipboard.py
-nautilus/nautilus-arronax.py
-[type: gettext/glade]data/ui/edit.ui
 data/desktop/arronax.desktop.in
+[type: gettext/glade]data/ui/edit.ui

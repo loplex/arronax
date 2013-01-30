@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-30 15:17+0100\n"
+"POT-Creation-Date: 2013-01-30 16:06+0100\n"
 "PO-Revision-Date: 2012-07-01 18:41+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -208,17 +208,13 @@ msgstr ""
 msgid "Arronax doesn't support this kind of starter yet"
 msgstr "Arronax aún no es compatible con este tipo de accesos directos"
 
-#: ../nautilus/nautilus-arronax.py:22 ../nautilus/nautilus-arronax.py:41
-msgid "Create starter for this file"
-msgstr "Crear acceso directo para este archivo"
+#: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:9
+msgid "Arronax"
+msgstr "Arronax"
 
-#: ../nautilus/nautilus-arronax.py:28
-msgid "Modify this starter"
-msgstr "Modificar este acceso directo"
-
-#: ../nautilus/nautilus-arronax.py:34
-msgid "Create starter"
-msgstr "Crear acceso directo"
+#: ../data/desktop/arronax.desktop.in.h:2
+msgid "Create and edit application starters"
+msgstr "Cree y edite accesos directos a aplicaciones"
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
@@ -247,10 +243,6 @@ msgstr "Guardar al acceso directo a aplicación"
 #: ../data/ui/edit.ui.h:8
 msgid "Save as another application starter"
 msgstr "Guardar como otro acceso directo a aplicación"
-
-#: ../data/ui/edit.ui.h:9 ../data/desktop/arronax.desktop.in.h:1
-msgid "Arronax"
-msgstr "Arronax"
 
 #: ../data/ui/edit.ui.h:10
 msgid "_File"
@@ -438,6 +430,11 @@ msgstr ""
 msgid "Keywords"
 msgstr "Palabras clave"
 
-#: ../data/desktop/arronax.desktop.in.h:2
-msgid "Create and edit application starters"
-msgstr "Cree y edite accesos directos a aplicaciones"
+#~ msgid "Create starter for this file"
+#~ msgstr "Crear acceso directo para este archivo"
+
+#~ msgid "Modify this starter"
+#~ msgstr "Modificar este acceso directo"
+
+#~ msgid "Create starter"
+#~ msgstr "Crear acceso directo"

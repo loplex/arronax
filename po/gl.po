@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-30 15:17+0100\n"
+"POT-Creation-Date: 2013-01-30 16:06+0100\n"
 "PO-Revision-Date: 2012-06-20 23:33+0000\n"
 "Last-Translator: oterobueu <oterobueu@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
@@ -208,17 +208,13 @@ msgstr ""
 msgid "Arronax doesn't support this kind of starter yet"
 msgstr "Arronax todavía non soporta este tipo de lanzadores"
 
-#: ../nautilus/nautilus-arronax.py:22 ../nautilus/nautilus-arronax.py:41
-msgid "Create starter for this file"
-msgstr "Crear lanzador para este ficheiro"
+#: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:9
+msgid "Arronax"
+msgstr "Arronax"
 
-#: ../nautilus/nautilus-arronax.py:28
-msgid "Modify this starter"
-msgstr "Modificar este lanzador"
-
-#: ../nautilus/nautilus-arronax.py:34
-msgid "Create starter"
-msgstr "Crear lanzador"
+#: ../data/desktop/arronax.desktop.in.h:2
+msgid "Create and edit application starters"
+msgstr "Crear e editar lanzadores de aplicacion"
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
@@ -247,10 +243,6 @@ msgstr "Gardar lanzador de aplicación"
 #: ../data/ui/edit.ui.h:8
 msgid "Save as another application starter"
 msgstr "Gardar como outro lanzador de aplicación"
-
-#: ../data/ui/edit.ui.h:9 ../data/desktop/arronax.desktop.in.h:1
-msgid "Arronax"
-msgstr "Arronax"
 
 #: ../data/ui/edit.ui.h:10
 msgid "_File"
@@ -431,6 +423,11 @@ msgstr "Palabras Clave:"
 msgid "Keywords"
 msgstr "Palabras clave"
 
-#: ../data/desktop/arronax.desktop.in.h:2
-msgid "Create and edit application starters"
-msgstr "Crear e editar lanzadores de aplicacion"
+#~ msgid "Create starter for this file"
+#~ msgstr "Crear lanzador para este ficheiro"
+
+#~ msgid "Modify this starter"
+#~ msgstr "Modificar este lanzador"
+
+#~ msgid "Create starter"
+#~ msgstr "Crear lanzador"

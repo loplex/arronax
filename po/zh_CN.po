@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-30 15:17+0100\n"
+"POT-Creation-Date: 2013-01-30 16:06+0100\n"
 "PO-Revision-Date: 2012-06-07 08:11+0000\n"
 "Last-Translator: Wang Dianjin <Unknown>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -208,17 +208,13 @@ msgstr ""
 msgid "Arronax doesn't support this kind of starter yet"
 msgstr "Arronax 还不支持该种启动器"
 
-#: ../nautilus/nautilus-arronax.py:22 ../nautilus/nautilus-arronax.py:41
-msgid "Create starter for this file"
-msgstr "创建该文件的启动器"
+#: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:9
+msgid "Arronax"
+msgstr "Arronax"
 
-#: ../nautilus/nautilus-arronax.py:28
-msgid "Modify this starter"
-msgstr "修改该启动器"
-
-#: ../nautilus/nautilus-arronax.py:34
-msgid "Create starter"
-msgstr "创建启动器"
+#: ../data/desktop/arronax.desktop.in.h:2
+msgid "Create and edit application starters"
+msgstr "创建并编辑应用启动器"
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
@@ -247,10 +243,6 @@ msgstr "保存到应用启动器"
 #: ../data/ui/edit.ui.h:8
 msgid "Save as another application starter"
 msgstr "另存为其他应用启动器"
-
-#: ../data/ui/edit.ui.h:9 ../data/desktop/arronax.desktop.in.h:1
-msgid "Arronax"
-msgstr "Arronax"
 
 #: ../data/ui/edit.ui.h:10
 msgid "_File"
@@ -431,6 +423,11 @@ msgstr ""
 msgid "Keywords"
 msgstr ""
 
-#: ../data/desktop/arronax.desktop.in.h:2
-msgid "Create and edit application starters"
-msgstr "创建并编辑应用启动器"
+#~ msgid "Create starter for this file"
+#~ msgstr "创建该文件的启动器"
+
+#~ msgid "Modify this starter"
+#~ msgstr "修改该启动器"
+
+#~ msgid "Create starter"
+#~ msgstr "创建启动器"
