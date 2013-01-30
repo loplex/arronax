@@ -38,7 +38,7 @@ Description: Create and modify application, file and URI starters.
 Package: arronax-nautilus
 Architecture: all
 X-Python-Version: >= 2.7
-Depends: ${python:Depends}, ${misc:Depends}, arronax-base, nautilus (>= 3.4.1), python-nautilus
+Depends: ${python:Depends}, ${misc:Depends}, python (>=2.7) , arronax-base, nautilus (>= 3.4.1), python-nautilus
 Conflicts: arronax (<= 0.03)
 Description: Create and modify application, file and URI starters.
  Arronax lets you create and modify starters (*.desktop files) for applications,

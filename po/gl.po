@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-30 22:05+0100\n"
+"POT-Creation-Date: 2013-01-31 00:14+0100\n"
 "PO-Revision-Date: 2012-06-20 23:33+0000\n"
 "Last-Translator: oterobueu <oterobueu@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-01-30 17:20+0000\n"
+"X-Launchpad-Export-Date: 2013-01-30 22:52+0000\n"
 "X-Generator: Launchpad (build 16455)\n"
 
 #: ../arronax/editor.py:131
@@ -209,23 +209,20 @@ msgid "Arronax doesn't support this kind of starter yet"
 msgstr "Arronax todavía non soporta este tipo de lanzadores"
 
 #: ../nautilus/nautilus-arronax.py:22
-#, fuzzy
 msgid "Create a starter for this program"
-msgstr "Crear lanzador para este ficheiro"
+msgstr ""
 
 #: ../nautilus/nautilus-arronax.py:28
 msgid "Modify this starter"
 msgstr "Modificar este lanzador"
 
 #: ../nautilus/nautilus-arronax.py:34
-#, fuzzy
 msgid "Create a starter"
-msgstr "Crear lanzador"
+msgstr ""
 
 #: ../nautilus/nautilus-arronax.py:41
-#, fuzzy
 msgid "Create a starter for this file"
-msgstr "Crear lanzador para este ficheiro"
+msgstr ""
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:9
 msgid "Arronax"
@@ -441,3 +438,9 @@ msgstr "Palabras Clave:"
 #: ../data/ui/edit.ui.h:57
 msgid "Keywords"
 msgstr "Palabras clave"
+
+#~ msgid "Create starter for this file"
+#~ msgstr "Crear lanzador para este ficheiro"
+
+#~ msgid "Create starter"
+#~ msgstr "Crear lanzador"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-30 22:05+0100\n"
+"POT-Creation-Date: 2013-01-31 00:14+0100\n"
 "PO-Revision-Date: 2012-07-01 18:41+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-01-30 17:20+0000\n"
+"X-Launchpad-Export-Date: 2013-01-30 22:52+0000\n"
 "X-Generator: Launchpad (build 16455)\n"
 
 #: ../arronax/editor.py:131
@@ -209,23 +209,20 @@ msgid "Arronax doesn't support this kind of starter yet"
 msgstr "Arronax aún no es compatible con este tipo de accesos directos"
 
 #: ../nautilus/nautilus-arronax.py:22
-#, fuzzy
 msgid "Create a starter for this program"
-msgstr "Crear acceso directo para este archivo"
+msgstr ""
 
 #: ../nautilus/nautilus-arronax.py:28
 msgid "Modify this starter"
 msgstr "Modificar este acceso directo"
 
 #: ../nautilus/nautilus-arronax.py:34
-#, fuzzy
 msgid "Create a starter"
-msgstr "Crear acceso directo"
+msgstr ""
 
 #: ../nautilus/nautilus-arronax.py:41
-#, fuzzy
 msgid "Create a starter for this file"
-msgstr "Crear acceso directo para este archivo"
+msgstr ""
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:9
 msgid "Arronax"
@@ -448,3 +445,9 @@ msgstr ""
 #: ../data/ui/edit.ui.h:57
 msgid "Keywords"
 msgstr "Palabras clave"
+
+#~ msgid "Create starter"
+#~ msgstr "Crear acceso directo"
+
+#~ msgid "Create starter for this file"
+#~ msgstr "Crear acceso directo para este archivo"
