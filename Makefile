@@ -5,7 +5,7 @@ VERSION=$(shell echo '${DEBVERSION}' | egrep -o '[0-9.-]{3,}')
 WEBDIR=/home/diesch/florian-diesch.de/sphinx/neu/source/software/${NAME}/dist
 
 #PPA=diesch/testing
-PPA=diesch/test2
+PPA=diesch/experimental
 
 DEBUILD=debuild -sa  -v${DEBVERSION} -kB57F5641 -i'icon|.bzr'
 

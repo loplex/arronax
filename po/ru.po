@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-31 00:14+0100\n"
+"POT-Creation-Date: 2013-02-11 16:38+0100\n"
 "PO-Revision-Date: 2012-09-30 16:27+0000\n"
 "Last-Translator: Ivlev Denis <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -130,15 +130,15 @@ msgstr "Файл не сохранён."
 msgid "Can not save starter"
 msgstr "Невозможно сохранить ярлык запуска"
 
-#: ../arronax/editor.py:495
+#: ../arronax/editor.py:497
 msgid "This is not a local file. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:501
+#: ../arronax/editor.py:503
 msgid "This is not an image. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:536
+#: ../arronax/editor.py:538
 msgid "Created new starter."
 msgstr ""
 
@@ -212,8 +212,9 @@ msgid "Arronax doesn't support this kind of starter yet"
 msgstr "Arronax не поддерживает этот тип ярлыков запуска"
 
 #: ../nautilus/nautilus-arronax.py:22
+#, fuzzy
 msgid "Create a starter for this program"
-msgstr ""
+msgstr "Создать ярлык запуска для этого файла"
 
 #: ../nautilus/nautilus-arronax.py:28
 msgid "Modify this starter"
@@ -224,8 +225,9 @@ msgid "Create a starter"
 msgstr ""
 
 #: ../nautilus/nautilus-arronax.py:41
+#, fuzzy
 msgid "Create a starter for this file"
-msgstr ""
+msgstr "Создать ярлык запуска для этого файла"
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:9
 msgid "Arronax"
@@ -450,6 +452,3 @@ msgstr "Ключевые слова"
 
 #~ msgid "Create starter"
 #~ msgstr "Создать ярлык запуска"
-
-#~ msgid "Create starter for this file"
-#~ msgstr "Создать ярлык запуска для этого файла"

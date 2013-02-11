@@ -46,7 +46,7 @@ QUESTION_URL = 'https://answers.launchpad.net/%s/+addquestion' % app_name
 FILE_DLG_DEF = {
     'dlg_open': {'title': _('Open File'),
                  'action':  Gtk.FileChooserAction.OPEN,
-                 'patterns': ['*.desktop'],
+                 'patterns': ['*.desktop', '*'],
                  'buttons': [(_('Desktop'), USER_DESKTOP_DIR),
                              (_('User App Folder'), USER_APPLICATIONS_DIR),
                              (_('System App Folder'), SYS_APPLICATIONS_DIR),

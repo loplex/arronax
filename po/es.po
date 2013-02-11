@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-31 00:14+0100\n"
+"POT-Creation-Date: 2013-02-11 16:38+0100\n"
 "PO-Revision-Date: 2012-07-01 18:41+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -130,15 +130,15 @@ msgstr "El archivo no ha sido guardado."
 msgid "Can not save starter"
 msgstr "No se puede guardar el acceso directo"
 
-#: ../arronax/editor.py:495
+#: ../arronax/editor.py:497
 msgid "This is not a local file. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:501
+#: ../arronax/editor.py:503
 msgid "This is not an image. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:536
+#: ../arronax/editor.py:538
 msgid "Created new starter."
 msgstr ""
 
@@ -209,8 +209,9 @@ msgid "Arronax doesn't support this kind of starter yet"
 msgstr "Arronax aún no es compatible con este tipo de accesos directos"
 
 #: ../nautilus/nautilus-arronax.py:22
+#, fuzzy
 msgid "Create a starter for this program"
-msgstr ""
+msgstr "Crear acceso directo para este archivo"
 
 #: ../nautilus/nautilus-arronax.py:28
 msgid "Modify this starter"
@@ -221,8 +222,9 @@ msgid "Create a starter"
 msgstr ""
 
 #: ../nautilus/nautilus-arronax.py:41
+#, fuzzy
 msgid "Create a starter for this file"
-msgstr ""
+msgstr "Crear acceso directo para este archivo"
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:9
 msgid "Arronax"
@@ -448,6 +450,3 @@ msgstr "Palabras clave"
 
 #~ msgid "Create starter"
 #~ msgstr "Crear acceso directo"
-
-#~ msgid "Create starter for this file"
-#~ msgstr "Crear acceso directo para este archivo"

@@ -387,7 +387,9 @@ class Editor(object):
         dialog.destroy()
         if response != Gtk.ResponseType.OK:
             return
-        if add_ext and not path.endswith('.desktop'):
+        if (add_ext and 
+            not path.endswith('.desktop') and 
+            not os.path.isfile(path)):
             path='%s.desktop' % path
         return path
 

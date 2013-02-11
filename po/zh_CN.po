@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-31 00:14+0100\n"
+"POT-Creation-Date: 2013-02-11 16:38+0100\n"
 "PO-Revision-Date: 2012-06-07 08:11+0000\n"
 "Last-Translator: Wang Dianjin <Unknown>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -130,15 +130,15 @@ msgstr "文件未保存。"
 msgid "Can not save starter"
 msgstr "无法保存启动器"
 
-#: ../arronax/editor.py:495
+#: ../arronax/editor.py:497
 msgid "This is not a local file. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:501
+#: ../arronax/editor.py:503
 msgid "This is not an image. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:536
+#: ../arronax/editor.py:538
 msgid "Created new starter."
 msgstr ""
 
@@ -209,8 +209,9 @@ msgid "Arronax doesn't support this kind of starter yet"
 msgstr "Arronax 还不支持该种启动器"
 
 #: ../nautilus/nautilus-arronax.py:22
+#, fuzzy
 msgid "Create a starter for this program"
-msgstr ""
+msgstr "创建该文件的启动器"
 
 #: ../nautilus/nautilus-arronax.py:28
 msgid "Modify this starter"
@@ -221,8 +222,9 @@ msgid "Create a starter"
 msgstr ""
 
 #: ../nautilus/nautilus-arronax.py:41
+#, fuzzy
 msgid "Create a starter for this file"
-msgstr ""
+msgstr "创建该文件的启动器"
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:9
 msgid "Arronax"
@@ -441,6 +443,3 @@ msgstr ""
 
 #~ msgid "Create starter"
 #~ msgstr "创建启动器"
-
-#~ msgid "Create starter for this file"
-#~ msgstr "创建该文件的启动器"

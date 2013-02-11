@@ -13,11 +13,13 @@ def create_filechooser_dlg(title, action, patterns=None, mime_types=None):
         for p in patterns:
             filter = Gtk.FileFilter()
             filter.add_pattern(p)
+            filter.set_name(p)
             dlg.add_filter(filter)
     if mime_types is not None:
         for m in mime_types:
             filter = Gtk.FileFilter()
             filter.add_mime_type(m)
+            filter.set_name(m)
             dlg.add_filter(filter)
     return dlg
 

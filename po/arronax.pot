@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-31 00:14+0100\n"
+"POT-Creation-Date: 2013-02-11 16:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,15 +129,15 @@ msgstr ""
 msgid "Can not save starter"
 msgstr ""
 
-#: ../arronax/editor.py:495
+#: ../arronax/editor.py:497
 msgid "This is not a local file. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:501
+#: ../arronax/editor.py:503
 msgid "This is not an image. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:536
+#: ../arronax/editor.py:538
 msgid "Created new starter."
 msgstr ""
 

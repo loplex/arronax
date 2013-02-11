@@ -1,3 +1,11 @@
+arronax (0.04~pre4) quantal; urgency=low
+
+  * updated translations
+  * minor UI improvements
+  * some bugfixes
+
+ -- Florian Diesch <devel@florian-diesch.de>  Thu, 31 Jan 2013 03:57:00 +0100
+
 arronax (0.04~pre3) quantal; urgency=low
 
   * conflicts with arronax <= 0.03
