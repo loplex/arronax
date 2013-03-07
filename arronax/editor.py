@@ -423,7 +423,7 @@ class Editor(object):
             if uri.scheme == 'file':
                 text = urllib.url2pathname(uri.path)
             else:
-                text = uri
+                text = uris[0]
             widget.set_text(text)
 
 
