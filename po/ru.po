@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-07 21:45+0100\n"
-"PO-Revision-Date: 2012-09-30 16:27+0000\n"
-"Last-Translator: Ivlev Denis <Unknown>\n"
+"PO-Revision-Date: 2013-03-06 11:16+0000\n"
+"Last-Translator: Atanas Kovachki <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
-"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-01-30 22:52+0000\n"
-"X-Generator: Launchpad (build 16455)\n"
+"X-Launchpad-Export-Date: 2013-03-08 18:56+0000\n"
+"X-Generator: Launchpad (build 16523)\n"
+"Language: ru\n"
 
 #: ../arronax/editor.py:131
 msgid "GNOME"
@@ -184,25 +184,26 @@ msgstr ""
 
 #: ../arronax/about.py:30
 msgid "Report a Bug"
-msgstr ""
+msgstr "Сообщить о неполадке"
 
 #: ../arronax/about.py:36
 msgid "Help with Translations"
-msgstr ""
+msgstr "Помочь с переводом"
 
 #: ../arronax/about.py:42
 msgid "Donate via Flattr"
-msgstr ""
+msgstr "Пожертвовать через Flattr"
 
 #: ../arronax/about.py:48
 msgid "Donate via PayPal"
-msgstr ""
+msgstr "Пожертвовать через PayPal"
 
 #: ../arronax/about.py:94
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Aleksey Kabanov https://launchpad.net/~ak099\n"
+"  Atanas Kovachki https://launchpad.net/~zdar\n"
 "  Eugene Marshal https://launchpad.net/~lowrider\n"
 "  Florian Diesch https://launchpad.net/~diesch\n"
 "  Ivlev Denis https://launchpad.net/~den4ik"
@@ -212,9 +213,8 @@ msgid "Arronax doesn't support this kind of starter yet"
 msgstr "Arronax не поддерживает этот тип ярлыков запуска"
 
 #: ../nautilus/nautilus-arronax.py:22
-#, fuzzy
 msgid "Create a starter for this program"
-msgstr "Создать ярлык запуска для этого файла"
+msgstr ""
 
 #: ../nautilus/nautilus-arronax.py:28
 msgid "Modify this starter"
@@ -225,9 +225,8 @@ msgid "Create a starter"
 msgstr ""
 
 #: ../nautilus/nautilus-arronax.py:41
-#, fuzzy
 msgid "Create a starter for this file"
-msgstr "Создать ярлык запуска для этого файла"
+msgstr ""
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:9
 msgid "Arronax"
@@ -435,7 +434,8 @@ msgid "MIME types"
 msgstr "MIME-типы"
 
 #: ../data/ui/edit.ui.h:54
-msgid "List of keywords that may be used for searching starters, e.g. in Unity"
+msgid ""
+"List of keywords that may be used for searching starters, e.g. in Unity"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:55
@@ -449,6 +449,3 @@ msgstr ""
 #: ../data/ui/edit.ui.h:57
 msgid "Keywords"
 msgstr "Ключевые слова"
-
-#~ msgid "Create starter"
-#~ msgstr "Создать ярлык запуска"

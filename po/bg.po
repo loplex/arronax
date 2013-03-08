@@ -1,16 +1,16 @@
-# Spanish translation for arronax
-# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# Bulgarian translation for arronax
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the arronax package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-03-07 21:45+0100\n"
-"PO-Revision-Date: 2012-07-01 18:41+0000\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
-"Language-Team: Spanish <es@li.org>\n"
+"PO-Revision-Date: 2013-03-06 15:52+0000\n"
+"Last-Translator: Atanas Kovachki <Unknown>\n"
+"Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,7 +47,7 @@ msgstr ""
 
 #: ../arronax/editor.py:138
 msgid "Unity"
-msgstr ""
+msgstr "Юнити"
 
 #: ../arronax/editor.py:139
 msgid "XFCE"
@@ -60,168 +60,168 @@ msgstr ""
 #: ../arronax/editor.py:177
 #, python-format
 msgid "Loading file '%s' ..."
-msgstr "Cargando el archivo «%s»…"
+msgstr "Зареждане на файла '%s' ..."
 
 #: ../arronax/editor.py:178
 #, python-format
 msgid "Loaded file '%s' ..."
-msgstr "Se cargó el archivo «%s»…"
+msgstr "Зареден е файла '%s' ..."
 
 #: ../arronax/editor.py:182
 msgid "Can not load starter"
-msgstr "No se puede cargar el acceso directo"
+msgstr "Не може да се зареди стартера"
 
 #: ../arronax/editor.py:183
 msgid "File not loaded."
-msgstr "No se cargó el archivo."
+msgstr "Файла не зареди."
 
 #: ../arronax/editor.py:223
 msgid "You need to provide a title."
-msgstr "Necesita proporcionar un título."
+msgstr "Трябва да въведете име."
 
 #: ../arronax/editor.py:230
 msgid "You need to provide a command."
-msgstr "Necesita proporcionar una orden."
+msgstr "Трябва да зададете команда."
 
 #: ../arronax/editor.py:237
 msgid "You need to provide a URL or file name."
-msgstr ""
+msgstr "Трябва да предоставите линк или името на файла."
 
 #: ../arronax/editor.py:248
 msgid "Save now?"
-msgstr "¿Guardar ahora?"
+msgstr "Да се запази ли сега?"
 
 #: ../arronax/editor.py:249
 msgid "You have unsaved changes.  Do you want to save them now?"
-msgstr "Tiene cambios sin guardar. ¿Quiere guardarlos ahora?"
+msgstr "Има незапазени промени. Да се запазят ли сега?"
 
 #: ../arronax/editor.py:268 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
-msgstr "Seleccionar icono"
+msgstr "Изберете иконка"
 
 #: ../arronax/editor.py:320
 msgid "Error"
-msgstr "Error"
+msgstr "Грешка"
 
 #: ../arronax/editor.py:324
 msgid "Saving file ..."
-msgstr "Guardando el archivo…"
+msgstr "Съхраняване на файла ..."
 
 #: ../arronax/editor.py:325
 msgid "File saved."
-msgstr "Se ha guardado el archivo."
+msgstr "Файлът е съхранен."
 
 #: ../arronax/editor.py:327
 #, python-format
 msgid "Saving file '%s'..."
-msgstr "Guardando el archivo «%s»…"
+msgstr "Съхраняване на файла '%s'..."
 
 #: ../arronax/editor.py:328 ../arronax/editor.py:347
 #, python-format
 msgid "Saved file '%s'."
-msgstr "Se ha guardado el archivo «%s»."
+msgstr "Съхранен е файла '%s'."
 
 #: ../arronax/editor.py:343 ../arronax/editor.py:353
 msgid "File not saved."
-msgstr "El archivo no ha sido guardado."
+msgstr "Файлът не е съхранен."
 
 #: ../arronax/editor.py:352
 msgid "Can not save starter"
-msgstr "No se puede guardar el acceso directo"
+msgstr "Не може да се съхрани стартера"
 
 #: ../arronax/editor.py:497
 msgid "This is not a local file. Icon not changed."
-msgstr ""
+msgstr "Това не е локален файл. Иконката не може да се промени."
 
 #: ../arronax/editor.py:503
 msgid "This is not an image. Icon not changed."
-msgstr ""
+msgstr "Това не е изображение. Иконката не може да се промени."
 
 #: ../arronax/editor.py:538
 msgid "Created new starter."
-msgstr ""
+msgstr "Създаден е нов стартер."
 
 #: ../arronax/settings.py:47
 msgid "Open File"
-msgstr "Abrir archivo"
+msgstr "Отвори файла"
 
 #: ../arronax/settings.py:50 ../arronax/settings.py:57
 msgid "Desktop"
-msgstr "Escritorio"
+msgstr "Работен плот"
 
 #: ../arronax/settings.py:51 ../arronax/settings.py:58
 msgid "User App Folder"
-msgstr "Carpeta de aplicaciones del usuario"
+msgstr "Папка с приложения на потребителя"
 
 #: ../arronax/settings.py:52
 msgid "System App Folder"
-msgstr ""
+msgstr "Папка с приложения на системата"
 
 #: ../arronax/settings.py:55
 msgid "Save File"
-msgstr ""
+msgstr "Запазване на файл"
 
 #: ../arronax/settings.py:61
 msgid "Select Folder"
-msgstr "Seleccionar carpeta"
+msgstr "Изберете папка"
 
 #: ../arronax/settings.py:64
 msgid "Select Program"
-msgstr "Seleccionar programa"
+msgstr "Изберете програма"
 
 #: ../arronax/settings.py:67
 msgid "Select File"
-msgstr ""
+msgstr "Изберете файл"
 
 #: ../arronax/about.py:12
 msgid "Go to Web Page"
-msgstr ""
+msgstr "Перемини към сайта"
 
 #: ../arronax/about.py:21
 msgid "Ask a Question"
-msgstr ""
+msgstr "Задай въпрос"
 
 #: ../arronax/about.py:30
 msgid "Report a Bug"
-msgstr ""
+msgstr "Съобщи за грешка"
 
 #: ../arronax/about.py:36
 msgid "Help with Translations"
-msgstr ""
+msgstr "Помогнете с превода"
 
 #: ../arronax/about.py:42
 msgid "Donate via Flattr"
-msgstr ""
+msgstr "Направи дарение чрез Flattr"
 
 #: ../arronax/about.py:48
 msgid "Donate via PayPal"
-msgstr ""
+msgstr "Направи дарение чрез PayPal"
 
 #: ../arronax/about.py:94
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Adolfo Jayme Barrientos https://launchpad.net/~fitoschido"
+"  Atanas Kovachki https://launchpad.net/~zdar"
 
 #: ../arronax/desktopfile.py:40
 msgid "Arronax doesn't support this kind of starter yet"
-msgstr "Arronax aún no es compatible con este tipo de accesos directos"
+msgstr "Arronax не поддържа този вид на стартера"
 
 #: ../nautilus/nautilus-arronax.py:22
 msgid "Create a starter for this program"
-msgstr ""
+msgstr "Създаване на стартер за тази програма"
 
 #: ../nautilus/nautilus-arronax.py:28
 msgid "Modify this starter"
-msgstr "Modificar este acceso directo"
+msgstr "Промени този стартер"
 
 #: ../nautilus/nautilus-arronax.py:34
 msgid "Create a starter"
-msgstr ""
+msgstr "Създаване на стартер"
 
 #: ../nautilus/nautilus-arronax.py:41
 msgid "Create a starter for this file"
-msgstr ""
+msgstr "Създаване на стартер за този файл"
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:9
 msgid "Arronax"
@@ -229,47 +229,47 @@ msgstr "Arronax"
 
 #: ../data/desktop/arronax.desktop.in.h:2
 msgid "Create and edit application starters"
-msgstr "Cree y edite accesos directos a aplicaciones"
+msgstr "Създаване и редактиране на стартери за приложения"
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
-msgstr "Mostrar información sobre Arronax"
+msgstr "Покажи информация за Arronax"
 
 #: ../data/ui/edit.ui.h:3
 msgid "Select an icon for this starter"
-msgstr "Seleccione un icono para este acceso directo"
+msgstr "Изберете иконка за този стартер"
 
 #: ../data/ui/edit.ui.h:4
 msgid "Create a new application starter"
-msgstr "Crear un acceso directo nuevo a una aplicación"
+msgstr "Създаване на нов стартер за приложение"
 
 #: ../data/ui/edit.ui.h:5
 msgid "Open a application starter"
-msgstr "Abrir un acceso directo a aplicación"
+msgstr "Отвори стартера за проложението"
 
 #: ../data/ui/edit.ui.h:6
 msgid "Quit Arronax"
-msgstr "Salir de Arronax"
+msgstr "Излезте от Arronax"
 
 #: ../data/ui/edit.ui.h:7
 msgid "Save to application starter"
-msgstr "Guardar al acceso directo a aplicación"
+msgstr "Съхрани в стартера запроложението"
 
 #: ../data/ui/edit.ui.h:8
 msgid "Save as another application starter"
-msgstr "Guardar como otro acceso directo a aplicación"
+msgstr "Съхрани като стартер за друго приложение"
 
 #: ../data/ui/edit.ui.h:10
 msgid "_File"
-msgstr "_Archivo"
+msgstr "_Файл"
 
 #: ../data/ui/edit.ui.h:11
 msgid "_Edit"
-msgstr "_Editar"
+msgstr "_Редактиране"
 
 #: ../data/ui/edit.ui.h:12
 msgid "_Help"
-msgstr "Ay_uda"
+msgstr "_Помощ"
 
 #: ../data/ui/edit.ui.h:13
 msgid "toolbutton1"
@@ -277,7 +277,7 @@ msgstr "toolbutton1"
 
 #: ../data/ui/edit.ui.h:14
 msgid "Save current application starter"
-msgstr "Guardar acceso directo a aplicación actual"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:15
 msgid "What kind of starter do you want?"
@@ -301,7 +301,7 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:20
 msgid "Title:"
-msgstr "Título:"
+msgstr "Заглавие:"
 
 #: ../data/ui/edit.ui.h:21
 msgid "The command you want to start"
@@ -309,11 +309,11 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:22
 msgid "Command:"
-msgstr "Orden:"
+msgstr "Команда:"
 
 #: ../data/ui/edit.ui.h:23
 msgid "Select..."
-msgstr "Seleccionar…"
+msgstr "Изберете..."
 
 #: ../data/ui/edit.ui.h:24
 msgid "Browse the file system to select a command"
@@ -327,7 +327,7 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:27
 msgid "Start in folder:"
-msgstr "Iniciar en carpeta:"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:28
 msgid "Browse the file system to select a folder"
@@ -339,7 +339,7 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:30
 msgid "Run in Terminal:"
-msgstr "Ejecutar en terminal:"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:31
 msgid "The file or URL you want to open"
@@ -355,7 +355,7 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:34
 msgid "Basic"
-msgstr "Básico"
+msgstr "Базов"
 
 #: ../data/ui/edit.ui.h:35
 msgid "Hide this and any system wide starters with the same name."
@@ -363,7 +363,7 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:36
 msgid "Hidden:"
-msgstr "Oculto:"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:37
 msgid ""
@@ -373,7 +373,7 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:38
 msgid "Window Class:"
-msgstr "Clase de ventana:"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:39
 msgid "Categories in which the entry should be shown in a menu"
@@ -381,7 +381,7 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:40
 msgid "Categories:"
-msgstr "Categorías:"
+msgstr "Категории:"
 
 #: ../data/ui/edit.ui.h:41
 msgid "Tooltip for the entry"
@@ -389,11 +389,11 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:42
 msgid "Comment:"
-msgstr "Comentario:"
+msgstr "Описание:"
 
 #: ../data/ui/edit.ui.h:43
 msgid "Advanced"
-msgstr "Avanzado"
+msgstr "Дополнително"
 
 #: ../data/ui/edit.ui.h:44
 msgid "Do you want the starter to be visibile only in some environments?"
@@ -401,11 +401,11 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:45
 msgid "Show in:"
-msgstr ""
+msgstr "Покажи в:"
 
 #: ../data/ui/edit.ui.h:46
 msgid "Show in"
-msgstr ""
+msgstr "Покажи в"
 
 #: ../data/ui/edit.ui.h:47
 msgid "File types your command can open."
@@ -419,15 +419,10 @@ msgid ""
 "line breaks or\n"
 "semicolons (\";\")"
 msgstr ""
-"Tipos MIME:\n"
-"\n"
-"separados por \n"
-"saltos de línea o\n"
-"punto y coma (;)"
 
 #: ../data/ui/edit.ui.h:53
 msgid "MIME types"
-msgstr "Tipos MIME"
+msgstr "MIME видове"
 
 #: ../data/ui/edit.ui.h:54
 msgid ""
@@ -439,9 +434,10 @@ msgid ""
 "Keywords:\n"
 "(one per line)"
 msgstr ""
-"Palabras clave:\n"
-"(una por línea)"
+"Ключови думи:\n"
+"(по един а на \n"
+"всеки нов ред)"
 
 #: ../data/ui/edit.ui.h:57
 msgid "Keywords"
-msgstr "Palabras clave"
+msgstr "Ключови думи"

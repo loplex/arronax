@@ -11,12 +11,12 @@ msgstr ""
 "PO-Revision-Date: 2013-01-30 22:24+0000\n"
 "Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: German <de@li.org>\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-01-30 22:52+0000\n"
-"X-Generator: Launchpad (build 16455)\n"
+"X-Launchpad-Export-Date: 2013-03-08 18:56+0000\n"
+"X-Generator: Launchpad (build 16523)\n"
+"Language: de\n"
 
 #: ../arronax/editor.py:131
 msgid "GNOME"
@@ -210,7 +210,6 @@ msgid "Arronax doesn't support this kind of starter yet"
 msgstr "Arronax unterstützt diese Art von Starter noch nicht."
 
 #: ../nautilus/nautilus-arronax.py:22
-#, fuzzy
 msgid "Create a starter for this program"
 msgstr "Einen Starter für dieses Programm anlegen"
 
@@ -441,7 +440,8 @@ msgid "MIME types"
 msgstr "MIME-Typen"
 
 #: ../data/ui/edit.ui.h:54
-msgid "List of keywords that may be used for searching starters, e.g. in Unity"
+msgid ""
+"List of keywords that may be used for searching starters, e.g. in Unity"
 msgstr ""
 "Liste mit Schlüsselwörtern, die in Suchfunktionen benutzt werde können, z.B. "
 "unter Unity"
@@ -457,24 +457,3 @@ msgstr ""
 #: ../data/ui/edit.ui.h:57
 msgid "Keywords"
 msgstr "Stichwörter"
-
-#~ msgid "Create starter for this file"
-#~ msgstr "Für diese Datei einen Starter anlegen"
-
-#~ msgid "Create starter"
-#~ msgstr "Starter anlegen"
-
-#~ msgid "Tooltip for the entry, for example \"View sites on the Internet\"."
-#~ msgstr "Minihilfe für diesen Starter"
-
-#~ msgid ""
-#~ "A list of keywords which may be used in addition to other metadata \n"
-#~ "to describe this entry. This can be useful e.g. to facilitate searching \n"
-#~ "through entries. \n"
-#~ "\n"
-#~ "It's used for example by the Unity dash"
-#~ msgstr ""
-#~ "Eine Liste von Schlüsselwörtern, die zusätzlich zu anderen Metadaten "
-#~ "benutzt werden, um diesen Starter zu beschreiben, z.B. bei einer Suche.\n"
-#~ "\n"
-#~ "Wird z.B. von Unity benutzt"

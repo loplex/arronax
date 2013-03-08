@@ -1,3 +1,15 @@
+arronax (0.04) quantal; urgency=low
+
+  * updated translations from launchpad
+
+ -- Florian Diesch <devel@florian-diesch.de>  Fri, 08 Mar 2013 18:42:33 +0100
+
+arronax (0.04~pre5) quantal; urgency=low
+
+  * some more bugfixes
+
+ -- Florian Diesch <devel@florian-diesch.de>  Fri, 08 Mar 2013 01:43:42 +0100
+
 arronax (0.04~pre4) quantal; urgency=low
 
   * updated translations
