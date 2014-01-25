@@ -1,16 +1,16 @@
-# French translation for arronax
-# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# Malay translation for arronax
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the arronax package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-03-07 21:45+0100\n"
-"PO-Revision-Date: 2013-07-13 12:36+0000\n"
-"Last-Translator: ymadec <ymadec@myopera.com>\n"
-"Language-Team: French <fr@li.org>\n"
+"PO-Revision-Date: 2013-09-05 14:34+0000\n"
+"Last-Translator: abuyop <Unknown>\n"
+"Language-Team: Malay <ms@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,7 +43,7 @@ msgstr "ROX"
 
 #: ../arronax/editor.py:137
 msgid "Trinity Desktop"
-msgstr "Bureau Trinity"
+msgstr "Desktop Trinity"
 
 #: ../arronax/editor.py:138
 msgid "Unity"
@@ -55,178 +55,174 @@ msgstr "XFCE"
 
 #: ../arronax/editor.py:140
 msgid "Legacy environments"
-msgstr "Anciens environnements"
+msgstr "Persekitaran legasi"
 
 #: ../arronax/editor.py:177
 #, python-format
 msgid "Loading file '%s' ..."
-msgstr "Chargement du fichier '%s' ..."
+msgstr "Memuatkan fail '%s' ..."
 
 #: ../arronax/editor.py:178
 #, python-format
 msgid "Loaded file '%s' ..."
-msgstr "Fichier '%s' chargé ..."
+msgstr "Fail '%s' dimuatkan ..."
 
 #: ../arronax/editor.py:182
 msgid "Can not load starter"
-msgstr "Impossible de charger le lanceur"
+msgstr "Tidak dapat muatkan pemula"
 
 #: ../arronax/editor.py:183
 msgid "File not loaded."
-msgstr "Fichier non chargé."
+msgstr "Fail tidak dimuatkan."
 
 #: ../arronax/editor.py:223
 msgid "You need to provide a title."
-msgstr "Vous devez fournir un titre."
+msgstr "Anda perlu sediakan tajuk."
 
 #: ../arronax/editor.py:230
 msgid "You need to provide a command."
-msgstr "Vous devez fournir une commande."
+msgstr "Anda perlu sediakan satu perintah."
 
 #: ../arronax/editor.py:237
 msgid "You need to provide a URL or file name."
-msgstr "Vous devez fournir une URL ou un nom de fichier."
+msgstr "Anda perlu sediakan satu URL atau nama fail."
 
 #: ../arronax/editor.py:248
 msgid "Save now?"
-msgstr "Enregistrer maintenant ?"
+msgstr "Simpan sekarang?"
 
 #: ../arronax/editor.py:249
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
-"Vous avez des changements non enregistrés.  Voulez-vous les enregistrer "
-"maintenant ?"
+"Anda mempunyai perubahan tidak disimpan. Anda hendak simpan ia sekarang?"
 
 #: ../arronax/editor.py:268 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
-msgstr "Choisir une icône"
+msgstr "Pilih Ikon"
 
 #: ../arronax/editor.py:320
 msgid "Error"
-msgstr "Erreur"
+msgstr "Ralat"
 
 #: ../arronax/editor.py:324
 msgid "Saving file ..."
-msgstr "Enregistrement du fichier ..."
+msgstr "Menyimpan fail ..."
 
 #: ../arronax/editor.py:325
 msgid "File saved."
-msgstr "Fichier enregistré."
+msgstr "Fail disimpan."
 
 #: ../arronax/editor.py:327
 #, python-format
 msgid "Saving file '%s'..."
-msgstr "Enregistrement de '%s' en cours..."
+msgstr "Menyimpan fail '%s' ..."
 
 #: ../arronax/editor.py:328 ../arronax/editor.py:347
 #, python-format
 msgid "Saved file '%s'."
-msgstr "Enregistrement de '%s' terminé."
+msgstr "Fail '%s' disimpan."
 
 #: ../arronax/editor.py:343 ../arronax/editor.py:353
 msgid "File not saved."
-msgstr "Fichier non enregistré."
+msgstr "Fail tidak disimpan."
 
 #: ../arronax/editor.py:352
 msgid "Can not save starter"
-msgstr "Impossible d'enregistrer le lanceur"
+msgstr "Tidak dapat simpan pemula"
 
 #: ../arronax/editor.py:497
 msgid "This is not a local file. Icon not changed."
-msgstr "Ceci n'est pas un fichier local. L'icône n'a pas été changé."
+msgstr "Ia bukanlah fail setempat. Ikon tidak berubah."
 
 #: ../arronax/editor.py:503
 msgid "This is not an image. Icon not changed."
-msgstr "Ceci n'est pas une image. L'icône n'a pas été changé."
+msgstr "Ia bukanlah imej. Ikon tidak berubah."
 
 #: ../arronax/editor.py:538
 msgid "Created new starter."
-msgstr "Nouveau lanceur créé."
+msgstr "Pemula baru dicipta."
 
 #: ../arronax/settings.py:47
 msgid "Open File"
-msgstr "Ouvrir le fichier"
+msgstr "Buka Fail"
 
 #: ../arronax/settings.py:50 ../arronax/settings.py:57
 msgid "Desktop"
-msgstr "Bureau"
+msgstr "Desktop"
 
 #: ../arronax/settings.py:51 ../arronax/settings.py:58
 msgid "User App Folder"
-msgstr "Dossier Applications de l'utilisateur"
+msgstr "Folder Apl Pengguna"
 
 #: ../arronax/settings.py:52
 msgid "System App Folder"
-msgstr ""
+msgstr "Folder Apl Sistem"
 
 #: ../arronax/settings.py:55
 msgid "Save File"
-msgstr "Enregistrer le Fichier"
+msgstr "Simpan Fail"
 
 #: ../arronax/settings.py:61
 msgid "Select Folder"
-msgstr "Choisissez un dossier"
+msgstr "Pilih Folder"
 
 #: ../arronax/settings.py:64
 msgid "Select Program"
-msgstr "Choisir le programme"
+msgstr "Pilih Program"
 
 #: ../arronax/settings.py:67
 msgid "Select File"
-msgstr "Sélectionner le fichier"
+msgstr "Pilih Fail"
 
 #: ../arronax/about.py:12
 msgid "Go to Web Page"
-msgstr "Visiter notre page Web"
+msgstr "Pergi ke Laman Sesawang"
 
 #: ../arronax/about.py:21
 msgid "Ask a Question"
-msgstr "Poser une question"
+msgstr "Tanya Soalan"
 
 #: ../arronax/about.py:30
 msgid "Report a Bug"
-msgstr "Signaler un bogue"
+msgstr "Lapor Pepijat"
 
 #: ../arronax/about.py:36
 msgid "Help with Translations"
-msgstr "Aider à traduire"
+msgstr "Bantu Terjemah"
 
 #: ../arronax/about.py:42
 msgid "Donate via Flattr"
-msgstr "Faire un don via Flattr"
+msgstr "Derma melalui Flattr"
 
 #: ../arronax/about.py:48
 msgid "Donate via PayPal"
-msgstr "Faire un don via PayPal"
+msgstr "Derma melalui PayPal"
 
 #: ../arronax/about.py:94
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Eliovir https://launchpad.net/~eliovir\n"
-"  Sylvie Gallet https://launchpad.net/~sylvie-gallet\n"
-"  londumas https://launchpad.net/~helion331990\n"
-"  ymadec https://launchpad.net/~ymadec"
+"  abuyop https://launchpad.net/~abuyop"
 
 #: ../arronax/desktopfile.py:40
 msgid "Arronax doesn't support this kind of starter yet"
-msgstr "Arronax ne gère pas encore ce type de lanceur"
+msgstr "Arronax tidak menyokong jenis pemula ini lagi"
 
 #: ../nautilus/nautilus-arronax.py:22
 msgid "Create a starter for this program"
-msgstr "Créer un lanceur pour ce programme."
+msgstr "Cipta pemula untuk program ini"
 
 #: ../nautilus/nautilus-arronax.py:28
 msgid "Modify this starter"
-msgstr "Modifier ce lanceur"
+msgstr "Ubahsuai pemula ini"
 
 #: ../nautilus/nautilus-arronax.py:34
 msgid "Create a starter"
-msgstr "Créer un lanceur"
+msgstr "Cipta satu pemula"
 
 #: ../nautilus/nautilus-arronax.py:41
 msgid "Create a starter for this file"
-msgstr "Créer un lanceur pour ce fichier"
+msgstr "Cipta pemula untuk fail ini"
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:9
 msgid "Arronax"
@@ -234,188 +230,192 @@ msgstr "Arronax"
 
 #: ../data/desktop/arronax.desktop.in.h:2
 msgid "Create and edit application starters"
-msgstr "Créer et modifier des lanceurs d'applications"
+msgstr "Cipta dan sunting pemula aplikasi"
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
-msgstr "Informations à propos d'Arronax"
+msgstr "Tunjuk maklumat mengenai Arronax"
 
 #: ../data/ui/edit.ui.h:3
 msgid "Select an icon for this starter"
-msgstr "Choisur une icône pour ce lanceur"
+msgstr "Pilih satu ikon untuk pemula ini"
 
 #: ../data/ui/edit.ui.h:4
 msgid "Create a new application starter"
-msgstr "Créer un nouveau lanceur d'application"
+msgstr "Cipta pemula aplikasi baru"
 
 #: ../data/ui/edit.ui.h:5
 msgid "Open a application starter"
-msgstr "Ouvrir un lanceur d'application"
+msgstr "Buka pemula aplikasi"
 
 #: ../data/ui/edit.ui.h:6
 msgid "Quit Arronax"
-msgstr "Quitter Arronax"
+msgstr "Keluar Arronax"
 
 #: ../data/ui/edit.ui.h:7
 msgid "Save to application starter"
-msgstr "Enregistrer le lanceur d'application"
+msgstr "Simpan ke pemula aplikasi"
 
 #: ../data/ui/edit.ui.h:8
 msgid "Save as another application starter"
-msgstr "Enregistrer comme autre lanceur d'application"
+msgstr "Simpan sebagai pemula aplikasi lain"
 
 #: ../data/ui/edit.ui.h:10
 msgid "_File"
-msgstr "_Fichier"
+msgstr "_Fail"
 
 #: ../data/ui/edit.ui.h:11
 msgid "_Edit"
-msgstr "_Edition"
+msgstr "_Sunting"
 
 #: ../data/ui/edit.ui.h:12
 msgid "_Help"
-msgstr "_Aide"
+msgstr "_Bantuan"
 
 #: ../data/ui/edit.ui.h:13
 msgid "toolbutton1"
-msgstr "toolbutton1"
+msgstr "butangalat1"
 
 #: ../data/ui/edit.ui.h:14
 msgid "Save current application starter"
-msgstr "Enregistrer le lanceur d'application actuel"
+msgstr "Simpan pemula aplikasi semasa"
 
 #: ../data/ui/edit.ui.h:15
 msgid "What kind of starter do you want?"
-msgstr "Quel type de lanceur voulez-vous ?"
+msgstr "Apakah jenis pemula yang anda mahu?"
 
 #: ../data/ui/edit.ui.h:16
 msgid "This is a starter for an application"
-msgstr "Ceci est un lanceur pour une application"
+msgstr "Ia merupakan pemula untuk aplikasi"
 
 #: ../data/ui/edit.ui.h:17
 msgid "This is a starter for a file or a location"
-msgstr "Ceci est un lanceur pour un fichier ou un dossier"
+msgstr "Ia merupakan pemula untuk fail atau lokasi"
 
 #: ../data/ui/edit.ui.h:18
 msgid "The icon displayed for this starter. Click to select another one."
-msgstr "L'icône affichée pour ce lanceur. Cliquer pour en choisir une autre."
+msgstr "Ikon yang dipaparkan untuk pemula ini. Klik untuk pilih yang lain."
 
 #: ../data/ui/edit.ui.h:19
 msgid "Title that is displayed for this starter file"
-msgstr ""
+msgstr "Tajuk yang dipaparkan untuk fail pemula ini"
 
 #: ../data/ui/edit.ui.h:20
 msgid "Title:"
-msgstr "Titre :"
+msgstr "Tajuk:"
 
 #: ../data/ui/edit.ui.h:21
 msgid "The command you want to start"
-msgstr "La commande que vous voulez exécuter"
+msgstr "Perintah yang anda mahu mulakan"
 
 #: ../data/ui/edit.ui.h:22
 msgid "Command:"
-msgstr "Commande :"
+msgstr "Perintah:"
 
 #: ../data/ui/edit.ui.h:23
 msgid "Select..."
-msgstr "Choisir…"
+msgstr "Pilih..."
 
 #: ../data/ui/edit.ui.h:24
 msgid "Browse the file system to select a command"
-msgstr "Naviguer dans le système de fichier pour choisir une commande"
+msgstr "Layar sistem fail untuk memilih perintah"
 
 #: ../data/ui/edit.ui.h:25
 msgid ""
 "Path to a folder that is used as the \n"
 "working folder for the program"
 msgstr ""
+"Laluan ke folder yang diguna sebagai\n"
+"folder kerja untuk program"
 
 #: ../data/ui/edit.ui.h:27
 msgid "Start in folder:"
-msgstr "Démarrer dans le dossier :"
+msgstr "Mula dalam folder:"
 
 #: ../data/ui/edit.ui.h:28
 msgid "Browse the file system to select a folder"
-msgstr "Naviguer dans le système de fichier pour choisir un dossier"
+msgstr "Layar sistem fail untuk memilih satu folder"
 
 #: ../data/ui/edit.ui.h:29
 msgid "If switched on the command is run in a Terminal window"
-msgstr "Si activé, la commande est lancée dans une fenêtre de terminal"
+msgstr "Jika ditukar semasa perintah dijalankan dalam tetingkap Terminal"
 
 #: ../data/ui/edit.ui.h:30
 msgid "Run in Terminal:"
-msgstr "Exécuter dans un terminal :"
+msgstr "Jalankan dalam Terminal:"
 
 #: ../data/ui/edit.ui.h:31
 msgid "The file or URL you want to open"
-msgstr "Le fichier ou l'URL que vous voulez ouvrir"
+msgstr "Fail atau URL yang anda mahu buka"
 
 #: ../data/ui/edit.ui.h:32
 msgid "File or URL:"
-msgstr "Fichier ou URL :"
+msgstr "Fail atau URL:"
 
 #: ../data/ui/edit.ui.h:33
 msgid "Browse the file system to select a file"
-msgstr "Naviguer dans le système de fichier pour choisir un fichier"
+msgstr "Layar sistem fail untuk memilih satu fail"
 
 #: ../data/ui/edit.ui.h:34
 msgid "Basic"
-msgstr "Basique"
+msgstr "Asas"
 
 #: ../data/ui/edit.ui.h:35
 msgid "Hide this and any system wide starters with the same name."
 msgstr ""
+"Sembunyi ini dan mana-mana pemula menyeluruhi sistem dengan nama yang serupa."
 
 #: ../data/ui/edit.ui.h:36
 msgid "Hidden:"
-msgstr "Caché :"
+msgstr "Tersembunyi:"
 
 #: ../data/ui/edit.ui.h:37
 msgid ""
 "The application will show at least one window with the given string as its "
 "WM class or WM name hint"
 msgstr ""
+"Aplikasi akan tunjukkan sekurang-kurangnya satu tetingkap dengan rentetan "
+"yang diberi sebagai kelas WMnya atau pembayang nama WM"
 
 #: ../data/ui/edit.ui.h:38
 msgid "Window Class:"
-msgstr "Classe de fenêtre :"
+msgstr "Kelas Tetingkap:"
 
 #: ../data/ui/edit.ui.h:39
 msgid "Categories in which the entry should be shown in a menu"
-msgstr "Catégories du menu dans lesquelles l'entrée devrait apparaître"
+msgstr "Kategori yang mana masukan patut ditunjukkan dalam menu"
 
 #: ../data/ui/edit.ui.h:40
 msgid "Categories:"
-msgstr "Catégories :"
+msgstr "Kategori:"
 
 #: ../data/ui/edit.ui.h:41
 msgid "Tooltip for the entry"
-msgstr ""
+msgstr "Tip alat untuk masukan"
 
 #: ../data/ui/edit.ui.h:42
 msgid "Comment:"
-msgstr "Commentaire :"
+msgstr "Ulasan:"
 
 #: ../data/ui/edit.ui.h:43
 msgid "Advanced"
-msgstr "Avancé"
+msgstr "Lanjutan"
 
 #: ../data/ui/edit.ui.h:44
 msgid "Do you want the starter to be visibile only in some environments?"
-msgstr ""
-"Voulez-vous que ce lanceur ne soit visible que dans certains environnements ?"
+msgstr "Anda mahu pemula menjadi tampak dalam beberapa persekitaran sahaja?"
 
 #: ../data/ui/edit.ui.h:45
 msgid "Show in:"
-msgstr "Montrer dans :"
+msgstr "Tunjuk dalam:"
 
 #: ../data/ui/edit.ui.h:46
 msgid "Show in"
-msgstr "Montrer dans"
+msgstr "Tunjuk dalam"
 
 #: ../data/ui/edit.ui.h:47
 msgid "File types your command can open."
-msgstr "Les types de fichiers que votre commande peut ouvrir."
+msgstr "Jenis fail yang mana perintah anda boleh buka."
 
 #: ../data/ui/edit.ui.h:48
 msgid ""
@@ -425,31 +425,30 @@ msgid ""
 "line breaks or\n"
 "semicolons (\";\")"
 msgstr ""
-"Types MIME \n"
+"Jenis MIME:\n"
 "\n"
-"séparés par des \n"
-"sauts de lignes ou \n"
-"points-virgules (\";\")"
+"dipisah dengan \n"
+"hentian baris atau\n"
+"titik bertindih (\";\")"
 
 #: ../data/ui/edit.ui.h:53
 msgid "MIME types"
-msgstr "Types MIME"
+msgstr "Jenis MIME"
 
 #: ../data/ui/edit.ui.h:54
 msgid ""
 "List of keywords that may be used for searching starters, e.g. in Unity"
 msgstr ""
-"La liste des mots clés qui peuvent être utilisés pour trouver les lanceurs "
-"(exemple dans Unity)."
+"Senarai kata kunci yang diguna untuk menggelintar pemula, cth. dalam Unity"
 
 #: ../data/ui/edit.ui.h:55
 msgid ""
 "Keywords:\n"
 "(one per line)"
 msgstr ""
-"Mots clé :\n"
-"(un par ligne)"
+"Kata kunci:\n"
+"(satu per baris)"
 
 #: ../data/ui/edit.ui.h:57
 msgid "Keywords"
-msgstr "Mots-clefs"
+msgstr "Kata Kunci"

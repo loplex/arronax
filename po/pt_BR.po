@@ -8,55 +8,54 @@ msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-03-07 21:45+0100\n"
-"PO-Revision-Date: 2012-11-12 21:06+0000\n"
-"Last-Translator: Henrique Otavio do Espirito Santo Becker "
-"<rikee8@gmail.com>\n"
+"PO-Revision-Date: 2013-06-06 19:44+0000\n"
+"Last-Translator: Átila Camurça <camurca.home@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-08 18:56+0000\n"
-"X-Generator: Launchpad (build 16523)\n"
+"X-Launchpad-Export-Date: 2014-01-25 16:32+0000\n"
+"X-Generator: Launchpad (build 16914)\n"
 
 #: ../arronax/editor.py:131
 msgid "GNOME"
-msgstr ""
+msgstr "GNOME"
 
 #: ../arronax/editor.py:132
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: ../arronax/editor.py:133
 msgid "LXDE"
-msgstr ""
+msgstr "LXDE"
 
 #: ../arronax/editor.py:134
 msgid "MATE"
-msgstr ""
+msgstr "MATE"
 
 #: ../arronax/editor.py:135
 msgid "Razor-qt"
-msgstr ""
+msgstr "Razor-qt"
 
 #: ../arronax/editor.py:136
 msgid "ROX"
-msgstr ""
+msgstr "ROX"
 
 #: ../arronax/editor.py:137
 msgid "Trinity Desktop"
-msgstr ""
+msgstr "Trinity Desktop"
 
 #: ../arronax/editor.py:138
 msgid "Unity"
-msgstr ""
+msgstr "Unity"
 
 #: ../arronax/editor.py:139
 msgid "XFCE"
-msgstr ""
+msgstr "XFCE"
 
 #: ../arronax/editor.py:140
 msgid "Legacy environments"
-msgstr ""
+msgstr "Ambientes herdados"
 
 #: ../arronax/editor.py:177
 #, python-format
@@ -86,7 +85,7 @@ msgstr "Você precisa inserir um comando."
 
 #: ../arronax/editor.py:237
 msgid "You need to provide a URL or file name."
-msgstr ""
+msgstr "Você precisa fornecer uma URL ou um nome de arquivo"
 
 #: ../arronax/editor.py:248
 msgid "Save now?"
@@ -132,15 +131,15 @@ msgstr "Não é possível salvar o inicializador"
 
 #: ../arronax/editor.py:497
 msgid "This is not a local file. Icon not changed."
-msgstr ""
+msgstr "Este não é um arquivo local. Ícone não foi modificado."
 
 #: ../arronax/editor.py:503
 msgid "This is not an image. Icon not changed."
-msgstr ""
+msgstr "Esta não é uma imagem. Ícone não foi modificado."
 
 #: ../arronax/editor.py:538
 msgid "Created new starter."
-msgstr ""
+msgstr "Novo lançador criado."
 
 #: ../arronax/settings.py:47
 msgid "Open File"
@@ -156,11 +155,11 @@ msgstr "Pasta de aplicativos do usuário"
 
 #: ../arronax/settings.py:52
 msgid "System App Folder"
-msgstr ""
+msgstr "Diretório Aplicativos do Sistema"
 
 #: ../arronax/settings.py:55
 msgid "Save File"
-msgstr ""
+msgstr "Salvar arquivo"
 
 #: ../arronax/settings.py:61
 msgid "Select Folder"
@@ -172,38 +171,39 @@ msgstr "Selecionar Programa"
 
 #: ../arronax/settings.py:67
 msgid "Select File"
-msgstr ""
+msgstr "Selecionar arquivo"
 
 #: ../arronax/about.py:12
 msgid "Go to Web Page"
-msgstr ""
+msgstr "Ir à página na Internet"
 
 #: ../arronax/about.py:21
 msgid "Ask a Question"
-msgstr ""
+msgstr "Faça uma pergunta"
 
 #: ../arronax/about.py:30
 msgid "Report a Bug"
-msgstr ""
+msgstr "Relatar um erro"
 
 #: ../arronax/about.py:36
 msgid "Help with Translations"
-msgstr ""
+msgstr "Ajudar com Traduções"
 
 #: ../arronax/about.py:42
 msgid "Donate via Flattr"
-msgstr ""
+msgstr "Fazer uma doação pelo Flattr"
 
 #: ../arronax/about.py:48
 msgid "Donate via PayPal"
-msgstr ""
+msgstr "Fazer uma doação pelo PayPal"
 
 #: ../arronax/about.py:94
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Adriano Steffler https://launchpad.net/~adrianosteffler\n"
-"  Henrique Otavio do Espirito Santo Becker https://launchpad.net/~rikee8"
+"  Henrique Otavio do Espirito Santo Becker https://launchpad.net/~rikee8\n"
+"  Átila Camurça https://launchpad.net/~atilacamurca"
 
 #: ../arronax/desktopfile.py:40
 msgid "Arronax doesn't support this kind of starter yet"
@@ -211,7 +211,7 @@ msgstr "Arronax não suporta este tipo de inicializador ainda"
 
 #: ../nautilus/nautilus-arronax.py:22
 msgid "Create a starter for this program"
-msgstr ""
+msgstr "Criar um lançador para este programa"
 
 #: ../nautilus/nautilus-arronax.py:28
 msgid "Modify this starter"
@@ -219,11 +219,11 @@ msgstr "Modificar este inicializador"
 
 #: ../nautilus/nautilus-arronax.py:34
 msgid "Create a starter"
-msgstr ""
+msgstr "Criar um lançador"
 
 #: ../nautilus/nautilus-arronax.py:41
 msgid "Create a starter for this file"
-msgstr ""
+msgstr "Criar um lançador para este arquivo"
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:9
 msgid "Arronax"
@@ -283,7 +283,7 @@ msgstr "Salvar inicializador de aplicativo atual"
 
 #: ../data/ui/edit.ui.h:15
 msgid "What kind of starter do you want?"
-msgstr ""
+msgstr "Que tipo de lançador você quer?"
 
 #: ../data/ui/edit.ui.h:16
 msgid "This is a starter for an application"
@@ -291,15 +291,15 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:17
 msgid "This is a starter for a file or a location"
-msgstr ""
+msgstr "Este é um lançador para um arquivo ou um local"
 
 #: ../data/ui/edit.ui.h:18
 msgid "The icon displayed for this starter. Click to select another one."
-msgstr ""
+msgstr "O ícone exibido para este lançador. Clique para selecionar outro."
 
 #: ../data/ui/edit.ui.h:19
 msgid "Title that is displayed for this starter file"
-msgstr ""
+msgstr "Título que é exibido para este arquivo lançador"
 
 #: ../data/ui/edit.ui.h:20
 msgid "Title:"
@@ -307,7 +307,7 @@ msgstr "Título:"
 
 #: ../data/ui/edit.ui.h:21
 msgid "The command you want to start"
-msgstr ""
+msgstr "O comando que você deseja iniciar"
 
 #: ../data/ui/edit.ui.h:22
 msgid "Command:"
@@ -319,13 +319,15 @@ msgstr "Selecionar..."
 
 #: ../data/ui/edit.ui.h:24
 msgid "Browse the file system to select a command"
-msgstr ""
+msgstr "Navegar o sistema de arquivos para selecionar um comando"
 
 #: ../data/ui/edit.ui.h:25
 msgid ""
 "Path to a folder that is used as the \n"
 "working folder for the program"
 msgstr ""
+"Caminho para um diretório que é usado como o\n"
+"diretório de trabalho para o programa"
 
 #: ../data/ui/edit.ui.h:27
 msgid "Start in folder:"
@@ -333,11 +335,11 @@ msgstr "Iniciar no diretório:"
 
 #: ../data/ui/edit.ui.h:28
 msgid "Browse the file system to select a folder"
-msgstr ""
+msgstr "Navegar o sistema de arquivos para selecionar um diretório"
 
 #: ../data/ui/edit.ui.h:29
 msgid "If switched on the command is run in a Terminal window"
-msgstr ""
+msgstr "Mude se o comando precisa ser executado num Terminal ou não"
 
 #: ../data/ui/edit.ui.h:30
 msgid "Run in Terminal:"
@@ -345,15 +347,15 @@ msgstr "Executar no Console:"
 
 #: ../data/ui/edit.ui.h:31
 msgid "The file or URL you want to open"
-msgstr ""
+msgstr "O arquivo ou URL que você deseja abrir"
 
 #: ../data/ui/edit.ui.h:32
 msgid "File or URL:"
-msgstr ""
+msgstr "Arquivo ou URL:"
 
 #: ../data/ui/edit.ui.h:33
 msgid "Browse the file system to select a file"
-msgstr ""
+msgstr "Navegar no sistema de arquivos para selecionar o arquivo"
 
 #: ../data/ui/edit.ui.h:34
 msgid "Basic"
@@ -361,7 +363,7 @@ msgstr "Básico"
 
 #: ../data/ui/edit.ui.h:35
 msgid "Hide this and any system wide starters with the same name."
-msgstr ""
+msgstr "Esconder isto e qualquer outro lançador do sistema com o mesmo nome."
 
 #: ../data/ui/edit.ui.h:36
 msgid "Hidden:"
@@ -379,7 +381,7 @@ msgstr "Classe da janela:"
 
 #: ../data/ui/edit.ui.h:39
 msgid "Categories in which the entry should be shown in a menu"
-msgstr ""
+msgstr "Categorias na qual seu lançador deveria aparecer no menu"
 
 #: ../data/ui/edit.ui.h:40
 msgid "Categories:"
@@ -387,7 +389,7 @@ msgstr "Categorias:"
 
 #: ../data/ui/edit.ui.h:41
 msgid "Tooltip for the entry"
-msgstr ""
+msgstr "Dica para o lançador"
 
 #: ../data/ui/edit.ui.h:42
 msgid "Comment:"
@@ -399,19 +401,19 @@ msgstr "Avançado"
 
 #: ../data/ui/edit.ui.h:44
 msgid "Do you want the starter to be visibile only in some environments?"
-msgstr ""
+msgstr "Você deseja que o lançador seja visível somente em alguns ambientes?"
 
 #: ../data/ui/edit.ui.h:45
 msgid "Show in:"
-msgstr ""
+msgstr "Mostrar em:"
 
 #: ../data/ui/edit.ui.h:46
 msgid "Show in"
-msgstr ""
+msgstr "Mostrar em"
 
 #: ../data/ui/edit.ui.h:47
 msgid "File types your command can open."
-msgstr ""
+msgstr "Tipos de arquivos que seu comando pode abrir."
 
 #: ../data/ui/edit.ui.h:48
 msgid ""
@@ -435,6 +437,8 @@ msgstr "Tipos MIME"
 msgid ""
 "List of keywords that may be used for searching starters, e.g. in Unity"
 msgstr ""
+"Lista de palavras-chave que podem ser usadas para buscar lançadores, ex. na "
+"Unity"
 
 #: ../data/ui/edit.ui.h:55
 msgid ""

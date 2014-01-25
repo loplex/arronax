@@ -1,3 +1,10 @@
+arronax (0.05) saucy; urgency=low
+
+  * added drag&drop support for application:// uris
+  * added Malay translations
+
+ -- Florian Diesch <devel@florian-diesch.de>  Sat, 25 Jan 2014 17:14:40 +0100
+
 arronax (0.04) quantal; urgency=low
 
   * updated translations from launchpad

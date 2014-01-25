@@ -2,9 +2,9 @@ Source: arronax
 Section: gnome
 Priority: optional
 Maintainer: Florian Diesch <devel@florian-diesch.de>
-Build-Depends: debhelper (>= 8.0.0), gettext, intltool, python2.7, 
+Build-Depends: debhelper (>= 8.0.0), gettext, intltool, python (>= 2.7), 
  python-distutils-extra, python-setuptools, python-pkg-resources
-Standards-Version: 3.9.2
+Standards-Version: 3.9.4
 Homepage:  http://www.florian-diesch.de/software/arronax/
 X-Python-Version: >= 2.7
 

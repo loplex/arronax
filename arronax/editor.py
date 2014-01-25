@@ -409,10 +409,17 @@ class Editor(object):
         if info == 0 and len(uris) > 0:
             uris = data.get_uris()
             uri = urlparse.urlparse(uris[0])
+            filename = None
             if uri.scheme == 'file':
                 filename = urllib.url2pathname(uri.path)
+            elif uri.scheme == 'application':
+                appinfo = Gio.DesktopAppInfo.new(uri.netloc)
+                filename = appinfo.get_filename()
+            if filename:
                 self.check_dirty()
                 self.read_desktop_file(filename)
+
+                
 
                 
     def on_urientry_drag_data_received(self, widget, drag_context, x, y, data,

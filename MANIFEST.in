@@ -1,8 +1,11 @@
 include *.py
 include COPYING
 include *.txt
+include setup.cfg
 recursive-include data *.png *.svg *.ui *.in
 recursive-include po *.po *.pot *.in
+recursive-include debian *
+
 
 
 
