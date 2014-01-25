@@ -5,7 +5,7 @@ from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio
 from gettext import gettext as _
 
 APP_NAME = 'Arronax'
-APP_VERSION  = '0.04'
+APP_VERSION  = '0.05'
 
 app_name = APP_NAME.lower()
 
