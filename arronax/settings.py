@@ -3,6 +3,7 @@ import xdgpath
 import xdg.BaseDirectory
 from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio
 from gettext import gettext as _
+import gettext
 
 APP_NAME = 'Arronax'
 APP_VERSION  = '0.05'
@@ -43,29 +44,6 @@ TRANSLATIONS_URL = 'https://translations.launchpad.net/%s' % app_name
 BUGREPORT_URL = 'https://bugs.launchpad.net/%s/+filebug' % app_name
 QUESTION_URL = 'https://answers.launchpad.net/%s/+addquestion' % app_name
 
-FILE_DLG_DEF = {
-    'dlg_open': {'title': _('Open File'),
-                 'action':  Gtk.FileChooserAction.OPEN,
-                 'patterns': ['*.desktop', '*'],
-                 'buttons': [(_('Desktop'), USER_DESKTOP_DIR),
-                             (_('User App Folder'), USER_APPLICATIONS_DIR),
-                             (_('System App Folder'), SYS_APPLICATIONS_DIR),
-                             ],
-             },
-    'dlg_save': {'title': _('Save File'),
-             'action':  Gtk.FileChooserAction.SAVE,
-             'buttons': [(_('Desktop'), USER_DESKTOP_DIR),
-                         (_('User App Folder'), USER_APPLICATIONS_DIR),
-                         ],
-             },
-    'dlg_working_dir': {'title': _('Select Folder'),
-                     'action':  Gtk.FileChooserAction.SELECT_FOLDER,
-                    },
-    'dlg_command': {'title': _('Select Program'),
-                'action':  Gtk.FileChooserAction.OPEN,
-                },
-    'dlg_file': {'title': _('Select File'),
-             'action':  Gtk.FileChooserAction.OPEN,
-                },
-    }
+
+
 

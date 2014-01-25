@@ -5,6 +5,45 @@ import os, os.path, time, sys, urllib, urlparse
 from gettext import gettext as _
 import gettext
 
+import settings
+
+gettext.bindtextdomain(settings.GETTEXT_DOMAIN)
+gettext.textdomain(settings.GETTEXT_DOMAIN)
+gettext.bind_textdomain_codeset(settings.GETTEXT_DOMAIN, 'UTF-8')
+
+FILE_DLG_DEF = {
+    'dlg_open': {'title': _('Open File'),
+                 'action':  Gtk.FileChooserAction.OPEN,
+                 'patterns': ['*.desktop', '*'],
+                 'buttons': [(_('Desktop'),
+                              settings.USER_DESKTOP_DIR),
+                             (_('User App Folder'),
+                              settings.USER_APPLICATIONS_DIR),
+                             (_('System App Folder'),
+                              settings.SYS_APPLICATIONS_DIR),
+                             ],
+             },
+    'dlg_save': {'title': _('Save File'),
+             'action':  Gtk.FileChooserAction.SAVE,
+             'buttons': [(_('Desktop'),
+                          settings.USER_DESKTOP_DIR),
+                         (_('User App Folder'),
+                          settings.USER_APPLICATIONS_DIR),
+                         ],
+             },
+    'dlg_working_dir': {'title': _('Select Folder'),
+                     'action':  Gtk.FileChooserAction.SELECT_FOLDER,
+                    },
+    'dlg_command': {'title': _('Select Program'),
+                'action':  Gtk.FileChooserAction.OPEN,
+                },
+    'dlg_file': {'title': _('Select File'),
+             'action':  Gtk.FileChooserAction.OPEN,
+                },
+    }
+
+
+
 def create_filechooser_dlg(title, action, patterns=None, mime_types=None):
     dlg = Gtk.FileChooserDialog(title, None, action, 
                                 (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,

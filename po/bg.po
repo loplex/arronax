@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 17:58+0100\n"
+"POT-Creation-Date: 2014-01-25 21:06+0100\n"
 "PO-Revision-Date: 2013-03-06 15:52+0000\n"
 "Last-Translator: Atanas Kovachki <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -142,35 +142,35 @@ msgstr "Това не е изображение. Иконката не може 
 msgid "Created new starter."
 msgstr "Създаден е нов стартер."
 
-#: ../arronax/settings.py:47
+#: ../arronax/filechooser.py:15
 msgid "Open File"
 msgstr "Отвори файла"
 
-#: ../arronax/settings.py:50 ../arronax/settings.py:57
+#: ../arronax/filechooser.py:18 ../arronax/filechooser.py:28
 msgid "Desktop"
 msgstr "Работен плот"
 
-#: ../arronax/settings.py:51 ../arronax/settings.py:58
+#: ../arronax/filechooser.py:20 ../arronax/filechooser.py:30
 msgid "User App Folder"
 msgstr "Папка с приложения на потребителя"
 
-#: ../arronax/settings.py:52
+#: ../arronax/filechooser.py:22
 msgid "System App Folder"
 msgstr "Папка с приложения на системата"
 
-#: ../arronax/settings.py:55
+#: ../arronax/filechooser.py:26
 msgid "Save File"
 msgstr "Запазване на файл"
 
-#: ../arronax/settings.py:61
+#: ../arronax/filechooser.py:34
 msgid "Select Folder"
 msgstr "Изберете папка"
 
-#: ../arronax/settings.py:64
+#: ../arronax/filechooser.py:37
 msgid "Select Program"
 msgstr "Изберете програма"
 
-#: ../arronax/settings.py:67
+#: ../arronax/filechooser.py:40
 msgid "Select File"
 msgstr "Изберете файл"
 

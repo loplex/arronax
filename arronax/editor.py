@@ -354,7 +354,7 @@ class Editor(object):
 
                            
     def ask_for_filename(self, defname, add_ext=False, default=None):
-        dlgdef = settings.FILE_DLG_DEF[defname]
+        dlgdef = filechooser.FILE_DLG_DEF[defname]
         dialog = filechooser.create_dir_buttons_filechooser_dlg(
             title=dlgdef['title'],
             action=dlgdef['action'],
