@@ -30,9 +30,10 @@ class DesktopFile(object):
 
         if path is not None:
             try:
-                self.keyfile.load_from_file(path,
-                                            GLib.KeyFileFlags.KEEP_COMMENTS | 
-                                            GLib.KeyFileFlags.KEEP_TRANSLATIONS)
+                self.keyfile.load_from_file(
+                    path,
+                    GLib.KeyFileFlags.KEEP_COMMENTS | 
+                    GLib.KeyFileFlags.KEEP_TRANSLATIONS)
             except Exception, e:
                 return str(e)
                 
@@ -71,8 +72,6 @@ class DesktopFile(object):
             else:
                 self.keyfile.set_string(self.group, key, str(value))
                                 
-
-
  
     def save(self, path): 
         content = self.keyfile.to_data()[0]
@@ -96,16 +95,5 @@ class DesktopFile(object):
 
     def __setitem__(self, key, value):
         self.set_to_key(key, value)
-                
 
 
-if __name__ == '__main__':
-    df = DesktopFile()
-    df['Name'] = 'Foo'
-    df['Hidden'] = True
-
-    print df['Name'],  df['Hidden']
-    df.save('foo')
-
-        
-    

@@ -7,7 +7,7 @@ from gettext import gettext as _
 import gettext
 
 import settings, connection, desktopfile, widgets, clipboard, about, dialogs
-import converter, statusbar, filechooser
+import converter, statusbar, filechooser, tvtools, quicklist
 
 IS_STANDALONE = False
 
@@ -51,8 +51,10 @@ class Editor(object):
             entry.connect('drag-data-received',  
                           self.on_urientry_drag_data_received)
 
- 
-        self.tview_mime = self.obj('tview_advanced_mime_types')
+
+        self.quicklist = quicklist.Quicklist(self.obj('tv_quicklist'))
+
+        self.tview_mime = self.obj('tview_mime_types')
         self.tview_mime.drag_dest_set(Gtk.DestDefaults.ALL, [],  
                                       Gdk.DragAction.COPY)
         self.tview_mime.drag_dest_add_uri_targets()
@@ -116,15 +118,19 @@ class Editor(object):
                       related=self.factory.get('l_advanced_wm_class'))
 
         self.conn.add('MimeType', 
-                      self.factory.get('tview_advanced_mime_types'),
+                      self.factory.get('tview_mime_types'),
                       converter=converter.ListConverter(),
                       tags=['application']
                       )
-        self.conn.add_no_data(self.factory.get('notebook', 
-                                               klass=widgets.NotebookPageWidget,
-                                               page_num=3),
+
+        
+        self.conn.add_no_data(self.factory.get('l_tab_quicklist'),
                               tags=['application']
                               )
+        self.conn.add_no_data(self.factory.get('l_tab_mime_types'),
+                              tags=['application']
+                              )
+
         self.conn.add('OnlyShowIn',
                       self.factory.get('tview_advanced_show_in',
                                        klass=widgets.SelectionListWidget,
@@ -145,7 +151,6 @@ class Editor(object):
                       
         self.conn.clear(store=True)
         
-
         self.type_watcher = widgets.get_watcher(
             self.factory.get('cbox_type'),
             connection_groups=[self.conn],
@@ -155,7 +160,7 @@ class Editor(object):
             )
 
         ## make sure the type is changed so we get the signal
-        self.factory.get('cbox_type').set_data(-1) 
+        self.factory.get('cbox_type').set_data(-1)
         self.factory.get('cbox_type').set_data(type)
 
         if mode is MODE_EDIT:
@@ -171,7 +176,6 @@ class Editor(object):
             self.filename = path
       
         self.win.show()
-
 
     def read_desktop_file(self, path):
         with statusbar.Status(_("Loading file '%s' ...") % path,
@@ -404,10 +408,9 @@ class Editor(object):
         self.quit()
 
     def on_window1_drag_data_received(self, widget, drag_context, x, y, data,
-                                      info, time):        
+                                      info, time): 
         uris = data.get_uris()
-        if info == 0 and len(uris) > 0:
-            uris = data.get_uris()
+        if info == 0 and len(uris) > 0:           
             uri = urlparse.urlparse(uris[0])
             filename = None
             if uri.scheme == 'file':
@@ -422,8 +425,8 @@ class Editor(object):
                 
 
                 
-    def on_urientry_drag_data_received(self, widget, drag_context, x, y, data,
-                                      info, time):
+    def on_urientry_drag_data_received(self, widget, drag_context, x, y, 
+                                       data, info, time):
         uris = data.get_uris()
         if uris:
             uri = urlparse.urlparse(uris[0])
@@ -436,9 +439,9 @@ class Editor(object):
 
 
         
-    def on_tview_advanced_mime_types_drag_data_received(self, widget, 
-                                                       drag_context, x, y, data,
-                                                       info, time):
+    def on_tview_mime_types_drag_data_received(self, widget, 
+                                               drag_context, x, y, data,
+                                               info, time):
         mime_types = set()
         uris = data.get_uris()
         for uri in uris:
@@ -449,15 +452,13 @@ class Editor(object):
                 mime_types.add(info.get_content_type())
             except GLib.GError as e:
                 print e
-        tview = self.factory.get('tview_advanced_mime_types')
+        tview = self.factory.get('tview_mime_types')
         data = tview.get_data()
         current = [x for x in data.splitlines() if x.strip() != '']
         mime_types.update(current)
         tview.set_data('\n'.join(sorted(mime_types)))
 
             
-        
-
 ###############
 ## buttons
 
@@ -545,6 +546,26 @@ class Editor(object):
         statusbar.show_msg(_('Created new starter.'))
         self.update_window_title()
         
+
+    def on_ac_quicklist_up_activate(self, action, *args):
+        self.quicklist.goto_prev_row()
+                
+    def on_ac_quicklist_down_activate(self, action, *args):
+        self.quicklist.goto_next_row()
+
+    def on_ac_quicklist_remove_activate(self, action, *args):
+        self.quicklist.remove_current_row()
+
+    def on_ac_quicklist_new_activate(self, action, *args):
+        self.quicklist.new_row()
+
+    def on_ac_quicklist_edit_activate(self, action, *args):
+        self.quicklist.edit_current_row()
+        
+    def on_ac_quicklist_duplicate_activate(self, action, *args):
+        self.quicklist.duplicate_current_row()
+
+
 
 
 def main():

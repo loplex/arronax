@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.16.1 -->
 <interface>
-  <!-- interface-requires gtk+ 3.0 -->
+  <requires lib="gtk+" version="3.0"/>
   <object class="GtkAction" id="ac_about">
     <property name="tooltip" translatable="yes">Show informations about Arronax</property>
     <property name="stock_id">gtk-about</property>
@@ -33,6 +34,40 @@
   <object class="GtkAction" id="ac_paste">
     <property name="stock_id">gtk-paste</property>
   </object>
+  <object class="GtkAction" id="ac_quicklist_down">
+    <property name="stock_id">gtk-go-down</property>
+    <signal name="activate" handler="on_ac_quicklist_down_activate" swapped="no"/>
+  </object>
+  <object class="GtkAction" id="ac_quicklist_duplicate">
+    <property name="label" translatable="yes">Duplicate</property>
+    <signal name="activate" handler="on_ac_quicklist_duplicate_activate" swapped="no"/>
+  </object>
+  <object class="GtkButton" id="b_quicklist_duplicate">
+    <property name="label" translatable="yes">button</property>
+    <property name="use_action_appearance">True</property>
+    <property name="related_action">ac_quicklist_duplicate</property>
+    <property name="visible">True</property>
+    <property name="can_focus">True</property>
+    <property name="receives_default">True</property>
+    <property name="margin_left">6</property>
+    <property name="margin_right">6</property>
+  </object>
+  <object class="GtkAction" id="ac_quicklist_edit">
+    <property name="stock_id">gtk-edit</property>
+    <signal name="activate" handler="on_ac_quicklist_edit_activate" swapped="no"/>
+  </object>
+  <object class="GtkAction" id="ac_quicklist_new">
+    <property name="stock_id">gtk-new</property>
+    <signal name="activate" handler="on_ac_quicklist_new_activate" swapped="no"/>
+  </object>
+  <object class="GtkAction" id="ac_quicklist_remove">
+    <property name="stock_id">gtk-delete</property>
+    <signal name="activate" handler="on_ac_quicklist_remove_activate" swapped="no"/>
+  </object>
+  <object class="GtkAction" id="ac_quicklist_up">
+    <property name="stock_id">gtk-go-up</property>
+    <signal name="activate" handler="on_ac_quicklist_up_activate" swapped="no"/>
+  </object>
   <object class="GtkAction" id="ac_quit">
     <property name="tooltip" translatable="yes">Quit Arronax</property>
     <property name="stock_id">gtk-quit</property>
@@ -54,8 +89,8 @@
     <property name="height_request">450</property>
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Arronax</property>
-    <signal name="drag-data-received" handler="on_window1_drag_data_received" swapped="no"/>
     <signal name="delete-event" handler="on_window1_delete_event" swapped="no"/>
+    <signal name="drag-data-received" handler="on_window1_drag_data_received" swapped="no"/>
     <child>
       <object class="GtkBox" id="box_main">
         <property name="visible">True</property>
@@ -324,8 +359,6 @@
             <property name="margin_top">6</property>
             <property name="margin_bottom">6</property>
             <property name="hexpand">True</property>
-            <property name="entry_text_column">0</property>
-            <property name="id_column">1</property>
             <items>
               <item translatable="yes">This is a starter for an application</item>
               <item translatable="yes">This is a starter for a file or a location</item>
@@ -411,7 +444,6 @@
                         <property name="margin_top">6</property>
                         <property name="hexpand">True</property>
                         <property name="invisible_char">•</property>
-                        <property name="invisible_char_set">True</property>
                       </object>
                       <packing>
                         <property name="left_attach">1</property>
@@ -450,7 +482,6 @@
                             <property name="margin_top">12</property>
                             <property name="hexpand">True</property>
                             <property name="invisible_char">•</property>
-                            <property name="invisible_char_set">True</property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -515,7 +546,6 @@ working folder for the program</property>
                             <property name="margin_top">6</property>
                             <property name="hexpand">True</property>
                             <property name="invisible_char">•</property>
-                            <property name="invisible_char_set">True</property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -611,7 +641,6 @@ working folder for the program</property>
                             <property name="margin_top">12</property>
                             <property name="hexpand">True</property>
                             <property name="invisible_char">•</property>
-                            <property name="invisible_char_set">True</property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -664,7 +693,8 @@ working folder for the program</property>
                   <object class="GtkLabel" id="l_tab_basic">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Basic</property>
+                    <property name="label" translatable="yes">_Basic</property>
+                    <property name="use_underline">True</property>
                   </object>
                   <packing>
                     <property name="tab_fill">False</property>
@@ -799,7 +829,6 @@ working folder for the program</property>
                         <property name="margin_top">12</property>
                         <property name="hexpand">True</property>
                         <property name="invisible_char">•</property>
-                        <property name="invisible_char_set">True</property>
                       </object>
                       <packing>
                         <property name="left_attach">1</property>
@@ -817,7 +846,8 @@ working folder for the program</property>
                   <object class="GtkLabel" id="l_tab_advanced">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Advanced</property>
+                    <property name="label" translatable="yes">_Advanced</property>
+                    <property name="use_underline">True</property>
                   </object>
                   <packing>
                     <property name="position">1</property>
@@ -886,10 +916,178 @@ working folder for the program</property>
                   <object class="GtkLabel" id="l_tab_show_in">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Show in</property>
+                    <property name="label" translatable="yes">_Show in</property>
+                    <property name="use_underline">True</property>
                   </object>
                   <packing>
                     <property name="position">2</property>
+                    <property name="tab_fill">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkBox" id="box_quickhlist">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkScrolledWindow" id="swin_quicklist">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="shadow_type">in</property>
+                        <child>
+                          <object class="GtkTreeView" id="tv_quicklist">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="headers_clickable">False</property>
+                            <property name="reorderable">True</property>
+                            <property name="rules_hint">True</property>
+                            <property name="search_column">0</property>
+                            <property name="show_expanders">False</property>
+                            <child internal-child="selection">
+                              <object class="GtkTreeSelection" id="treeview-selection2"/>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox" id="box_quicklist_buttons">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkButton" id="b_quicklist_up">
+                            <property name="label" translatable="yes">button</property>
+                            <property name="use_action_appearance">True</property>
+                            <property name="related_action">ac_quicklist_up</property>
+                            <property name="name">6</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
+                            <property name="margin_left">6</property>
+                            <property name="margin_right">6</property>
+                            <property name="margin_top">6</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="b_quicklist_down">
+                            <property name="label" translatable="yes">button</property>
+                            <property name="use_action_appearance">True</property>
+                            <property name="related_action">ac_quicklist_down</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
+                            <property name="margin_left">6</property>
+                            <property name="margin_right">6</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="b_quicklist_new">
+                            <property name="label" translatable="yes">button</property>
+                            <property name="use_action_appearance">True</property>
+                            <property name="related_action">ac_quicklist_new</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
+                            <property name="margin_left">6</property>
+                            <property name="margin_right">6</property>
+                            <property name="margin_top">12</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="b_quicklist_duplicate1">
+                            <property name="label" translatable="yes">button</property>
+                            <property name="use_action_appearance">True</property>
+                            <property name="related_action">ac_quicklist_duplicate</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
+                            <property name="margin_left">6</property>
+                            <property name="margin_right">6</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="b_quicklist_edit">
+                            <property name="label" translatable="yes">button</property>
+                            <property name="use_action_appearance">True</property>
+                            <property name="related_action">ac_quicklist_edit</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
+                            <property name="margin_left">6</property>
+                            <property name="margin_right">6</property>
+                            <property name="margin_top">12</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">5</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="b_quicklist_remove">
+                            <property name="label" translatable="yes">button</property>
+                            <property name="use_action_appearance">True</property>
+                            <property name="related_action">ac_quicklist_remove</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
+                            <property name="margin_left">6</property>
+                            <property name="margin_right">6</property>
+                            <property name="margin_top">24</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">6</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="position">3</property>
+                  </packing>
+                </child>
+                <child type="tab">
+                  <object class="GtkLabel" id="l_tab_quicklist">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">_Quicklist</property>
+                    <property name="use_underline">True</property>
+                  </object>
+                  <packing>
+                    <property name="position">3</property>
                     <property name="tab_fill">False</property>
                   </packing>
                 </child>
@@ -901,7 +1099,7 @@ working folder for the program</property>
                     <property name="vexpand">True</property>
                     <property name="border_width">6</property>
                     <child>
-                      <object class="GtkLabel" id="l_advanced_mime_types">
+                      <object class="GtkLabel" id="l_mime_types">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="tooltip_text" translatable="yes">File types your command can open.</property>
@@ -914,6 +1112,8 @@ working folder for the program</property>
 seperated by 
 line breaks or
 semicolons (";")</property>
+                        <property name="use_underline">True</property>
+                        <property name="mnemonic_widget">tview_mime_types</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
@@ -923,7 +1123,7 @@ semicolons (";")</property>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkScrolledWindow" id="swin_advanced_mime_types">
+                      <object class="GtkScrolledWindow" id="swin_mime_types">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="margin_top">6</property>
@@ -931,13 +1131,13 @@ semicolons (";")</property>
                         <property name="vexpand">True</property>
                         <property name="shadow_type">in</property>
                         <child>
-                          <object class="GtkTextView" id="tview_advanced_mime_types">
+                          <object class="GtkTextView" id="tview_mime_types">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="tooltip_text" translatable="yes">File types your command can open.</property>
                             <property name="hexpand">True</property>
                             <property name="vexpand">True</property>
-                            <signal name="drag-data-received" handler="on_tview_advanced_mime_types_drag_data_received" swapped="no"/>
+                            <signal name="drag-data-received" handler="on_tview_mime_types_drag_data_received" swapped="no"/>
                           </object>
                         </child>
                       </object>
@@ -950,17 +1150,18 @@ semicolons (";")</property>
                     </child>
                   </object>
                   <packing>
-                    <property name="position">3</property>
+                    <property name="position">4</property>
                   </packing>
                 </child>
                 <child type="tab">
-                  <object class="GtkLabel" id="l_tab_keywords">
+                  <object class="GtkLabel" id="l_tab_mime_types">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">MIME types</property>
+                    <property name="label" translatable="yes">_MIME types</property>
+                    <property name="use_underline">True</property>
                   </object>
                   <packing>
-                    <property name="position">3</property>
+                    <property name="position">4</property>
                     <property name="tab_fill">False</property>
                   </packing>
                 </child>
@@ -1020,17 +1221,18 @@ semicolons (";")</property>
                     </child>
                   </object>
                   <packing>
-                    <property name="position">4</property>
+                    <property name="position">5</property>
                   </packing>
                 </child>
                 <child type="tab">
                   <object class="GtkLabel" id="l_tab_keyword">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Keywords</property>
+                    <property name="label" translatable="yes">_Keywords</property>
+                    <property name="use_underline">True</property>
                   </object>
                   <packing>
-                    <property name="position">4</property>
+                    <property name="position">5</property>
                     <property name="tab_fill">False</property>
                   </packing>
                 </child>
