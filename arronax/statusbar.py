@@ -45,8 +45,3 @@ def init(widget):
     statusbar = widget
 
 
-    
-
-    
-    
-

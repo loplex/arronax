@@ -6,8 +6,8 @@ import os, os.path, time, sys, urllib, urlparse
 from gettext import gettext as _
 import gettext
 
-import settings, connection, desktopfile, widgets, clipboard, about, dialogs
-import converter, statusbar, filechooser, tvtools, quicklist
+import settings, desktopfile, clipboard, about, dialogs
+import statusbar, filechooser, tvtools, quicklist, utils, mimetypes
 
 IS_STANDALONE = False
 
@@ -22,6 +22,53 @@ TYPE_LINK = 1
 class Editor(object):
 
     def __init__(self, path, mode, type=TYPE_APPLICATION):
+        self.create_builder()
+
+        utils.activate_drag_and_drop(self['window1'])
+        utils.activate_drag_and_drop(self['bt_icon'])
+        utils.activate_drag_and_drop(
+            self['e_title'], self.on_entry_drag_data_received, 'Name')
+        utils.activate_drag_and_drop(
+            self['e_command'], self.on_entry_drag_data_received, 
+            'Exec')
+        utils.activate_drag_and_drop(
+            self['e_working_dir'], self.on_entry_drag_data_received,
+            'Path')
+        utils.activate_drag_and_drop(
+            self['e_categories'], self.on_entry_drag_data_received, 
+            'Categories')
+        utils.activate_drag_and_drop(
+            self['e_wm_class'], self.on_entry_drag_data_received, 
+            'StartupWMClass')
+        utils.activate_drag_and_drop(
+            self['e_comment'], self.on_entry_drag_data_received, 
+            'Comment')
+        utils.activate_drag_and_drop(self['tview_mime_types'])
+
+        self.quicklist = quicklist.Quicklist(self['tv_quicklist'])
+        self.dfile = desktopfile.DesktopFile()
+        self.clip = clipboard.ContainerClipboard(self['box_main'], 
+                                                 self.builder)
+        statusbar.init(self['statusbar'])        
+        about.add_help_menu(self['menu_help'])
+        self.setup_tv_show_in()
+
+        if mode is MODE_EDIT:
+            self.read_desktop_file(path)
+        elif mode is MODE_CREATE_FOR:
+            self.filename = None
+            if type == TYPE_APPLICATION:
+                self['e_command'].set_text(path)
+            else:
+                self['e_uri'].set_text(path)
+            self.create_title_from_command(path)
+        else:
+            self.filename = path
+      
+        self['window1'].show()
+
+
+    def create_builder(self):
         self.builder = Gtk.Builder()
         self.builder.set_translation_domain(settings.GETTEXT_DOMAIN)
         gettext.bindtextdomain(settings.GETTEXT_DOMAIN)
@@ -31,167 +78,35 @@ class Editor(object):
         self.builder.add_from_file(os.path.join(settings.UI_DIR, 
                                                 'edit.ui'))
         self.builder.connect_signals(self)
-        
-        self.win = self.obj('window1')
-        self.win.drag_dest_set(Gtk.DestDefaults.ALL, [],  
-                               Gdk.DragAction.COPY)
-        self.win.drag_dest_add_uri_targets()
 
 
-        bt_icon = self.obj('bt_icon')
-        bt_icon.drag_dest_set(Gtk.DestDefaults.ALL, [],  
-                               Gdk.DragAction.COPY)
-        bt_icon.drag_dest_add_uri_targets()
-
-        for name in ('e_command', 'e_working_dir', 'e_uri'):
-            entry =  self.obj(name)
-            entry.drag_dest_set(Gtk.DestDefaults.ALL, [],  
-                                Gdk.DragAction.COPY)
-            entry.drag_dest_add_uri_targets()
-            entry.connect('drag-data-received',  
-                          self.on_urientry_drag_data_received)
-
-
-        self.quicklist = quicklist.Quicklist(self.obj('tv_quicklist'))
-
-        self.tview_mime = self.obj('tview_mime_types')
-        self.tview_mime.drag_dest_set(Gtk.DestDefaults.ALL, [],  
-                                      Gdk.DragAction.COPY)
-        self.tview_mime.drag_dest_add_uri_targets()
-
-        self.clip = clipboard.ContainerClipboard(self.obj('box_main'))
-        self.clip.add_actions(cut=self.obj('ac_cut'),
-                              copy=self.obj('ac_copy'),
-                              paste=self.obj('ac_paste'),
-                              delete=self.obj('ac_delete'))
-
-        self.dfile = desktopfile.DesktopFile(self.win)
-        self.factory = widgets.WidgetFactory(self.builder)
-
-        statusbar.init(self.obj('statusbar'))
-        
-        about.add_help_menu(self.obj('menu_help'))
-
-        self.conn = connection.ConnectionGroup(self.dfile)
-
-        self.conn.add('Type', self.factory.get('cbox_type'),
-                      converter=converter.DictConverter({0: 'Application',
-                                                         1: 'Link'})
-                      )
- 
-        self.conn.add('Name', self.factory.get('e_title'))
-        self.conn.add('Comment', self.factory.get('e_comment'))
-        self.conn.add('Exec', self.factory.get('e_command'), 
-                      tags=['application'], 
-                      related=(self.factory.get('l_command'),
-                               self.factory.get('bt_command')
-                               )
-                      )
-        self.conn.add('URL', self.factory.get('e_uri'), 
-                      tags=['link'], 
-                      related=(self.factory.get('l_uri'),
-                               self.factory.get('bt_uri')
-                               )
-                      )
-        self.conn.add('Hidden', self.factory.get('sw_advanced_hidden'),
-                      type=bool, tags=['application'], 
-                      related=self.factory.get('l_advanced_hidden'))
-        self.conn.add('Terminal', self.factory.get('sw_run_in_terminal'),
-                      type=bool, tags=['application'],
-                      related=self.factory.get('l_run_in_terminal'))
-        self.conn.add('Icon', self.factory.get(
-                'img_icon',
-                defaulter=widgets.StringDefaulter(settings.DEFAULT_ICON)),
-                      )
-        self.conn.add('Keywords', self.factory.get('tview_keywords'),
-                      converter=converter.ListConverter()
-                      )
-        self.conn.add('Path', self.factory.get('e_working_dir'), 
-                      tags=['application'],
-                      related=(self.factory.get('l_working_dir'),
-                               self.factory.get('bt_working_dir')
-                               )
-                      )
-        self.conn.add('Categories', self.factory.get('e_advanced_categories'))
-        self.conn.add('StartupWMClass', self.factory.get('e_advanced_wm_class'),
-                      tags=['application'],
-                      related=self.factory.get('l_advanced_wm_class'))
-
-        self.conn.add('MimeType', 
-                      self.factory.get('tview_mime_types'),
-                      converter=converter.ListConverter(),
-                      tags=['application']
-                      )
-
-        
-        self.conn.add_no_data(self.factory.get('l_tab_quicklist'),
-                              tags=['application']
-                              )
-        self.conn.add_no_data(self.factory.get('l_tab_mime_types'),
-                              tags=['application']
-                              )
-
-        self.conn.add('OnlyShowIn',
-                      self.factory.get('tview_advanced_show_in',
-                                       klass=widgets.SelectionListWidget,
-                                       items={'GNOME': _('GNOME'),
-                                              'KDE': _('KDE'), 
-                                              'LXDE': _('LXDE'),
-                                              'MATE': _('MATE'),
-                                              'Razor': _('Razor-qt'),
-                                              'ROX': _('ROX'),
-                                              'TDE': _('Trinity Desktop'),
-                                              'Unity': _('Unity'), 
-                                              'XFCE': _('XFCE'),
-                                              'Old': _('Legacy environments'),
-                                              },
-                                       ),
-                      converter=converter.OneLineListConverter(),
-                      )
-                      
-        self.conn.clear(store=True)
-        
-        self.type_watcher = widgets.get_watcher(
-            self.factory.get('cbox_type'),
-            connection_groups=[self.conn],
-            tags={'application': lambda x: x == 0,
-                  'link': lambda x: x == 1
-                  }
-            )
-
-        ## make sure the type is changed so we get the signal
-        self.factory.get('cbox_type').set_data(-1)
-        self.factory.get('cbox_type').set_data(type)
-
-        if mode is MODE_EDIT:
-            self.read_desktop_file(path)
-        elif mode is MODE_CREATE_FOR:
-            self.filename = None
-            if type == TYPE_APPLICATION:
-                self.obj('e_command').set_text(path)
-            else:
-                self.obj('e_uri').set_text(path)
-            self.create_title_from_command(path)
-        else:
-            self.filename = path
-      
-        self.win.show()
+    def setup_tv_show_in(self):
+        tv = self['tv_show_in']
+        model = Gtk.ListStore(bool, str, str)
+        tv.set_model(model)
+        tvtools.create_treeview_column(tv, _('Enabled'), 0,
+                                       utils.create_toggle_renderer(tv),
+                                       activatable=True,
+                                       attr='active'
+                                   )
+        tvtools.create_treeview_column(tv, _('Name'), 1)
+        for field, name in sorted(settings.KNOWN_DESKTOPS.iteritems()):
+            model.append([True, name, field])
+    
 
     def read_desktop_file(self, path):
         with statusbar.Status(_("Loading file '%s' ...") % path,
                               _("Loaded file '%s' ...") % path) as status:
-            self.conn.clear(store=True)
             msg = self.dfile.load(path)
             if msg is not None:
-                dialogs.error(self.win, _('Can not load starter'), msg)
+                dialogs.error(self['window1'], 
+                              _('Can not load starter'), msg)
                 status.set_end_msg(_("File not loaded."))
-                self.conn.clear(store=True)
-                return
-                
-            self.filename = path
-            self.update_window_title()
-            self.conn.view()
-
+            else:
+                data = self.dfile.get_as_dict()
+                self.set_data_for_all_widgets(data)
+                self.filename = path
+                self.update_window_title()        
 
         
     def update_window_title(self): 
@@ -199,77 +114,57 @@ class Editor(object):
             title = settings.APP_NAME
         else:
             title = '%s: %s' % (settings.APP_NAME, self.filename)
-        self.win.set_title(title)
+        self['window1'].set_title(title)
         
-        
-        
+                
     def create_title_from_command(self, command):
-        if (command is None or 
-            command == ''  or 
-            self.obj('e_title').get_text() != ''):
+        if (command in (None, '') or 
+            self['e_title'].get_text() != ''):
             return
         title = os.path.basename(command)
-        if title.endswith('.desktop'):
-            title=title[:-len('.desktop')]
-        self.obj('e_title').set_text(title.title())
-        self.obj('e_title').select_region(0, len(title)+1)
+        self['e_title'].set_text(title.title())
+        self['e_title'].select_region(0, len(title)+1)
 
-
-    def obj(self, name):
-        return self.builder.get_object(name)
 
     def check_data(self):
-        msg=''
-        try:
-            if self.dfile['Name'] == '':
-                raise desktopfile.KeyNotSetException()
-        except desktopfile.KeyNotSetException:
-            msg = '%s\n%s' % (msg, _("You need to provide a title."))
-        
-        try:    
-            if (self.dfile['Type'] == 'Application' and 
-                self.dfile['Exec'] == ''):
-                raise desktopfile.KeyNotSetException()  
-        except desktopfile.KeyNotSetException:
-            msg = '%s\n%s' % (msg, _("You need to provide a command."))
+        msg=[]
+        if self['e_title'].get_text() == '':
+            msg.append(_("You need to provide a title."))
+        if self['e_command'].get_text() == '':
+            if self.dfile.type == 0:
+                msg.append(_("You need to provide a command."))
+            else:
+                msg.append(_("You need to provide a URL or file name."))
+        return '\n'.join(msg)
 
-        try:    
-            if (self.dfile['Type'] == 'Link' and 
-                self.dfile['URL'] == ''):
-                raise desktopfile.KeyNotSetException()  
-        except desktopfile.KeyNotSetException:
-            msg = '%s\n%s' % (msg, _("You need to provide a URL or file name."))
-
-        
-        return msg
-
-        
-
-    def check_dirty(self):
-        if self.conn.is_dirty():
+    def maybe_confirm_unsaved(self):
+        data = self.get_data_from_all_widgets()
+        answer = None
+        if self.dfile.is_dirty(data):
             answer = dialogs.yes_no_cancel_question(
-                self.win,
-                _('Save now?'),
+                self['window1'], _('Save now?'),
                 _('You have unsaved changes.  Do you want to save them now?')
                 )
             if answer == Gtk.ResponseType.YES:
-                self.save()
-            elif answer == Gtk.ResponseType.CANCEL:
-                return
+                return self.save()
+        return answer != Gtk.ResponseType.CANCEL
             
     def quit(self):
-        self.check_dirty()
-        
-        if IS_STANDALONE:
-            Gtk.main_quit()            
-        else:
-            self.win.destroy()
-
+        try: # just to be sure
+            really_quit =  self.maybe_confirm_unsaved()
+        except Exception as e:
+            print 'QUIT:', e
+            really_quit = True
+        if really_quit:        
+            if IS_STANDALONE:
+                Gtk.main_quit()            
+            else:
+                self['window1'].destroy()
 
     def select_icon(self):
         preview = Gtk.Image()
 
-        dialog = Gtk.FileChooserDialog(_("Select Icon"), self.win,
+        dialog = Gtk.FileChooserDialog(_("Select Icon"), self['window1'],
                                        Gtk.FileChooserAction.OPEN,
                                        (Gtk.STOCK_CANCEL, 
                                         Gtk.ResponseType.CANCEL,
@@ -306,8 +201,12 @@ class Editor(object):
         
         self.set_icon(path)
 
-    def set_icon(self, path):             
-        msg = self.factory.get('img_icon').set_data(path)
+    def __getitem__(self, key):
+        return self.builder.get_object(key)
+
+    def set_icon(self, path):
+        img = self['img_icon']
+        msg = utils.load_file_into_image(img, path)
         if msg is not None:
             statusbar.show_msg(msg)
         else:
@@ -316,33 +215,77 @@ class Editor(object):
     def about(self):
         about.show_about_dialog()
 
-        
-    def save(self, is_save_as=False):        
-        self.conn.store()
+    def get_data_from_all_widgets(self):
+        data = {
+            'type': self['cbox_type'].get_active(),
+            'title': self['e_title'].get_text(),
+            'command': self['e_command'].get_text(),
+            'working_dir':  self['e_working_dir'].get_text(),
+            'run_in_terminal': self['sw_run_in_terminal'].get_active(),
+            'hidden': self['sw_hidden'].get_active(),
+            'icon': utils.get_name_from_image(self['img_icon']),
+            'keywords': ';'.join(utils.get_list_from_textview(
+                self['tview_keywords'])),
+            'categories': self['e_categories'].get_text(),
+            'wm_class': self['e_wm_class'].get_text(),
+            'comment': self['e_comment'].get_text(),
+            'mime_type': ';'.join(utils.get_list_from_textview(
+                self['tview_mime_types'])),
+            'show_in': utils.get_desktops_from_tv(self['tv_show_in']),
+            'quicklist': utils.get_quicklist_from_tv(self['tv_quicklist'])
+        }
+        return data
+
+    def set_data_for_all_widgets(self, data):
+        self['cbox_type'].set_active(data['type'])
+        self['e_title'].set_text(data['title'])
+        self['e_command'].set_text(data['command'])
+        self['e_working_dir'].set_text(data['working_dir'])
+        self['sw_run_in_terminal'].set_active(data['run_in_terminal'])
+        self['sw_hidden'].set_active(data['hidden'])
+        self.set_icon(data['icon'])
+        utils.set_list_to_textview(self['tview_keywords'], data['keywords'])
+        self['e_categories'].set_text(data['categories'])
+        self['e_wm_class'].set_text(data['wm_class'])
+        self['e_comment'].set_text(data['comment'])
+        utils.set_list_to_textview(self['tview_mime_types'], 
+                                   data['mime_type'])
+        utils.load_desktops_into_tv(self['tv_show_in'], data['show_in'])
+        utils.load_quicklist_into_tv(self['tv_quicklist'], data['quicklist'])
+   
+    def get_default_filename(self):
+        fname_from_title = '%s.desktop' % self['e_title'].get_text()
+        if self.filename is None:
+            return fname_from_title
+        elif os.path.isdir(self.filename):
+            return os.path.join(self.filename, fname_from_title)
+        else:
+            return self.filename
+
+    def show_msg(self, msg):
+        if msg is not None:
+            msg = str(msg)
+            statusbar.show_msg(msg)
+
+    def save(self, is_save_as=False): 
+        data = self.get_data_from_all_widgets()
+        self.dfile.set_from_dict(data)
+
         msg = self.check_data()
         if msg != '':
-            dialogs.error(self.win, _('Error'), msg)
-            return
-        
-        if self.filename is None:
-            status_msg = _("Saving file ...")
-            end_msg = _("File saved.")
-        else:
-            status_msg = _("Saving file '%s'...")% self.filename
-            end_msg = _("Saved file '%s'.")% self.filename
-        with statusbar.Status(status_msg, end_msg) as status:
-            
+            dialogs.error(self['window1'], _('Error'), msg)
+            return False
+
+        status_msg = _("Saving file %s ...") % (self.filename or '')
+        end_msg = _("File %s saved.") % (self.filename or '')
+
+        with statusbar.Status(status_msg, end_msg) as status:            
             if (is_save_as or (self.filename is None or 
                                os.path.isdir(self.filename))):
-                fname_from_title = '%s.desktop' % self.obj('e_title').get_text()
-                if self.filename is None:
-                    default = fname_from_title
-                elif os.path.isdir(self.filename):
-                    default = os.path.join(self.filename, fname_from_title)
-                else:
-                    default = self.filename
+                default = self.get_default_filename()
 
-                filename = self.ask_for_filename('dlg_save', default=default)
+                filename = filechooser.ask_for_filename(
+                    'dlg_save', default=default)
                 if filename is None:
                     status.set_end_msg(_("File not saved."))
                     return
@@ -350,53 +293,14 @@ class Editor(object):
                     self.filename = filename
                     status.set_end_msg(_("Saved file '%s'.")% self.filename)
                     self.update_window_title()
-        
             msg = self.dfile.save(self.filename)
             if msg is not None:
-                dialogs.error(self.win, _('Can not save starter'), msg)
+                dialogs.error(self['window1'], _('Can not save starter'), 
+                              msg)
                 status.set_end_msg(_("File not saved."))
-
-                           
-    def ask_for_filename(self, defname, add_ext=False, default=None):
-        dlgdef = filechooser.FILE_DLG_DEF[defname]
-        dialog = filechooser.create_dir_buttons_filechooser_dlg(
-            title=dlgdef['title'],
-            action=dlgdef['action'],
-            patterns=dlgdef.get('patterns', None),
-            mime_types=dlgdef.get('mime_types', None),
-            dir_buttons=dlgdef.get('buttons', None)
-            )
-
-        is_save_action = (dlgdef['action'] in 
-                          (Gtk.FileChooserAction.SAVE,
-                           Gtk.FileChooserAction.CREATE_FOLDER))
-        if default is not None:
-            if os.path.isdir(default) or default=='':
-                folder = default
-            else:
-                folder = os.path.dirname(default)
-            if folder == '':
-                folder = settings.USER_DESKTOP_DIR   
-            dialog.set_current_folder(folder)
-
-            file = os.path.basename(default)
-            if file != '':
-                if is_save_action:
-                    dialog.set_current_name(file)
-                else:
-                    dialog.select_filename(default)
-
-        response = dialog.run()
-        path = dialog.get_filename()
-        dialog.destroy()
-        if response != Gtk.ResponseType.OK:
-            return
-        if (add_ext and 
-            not path.endswith('.desktop') and 
-            not os.path.isfile(path)):
-            path='%s.desktop' % path
-        return path
-
+                return False
+        return True
+            
 #####################
 ## signal handlers
 #####################
@@ -416,13 +320,13 @@ class Editor(object):
             if uri.scheme == 'file':
                 filename = urllib.url2pathname(uri.path)
             elif uri.scheme == 'application':
-                appinfo = Gio.DesktopAppInfo.new(uri.netloc)
-                filename = appinfo.get_filename()
+                filename = utils.get_path_for_application_uri(uri)
+            else:
+                statusbar.show_msg(
+                    _('This is not a local file. File not loaded.'))
             if filename:
-                self.check_dirty()
-                self.read_desktop_file(filename)
-
-                
+                if self.maybe_confirm_unsaved():
+                    self.read_desktop_file(filename)
 
                 
     def on_urientry_drag_data_received(self, widget, drag_context, x, y, 
@@ -437,82 +341,111 @@ class Editor(object):
             widget.set_text(text)
 
 
-
+    def on_entry_drag_data_received(self, widget, drag_context, x, y, 
+                                       data, info, time, field):
+        uris = data.get_uris()
+        if info == 0 and len(uris) > 0: 
+            title = utils.get_info_from_uri(uris[0], field)
+            widget.set_text(title) 
         
     def on_tview_mime_types_drag_data_received(self, widget, 
                                                drag_context, x, y, data,
                                                info, time):
-        mime_types = set()
         uris = data.get_uris()
-        for uri in uris:
-            try:
-                gfile = Gio.File.new_for_uri(uri)
-                info = gfile.query_info("standard::*", 
-                                        Gio.FileQueryInfoFlags.NONE, None)
-                mime_types.add(info.get_content_type())
-            except GLib.GError as e:
-                print e
-        tview = self.factory.get('tview_mime_types')
-        data = tview.get_data()
-        current = [x for x in data.splitlines() if x.strip() != '']
-        mime_types.update(current)
-        tview.set_data('\n'.join(sorted(mime_types)))
+        mime_types = utils.get_mime_types_from_uris(uris, self.show_msg)
+        data = ';'.join(utils.get_list_from_textview(
+            self['tview_mime_types']))
+        current = data.split(';')
+        mime_types.update(i for i in current if i.strip() != '')
+        utils.set_list_to_textview(self['tview_mime_types'], 
+                                   sorted(mime_types))
 
+
+###############
+## type list
+
+    def on_cbox_type_changed(self, widget):
+        app_only = ('e_working_dir', 'l_working_dir', 'bt_working_dir',
+                    'sw_run_in_terminal', 'l_run_in_terminal',
+                    'e_wm_class', 'l_wm_class',
+                    'l_tab_quicklist', 'box_quicklist',
+                    'l_tab_mime_types', 'box_mime_types',
+                )
+        is_app = widget.get_active() == 0
+        command_label = ( _('File or URL:'), _('Command:'),)[is_app]
+        for name in app_only:
+            self[name].set_sensitive(is_app)
+        self['l_command'].set_label(command_label)
             
 ###############
 ## buttons
 
-
     def on_bt_working_dir_clicked(self, *args):
-        default =  self.obj('e_working_dir').get_text()
+        default =  self['e_working_dir'].get_text()
         if default =='':  
-            cmd = self.obj('e_command').get_text()
+            cmd = self['e_command'].get_text()
             cmd_dir=os.path.dirname(cmd)
             if os.path.isdir(cmd_dir):
                 default = '%s/' % cmd_dir
             else:
                 default = None
 
-        path = self.ask_for_filename('dlg_working_dir', False, default)
+        path = filechooser.ask_for_filename(
+            'dlg_working_dir', False, default)
         if path is not None:
-            self.obj('e_working_dir').set_text(path)
+            self['e_working_dir'].set_text(path)
 
     def on_bt_command_clicked(self, *args):
-        cmd = self.obj('e_command').get_text()
-        path = self.ask_for_filename('dlg_command', False, default=cmd)
+        cmd = self['e_command'].get_text()
+        path = filechooser.ask_for_filename(
+            'dlg_command', False, default=cmd)
         if path is not None:
-            self.obj('e_command').set_text(path) 
+            self['e_command'].set_text(path) 
 
+    def on_bt_mime_types_select_clicked(self, *args):
+        mime_types = utils.get_list_from_textview(self['tview_mime_types'])
+        dlg = mimetypes.MimetypesDlg(mime_types)
+        mime_types = dlg.run()
+        if mime_types is not None:
+            utils.set_list_to_textview(self['tview_mime_types'], 
+                                       sorted(mime_types))
+
+            
     def on_bt_uri_clicked(self, *args):
-        uri = self.obj('e_uri').get_text()
+        uri = self['e_uri'].get_text()
         if uri == '':
             uri = None            
-        path = self.ask_for_filename('dlg_file', False, default=uri)
+        path = filechooser.ask_for_filename(
+            'dlg_file', False, default=uri)
         print 'PATH:', path
         if path is not None:
-            self.obj('e_uri').set_text(path) 
-
-
+            self['e_uri'].set_text(path) 
      
     def on_bt_icon_drag_data_received(self, widget, drag_context, x, y, data,
                                       info, time):
         uris = data.get_uris()
         if info == 0 and len(uris) > 0:
-            uri = data.get_uris()[0]
-            gfile = Gio.File.new_for_uri(uri)
-            path = gfile.get_path()
-            if path is None:
-               statusbar.show_msg(_('This is not a local file. Icon not changed.'))
-               return
-            info = gfile.query_info("standard::*", 
-                                    Gio.FileQueryInfoFlags.NONE, None)
-            mime = info.get_content_type()
-            if not mime.startswith('image/'):
-                statusbar.show_msg(_('This is not an image. Icon not changed.'))
+            uri = urlparse.urlparse(uris[0])
+            if uri.scheme == 'application':
+                path = utils.get_path_for_application_uri(uri)
+                icon = utils.get_field_from_desktop_file(path, 'Icon')
+                self.set_icon(icon)
+            elif uri.scheme == 'file':
+                path = uri.path
+                if utils.is_desktop_file(uri.geturl()):
+                    path = utils.get_field_from_desktop_file(path, 'Icon')
+                    self.set_icon(path)
+                else:
+                    mime = utils.get_mime_type(uri)
+                    if mime.startswith('image/'):
+                        self.set_icon(path)
+                    else:
+                        statusbar.show_msg(
+                            _('This is not an image. Icon not changed.'))
+            else:
+                statusbar.show_msg(
+                    _('This is not a local file. Icon not changed.'))
                 return
-            self.set_icon(path)
-
-
 
 ###############
 ## actions
@@ -533,18 +466,18 @@ class Editor(object):
         self.save(True)
 
     def on_ac_open_activate(self, action, *args):
-        self.check_dirty()
-        filename = self.ask_for_filename('dlg_open', True, default=None)
+        if self.maybe_confirm_unsaved():
+            filename = filechooser.ask_for_filename(
+                'dlg_open', True, default=None)
                                          
         if filename is not None:
             self.read_desktop_file(filename)
 
     def on_ac_new_activate(self, action, *args):
-        self.check_dirty()
-        self.filename = None
-        self.conn.clear(True)
-        statusbar.show_msg(_('Created new starter.'))
-        self.update_window_title()
+        if self.maybe_confirm_unsaved():
+            self.filename = None
+            statusbar.show_msg(_('Created new starter.'))
+            self.update_window_title()
         
 
     def on_ac_quicklist_up_activate(self, action, *args):
@@ -564,8 +497,6 @@ class Editor(object):
         
     def on_ac_quicklist_duplicate_activate(self, action, *args):
         self.quicklist.duplicate_current_row()
-
-
 
 
 def main():
@@ -590,8 +521,6 @@ def main():
     else:
         editor = Editor(path=None, mode=MODE_NEW) 
 
-
-
     try:
         Gtk.main()
     except KeyboardInterrupt:
@@ -600,9 +529,4 @@ def main():
 if __name__ == '__main__':
     main()
         
-
-
-
-
-
 

@@ -24,9 +24,11 @@
 from gi.repository import Gtk, Gdk
 
 class ContainerClipboard(object):
-    def __init__(self, container):
+    def __init__(self, container, builder=None):
         self.container = container
         self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
+        if builder:
+            self.add_actions_from_builder(builder)
 
     def _get_focus_widget(self, container=None):
         if container is None:
@@ -47,6 +49,12 @@ class ContainerClipboard(object):
             paste.connect('activate', lambda *args: self.paste())
         if delete is not None:
             delete.connect('activate', lambda *args: self.delete())
+
+    def add_actions_from_builder(self, builder):
+        self.add_actions(builder.get_object('ac_cut'),
+                         builder.get_object('ac_copy'),
+                         builder.get_object('ac_paste'),
+                         builder.get_object('ac_delete'))
 
 
     def cut(self):

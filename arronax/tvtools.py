@@ -19,12 +19,14 @@
 
 
 
-from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio
+from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio, Pango
 
 
 def add_cell_renderer(control, col_no=0, renderer=None, attr='text'):
     if renderer is None:
         renderer=Gtk.CellRendererText()
+        renderer.set_property('ellipsize', Pango.EllipsizeMode.END)
+        renderer.set_property('ellipsize-set', True)
     control.pack_start(renderer, True)
     control.add_attribute(renderer, attr, col_no)
     
@@ -34,6 +36,7 @@ def create_treeview_column(widget, title, col_no, renderer=None,
                            sort_column=-1):
     column = Gtk.TreeViewColumn(title)
     column.set_sort_column_id(sort_column)
+    column.set_resizable(True)
     widget.append_column(column)
     if activatable:
         renderer.set_activatable(True)

@@ -45,5 +45,15 @@ BUGREPORT_URL = 'https://bugs.launchpad.net/%s/+filebug' % app_name
 QUESTION_URL = 'https://answers.launchpad.net/%s/+addquestion' % app_name
 
 
-
+KNOWN_DESKTOPS={'GNOME': _('GNOME'),
+                'KDE': _('KDE'), 
+                'LXDE': _('LXDE'),
+                'MATE': _('MATE'),
+                'Razor': _('Razor-qt'),
+                'ROX': _('ROX'),
+                'TDE': _('Trinity Desktop'),
+                'Unity': _('Unity'), 
+                'XFCE': _('XFCE'),
+                'Old': _('Legacy environments')
+            }
 

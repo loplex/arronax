@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.16.1 -->
+<!-- Generated with glade 3.18.3 -->
 <interface>
   <requires lib="gtk+" version="3.0"/>
   <object class="GtkAction" id="ac_about">
@@ -42,16 +42,6 @@
     <property name="label" translatable="yes">Duplicate</property>
     <signal name="activate" handler="on_ac_quicklist_duplicate_activate" swapped="no"/>
   </object>
-  <object class="GtkButton" id="b_quicklist_duplicate">
-    <property name="label" translatable="yes">button</property>
-    <property name="use_action_appearance">True</property>
-    <property name="related_action">ac_quicklist_duplicate</property>
-    <property name="visible">True</property>
-    <property name="can_focus">True</property>
-    <property name="receives_default">True</property>
-    <property name="margin_left">6</property>
-    <property name="margin_right">6</property>
-  </object>
   <object class="GtkAction" id="ac_quicklist_edit">
     <property name="stock_id">gtk-edit</property>
     <signal name="activate" handler="on_ac_quicklist_edit_activate" swapped="no"/>
@@ -59,14 +49,6 @@
   <object class="GtkAction" id="ac_quicklist_new">
     <property name="stock_id">gtk-new</property>
     <signal name="activate" handler="on_ac_quicklist_new_activate" swapped="no"/>
-  </object>
-  <object class="GtkAction" id="ac_quicklist_remove">
-    <property name="stock_id">gtk-delete</property>
-    <signal name="activate" handler="on_ac_quicklist_remove_activate" swapped="no"/>
-  </object>
-  <object class="GtkAction" id="ac_quicklist_up">
-    <property name="stock_id">gtk-go-up</property>
-    <signal name="activate" handler="on_ac_quicklist_up_activate" swapped="no"/>
   </object>
   <object class="GtkAction" id="ac_quit">
     <property name="tooltip" translatable="yes">Quit Arronax</property>
@@ -88,6 +70,7 @@
     <property name="width_request">600</property>
     <property name="height_request">450</property>
     <property name="can_focus">False</property>
+    <property name="tooltip_text" translatable="yes">You can drop a starter here to load it.</property>
     <property name="title" translatable="yes">Arronax</property>
     <signal name="delete-event" handler="on_window1_delete_event" swapped="no"/>
     <signal name="drag-data-received" handler="on_window1_drag_data_received" swapped="no"/>
@@ -112,6 +95,7 @@
                     <property name="can_focus">False</property>
                     <child>
                       <object class="GtkImageMenuItem" id="imagemenuitem1">
+                        <property name="use_action_appearance">True</property>
                         <property name="related_action">ac_new</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -121,6 +105,7 @@
                     </child>
                     <child>
                       <object class="GtkImageMenuItem" id="imagemenuitem2">
+                        <property name="use_action_appearance">True</property>
                         <property name="related_action">ac_open</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -130,6 +115,7 @@
                     </child>
                     <child>
                       <object class="GtkImageMenuItem" id="imagemenuitem3">
+                        <property name="use_action_appearance">True</property>
                         <property name="related_action">ac_save</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -139,6 +125,7 @@
                     </child>
                     <child>
                       <object class="GtkImageMenuItem" id="imagemenuitem4">
+                        <property name="use_action_appearance">True</property>
                         <property name="related_action">ac_save_as</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -154,6 +141,7 @@
                     </child>
                     <child>
                       <object class="GtkImageMenuItem" id="imagemenuitem5">
+                        <property name="use_action_appearance">True</property>
                         <property name="related_action">ac_quit</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -177,6 +165,7 @@
                     <property name="can_focus">False</property>
                     <child>
                       <object class="GtkImageMenuItem" id="imagemenuitem6">
+                        <property name="use_action_appearance">True</property>
                         <property name="related_action">ac_cut</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -186,6 +175,7 @@
                     </child>
                     <child>
                       <object class="GtkImageMenuItem" id="imagemenuitem7">
+                        <property name="use_action_appearance">True</property>
                         <property name="related_action">ac_copy</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -195,6 +185,7 @@
                     </child>
                     <child>
                       <object class="GtkImageMenuItem" id="imagemenuitem8">
+                        <property name="use_action_appearance">True</property>
                         <property name="related_action">ac_paste</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -204,6 +195,7 @@
                     </child>
                     <child>
                       <object class="GtkImageMenuItem" id="imagemenuitem9">
+                        <property name="use_action_appearance">True</property>
                         <property name="related_action">ac_delete</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -227,6 +219,7 @@
                     <property name="can_focus">False</property>
                     <child>
                       <object class="GtkImageMenuItem" id="imagemenuitem10">
+                        <property name="use_action_appearance">True</property>
                         <property name="related_action">ac_about</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -251,12 +244,14 @@
             <property name="can_focus">False</property>
             <child>
               <object class="GtkToolButton" id="tb_new">
+                <property name="use_action_appearance">True</property>
                 <property name="related_action">ac_new</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Create a new application starter</property>
                 <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
+                <property name="stock_id">gtk-new</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -265,6 +260,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="tb_open">
+                <property name="use_action_appearance">True</property>
                 <property name="related_action">ac_open</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -289,6 +285,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="tb_save">
+                <property name="use_action_appearance">True</property>
                 <property name="related_action">ac_save</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -303,6 +300,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="tb_save_as">
+                <property name="use_action_appearance">True</property>
                 <property name="related_action">ac_save_as</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -329,6 +327,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="tb_quit">
+                <property name="use_action_appearance">True</property>
                 <property name="related_action">ac_quit</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -359,10 +358,12 @@
             <property name="margin_top">6</property>
             <property name="margin_bottom">6</property>
             <property name="hexpand">True</property>
+            <property name="active">0</property>
             <items>
               <item translatable="yes">This is a starter for an application</item>
               <item translatable="yes">This is a starter for a file or a location</item>
             </items>
+            <signal name="changed" handler="on_cbox_type_changed" swapped="no"/>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -383,11 +384,13 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">The icon displayed for this starter. To change it, drop an image or a starter here or click.</property>
                 <property name="valign">start</property>
                 <property name="margin_left">6</property>
                 <property name="margin_right">6</property>
                 <property name="margin_top">6</property>
                 <property name="use_underline">True</property>
+                <property name="xalign">0.52999997138977051</property>
                 <signal name="drag-data-received" handler="on_bt_icon_drag_data_received" swapped="no"/>
                 <child>
                   <object class="GtkImage" id="img_icon">
@@ -395,7 +398,6 @@
                     <property name="height_request">48</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="tooltip_text" translatable="yes">The icon displayed for this starter. Click to select another one.</property>
                     <property name="pixel_size">48</property>
                   </object>
                 </child>
@@ -420,23 +422,6 @@
                     <property name="vexpand">True</property>
                     <property name="border_width">6</property>
                     <child>
-                      <object class="GtkLabel" id="l_title">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">Title that is displayed for this starter file</property>
-                        <property name="margin_right">6</property>
-                        <property name="margin_top">6</property>
-                        <property name="xalign">1</property>
-                        <property name="label" translatable="yes">Title:</property>
-                      </object>
-                      <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">0</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
-                      </packing>
-                    </child>
-                    <child>
                       <object class="GtkEntry" id="e_title">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
@@ -448,25 +433,6 @@
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">0</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="l_command">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">The command you want to start</property>
-                        <property name="margin_right">6</property>
-                        <property name="margin_top">12</property>
-                        <property name="xalign">1</property>
-                        <property name="label" translatable="yes">Command:</property>
-                      </object>
-                      <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">1</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -491,7 +457,7 @@
                         </child>
                         <child>
                           <object class="GtkButton" id="bt_command">
-                            <property name="label" translatable="yes">Select...</property>
+                            <property name="label" translatable="yes">Select ...</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
@@ -510,26 +476,6 @@
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">1</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="l_working_dir">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">Path to a folder that is used as the 
-working folder for the program</property>
-                        <property name="margin_right">6</property>
-                        <property name="margin_top">6</property>
-                        <property name="xalign">1</property>
-                        <property name="label" translatable="yes">Start in folder:</property>
-                      </object>
-                      <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">3</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -543,7 +489,7 @@ working folder for the program</property>
                             <property name="can_focus">True</property>
                             <property name="tooltip_text" translatable="yes">Path to a folder that is used as the 
 working folder for the program</property>
-                            <property name="margin_top">6</property>
+                            <property name="margin_top">3</property>
                             <property name="hexpand">True</property>
                             <property name="invisible_char">•</property>
                           </object>
@@ -555,13 +501,13 @@ working folder for the program</property>
                         </child>
                         <child>
                           <object class="GtkButton" id="bt_working_dir">
-                            <property name="label" translatable="yes">Select...</property>
+                            <property name="label" translatable="yes">Select ...</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
                             <property name="tooltip_text" translatable="yes">Browse the file system to select a folder</property>
                             <property name="margin_left">6</property>
-                            <property name="margin_top">6</property>
+                            <property name="margin_top">3</property>
                             <signal name="clicked" handler="on_bt_working_dir_clicked" swapped="no"/>
                           </object>
                           <packing>
@@ -574,25 +520,47 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">3</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkLabel" id="l_run_in_terminal">
+                      <object class="GtkSwitch" id="sw_hidden">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">If switched on the command is run in a Terminal window</property>
-                        <property name="margin_right">6</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Hide this and any system wide starters with the same name.</property>
+                        <property name="halign">start</property>
                         <property name="margin_top">12</property>
-                        <property name="xalign">1</property>
-                        <property name="label" translatable="yes">Run in Terminal:</property>
                       </object>
                       <packing>
-                        <property name="left_attach">0</property>
+                        <property name="left_attach">1</property>
+                        <property name="top_attach">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="e_wm_class">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">The application will show at least one window with the given string as its WM class or WM name hint</property>
+                        <property name="margin_top">12</property>
+                        <property name="hexpand">True</property>
+                        <property name="invisible_char">•</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
                         <property name="top_attach">6</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="e_comment">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Tooltip for the entry</property>
+                        <property name="margin_top">12</property>
+                        <property name="hexpand">True</property>
+                        <property name="invisible_char">•</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="top_attach">7</property>
                       </packing>
                     </child>
                     <child>
@@ -601,91 +569,149 @@ working folder for the program</property>
                         <property name="can_focus">True</property>
                         <property name="tooltip_text" translatable="yes">If switched on the command is run in a Terminal window</property>
                         <property name="halign">start</property>
-                        <property name="margin_top">12</property>
+                        <property name="margin_top">3</property>
                       </object>
                       <packing>
                         <property name="left_attach">1</property>
-                        <property name="top_attach">6</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
+                        <property name="top_attach">2</property>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkLabel" id="l_uri">
+                      <object class="GtkLabel" id="l_title">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">The file or URL you want to open</property>
+                        <property name="tooltip_text" translatable="yes">Title that is displayed for this starter file</property>
+                        <property name="margin_right">6</property>
+                        <property name="margin_top">6</property>
+                        <property name="xalign">1</property>
+                        <property name="label" translatable="yes">Title:</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="l_command">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">The command you want to start</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">12</property>
                         <property name="xalign">1</property>
-                        <property name="label" translatable="yes">File or URL:</property>
+                        <property name="label" translatable="yes">Command:</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="l_working_dir">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Path to a folder that is used as the 
+working folder for the program</property>
+                        <property name="margin_right">6</property>
+                        <property name="margin_top">3</property>
+                        <property name="xalign">1</property>
+                        <property name="label" translatable="yes">Start in folder:</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="l_hidden">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Hide this and any system wide starters with the same name.</property>
+                        <property name="margin_right">6</property>
+                        <property name="margin_top">12</property>
+                        <property name="xalign">1</property>
+                        <property name="label" translatable="yes">Hidden:</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">4</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkBox" id="box1">
+                      <object class="GtkLabel" id="l_wm_class">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">The application will show at least one window with the given string as its WM class or WM name hint</property>
+                        <property name="margin_right">6</property>
+                        <property name="margin_top">12</property>
+                        <property name="xalign">1</property>
+                        <property name="label" translatable="yes">Window Class:</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">6</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="l_comment">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Tooltip for the entry</property>
+                        <property name="margin_right">6</property>
+                        <property name="margin_top">12</property>
+                        <property name="xalign">1</property>
+                        <property name="label" translatable="yes">Comment:</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">7</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="l_categories">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Categories in which the entry should be shown in a menu</property>
+                        <property name="margin_right">6</property>
+                        <property name="margin_top">3</property>
+                        <property name="xalign">1</property>
+                        <property name="label" translatable="yes">Categories:</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="l_run_in_terminal">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">If switched on the command is run in a Terminal window</property>
+                        <property name="margin_right">6</property>
+                        <property name="margin_top">3</property>
+                        <property name="xalign">1</property>
+                        <property name="label" translatable="yes">Run in Terminal:</property>
+                        <property name="use_underline">True</property>
+                        <property name="mnemonic_widget">sw_run_in_terminal</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="e_categories">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Categories in which the entry should be shown in a menu</property>
+                        <property name="margin_top">3</property>
                         <property name="hexpand">True</property>
-                        <child>
-                          <object class="GtkEntry" id="e_uri">
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="has_tooltip">True</property>
-                            <property name="tooltip_text" translatable="yes">The file or URL you want to open</property>
-                            <property name="margin_top">12</property>
-                            <property name="hexpand">True</property>
-                            <property name="invisible_char">•</property>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">0</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkButton" id="bt_uri">
-                            <property name="label" translatable="yes">Select...</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="receives_default">True</property>
-                            <property name="has_tooltip">True</property>
-                            <property name="tooltip_markup" translatable="yes">Browse the file system to select a file</property>
-                            <property name="tooltip_text" translatable="yes">Browse the file system to select a file</property>
-                            <property name="margin_left">6</property>
-                            <property name="margin_top">12</property>
-                            <signal name="clicked" handler="on_bt_uri_clicked" swapped="no"/>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">1</property>
-                          </packing>
-                        </child>
+                        <property name="invisible_char">•</property>
                       </object>
                       <packing>
                         <property name="left_attach">1</property>
-                        <property name="top_attach">4</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
+                        <property name="top_attach">5</property>
                       </packing>
-                    </child>
-                    <child>
-                      <placeholder/>
-                    </child>
-                    <child>
-                      <placeholder/>
-                    </child>
-                    <child>
-                      <placeholder/>
-                    </child>
-                    <child>
-                      <placeholder/>
                     </child>
                   </object>
                 </child>
@@ -701,174 +727,43 @@ working folder for the program</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkGrid" id="grid_advanced">
+                  <object class="GtkBox" id="box_show_in">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="hexpand">True</property>
-                    <property name="border_width">6</property>
+                    <property name="orientation">vertical</property>
                     <child>
-                      <object class="GtkLabel" id="l_advanced_hidden">
+                      <object class="GtkLabel" id="l_show_in_intro">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">Hide this and any system wide starters with the same name.</property>
+                        <property name="margin_left">12</property>
+                        <property name="margin_right">12</property>
+                        <property name="margin_top">12</property>
+                        <property name="margin_bottom">12</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0</property>
+                        <property name="label" translatable="yes">&lt;small&gt;Select the environments that should show your starter.&lt;/small&gt;</property>
+                        <property name="use_markup">True</property>
+                        <property name="wrap">True</property>
+                        <property name="width_chars">40</property>
+                        <property name="max_width_chars">40</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkScrolledWindow" id="swin_show_in">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="margin_left">6</property>
                         <property name="margin_right">6</property>
-                        <property name="margin_top">6</property>
-                        <property name="xalign">1</property>
-                        <property name="label" translatable="yes">Hidden:</property>
-                      </object>
-                      <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">0</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkSwitch" id="sw_advanced_hidden">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="tooltip_text" translatable="yes">Hide this and any system wide starters with the same name.</property>
-                        <property name="halign">start</property>
-                        <property name="margin_top">6</property>
-                      </object>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="top_attach">0</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="l_advanced_wm_class">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">The application will show at least one window with the given string as its WM class or WM name hint</property>
-                        <property name="margin_right">6</property>
-                        <property name="margin_top">12</property>
-                        <property name="xalign">1</property>
-                        <property name="label" translatable="yes">Window Class:</property>
-                      </object>
-                      <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">1</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkEntry" id="e_advanced_wm_class">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="tooltip_text" translatable="yes">The application will show at least one window with the given string as its WM class or WM name hint</property>
-                        <property name="margin_top">12</property>
-                        <property name="hexpand">True</property>
-                        <property name="invisible_char">•</property>
-                      </object>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="top_attach">1</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="l_advanced_categories">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">Categories in which the entry should be shown in a menu</property>
-                        <property name="margin_right">6</property>
-                        <property name="margin_top">12</property>
-                        <property name="xalign">1</property>
-                        <property name="label" translatable="yes">Categories:</property>
-                      </object>
-                      <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">2</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkEntry" id="e_advanced_categories">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="tooltip_text" translatable="yes">Categories in which the entry should be shown in a menu</property>
-                        <property name="margin_top">12</property>
-                        <property name="hexpand">True</property>
-                        <property name="invisible_char">•</property>
-                      </object>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="top_attach">2</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="l_comment">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">Tooltip for the entry</property>
-                        <property name="margin_right">6</property>
-                        <property name="margin_top">12</property>
-                        <property name="xalign">1</property>
-                        <property name="label" translatable="yes">Comment:</property>
-                      </object>
-                      <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">3</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkEntry" id="e_comment">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="tooltip_text" translatable="yes">Tooltip for the entry</property>
-                        <property name="margin_top">12</property>
-                        <property name="hexpand">True</property>
-                        <property name="invisible_char">•</property>
-                      </object>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="top_attach">3</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
-                      </packing>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="position">1</property>
-                  </packing>
-                </child>
-                <child type="tab">
-                  <object class="GtkLabel" id="l_tab_advanced">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">_Advanced</property>
-                    <property name="use_underline">True</property>
-                  </object>
-                  <packing>
-                    <property name="position">1</property>
-                    <property name="tab_fill">False</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkGrid" id="grid_show_in">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="hexpand">True</property>
-                    <property name="border_width">6</property>
-                    <child>
-                      <object class="GtkScrolledWindow" id="scrolledwindow1">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="margin_top">12</property>
+                        <property name="margin_bottom">6</property>
                         <property name="hexpand">True</property>
                         <property name="vexpand">True</property>
                         <child>
-                          <object class="GtkTreeView" id="tview_advanced_show_in">
+                          <object class="GtkTreeView" id="tv_show_in">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="tooltip_text" translatable="yes">Do you want the starter to be visibile only in some environments?</property>
@@ -883,33 +778,14 @@ working folder for the program</property>
                         </child>
                       </object>
                       <packing>
-                        <property name="left_attach">1</property>
-                        <property name="top_attach">0</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="l_show_in">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">Do you want the starter to be visibile only in some environments?</property>
-                        <property name="margin_right">6</property>
-                        <property name="margin_top">15</property>
-                        <property name="xalign">1</property>
-                        <property name="yalign">0</property>
-                        <property name="label" translatable="yes">Show in:</property>
-                      </object>
-                      <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">0</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
                       </packing>
                     </child>
                   </object>
                   <packing>
-                    <property name="position">2</property>
+                    <property name="position">1</property>
                   </packing>
                 </child>
                 <child type="tab">
@@ -920,58 +796,267 @@ working folder for the program</property>
                     <property name="use_underline">True</property>
                   </object>
                   <packing>
-                    <property name="position">2</property>
+                    <property name="position">1</property>
                     <property name="tab_fill">False</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="box_quickhlist">
+                  <object class="GtkBox" id="box_quicklist">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
                     <child>
-                      <object class="GtkScrolledWindow" id="swin_quicklist">
+                      <object class="GtkLabel" id="l_quicklist_intro">
                         <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="shadow_type">in</property>
-                        <child>
-                          <object class="GtkTreeView" id="tv_quicklist">
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="headers_clickable">False</property>
-                            <property name="reorderable">True</property>
-                            <property name="rules_hint">True</property>
-                            <property name="search_column">0</property>
-                            <property name="show_expanders">False</property>
-                            <child internal-child="selection">
-                              <object class="GtkTreeSelection" id="treeview-selection2"/>
-                            </child>
-                          </object>
-                        </child>
+                        <property name="can_focus">False</property>
+                        <property name="margin_left">12</property>
+                        <property name="margin_right">12</property>
+                        <property name="margin_top">12</property>
+                        <property name="margin_bottom">12</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0</property>
+                        <property name="label" translatable="yes">&lt;small&gt;Quicklists provide additinal actions for an application starter. They are used for example in the right-click menu of the Ubuntu Unity starter entries.&lt;/small&gt;</property>
+                        <property name="use_markup">True</property>
+                        <property name="wrap">True</property>
+                        <property name="width_chars">40</property>
+                        <property name="max_width_chars">40</property>
                       </object>
                       <packing>
-                        <property name="expand">True</property>
+                        <property name="expand">False</property>
                         <property name="fill">True</property>
                         <property name="position">0</property>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkBox" id="box_quicklist_buttons">
+                      <object class="GtkBox" id="box_quicklist_content">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="halign">center</property>
-                        <property name="orientation">vertical</property>
                         <child>
-                          <object class="GtkButton" id="b_quicklist_up">
-                            <property name="label" translatable="yes">button</property>
-                            <property name="use_action_appearance">True</property>
-                            <property name="related_action">ac_quicklist_up</property>
-                            <property name="name">6</property>
+                          <object class="GtkScrolledWindow" id="swin_quicklist">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="receives_default">True</property>
-                            <property name="margin_left">6</property>
-                            <property name="margin_right">6</property>
+                            <property name="shadow_type">in</property>
+                            <child>
+                              <object class="GtkTreeView" id="tv_quicklist">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="reorderable">True</property>
+                                <property name="rules_hint">True</property>
+                                <property name="search_column">0</property>
+                                <property name="show_expanders">False</property>
+                                <child internal-child="selection">
+                                  <object class="GtkTreeSelection" id="treeview-selection5"/>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="box_quicklist_buttons">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkButton" id="b_quicklist_up">
+                                <property name="label" translatable="yes">_Hoch</property>
+                                <property name="use_action_appearance">True</property>
+                                <property name="related_action"/>
+                                <property name="name">6</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="margin_left">6</property>
+                                <property name="margin_right">6</property>
+                                <property name="margin_top">6</property>
+                                <property name="use_underline">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="b_quicklist_down">
+                                <property name="label" translatable="yes">_Runter</property>
+                                <property name="use_action_appearance">True</property>
+                                <property name="related_action">ac_quicklist_down</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="margin_left">6</property>
+                                <property name="margin_right">6</property>
+                                <property name="use_underline">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="b_quicklist_new">
+                                <property name="label" translatable="yes">_Neu</property>
+                                <property name="use_action_appearance">True</property>
+                                <property name="related_action">ac_quicklist_new</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="margin_left">6</property>
+                                <property name="margin_right">6</property>
+                                <property name="margin_top">12</property>
+                                <property name="use_underline">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="b_quicklist_duplicate">
+                                <property name="label" translatable="yes">Duplicate</property>
+                                <property name="use_action_appearance">True</property>
+                                <property name="related_action">ac_quicklist_duplicate</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="margin_left">6</property>
+                                <property name="margin_right">6</property>
+                                <property name="use_underline">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">3</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="b_quicklist_edit">
+                                <property name="label" translatable="yes">_Bearbeiten</property>
+                                <property name="use_action_appearance">True</property>
+                                <property name="related_action">ac_quicklist_edit</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="margin_left">6</property>
+                                <property name="margin_right">6</property>
+                                <property name="margin_top">12</property>
+                                <property name="use_underline">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">5</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="b_quicklist_remove">
+                                <property name="label" translatable="yes">_Löschen</property>
+                                <property name="use_action_appearance">True</property>
+                                <property name="related_action"/>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="margin_left">6</property>
+                                <property name="margin_right">6</property>
+                                <property name="margin_top">24</property>
+                                <property name="use_underline">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">6</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+                <child type="tab">
+                  <object class="GtkLabel" id="l_tab_quicklist">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">_Quicklist</property>
+                    <property name="use_underline">True</property>
+                  </object>
+                  <packing>
+                    <property name="position">2</property>
+                    <property name="tab_fill">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkBox" id="box_mime_types">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkLabel" id="l_mime_types_intro">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="margin_left">12</property>
+                        <property name="margin_right">12</property>
+                        <property name="margin_top">12</property>
+                        <property name="margin_bottom">12</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0</property>
+                        <property name="label" translatable="yes">&lt;small&gt;This are the MIME types your application is able to open. Your application will be listet in "Open with..." dialogs for files of this types.
+Add MIME types one per line or separated by semicolons (";"), 
+drag files into the text field to add their MIME types or use the "Select ..." button.&lt;/small&gt;</property>
+                        <property name="use_markup">True</property>
+                        <property name="wrap">True</property>
+                        <property name="width_chars">40</property>
+                        <property name="max_width_chars">40</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox" id="box_mime_type">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <child>
+                          <object class="GtkScrolledWindow" id="swin_mime_types">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
                             <property name="margin_top">6</property>
+                            <property name="hexpand">True</property>
+                            <property name="vexpand">True</property>
+                            <property name="shadow_type">in</property>
+                            <child>
+                              <object class="GtkTextView" id="tview_mime_types">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="tooltip_text" translatable="yes">File types your command can open.</property>
+                                <property name="hexpand">True</property>
+                                <property name="vexpand">True</property>
+                                <signal name="drag-data-received" handler="on_tview_mime_types_drag_data_received" swapped="no"/>
+                              </object>
+                            </child>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -980,91 +1065,23 @@ working folder for the program</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkButton" id="b_quicklist_down">
-                            <property name="label" translatable="yes">button</property>
-                            <property name="use_action_appearance">True</property>
-                            <property name="related_action">ac_quicklist_down</property>
+                          <object class="GtkButton" id="bt_mime_types_select">
+                            <property name="label" translatable="yes">Select ...</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
+                            <property name="halign">start</property>
+                            <property name="valign">start</property>
                             <property name="margin_left">6</property>
                             <property name="margin_right">6</property>
+                            <property name="margin_top">6</property>
+                            <property name="margin_bottom">6</property>
+                            <signal name="clicked" handler="on_bt_mime_types_select_clicked" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="position">1</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkButton" id="b_quicklist_new">
-                            <property name="label" translatable="yes">button</property>
-                            <property name="use_action_appearance">True</property>
-                            <property name="related_action">ac_quicklist_new</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="receives_default">True</property>
-                            <property name="margin_left">6</property>
-                            <property name="margin_right">6</property>
-                            <property name="margin_top">12</property>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">2</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkButton" id="b_quicklist_duplicate1">
-                            <property name="label" translatable="yes">button</property>
-                            <property name="use_action_appearance">True</property>
-                            <property name="related_action">ac_quicklist_duplicate</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="receives_default">True</property>
-                            <property name="margin_left">6</property>
-                            <property name="margin_right">6</property>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">3</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkButton" id="b_quicklist_edit">
-                            <property name="label" translatable="yes">button</property>
-                            <property name="use_action_appearance">True</property>
-                            <property name="related_action">ac_quicklist_edit</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="receives_default">True</property>
-                            <property name="margin_left">6</property>
-                            <property name="margin_right">6</property>
-                            <property name="margin_top">12</property>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">5</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkButton" id="b_quicklist_remove">
-                            <property name="label" translatable="yes">button</property>
-                            <property name="use_action_appearance">True</property>
-                            <property name="related_action">ac_quicklist_remove</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="receives_default">True</property>
-                            <property name="margin_left">6</property>
-                            <property name="margin_right">6</property>
-                            <property name="margin_top">24</property>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">6</property>
                           </packing>
                         </child>
                       </object>
@@ -1077,80 +1094,7 @@ working folder for the program</property>
                   </object>
                   <packing>
                     <property name="position">3</property>
-                  </packing>
-                </child>
-                <child type="tab">
-                  <object class="GtkLabel" id="l_tab_quicklist">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">_Quicklist</property>
-                    <property name="use_underline">True</property>
-                  </object>
-                  <packing>
-                    <property name="position">3</property>
                     <property name="tab_fill">False</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkGrid" id="grid_mime_types">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="hexpand">True</property>
-                    <property name="vexpand">True</property>
-                    <property name="border_width">6</property>
-                    <child>
-                      <object class="GtkLabel" id="l_mime_types">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">File types your command can open.</property>
-                        <property name="margin_right">6</property>
-                        <property name="margin_top">6</property>
-                        <property name="xalign">1</property>
-                        <property name="yalign">0</property>
-                        <property name="label" translatable="yes">MIME types:
-
-seperated by 
-line breaks or
-semicolons (";")</property>
-                        <property name="use_underline">True</property>
-                        <property name="mnemonic_widget">tview_mime_types</property>
-                      </object>
-                      <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">0</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkScrolledWindow" id="swin_mime_types">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="margin_top">6</property>
-                        <property name="hexpand">True</property>
-                        <property name="vexpand">True</property>
-                        <property name="shadow_type">in</property>
-                        <child>
-                          <object class="GtkTextView" id="tview_mime_types">
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="tooltip_text" translatable="yes">File types your command can open.</property>
-                            <property name="hexpand">True</property>
-                            <property name="vexpand">True</property>
-                            <signal name="drag-data-received" handler="on_tview_mime_types_drag_data_received" swapped="no"/>
-                          </object>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="top_attach">0</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
-                      </packing>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="position">4</property>
                   </packing>
                 </child>
                 <child type="tab">
@@ -1161,34 +1105,36 @@ semicolons (";")</property>
                     <property name="use_underline">True</property>
                   </object>
                   <packing>
-                    <property name="position">4</property>
+                    <property name="position">3</property>
                     <property name="tab_fill">False</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkGrid" id="grid_keywords">
+                  <object class="GtkBox" id="box_keywords">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="hexpand">True</property>
-                    <property name="vexpand">True</property>
-                    <property name="border_width">6</property>
+                    <property name="orientation">vertical</property>
                     <child>
-                      <object class="GtkLabel" id="l_keywords">
+                      <object class="GtkLabel" id="l_keywords_intro">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">List of keywords that may be used for searching starters, e.g. in Unity</property>
-                        <property name="margin_right">6</property>
-                        <property name="margin_top">6</property>
-                        <property name="xalign">1</property>
+                        <property name="margin_left">12</property>
+                        <property name="margin_right">12</property>
+                        <property name="margin_top">12</property>
+                        <property name="margin_bottom">12</property>
+                        <property name="xalign">0</property>
                         <property name="yalign">0</property>
-                        <property name="label" translatable="yes">Keywords:
-(one per line)</property>
+                        <property name="label" translatable="yes">&lt;small&gt;This keywords are used to some search functions (like the Ubuntu Unity Dash) to find your application.
+Add Keywords one per line or separated by semicolons (";").&lt;/small&gt;</property>
+                        <property name="use_markup">True</property>
+                        <property name="wrap">True</property>
+                        <property name="width_chars">40</property>
+                        <property name="max_width_chars">40</property>
                       </object>
                       <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">0</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
                       </packing>
                     </child>
                     <child>
@@ -1213,15 +1159,14 @@ semicolons (";")</property>
                         </child>
                       </object>
                       <packing>
-                        <property name="left_attach">1</property>
-                        <property name="top_attach">0</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
                       </packing>
                     </child>
                   </object>
                   <packing>
-                    <property name="position">5</property>
+                    <property name="position">4</property>
                   </packing>
                 </child>
                 <child type="tab">
@@ -1232,7 +1177,7 @@ semicolons (";")</property>
                     <property name="use_underline">True</property>
                   </object>
                   <packing>
-                    <property name="position">5</property>
+                    <property name="position">4</property>
                     <property name="tab_fill">False</property>
                   </packing>
                 </child>
