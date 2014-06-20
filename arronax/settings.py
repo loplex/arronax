@@ -6,7 +6,7 @@ from gettext import gettext as _
 import gettext
 
 APP_NAME = 'Arronax'
-APP_VERSION  = '0.05'
+APP_VERSION  = '0.06'
 
 app_name = APP_NAME.lower()
 
@@ -24,6 +24,18 @@ USER_APPLICATIONS_DIR = os.path.join(xdg.BaseDirectory.xdg_data_home,
 SYS_APPLICATIONS_DIR = '/usr/share/applications/'
 
 USER_DESKTOP_DIR = xdgpath.get_user_dir( 'desktop', '~/Desktop' )
+USER_AUTOSTART_DIR = os.path.join(
+    xdg.BaseDirectory.xdg_config_home, 'autostart')
+
+SYS_AUTOSTART_DIR = os.path.join('etc', 'xdg', 'autostart')
+try:
+    for dir in xdg.BaseDirectory.xdg_config_dirs[1:]:
+        path = os.path.join(dir, 'autostart')
+        if os.path.isdir(path):
+            SYS_AUTOSTART_DIR = path
+            break
+except:
+    pass
 
 DEFAULT_ICON = '/usr/share/icons/hicolor/scalable/apps/nautilus.svg'
 if not os.path.isfile(DEFAULT_ICON):

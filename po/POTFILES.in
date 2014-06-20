@@ -1,16 +1,19 @@
 arronax/statusbar.py
 arronax/__init__.py
+arronax/mimetypes.py
 arronax/editor.py
-arronax/widgets.py
-arronax/converter.py
 arronax/settings.py
+arronax/quicklist.py
 arronax/xdgpath.py
+arronax/tvtools.py
+arronax/utils.py
 arronax/filechooser.py
 arronax/about.py
-arronax/connection.py
 arronax/dialogs.py
 arronax/desktopfile.py
 arronax/clipboard.py
 nautilus/nautilus-arronax.py
 data/desktop/arronax.desktop.in
+[type: gettext/glade]data/ui/mimetypes.ui
 [type: gettext/glade]data/ui/edit.ui
+[type: gettext/glade]data/ui/quicklist.ui

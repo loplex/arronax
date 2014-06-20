@@ -52,16 +52,15 @@ class Editor(object):
         statusbar.init(self['statusbar'])        
         about.add_help_menu(self['menu_help'])
         self.setup_tv_show_in()
-
+        self['cbox_type'].set_active(0)
         if mode is MODE_EDIT:
             self.read_desktop_file(path)
         elif mode is MODE_CREATE_FOR:
             self.filename = None
-            if type == TYPE_APPLICATION:
-                self['e_command'].set_text(path)
-            else:
-                self['e_uri'].set_text(path)
+            self['e_command'].set_text(path)
             self.create_title_from_command(path)
+            if type == TYPE_LINK:
+                self['cbox_type'].set_active(1)
         else:
             self.filename = path
       
@@ -224,13 +223,13 @@ class Editor(object):
             'run_in_terminal': self['sw_run_in_terminal'].get_active(),
             'hidden': self['sw_hidden'].get_active(),
             'icon': utils.get_name_from_image(self['img_icon']),
-            'keywords': ';'.join(utils.get_list_from_textview(
-                self['tview_keywords'])),
+            'keywords': utils.make_keyfile_list_string(
+                utils.get_list_from_textview(self['tview_keywords'])),
             'categories': self['e_categories'].get_text(),
             'wm_class': self['e_wm_class'].get_text(),
             'comment': self['e_comment'].get_text(),
-            'mime_type': ';'.join(utils.get_list_from_textview(
-                self['tview_mime_types'])),
+            'mime_type':utils.make_keyfile_list_string(
+                utils.get_list_from_textview(self['tview_mime_types'])),
             'show_in': utils.get_desktops_from_tv(self['tv_show_in']),
             'quicklist': utils.get_quicklist_from_tv(self['tv_quicklist'])
         }
@@ -299,6 +298,7 @@ class Editor(object):
                               msg)
                 status.set_end_msg(_("File not saved."))
                 return False
+        self.read_desktop_file(self.filename)
         return True
             
 #####################
@@ -412,14 +412,13 @@ class Editor(object):
 
             
     def on_bt_uri_clicked(self, *args):
-        uri = self['e_uri'].get_text()
+        uri = self['e_command'].get_text()
         if uri == '':
             uri = None            
         path = filechooser.ask_for_filename(
             'dlg_file', False, default=uri)
-        print 'PATH:', path
         if path is not None:
-            self['e_uri'].set_text(path) 
+            self['e_command'].set_text(path) 
      
     def on_bt_icon_drag_data_received(self, widget, drag_context, x, y, data,
                                       info, time):

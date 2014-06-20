@@ -31,7 +31,7 @@ def get_desktops_from_tv(tv):
         return ''
     else:
         ds = [row[2] for row in model if row[0]]
-        result = ';'.join(ds)
+        result = ';'.join(ds)        
         return result + ';'
                                 
 def load_desktops_into_tv(tv, desktops):
@@ -45,7 +45,7 @@ def load_desktops_into_tv(tv, desktops):
 
 def get_quicklist_from_tv(tv):
     model = tv.get_model()
-    return [(row[0], row[1]) for row in model]
+    return [(row[0], row[1], row[2]) for row in model]
     
 def load_quicklist_into_tv(tv, qlist):
     model = tv.get_model()
@@ -94,6 +94,10 @@ def load_file_into_image(img, path):
         print e
         return str(e)
 
+
+def make_keyfile_list_string(alist):
+    result = ';'.join(alist)   
+    return result
 
 def get_list_from_textview(textview):
     buffer = textview.get_buffer()

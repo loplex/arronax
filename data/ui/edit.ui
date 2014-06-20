@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.18.3 -->
+<!-- Generated with glade 3.16.1 -->
 <interface>
   <requires lib="gtk+" version="3.0"/>
   <object class="GtkAction" id="ac_about">
@@ -50,6 +50,10 @@
     <property name="stock_id">gtk-new</property>
     <signal name="activate" handler="on_ac_quicklist_new_activate" swapped="no"/>
   </object>
+  <object class="GtkAction" id="ac_quicklist_remove">
+    <property name="stock_id">gtk-delete</property>
+    <signal name="activate" handler="on_ac_quicklist_remove_activate" swapped="no"/>
+  </object>
   <object class="GtkAction" id="ac_quit">
     <property name="tooltip" translatable="yes">Quit Arronax</property>
     <property name="stock_id">gtk-quit</property>
@@ -70,7 +74,6 @@
     <property name="width_request">600</property>
     <property name="height_request">450</property>
     <property name="can_focus">False</property>
-    <property name="tooltip_text" translatable="yes">You can drop a starter here to load it.</property>
     <property name="title" translatable="yes">Arronax</property>
     <signal name="delete-event" handler="on_window1_delete_event" swapped="no"/>
     <signal name="drag-data-received" handler="on_window1_drag_data_received" swapped="no"/>
@@ -378,28 +381,41 @@
             <property name="border_width">6</property>
             <property name="spacing">24</property>
             <child>
-              <object class="GtkButton" id="bt_icon">
-                <property name="use_action_appearance">False</property>
-                <property name="related_action">ac_icon</property>
+              <object class="GtkBox" id="box_icon">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="tooltip_text" translatable="yes">The icon displayed for this starter. To change it, drop an image or a starter here or click.</property>
-                <property name="valign">start</property>
-                <property name="margin_left">6</property>
-                <property name="margin_right">6</property>
-                <property name="margin_top">6</property>
-                <property name="use_underline">True</property>
-                <property name="xalign">0.52999997138977051</property>
-                <signal name="drag-data-received" handler="on_bt_icon_drag_data_received" swapped="no"/>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">You can drop a starter here to load it.</property>
+                <property name="orientation">vertical</property>
                 <child>
-                  <object class="GtkImage" id="img_icon">
-                    <property name="width_request">48</property>
-                    <property name="height_request">48</property>
+                  <object class="GtkButton" id="bt_icon">
+                    <property name="use_action_appearance">False</property>
+                    <property name="related_action">ac_icon</property>
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="pixel_size">48</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="tooltip_text" translatable="yes">The icon displayed for this starter. To change it, drop an image or a starter here or click.</property>
+                    <property name="valign">start</property>
+                    <property name="margin_left">6</property>
+                    <property name="margin_right">6</property>
+                    <property name="margin_top">6</property>
+                    <property name="use_underline">True</property>
+                    <property name="xalign">0.52999997138977051</property>
+                    <signal name="drag-data-received" handler="on_bt_icon_drag_data_received" swapped="no"/>
+                    <child>
+                      <object class="GtkImage" id="img_icon">
+                        <property name="width_request">48</property>
+                        <property name="height_request">48</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="pixel_size">48</property>
+                      </object>
+                    </child>
                   </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
                 </child>
               </object>
               <packing>
@@ -412,6 +428,7 @@
               <object class="GtkNotebook" id="notebook">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
+                <property name="has_tooltip">True</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
                 <child>
@@ -433,6 +450,8 @@
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">0</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -476,6 +495,8 @@
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">1</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -520,6 +541,8 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">3</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -533,6 +556,8 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">4</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -547,6 +572,8 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">6</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -561,6 +588,8 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">7</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -574,6 +603,8 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">2</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -589,6 +620,8 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">0</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -604,6 +637,8 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">1</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -620,6 +655,8 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">3</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -635,6 +672,8 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">4</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -650,6 +689,8 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">6</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -665,6 +706,8 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">7</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -680,6 +723,8 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">5</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -697,6 +742,8 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">2</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -711,6 +758,8 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">5</property>
+                        <property name="width">1</property>
+                        <property name="height">1</property>
                       </packing>
                     </child>
                   </object>
@@ -719,6 +768,7 @@ working folder for the program</property>
                   <object class="GtkLabel" id="l_tab_basic">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="tooltip_text" translatable="yes">Basic settings</property>
                     <property name="label" translatable="yes">_Basic</property>
                     <property name="use_underline">True</property>
                   </object>
@@ -735,6 +785,7 @@ working folder for the program</property>
                       <object class="GtkLabel" id="l_show_in_intro">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Select the environments that should show your starter.</property>
                         <property name="margin_left">12</property>
                         <property name="margin_right">12</property>
                         <property name="margin_top">12</property>
@@ -792,6 +843,7 @@ working folder for the program</property>
                   <object class="GtkLabel" id="l_tab_show_in">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="tooltip_text" translatable="yes">Select the environments that should show your starter.</property>
                     <property name="label" translatable="yes">_Show in</property>
                     <property name="use_underline">True</property>
                   </object>
@@ -840,6 +892,7 @@ working folder for the program</property>
                               <object class="GtkTreeView" id="tv_quicklist">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
+                                <property name="tooltip_text" translatable="yes">Titles of your quicklist items</property>
                                 <property name="reorderable">True</property>
                                 <property name="rules_hint">True</property>
                                 <property name="search_column">0</property>
@@ -960,7 +1013,7 @@ working folder for the program</property>
                               <object class="GtkButton" id="b_quicklist_remove">
                                 <property name="label" translatable="yes">_Löschen</property>
                                 <property name="use_action_appearance">True</property>
-                                <property name="related_action"/>
+                                <property name="related_action">ac_quicklist_remove</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
@@ -998,6 +1051,7 @@ working folder for the program</property>
                   <object class="GtkLabel" id="l_tab_quicklist">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="tooltip_text" translatable="yes">Quicklists provide additinal actions for an application starter. </property>
                     <property name="label" translatable="yes">_Quicklist</property>
                     <property name="use_underline">True</property>
                   </object>
@@ -1101,6 +1155,7 @@ drag files into the text field to add their MIME types or use the "Select ..." b
                   <object class="GtkLabel" id="l_tab_mime_types">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="tooltip_text" translatable="yes">The MIME types your application is able to open.</property>
                     <property name="label" translatable="yes">_MIME types</property>
                     <property name="use_underline">True</property>
                   </object>
@@ -1173,6 +1228,7 @@ Add Keywords one per line or separated by semicolons (";").&lt;/small&gt;</prope
                   <object class="GtkLabel" id="l_tab_keyword">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="tooltip_text" translatable="yes">Keywords are used to some search functions to find your application.</property>
                     <property name="label" translatable="yes">_Keywords</property>
                     <property name="use_underline">True</property>
                   </object>

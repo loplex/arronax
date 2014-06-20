@@ -35,8 +35,6 @@ from DistUtilsExtra.command import *
 
 from deb_setup_helpers import (get_deb_version, get_deb_description)
 
-require_python(0x20600f0)
-
 
 setup(
     name='arronax',

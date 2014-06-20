@@ -10,7 +10,8 @@ import os, os.path, stat
 import dialogs
 
 GROUP = 'Desktop Entry'
-AYATANA_GROUP_SUFFIX = ' Shortcut Group'
+#ACTION_TEMPLATE = ' Shortcut Group'
+ACTION_PREFIX = 'Desktop Action '
 
 class DesktopFile(object):
 
@@ -18,11 +19,26 @@ class DesktopFile(object):
         self.keyfile = GLib.KeyFile()
         self.dirty_flag = False
 
-    def remove_key(self, key, group=GROUP):
+    def has_key(self, group, key):
         try:
-            self.keyfile.remove_key(group, key)
+            value = self.keyfile.get_string(group, key)
+            return value is not None
         except:
-            pass
+            return False
+        
+    def remove_key(self, group, key):
+        try:
+            if self.has_key(group, key):
+                self.keyfile.remove_key(group, key)
+        except Exception as e:
+            print('RM KEY:', e)
+            
+
+    def get_string(self, group, key, default):
+        if self.has_key(group, key):
+            return self.keyfile.get_string(group, key)
+        else:
+            return default
 
     @property
     def type(self):
@@ -48,7 +64,7 @@ class DesktopFile(object):
     @title.setter
     def title(self, atitle):
         if atitle == '':
-            self.remove_key('Name')
+            self.remove_key(GROUP, 'Name')
         else:
             self.keyfile.set_string(GROUP, 'Name', atitle)
         self.dirty_flag = True
@@ -63,11 +79,12 @@ class DesktopFile(object):
 
     @command.setter
     def command(self, acommand):
-        key = ('Exec', 'URL')[self.type]
-        self.remove_key('Exec')
-        self.remove_key('URL')
-        if acommand != '':
-            self.keyfile.set_string(GROUP, key, acommand)
+        if self.type == 0:
+            self.remove_key(GROUP, 'URL')
+            self.keyfile.set_string(GROUP, 'Exec', acommand)
+        else:
+            self.remove_key(GROUP, 'Exec')
+            self.keyfile.set_string(GROUP, 'URL', acommand)
         self.dirty_flag = True
 
     @property
@@ -80,7 +97,7 @@ class DesktopFile(object):
     @working_dir.setter
     def working_dir(self, aworking_dir):
         if aworking_dir == '':
-            self.remove_key('Path')
+            self.remove_key(GROUP, 'Path')
         else:
             self.keyfile.set_string(GROUP, 'Path', aworking_dir)
         self.dirty_flag = True
@@ -95,7 +112,7 @@ class DesktopFile(object):
     @icon.setter
     def icon(self, aicon):
         if aicon == '':
-            self.remove_key('Icon')
+            self.remove_key(GROUP, 'Icon')
         else:
             self.keyfile.set_string(GROUP, 'Icon', aicon)
         self.dirty_flag = True
@@ -110,7 +127,7 @@ class DesktopFile(object):
     @keywords.setter
     def keywords(self, akeywords):
         if akeywords in  ['', ';']:
-            self.remove_key('Keywords')
+            self.remove_key(GROUP, 'Keywords')
         else:
             self.keyfile.set_string(GROUP, 'Keywords', akeywords)
         self.dirty_flag = True
@@ -125,7 +142,7 @@ class DesktopFile(object):
     @show_in.setter
     def show_in(self, ashow_in):
         if ashow_in in  ['', ';']:
-            self.remove_key('OnlyShowIn')
+            self.remove_key(GROUP, 'OnlyShowIn')
         else:
             self.keyfile.set_string(GROUP, 'OnlyShowIn', ashow_in)
         self.dirty_flag = True
@@ -140,7 +157,7 @@ class DesktopFile(object):
     @categories.setter
     def categories(self, acategories):
         if acategories == '':
-            self.remove_key('Categories')
+            self.remove_key(GROUP, 'Categories')
         else:
             self.keyfile.set_string(GROUP, 'Categories', acategories)
         self.dirty_flag = True
@@ -155,7 +172,7 @@ class DesktopFile(object):
     @comment.setter
     def comment(self, acomment):
         if acomment == '':
-            self.remove_key('Comment')
+            self.remove_key(GROUP, 'Comment')
         else:
             self.keyfile.set_string(GROUP, 'Comment', acomment)
         self.dirty_flag = True
@@ -170,7 +187,7 @@ class DesktopFile(object):
     @mime_type.setter
     def mime_type(self, amime_type):
         if amime_type in ['', ';']:
-            self.remove_key('MimeType')
+            self.remove_key(GROUP, 'MimeType')
         else:
             self.keyfile.set_string(GROUP, 'MimeType', amime_type)
         self.dirty_flag = True
@@ -186,7 +203,7 @@ class DesktopFile(object):
     @wm_class.setter
     def wm_class(self, awm_class):
         if awm_class == '':
-            self.remove_key('StartupWMClass')
+            self.remove_key(GROUP, 'StartupWMClass')
         else:
             self.keyfile.set_string(GROUP, 'StartupWMClass', awm_class)
         self.dirty_flag = True
@@ -221,42 +238,52 @@ class DesktopFile(object):
     @property
     def quicklist(self):
         result = []
-        groups, _ = self.keyfile.get_groups()
-        for group in groups:
-            if group.endswith(AYATANA_GROUP_SUFFIX):
-                try:
-                    command =  self.keyfile.get_string(group, 'Exec')
-                except:
-                    command = ''
-                try:
-                    title = self.keyfile.get_string(group, 'Name')
-                except:
-                    title = command
-                result.append((title, command))
+        actions =  self.get_string(GROUP, 'Actions', '')
+        for gname in actions.split(';'):
+            if gname:                
+                group = ACTION_PREFIX + gname
+                command = self.get_string(group, 'Exec', '')
+                title = self.get_string(group, 'Name', command)
+                result.append((title, command, gname))
         return result
+
+    def create_group_name(self, title):
+        basename = ''.join(c for c in title if c.isalpha())
+        name = basename
+        cnt = 1
+        while self.keyfile.has_group(ACTION_PREFIX + name):
+            name = '%s%s' %(basename, cnt)
+            cnt+=1
+        return name
 
     @quicklist.setter
     def quicklist(self, alist):
-        shortcuts = []
-        groups, _ = self.keyfile.get_groups()
-        for group in groups:
-            if group.endswith(AYATANA_GROUP_SUFFIX):
-                self.keyfile.remove_group(group)
-        for i, row in enumerate(alist):
-            title, command = row[0], row[1]
-            group_name = 'Group%s' % i
-            shortcuts.append(group_name)
-            group = group_name + AYATANA_GROUP_SUFFIX
+        _oldgrps = self.get_string(GROUP, 'Actions', '')
+        oldgroups = set(i for i in _oldgrps.split(';') if i)
+        groups = []
+        for title, command, gname in alist:
+            if gname == '':
+                gname = self.create_group_name(title)
+            group = ACTION_PREFIX + gname
             self.keyfile.set_string(group, 'Exec', command)
             self.keyfile.set_string(group, 'Name', title)
-        if shortcuts:            
-            key = 'X-Ayatana-Desktop-Shortcuts'
-            value = ';'.join(shortcuts)
-            self.keyfile.set_string(GROUP, key, value)
+            groups.append(gname)
+            self.dirty_flag = True
+
+        if groups:
+            value = ';'.join(groups)
+            value = value + ';'
+            self.keyfile.set_string(GROUP, 'Actions', value)            
+        else:
+            self.remove_key(GROUP, 'Actions')
+        for gname in oldgroups - set(groups):
+            group = ACTION_PREFIX + gname
+            if self.keyfile.has_group(group):
+                self.keyfile.remove_group(group)
+                self.dirty_flag = True
 
 
     def set_from_dict(self, data):
-        print data
         self.type = data['type'] # needs to be set first
         for key, value in data.iteritems():
             setattr(self, key, value)
@@ -275,8 +302,14 @@ class DesktopFile(object):
     def is_dirty(self, data):
         if self.dirty_flag:
             return True
+        list_fields = set(('keywords', 'categories', 'mime_type', 
+                           'show_in'))
         for key, value in data.iteritems():
-            if getattr(self, key) != value:
+            my_value = getattr(self, key)
+            if key in list_fields:
+                value = str(value).rstrip(';')
+                my_value = str(my_value).rstrip(';')
+            if my_value != value:
                 return True
         else:
             return False
@@ -294,6 +327,7 @@ class DesktopFile(object):
 
     def save(self, path): 
         content = self.keyfile.to_data()[0]
+
         try:
             os.rename(path, '%s~' % path)
         except Exception, e:
@@ -301,11 +335,11 @@ class DesktopFile(object):
         try:
             with open(path, 'w') as _file:
                 _file.write(content)
+            self.dirty_flag = False
             mode = os.stat(path).st_mode
             os.chmod(path, mode | stat.S_IEXEC)
         except Exception, e:
            return str(e)
-        self.dirty_flag = False
         return None
 
 

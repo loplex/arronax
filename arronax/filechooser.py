@@ -15,21 +15,9 @@ FILE_DLG_DEF = {
     'dlg_open': {'title': _('Open File'),
                  'action':  Gtk.FileChooserAction.OPEN,
                  'patterns': ['*.desktop', '*'],
-                 'buttons': [(_('Desktop'),
-                              settings.USER_DESKTOP_DIR),
-                             (_('User App Folder'),
-                              settings.USER_APPLICATIONS_DIR),
-                             (_('System App Folder'),
-                              settings.SYS_APPLICATIONS_DIR),
-                             ],
              },
     'dlg_save': {'title': _('Save File'),
              'action':  Gtk.FileChooserAction.SAVE,
-             'buttons': [(_('Desktop'),
-                          settings.USER_DESKTOP_DIR),
-                         (_('User App Folder'),
-                          settings.USER_APPLICATIONS_DIR),
-                         ],
              },
     'dlg_working_dir': {'title': _('Select Folder'),
                      'action':  Gtk.FileChooserAction.SELECT_FOLDER,
@@ -69,22 +57,37 @@ def create_dir_buttons_filechooser_dlg(title, action,
                                        mime_types=None,
                                        dir_buttons=None):
     dlg = create_filechooser_dlg(title, action, patterns, mime_types)
-    if dir_buttons is not None:
-        bbox = Gtk.HButtonBox()
-        for title, dir in dir_buttons:
-            def callback(widget, dir=dir, title=title, dlg=dlg):
-                if not os.path.isdir(dir):
-                    try:
-                        os.makedirs(dir)
-                    except Exception, e:
-                        print e
-                        return
-                dlg.set_current_folder(dir)
-            bt = Gtk.Button.new_with_label(title)
-            bt.connect('clicked', callback)
-            bbox.pack_end(bt, False, True, 6)
-        bbox.show_all()
-        dlg.set_extra_widget(bbox)
+    label = Gtk.Label(_('Standard folders: '))
+    box = Gtk.HBox()
+    box.add(label)
+    cbox = Gtk.ComboBox()
+    renderer = Gtk.CellRendererText()
+    cbox.pack_start(renderer, True)
+    cbox.add_attribute(renderer, "text", 0)
+    model = Gtk.ListStore(str, str)
+    model.append((_('Desktop'), settings.USER_DESKTOP_DIR))
+    model.append((_('User App Folder'), settings.USER_APPLICATIONS_DIR))
+    model.append((_('System App Folder'), settings.SYS_APPLICATIONS_DIR))
+    model.append((_('User Autostart Folder'), settings.USER_AUTOSTART_DIR))
+    model.append((_('System Autostart Folder'), settings.SYS_AUTOSTART_DIR))
+
+    cbox.set_model(model)
+    box.add(cbox)
+
+    def callback(*args):
+        i = cbox.get_active()
+        name, path = model[i]
+        if not os.path.isdir(path):
+            try:
+                os.makedirs(path)
+            except Exception as e:
+                print e
+        dlg.set_current_folder(path)
+
+    cbox.connect('changed', callback)
+
+    box.show_all()
+    dlg.set_extra_widget(box)
     return dlg
 
 
@@ -122,7 +125,7 @@ def ask_for_filename(defname, add_ext=False, default=None):
     response = dialog.run()
     path = dialog.get_filename()
     dialog.destroy()
-    if response != Gtk.ResponseType.OK:
+    if response != Gtk.ResponseType.OK or path is None:
         return
     if (add_ext and 
         not path.endswith('.desktop') and 

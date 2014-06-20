@@ -39,7 +39,7 @@ class Quicklist(object):
         return self.builder.get_object(key)
 
     def setup_treeview(self):
-        model = Gtk.ListStore(str, str)
+        model = Gtk.ListStore(str, str, str)
         self.tv.set_model(model)
         tvtools.create_treeview_column(self.tv, _('Title'), 0)
 
@@ -69,10 +69,10 @@ class Quicklist(object):
 
     def get_current_row(self):
         try:
-            title, command =  tvtools.get_current_row(self.tv)
+            title, command, group =  tvtools.get_current_row(self.tv)
         except TypeError: # not row selected
-            title = command = ''
-        return title, command
+            title = command = group = ''
+        return title, command, group
 
     def goto_next_row(self):
          tvtools.move_current_row_down(self.tv)
@@ -84,23 +84,23 @@ class Quicklist(object):
         tvtools.del_current_row(self.tv)
 
     def edit_current_row(self):
-        title, command = self.get_current_row()
+        title, command, group = self.get_current_row()
         try:
             title, command = self.edit_item(title, command)
-            tvtools.set_current_row(self.tv, [title, command])
+            tvtools.set_current_row(self.tv, [title, command, group])
         except TypeError:  # cancel button pressed
             pass
 
     def new_row(self):
         try:
             title, command = self.edit_item('', '')
-            tvtools.insert_row_after_current(self.tv, [title, command])
+            tvtools.insert_row_after_current(self.tv, [title, command, ''])
         except TypeError:  # cancel button pressed
             pass
 
     def duplicate_current_row(self):
-        title, command = self.get_current_row()
-        tvtools.insert_row_after_current(self.tv, [title, command])
+        title, command, _ = self.get_current_row()
+        tvtools.insert_row_after_current(self.tv, [title, command, ''])
 
     def edit_item(self, title, command):
         dialog, e_title, e_command = self.create_edit_dialog(title, command)
@@ -136,7 +136,7 @@ class Quicklist(object):
                     row = self.get_row_from_desktop_file(filename)
                     return row
                 else:
-                    return title, filename
+                    return title, filename, ''
 
     def get_row_from_desktop_file(self, path):
         keyfile = GLib.KeyFile()
@@ -149,12 +149,12 @@ class Quicklist(object):
         group = 'Desktop Entry'
         title = keyfile.get_string(group, 'Name')
         command = keyfile.get_string(group, 'Exec')
-        return title, command
+        return title, command, ''
         
     def on_drag_data_received(self, widget, drag_context, x, y,
                               data, info, time, 
                               e_title, e_command):        
         uris = data.get_uris()
-        title, command = self.get_row_from_drag_and_drop(uris, info)
+        title, command, _ = self.get_row_from_drag_and_drop(uris, info)
         e_title.set_text(title)
         e_command.set_text(command)
