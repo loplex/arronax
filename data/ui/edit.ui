@@ -54,6 +54,10 @@
     <property name="stock_id">gtk-delete</property>
     <signal name="activate" handler="on_ac_quicklist_remove_activate" swapped="no"/>
   </object>
+  <object class="GtkAction" id="ac_quicklist_up">
+    <property name="stock_id">gtk-go-up</property>
+    <signal name="activate" handler="on_ac_quicklist_up_activate" swapped="no"/>
+  </object>
   <object class="GtkAction" id="ac_quit">
     <property name="tooltip" translatable="yes">Quit Arronax</property>
     <property name="stock_id">gtk-quit</property>
@@ -252,7 +256,6 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Create a new application starter</property>
-                <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-new</property>
               </object>
@@ -268,7 +271,6 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Open a application starter</property>
-                <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
               </object>
               <packing>
@@ -293,7 +295,6 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Save current application starter</property>
-                <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
               </object>
               <packing>
@@ -308,7 +309,6 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Save as another application starter</property>
-                <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
               </object>
               <packing>
@@ -336,7 +336,6 @@
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Quit Arronax</property>
                 <property name="hexpand">True</property>
-                <property name="label" translatable="yes">toolbutton1</property>
                 <property name="use_underline">True</property>
               </object>
               <packing>
@@ -817,7 +816,7 @@ working folder for the program</property>
                           <object class="GtkTreeView" id="tv_show_in">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="tooltip_text" translatable="yes">Do you want the starter to be visibile only in some environments?</property>
+                            <property name="tooltip_text" translatable="yes">Do you want the starter to be visible only in some environments?</property>
                             <property name="margin_top">6</property>
                             <property name="vexpand">True</property>
                             <property name="headers_visible">False</property>
@@ -867,7 +866,7 @@ working folder for the program</property>
                         <property name="margin_bottom">12</property>
                         <property name="xalign">0</property>
                         <property name="yalign">0</property>
-                        <property name="label" translatable="yes">&lt;small&gt;Quicklists provide additinal actions for an application starter. They are used for example in the right-click menu of the Ubuntu Unity starter entries.&lt;/small&gt;</property>
+                        <property name="label" translatable="yes">&lt;small&gt;Quicklists provide additional actions for an application starter. They are used for example in the right-click menu of the Ubuntu Unity starter entries.&lt;/small&gt;</property>
                         <property name="use_markup">True</property>
                         <property name="wrap">True</property>
                         <property name="width_chars">40</property>
@@ -917,9 +916,8 @@ working folder for the program</property>
                             <property name="orientation">vertical</property>
                             <child>
                               <object class="GtkButton" id="b_quicklist_up">
-                                <property name="label" translatable="yes">_Hoch</property>
                                 <property name="use_action_appearance">True</property>
-                                <property name="related_action"/>
+                                <property name="related_action">ac_quicklist_up</property>
                                 <property name="name">6</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
@@ -937,7 +935,6 @@ working folder for the program</property>
                             </child>
                             <child>
                               <object class="GtkButton" id="b_quicklist_down">
-                                <property name="label" translatable="yes">_Runter</property>
                                 <property name="use_action_appearance">True</property>
                                 <property name="related_action">ac_quicklist_down</property>
                                 <property name="visible">True</property>
@@ -946,6 +943,7 @@ working folder for the program</property>
                                 <property name="margin_left">6</property>
                                 <property name="margin_right">6</property>
                                 <property name="use_underline">True</property>
+                                <property name="xalign">0.56000000238418579</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -955,7 +953,6 @@ working folder for the program</property>
                             </child>
                             <child>
                               <object class="GtkButton" id="b_quicklist_new">
-                                <property name="label" translatable="yes">_Neu</property>
                                 <property name="use_action_appearance">True</property>
                                 <property name="related_action">ac_quicklist_new</property>
                                 <property name="visible">True</property>
@@ -974,7 +971,6 @@ working folder for the program</property>
                             </child>
                             <child>
                               <object class="GtkButton" id="b_quicklist_duplicate">
-                                <property name="label" translatable="yes">Duplicate</property>
                                 <property name="use_action_appearance">True</property>
                                 <property name="related_action">ac_quicklist_duplicate</property>
                                 <property name="visible">True</property>
@@ -992,7 +988,6 @@ working folder for the program</property>
                             </child>
                             <child>
                               <object class="GtkButton" id="b_quicklist_edit">
-                                <property name="label" translatable="yes">_Bearbeiten</property>
                                 <property name="use_action_appearance">True</property>
                                 <property name="related_action">ac_quicklist_edit</property>
                                 <property name="visible">True</property>
@@ -1011,7 +1006,6 @@ working folder for the program</property>
                             </child>
                             <child>
                               <object class="GtkButton" id="b_quicklist_remove">
-                                <property name="label" translatable="yes">_Löschen</property>
                                 <property name="use_action_appearance">True</property>
                                 <property name="related_action">ac_quicklist_remove</property>
                                 <property name="visible">True</property>
@@ -1051,7 +1045,7 @@ working folder for the program</property>
                   <object class="GtkLabel" id="l_tab_quicklist">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="tooltip_text" translatable="yes">Quicklists provide additinal actions for an application starter. </property>
+                    <property name="tooltip_text" translatable="yes">Quicklists provide additional actions for an application starter. </property>
                     <property name="label" translatable="yes">_Quicklist</property>
                     <property name="use_underline">True</property>
                   </object>
@@ -1075,7 +1069,7 @@ working folder for the program</property>
                         <property name="margin_bottom">12</property>
                         <property name="xalign">0</property>
                         <property name="yalign">0</property>
-                        <property name="label" translatable="yes">&lt;small&gt;This are the MIME types your application is able to open. Your application will be listet in "Open with..." dialogs for files of this types.
+                        <property name="label" translatable="yes">&lt;small&gt;This are the MIME types your application is able to open. Your application will be listed in "Open with..." dialogs for files of this types.
 Add MIME types one per line or separated by semicolons (";"), 
 drag files into the text field to add their MIME types or use the "Select ..." button.&lt;/small&gt;</property>
                         <property name="use_markup">True</property>
