@@ -92,6 +92,11 @@ class Editor(object):
         for field, name in sorted(settings.KNOWN_DESKTOPS.iteritems()):
             model.append([True, name, field])
     
+    def update_from_dfile(self):
+        data = self.dfile.get_as_dict()
+        self.set_data_for_all_widgets(data)
+        self.update_window_title()        
+
 
     def read_desktop_file(self, path):
         with statusbar.Status(_("Loading file '%s' ...") % path,
@@ -102,10 +107,8 @@ class Editor(object):
                               _('Can not load starter'), msg)
                 status.set_end_msg(_("File not loaded."))
             else:
-                data = self.dfile.get_as_dict()
-                self.set_data_for_all_widgets(data)
                 self.filename = path
-                self.update_window_title()        
+                self.update_from_dfile()
 
         
     def update_window_title(self): 
@@ -234,6 +237,7 @@ class Editor(object):
             'quicklist': utils.get_quicklist_from_tv(self['tv_quicklist'])
         }
         return data
+
 
     def set_data_for_all_widgets(self, data):
         self['cbox_type'].set_active(data['type'])
@@ -475,6 +479,8 @@ class Editor(object):
     def on_ac_new_activate(self, action, *args):
         if self.maybe_confirm_unsaved():
             self.filename = None
+            self.dfile.clear()
+            self.update_from_dfile()
             statusbar.show_msg(_('Created new starter.'))
             self.update_window_title()
         

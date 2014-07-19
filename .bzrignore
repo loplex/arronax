@@ -2,3 +2,6 @@ arronax.egg-info
 build
 debian/arronax
 debian/arronax.debhelper.log
+debian/tmp
+debian/arronax-base
+debian/arronax-nautilus

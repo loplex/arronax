@@ -7,126 +7,124 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-20 22:23+0200\n"
-"PO-Revision-Date: 2013-01-30 22:24+0000\n"
-"Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
+"POT-Creation-Date: 2014-07-19 16:39+0200\n"
+"PO-Revision-Date: 2014-07-03 17:35+0000\n"
+"Last-Translator: Tobias Bannert <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-25 16:32+0000\n"
-"X-Generator: Launchpad (build 16914)\n"
+"X-Launchpad-Export-Date: 2014-07-16 12:36+0000\n"
+"X-Generator: Launchpad (build 17112)\n"
 
 #: ../arronax/mimetypes.py:47
-#, fuzzy
 msgid "Selected"
-msgstr "Datei auswählen"
+msgstr "Ausgewählt"
 
 #: ../arronax/mimetypes.py:58 ../arronax/editor.py:91
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: ../arronax/mimetypes.py:60
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: ../arronax/editor.py:86
 msgid "Enabled"
-msgstr ""
+msgstr "Aktiviert"
 
-#: ../arronax/editor.py:97
+#: ../arronax/editor.py:102
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Lade Datei '%s' ..."
 
-#: ../arronax/editor.py:98
+#: ../arronax/editor.py:103
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Datei '%s' geladen."
 
-#: ../arronax/editor.py:102
+#: ../arronax/editor.py:107
 msgid "Can not load starter"
 msgstr "Starter kann nicht geladen werden"
 
-#: ../arronax/editor.py:103
+#: ../arronax/editor.py:108
 msgid "File not loaded."
 msgstr "Datei nicht geladen."
 
-#: ../arronax/editor.py:131
+#: ../arronax/editor.py:134
 msgid "You need to provide a title."
 msgstr "Sie müssen einen Titel angeben."
 
-#: ../arronax/editor.py:134
+#: ../arronax/editor.py:137
 msgid "You need to provide a command."
 msgstr "Sie müssen einen Befehl angeben."
 
-#: ../arronax/editor.py:136
+#: ../arronax/editor.py:139
 msgid "You need to provide a URL or file name."
-msgstr "Sie müssen eine URl oder einen Dateinamen angeben."
+msgstr "Sie müssen eine URL oder einen Dateinamen angeben."
 
-#: ../arronax/editor.py:144
+#: ../arronax/editor.py:147
 msgid "Save now?"
 msgstr "Jetzt speichern?"
 
-#: ../arronax/editor.py:145
+#: ../arronax/editor.py:148
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
 "Einige Änderungen wurden noch nicht gespeichert. Wollen Sie jetzt speichern?"
 
-#: ../arronax/editor.py:166 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:169 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Wählen Sie ein Symbol"
 
-#: ../arronax/editor.py:275
+#: ../arronax/editor.py:279
 msgid "Error"
 msgstr "Fehler"
 
-#: ../arronax/editor.py:278
-#, fuzzy, python-format
+#: ../arronax/editor.py:282
+#, python-format
 msgid "Saving file %s ..."
-msgstr "Speichere Datei '%s'..."
+msgstr "Speichere Datei %s"
 
-#: ../arronax/editor.py:279
-#, fuzzy, python-format
+#: ../arronax/editor.py:283
+#, python-format
 msgid "File %s saved."
-msgstr "Die Datei wurde gespeichert."
+msgstr "Datei %s gespeichert."
 
-#: ../arronax/editor.py:289 ../arronax/editor.py:299
+#: ../arronax/editor.py:293 ../arronax/editor.py:303
 msgid "File not saved."
 msgstr "Datei nicht gespeichert."
 
-#: ../arronax/editor.py:293
+#: ../arronax/editor.py:297
 #, python-format
 msgid "Saved file '%s'."
 msgstr "Datei '%s' gespeichert."
 
-#: ../arronax/editor.py:297
+#: ../arronax/editor.py:301
 msgid "Can not save starter"
 msgstr "Starter kann nicht gespeichert werden"
 
-#: ../arronax/editor.py:326
-#, fuzzy
+#: ../arronax/editor.py:330
 msgid "This is not a local file. File not loaded."
-msgstr "Das ist keine lokale Datei. Symbol nicht geändert."
+msgstr "Dies ist keine lokale Datei. Datei nicht geladen."
 
-#: ../arronax/editor.py:375
+#: ../arronax/editor.py:379
 msgid "File or URL:"
 msgstr "Datei oder Ort (URL):"
 
-#: ../arronax/editor.py:375 ../data/ui/edit.ui.h:32
+#: ../arronax/editor.py:379 ../data/ui/edit.ui.h:32
 msgid "Command:"
 msgstr "Befehl:"
 
-#: ../arronax/editor.py:443
+#: ../arronax/editor.py:447
 msgid "This is not an image. Icon not changed."
-msgstr "Das ist keine Bild-Datei. Symbol  nicht geändert."
+msgstr "Das ist keine Bild-Datei. Symbol nicht geändert."
 
-#: ../arronax/editor.py:446
+#: ../arronax/editor.py:450
 msgid "This is not a local file. Icon not changed."
 msgstr "Das ist keine lokale Datei. Symbol nicht geändert."
 
-#: ../arronax/editor.py:478
+#: ../arronax/editor.py:484
 msgid "Created new starter."
 msgstr "Neuen Starter angelegt."
 
@@ -171,9 +169,8 @@ msgid "Legacy environments"
 msgstr "traditionelle Arbeitsumgebungen"
 
 #: ../arronax/quicklist.py:44
-#, fuzzy
 msgid "Title"
-msgstr "Titel:"
+msgstr "Titel"
 
 #: ../arronax/filechooser.py:15
 msgid "Open File"
@@ -196,9 +193,8 @@ msgid "Select File"
 msgstr "Datei auswählen"
 
 #: ../arronax/filechooser.py:60
-#, fuzzy
 msgid "Standard folders: "
-msgstr "Starte in Ordner:"
+msgstr "Standard-Ordner "
 
 #: ../arronax/filechooser.py:68
 msgid "Desktop"
@@ -213,14 +209,12 @@ msgid "System App Folder"
 msgstr "System-Ordner für Anwendungen"
 
 #: ../arronax/filechooser.py:71
-#, fuzzy
 msgid "User Autostart Folder"
-msgstr "Benutzer-Ordner für Starter"
+msgstr "Ordner für Benutzer-Startprogramme"
 
 #: ../arronax/filechooser.py:72
-#, fuzzy
 msgid "System Autostart Folder"
-msgstr "System-Ordner für Anwendungen"
+msgstr "Ordern für System-Startprogramme"
 
 #: ../arronax/about.py:12
 msgid "Go to Web Page"
@@ -250,7 +244,8 @@ msgstr "Spenden (PayPal)"
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Florian Diesch https://launchpad.net/~diesch"
+"  Florian Diesch https://launchpad.net/~diesch\n"
+"  Tobias Bannert https://launchpad.net/~toba"
 
 #: ../nautilus/nautilus-arronax.py:22
 msgid "Create a starter for this program"
@@ -281,6 +276,9 @@ msgid ""
 "<small>This are all MIME types that are registered on your system.\n"
 "You can drag files into the list to select their MIME types.</small>"
 msgstr ""
+"<small>Diese MIME-Typen sind auf Ihrem System registriert.\n"
+"Sie können Dateien auf die Liste ziehen, um deren MIME-Typen auszuwählen.</"
+"small>"
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
@@ -300,7 +298,7 @@ msgstr "Einen Starter öffnen"
 
 #: ../data/ui/edit.ui.h:6
 msgid "Duplicate"
-msgstr ""
+msgstr "Verdoppeln"
 
 #: ../data/ui/edit.ui.h:7
 msgid "Quit Arronax"
@@ -344,16 +342,15 @@ msgstr "Dies ist ein Starter für eine Datei oder einen Ort"
 
 #: ../data/ui/edit.ui.h:18
 msgid "You can drop a starter here to load it."
-msgstr ""
+msgstr "Sie können einen Starter hierher ziehen, um ihn zu öffnen."
 
 #: ../data/ui/edit.ui.h:19
-#, fuzzy
 msgid ""
 "The icon displayed for this starter. To change it, drop an image or a "
 "starter here or click."
 msgstr ""
-"Das Symbol, das für diesen Starter verwendet wird. Klicken Sie hier, um ein "
-"anderes Symbol auszuwählen."
+"Das Symbol für den Starter. Sie können ein Bild hierher ziehen oder hier "
+"klicken, um das Symbol zu ändern."
 
 #: ../data/ui/edit.ui.h:20
 msgid "Title that is displayed for this starter file"
@@ -364,7 +361,6 @@ msgid "The command you want to start"
 msgstr "Der Befehl, den Sie starten wollen"
 
 #: ../data/ui/edit.ui.h:22
-#, fuzzy
 msgid "Select ..."
 msgstr "Auswählen ..."
 
@@ -393,7 +389,7 @@ msgid ""
 "The application will show at least one window with the given string as its "
 "WM class or WM name hint"
 msgstr ""
-"Das Programm wird mindestens ein Fenster anzeigen, das die4sen Wert als "
+"Das Programm wird mindestens ein Fenster anzeigen, das diesen Wert als "
 "WM_CLASS oder WM_NAME benutzt"
 
 #: ../data/ui/edit.ui.h:29
@@ -402,8 +398,7 @@ msgstr "Minihilfe für den Starter"
 
 #: ../data/ui/edit.ui.h:30
 msgid "If switched on the command is run in a Terminal window"
-msgstr ""
-"Wenn aktiviert, wird das Programm ijn einem Terminal-Fenster ausgeführt"
+msgstr "Wenn aktiviert, wird das Programm in einem Terminal-Fenster ausgeführt"
 
 #: ../data/ui/edit.ui.h:31
 msgid "Title:"
@@ -439,31 +434,31 @@ msgstr "Im Terminal ausführen:"
 
 #: ../data/ui/edit.ui.h:40
 msgid "Basic settings"
-msgstr ""
+msgstr "Grundeinstellungen"
 
 #: ../data/ui/edit.ui.h:41
-#, fuzzy
 msgid "_Basic"
-msgstr "Grundeinstellungen"
+msgstr "_Allgemein"
 
 #: ../data/ui/edit.ui.h:42
 msgid "Select the environments that should show your starter."
-msgstr ""
+msgstr "Wählen Sie die Arbeitsumgebungen, in denen der Starter sichtbar ist"
 
 #: ../data/ui/edit.ui.h:43
 msgid "<small>Select the environments that should show your starter.</small>"
 msgstr ""
+"<small>Wählen Sie die Arbeitsumgebungen, in denen der Starter sichtbar ist</"
+"small>"
 
 #: ../data/ui/edit.ui.h:44
-#, fuzzy
 msgid "Do you want the starter to be visible only in some environments?"
 msgstr ""
-"Wollen Sie, dass der Starter nur in bestimmten Umgebungen sichtbar ist?"
+"Wollen Sie, dass der Starter nur in bestimmten Arbeitsumgebungen sichtbar "
+"ist?"
 
 #: ../data/ui/edit.ui.h:45
-#, fuzzy
 msgid "_Show in"
-msgstr "Anzeigen in"
+msgstr "Sichtbarkeit"
 
 #: ../data/ui/edit.ui.h:46
 msgid ""
@@ -471,18 +466,21 @@ msgid ""
 "They are used for example in the right-click menu of the Ubuntu Unity "
 "starter entries.</small>"
 msgstr ""
+"<small>Aktionslisten enthalten zusätzliche Aktionen für Programm-Starter. "
+"Sie werden zum Beispiel im Rechtsklick-Menü der Starterleiste von Ubuntu "
+"Unity verwendet.</small>"
 
 #: ../data/ui/edit.ui.h:47
 msgid "Titles of your quicklist items"
-msgstr ""
+msgstr "Titel der Aktionslisten"
 
 #: ../data/ui/edit.ui.h:48
 msgid "Quicklists provide additional actions for an application starter. "
-msgstr ""
+msgstr "Aktionslisten enthalten zusätzliche Aktionen für Programm-Starter. "
 
 #: ../data/ui/edit.ui.h:49
 msgid "_Quicklist"
-msgstr ""
+msgstr "_Aktionsliste"
 
 #: ../data/ui/edit.ui.h:50
 msgid ""
@@ -493,6 +491,13 @@ msgid ""
 "drag files into the text field to add their MIME types or use the "
 "\"Select ...\" button.</small>"
 msgstr ""
+"<small> Dies sind die MIME-Typen, die das Programm öffnen kann. Das Programm "
+"wird in \"Öffnen mit ...\"-Dialoge für Dateien dieser Typen aufgelistet.\n"
+"\n"
+"Sie könne MIME-Typen jeweils einen pro Zeile oder durch Semikolon (\";\") "
+"getrennt hinzufügen.\n"
+"Ziehen Sie die Dateien in das Textfeld, oder verwenden Sie die Schaltfläche "
+"\"Auswählen ...\", um MIME-Typen von Dateien hinzufügen </small>"
 
 #: ../data/ui/edit.ui.h:53
 msgid "File types your command can open."
@@ -500,12 +505,11 @@ msgstr "Dateitypen, die das Programm öffnen kann"
 
 #: ../data/ui/edit.ui.h:54
 msgid "The MIME types your application is able to open."
-msgstr ""
+msgstr "Die MIME-Typen, die das Programm öffnen kann"
 
 #: ../data/ui/edit.ui.h:55
-#, fuzzy
 msgid "_MIME types"
-msgstr "MIME-Typen"
+msgstr "_MIME-Typen"
 
 #: ../data/ui/edit.ui.h:56
 msgid ""
@@ -513,6 +517,10 @@ msgid ""
 "Unity Dash) to find your application.\n"
 "Add Keywords one per line or separated by semicolons (\";\").</small>"
 msgstr ""
+"<small>Diese Schlüsselwörter werden von einige Suchfunktionen (zum Beispiel "
+"der Suchfunktion von Ubuntu Unity) verwendet, um Ihre Anwendung zu finden.\n"
+"Sie können Schlagwörter eines pro Zeile oder durch ein Semikolon (\";\") "
+"getrennt hinzufügen. </small>"
 
 #: ../data/ui/edit.ui.h:58
 msgid "List of keywords that may be used for searching starters, e.g. in Unity"
@@ -523,64 +531,21 @@ msgstr ""
 #: ../data/ui/edit.ui.h:59
 msgid "Keywords are used to some search functions to find your application."
 msgstr ""
+"Diese Schlüsselwörter werden von einige Suchfunktionen verwendet, um Ihre "
+"Anwendung zu finden."
 
 #: ../data/ui/edit.ui.h:60
-#, fuzzy
 msgid "_Keywords"
-msgstr "Stichwörter"
+msgstr "Schlüsselwörter"
 
 #: ../data/ui/quicklist.ui.h:1
-#, fuzzy
 msgid "Edit"
-msgstr "_Bearbeiten"
+msgstr "Bearbeiten"
 
 #: ../data/ui/quicklist.ui.h:2
-#, fuzzy
 msgid "_Command:"
-msgstr "Befehl:"
+msgstr "_Befehl:"
 
 #: ../data/ui/quicklist.ui.h:3
-#, fuzzy
 msgid "_Title:"
-msgstr "Titel:"
-
-#~ msgid "toolbutton1"
-#~ msgstr "Werkzeugknopf1"
-
-#~ msgid "Saving file ..."
-#~ msgstr "Speichere Datei ..."
-
-#~ msgid "Arronax doesn't support this kind of starter yet"
-#~ msgstr "Arronax unterstützt diese Art von Starter noch nicht."
-
-#~ msgid "The file or URL you want to open"
-#~ msgstr "Die Datei oder der Ort (URL), die bzw. den dieser Starter öffnet"
-
-#~ msgid "Browse the file system to select a file"
-#~ msgstr "Durchsuchen Sie das Dateisystem, um eine Datei auszuwählen."
-
-#~ msgid "Advanced"
-#~ msgstr "Erweitert"
-
-#~ msgid "Show in:"
-#~ msgstr "Anzeigen in:"
-
-#~ msgid ""
-#~ "MIME types:\n"
-#~ "\n"
-#~ "seperated by \n"
-#~ "line breaks or\n"
-#~ "semicolons (\";\")"
-#~ msgstr ""
-#~ "MIME-Typen:\n"
-#~ "\n"
-#~ "Getrennt durch\n"
-#~ "Zeilenumbrüche\n"
-#~ "oder Semikolons (\";\")"
-
-#~ msgid ""
-#~ "Keywords:\n"
-#~ "(one per line)"
-#~ msgstr ""
-#~ "Stichworte\n"
-#~ "(eines pro Zeile)"
+msgstr "_Titel:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-20 22:23+0200\n"
+"POT-Creation-Date: 2014-07-19 16:39+0200\n"
 "PO-Revision-Date: 2012-06-07 08:11+0000\n"
 "Last-Translator: Wang Dianjin <Unknown>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -15,13 +15,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-25 16:32+0000\n"
-"X-Generator: Launchpad (build 16914)\n"
+"X-Launchpad-Export-Date: 2014-07-16 12:36+0000\n"
+"X-Generator: Launchpad (build 17112)\n"
 
 #: ../arronax/mimetypes.py:47
-#, fuzzy
 msgid "Selected"
-msgstr "选择..."
+msgstr ""
 
 #: ../arronax/mimetypes.py:58 ../arronax/editor.py:91
 msgid "Name"
@@ -35,96 +34,96 @@ msgstr ""
 msgid "Enabled"
 msgstr ""
 
-#: ../arronax/editor.py:97
+#: ../arronax/editor.py:102
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "加载文件“%s”中..."
 
-#: ../arronax/editor.py:98
+#: ../arronax/editor.py:103
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "已加载文件“%s”..."
 
-#: ../arronax/editor.py:102
+#: ../arronax/editor.py:107
 msgid "Can not load starter"
 msgstr "无法加载启动器"
 
-#: ../arronax/editor.py:103
+#: ../arronax/editor.py:108
 msgid "File not loaded."
 msgstr "文件未加载。"
 
-#: ../arronax/editor.py:131
+#: ../arronax/editor.py:134
 msgid "You need to provide a title."
 msgstr "您需要提供一个标题。"
 
-#: ../arronax/editor.py:134
+#: ../arronax/editor.py:137
 msgid "You need to provide a command."
 msgstr "您需要提供一个命令。"
 
-#: ../arronax/editor.py:136
+#: ../arronax/editor.py:139
 msgid "You need to provide a URL or file name."
 msgstr ""
 
-#: ../arronax/editor.py:144
+#: ../arronax/editor.py:147
 msgid "Save now?"
 msgstr "保存？"
 
-#: ../arronax/editor.py:145
+#: ../arronax/editor.py:148
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr "您还未保存更改。您现在要保存吗？"
 
-#: ../arronax/editor.py:166 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:169 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "选择图标"
 
-#: ../arronax/editor.py:275
+#: ../arronax/editor.py:279
 msgid "Error"
 msgstr "错误"
 
-#: ../arronax/editor.py:278
-#, fuzzy, python-format
+#: ../arronax/editor.py:282
+#, python-format
 msgid "Saving file %s ..."
-msgstr "正在保存文件“%s”..."
+msgstr ""
 
-#: ../arronax/editor.py:279
-#, fuzzy, python-format
+#: ../arronax/editor.py:283
+#, python-format
 msgid "File %s saved."
-msgstr "文件已保存。"
+msgstr ""
 
-#: ../arronax/editor.py:289 ../arronax/editor.py:299
+#: ../arronax/editor.py:293 ../arronax/editor.py:303
 msgid "File not saved."
 msgstr "文件未保存。"
 
-#: ../arronax/editor.py:293
+#: ../arronax/editor.py:297
 #, python-format
 msgid "Saved file '%s'."
 msgstr "已保存文件“%s”。"
 
-#: ../arronax/editor.py:297
+#: ../arronax/editor.py:301
 msgid "Can not save starter"
 msgstr "无法保存启动器"
 
-#: ../arronax/editor.py:326
+#: ../arronax/editor.py:330
 msgid "This is not a local file. File not loaded."
 msgstr ""
 
-#: ../arronax/editor.py:375
+#: ../arronax/editor.py:379
 msgid "File or URL:"
 msgstr ""
 
-#: ../arronax/editor.py:375 ../data/ui/edit.ui.h:32
+#: ../arronax/editor.py:379 ../data/ui/edit.ui.h:32
 msgid "Command:"
 msgstr "命令："
 
-#: ../arronax/editor.py:443
+#: ../arronax/editor.py:447
 msgid "This is not an image. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:446
+#: ../arronax/editor.py:450
 msgid "This is not a local file. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:478
+#: ../arronax/editor.py:484
 msgid "Created new starter."
 msgstr ""
 
@@ -169,9 +168,8 @@ msgid "Legacy environments"
 msgstr ""
 
 #: ../arronax/quicklist.py:44
-#, fuzzy
 msgid "Title"
-msgstr "标题："
+msgstr ""
 
 #: ../arronax/filechooser.py:15
 msgid "Open File"
@@ -194,9 +192,8 @@ msgid "Select File"
 msgstr ""
 
 #: ../arronax/filechooser.py:60
-#, fuzzy
 msgid "Standard folders: "
-msgstr "启动文件夹中的："
+msgstr ""
 
 #: ../arronax/filechooser.py:68
 msgid "Desktop"
@@ -211,9 +208,8 @@ msgid "System App Folder"
 msgstr ""
 
 #: ../arronax/filechooser.py:71
-#, fuzzy
 msgid "User Autostart Folder"
-msgstr "用户应用文件夹"
+msgstr ""
 
 #: ../arronax/filechooser.py:72
 msgid "System Autostart Folder"
@@ -358,9 +354,8 @@ msgid "The command you want to start"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:22
-#, fuzzy
 msgid "Select ..."
-msgstr "选择..."
+msgstr ""
 
 #: ../data/ui/edit.ui.h:23
 msgid "Browse the file system to select a command"
@@ -431,9 +426,8 @@ msgid "Basic settings"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:41
-#, fuzzy
 msgid "_Basic"
-msgstr "基本"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:42
 msgid "Select the environments that should show your starter."
@@ -512,28 +506,13 @@ msgid "_Keywords"
 msgstr ""
 
 #: ../data/ui/quicklist.ui.h:1
-#, fuzzy
 msgid "Edit"
-msgstr "编辑(_E)"
+msgstr ""
 
 #: ../data/ui/quicklist.ui.h:2
-#, fuzzy
 msgid "_Command:"
-msgstr "命令："
+msgstr ""
 
 #: ../data/ui/quicklist.ui.h:3
-#, fuzzy
 msgid "_Title:"
-msgstr "标题："
-
-#~ msgid "toolbutton1"
-#~ msgstr "工具按钮1"
-
-#~ msgid "Saving file ..."
-#~ msgstr "正在保存文件..."
-
-#~ msgid "Arronax doesn't support this kind of starter yet"
-#~ msgstr "Arronax 还不支持该种启动器"
-
-#~ msgid "Advanced"
-#~ msgstr "高级"
+msgstr ""

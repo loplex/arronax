@@ -314,6 +314,24 @@ class DesktopFile(object):
         else:
             return False
 
+
+    def clear(self):
+        self.type = 0
+        self.title = ''
+        self.command = ''
+        self.working_dir = ''
+        self.run_in_terminal = False
+        self.hidden = False
+        self.icon = ''
+        self.keywords = ''
+        self.categories = ''
+        self.wm_class = ''
+        self.comment = ''
+        self.mime_type = ''
+        self.show_in = ''
+        self.quicklist = []
+        self.dirty_flag = False
+
     def load(self, path):
         try:
             self.keyfile.load_from_file(

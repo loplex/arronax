@@ -22,18 +22,23 @@
 #
 
 import glob
-
-import distribute_setup
-distribute_setup.use_setuptools()
+from setuptools import setup, find_packages
 
 
 from setup_helpers import (
     description, find_doctests, get_version, long_description, require_python)
 from setuptools import setup, find_packages
 
-from DistUtilsExtra.command import *
+try:
+    from DistUtilsExtra.command import *
+except ImportError:
+    raise RuntimeError('To build Masna you need https://launchpad.net/python-distutils-extra')
 
 from deb_setup_helpers import (get_deb_version, get_deb_description)
+
+def read_from_file(path):
+    with open(path) as input:
+        return input.read()
 
 
 setup(
@@ -46,7 +51,7 @@ setup(
     author = "Florian Diesch",
     author_email = "devel@florian-diesch.de",    
     description=get_deb_description(),
-    long_description=long_description(
+    long_description=read_from_file(
         'README.txt',
         ),
     license='GPLv3',

@@ -7,171 +7,169 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-20 22:23+0200\n"
-"PO-Revision-Date: 2012-10-03 22:56+0000\n"
+"POT-Creation-Date: 2014-07-19 16:39+0200\n"
+"PO-Revision-Date: 2014-06-24 19:05+0000\n"
 "Last-Translator: metacibi <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-25 16:32+0000\n"
-"X-Generator: Launchpad (build 16914)\n"
+"X-Launchpad-Export-Date: 2014-07-16 12:36+0000\n"
+"X-Generator: Launchpad (build 17112)\n"
 
 #: ../arronax/mimetypes.py:47
-#, fuzzy
 msgid "Selected"
-msgstr "Selecciona..."
+msgstr "Seleccionat"
 
 #: ../arronax/mimetypes.py:58 ../arronax/editor.py:91
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #: ../arronax/mimetypes.py:60
 msgid "Description"
-msgstr ""
+msgstr "Descripció"
 
 #: ../arronax/editor.py:86
 msgid "Enabled"
-msgstr ""
+msgstr "Habilitat"
 
-#: ../arronax/editor.py:97
+#: ../arronax/editor.py:102
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Carregant el fitxer '%s' ..."
 
-#: ../arronax/editor.py:98
+#: ../arronax/editor.py:103
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Fitxer '%s' carregat ..."
 
-#: ../arronax/editor.py:102
+#: ../arronax/editor.py:107
 msgid "Can not load starter"
 msgstr "No s'ha pogut carregar l'iniciador"
 
-#: ../arronax/editor.py:103
+#: ../arronax/editor.py:108
 msgid "File not loaded."
 msgstr "El fitxer no s'ha carregat."
 
-#: ../arronax/editor.py:131
+#: ../arronax/editor.py:134
 msgid "You need to provide a title."
 msgstr "Heu de proporcionar un nom."
 
-#: ../arronax/editor.py:134
+#: ../arronax/editor.py:137
 msgid "You need to provide a command."
 msgstr "Heu de proporcionar una ordre."
 
-#: ../arronax/editor.py:136
+#: ../arronax/editor.py:139
 msgid "You need to provide a URL or file name."
-msgstr ""
+msgstr "Heu de proporcionar una URL o un nom de fitxer."
 
-#: ../arronax/editor.py:144
+#: ../arronax/editor.py:147
 msgid "Save now?"
 msgstr "Voleu desar ara?"
 
-#: ../arronax/editor.py:145
+#: ../arronax/editor.py:148
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr "Teniu canvis sense desar. Voleu desar-los ara?"
 
-#: ../arronax/editor.py:166 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:169 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
-msgstr "Selecciona una icona"
+msgstr "Seleccioneu una icona"
 
-#: ../arronax/editor.py:275
+#: ../arronax/editor.py:279
 msgid "Error"
 msgstr "S'ha produït un error"
 
-#: ../arronax/editor.py:278
-#, fuzzy, python-format
-msgid "Saving file %s ..."
-msgstr "Desant el fitxer '%s'..."
-
-#: ../arronax/editor.py:279
-#, fuzzy, python-format
-msgid "File %s saved."
-msgstr "S'ha desat el fitxer."
-
-#: ../arronax/editor.py:289 ../arronax/editor.py:299
-msgid "File not saved."
-msgstr "El fitxer no s'ha desat"
-
-#: ../arronax/editor.py:293
+#: ../arronax/editor.py:282
 #, python-format
-msgid "Saved file '%s'."
-msgstr "El fitxer '%s' s'ha desat"
+msgid "Saving file %s ..."
+msgstr "Desant el fitxer %s ..."
+
+#: ../arronax/editor.py:283
+#, python-format
+msgid "File %s saved."
+msgstr "S'ha desat el fitxer %s."
+
+#: ../arronax/editor.py:293 ../arronax/editor.py:303
+msgid "File not saved."
+msgstr "El fitxer no s'ha desat."
 
 #: ../arronax/editor.py:297
+#, python-format
+msgid "Saved file '%s'."
+msgstr "El fitxer '%s' s'ha desat."
+
+#: ../arronax/editor.py:301
 msgid "Can not save starter"
 msgstr "No es pot desar l'iniciador"
 
-#: ../arronax/editor.py:326
+#: ../arronax/editor.py:330
 msgid "This is not a local file. File not loaded."
-msgstr ""
+msgstr "No s'ha carregat el fitxer perquè no és un fitxer local."
 
-#: ../arronax/editor.py:375
+#: ../arronax/editor.py:379
 msgid "File or URL:"
-msgstr ""
+msgstr "Fitxer o URL:"
 
-#: ../arronax/editor.py:375 ../data/ui/edit.ui.h:32
+#: ../arronax/editor.py:379 ../data/ui/edit.ui.h:32
 msgid "Command:"
 msgstr "Ordre:"
 
-#: ../arronax/editor.py:443
+#: ../arronax/editor.py:447
 msgid "This is not an image. Icon not changed."
-msgstr ""
+msgstr "No s'ha canviat la icona perquè el fitxer no és una imatge."
 
-#: ../arronax/editor.py:446
+#: ../arronax/editor.py:450
 msgid "This is not a local file. Icon not changed."
-msgstr ""
+msgstr "No s'ha canviat la icona perquè el fitxer no és un fitxer local."
 
-#: ../arronax/editor.py:478
+#: ../arronax/editor.py:484
 msgid "Created new starter."
-msgstr ""
+msgstr "S'ha creat un nou iniciador."
 
 #: ../arronax/settings.py:60
 msgid "GNOME"
-msgstr ""
+msgstr "GNOME"
 
 #: ../arronax/settings.py:61
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: ../arronax/settings.py:62
 msgid "LXDE"
-msgstr ""
+msgstr "LXDE"
 
 #: ../arronax/settings.py:63
 msgid "MATE"
-msgstr ""
+msgstr "MATE"
 
 #: ../arronax/settings.py:64
 msgid "Razor-qt"
-msgstr ""
+msgstr "Razor-qt"
 
 #: ../arronax/settings.py:65
 msgid "ROX"
-msgstr ""
+msgstr "ROX"
 
 #: ../arronax/settings.py:66
 msgid "Trinity Desktop"
-msgstr ""
+msgstr "Trinity Desktop"
 
 #: ../arronax/settings.py:67
 msgid "Unity"
-msgstr ""
+msgstr "Unity"
 
 #: ../arronax/settings.py:68
 msgid "XFCE"
-msgstr ""
+msgstr "XFCE"
 
 #: ../arronax/settings.py:69
 msgid "Legacy environments"
-msgstr ""
+msgstr "Entorns heretats"
 
 #: ../arronax/quicklist.py:44
-#, fuzzy
 msgid "Title"
-msgstr "Nom:"
+msgstr "Nom"
 
 #: ../arronax/filechooser.py:15
 msgid "Open File"
@@ -179,11 +177,11 @@ msgstr "Obre un fitxer"
 
 #: ../arronax/filechooser.py:19
 msgid "Save File"
-msgstr ""
+msgstr "Desa el fitxer"
 
 #: ../arronax/filechooser.py:22
 msgid "Select Folder"
-msgstr "Seleccioneu una carpeta"
+msgstr "Selecciona una carpeta"
 
 #: ../arronax/filechooser.py:25
 msgid "Select Program"
@@ -191,12 +189,11 @@ msgstr "Selecciona una aplicació"
 
 #: ../arronax/filechooser.py:28
 msgid "Select File"
-msgstr ""
+msgstr "Selecciona un fitxer"
 
 #: ../arronax/filechooser.py:60
-#, fuzzy
 msgid "Standard folders: "
-msgstr "Carpeta d'inici:"
+msgstr "Carpetes estàndard "
 
 #: ../arronax/filechooser.py:68
 msgid "Desktop"
@@ -208,40 +205,39 @@ msgstr "Vés a la carpeta d'aplicacions de l'usuari"
 
 #: ../arronax/filechooser.py:70
 msgid "System App Folder"
-msgstr ""
+msgstr "Vés a la carpeta d'aplicacions del sistema"
 
 #: ../arronax/filechooser.py:71
-#, fuzzy
 msgid "User Autostart Folder"
-msgstr "Vés a la carpeta d'aplicacions de l'usuari"
+msgstr "Vés a la carpeta d'inici automàtic de l'usuari"
 
 #: ../arronax/filechooser.py:72
 msgid "System Autostart Folder"
-msgstr ""
+msgstr "Vés a la carpeta d'inici automàtic del sistema"
 
 #: ../arronax/about.py:12
 msgid "Go to Web Page"
-msgstr ""
+msgstr "Ves a la Pàgina Web"
 
 #: ../arronax/about.py:21
 msgid "Ask a Question"
-msgstr ""
+msgstr "Tramet una pregunta"
 
 #: ../arronax/about.py:30
 msgid "Report a Bug"
-msgstr ""
+msgstr "Informeu d'un problema"
 
 #: ../arronax/about.py:36
 msgid "Help with Translations"
-msgstr ""
+msgstr "Ajudeu amb la Traducció"
 
 #: ../arronax/about.py:42
 msgid "Donate via Flattr"
-msgstr ""
+msgstr "Feu una donació via Flattr"
 
 #: ../arronax/about.py:48
 msgid "Donate via PayPal"
-msgstr ""
+msgstr "Feu una donació via PayPal"
 
 #: ../arronax/about.py:94
 msgid "translator-credits"
@@ -251,19 +247,19 @@ msgstr ""
 
 #: ../nautilus/nautilus-arronax.py:22
 msgid "Create a starter for this program"
-msgstr ""
+msgstr "Crea un iniciador per a aquesta aplicació"
 
 #: ../nautilus/nautilus-arronax.py:28
 msgid "Modify this starter"
-msgstr "Modifica l'iniciador"
+msgstr "Modifica aquest iniciador"
 
 #: ../nautilus/nautilus-arronax.py:34
 msgid "Create a starter"
-msgstr ""
+msgstr "Crea un iniciador"
 
 #: ../nautilus/nautilus-arronax.py:41
 msgid "Create a starter for this file"
-msgstr ""
+msgstr "Crea un iniciador per a aquest fitxer"
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:10
 msgid "Arronax"
@@ -278,6 +274,9 @@ msgid ""
 "<small>This are all MIME types that are registered on your system.\n"
 "You can drag files into the list to select their MIME types.</small>"
 msgstr ""
+"<small>Aquests són tots els tipus MIME enregistrats en el vostre sistema.\n"
+"Podeu arrossegar i deixar anar fitxers damunt la llista per a seleccionar-ne "
+"els tipus MIME.</small>"
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
@@ -289,7 +288,7 @@ msgstr "Selecciona una icona per a l'iniciador"
 
 #: ../data/ui/edit.ui.h:4
 msgid "Create a new application starter"
-msgstr "Crear un nou iniciador d'aplicació"
+msgstr "Crea un nou iniciador d'aplicació"
 
 #: ../data/ui/edit.ui.h:5
 msgid "Open a application starter"
@@ -297,7 +296,7 @@ msgstr "Obre un iniciador d'aplicació"
 
 #: ../data/ui/edit.ui.h:6
 msgid "Duplicate"
-msgstr ""
+msgstr "Duplica"
 
 #: ../data/ui/edit.ui.h:7
 msgid "Quit Arronax"
@@ -329,70 +328,76 @@ msgstr "Desa l'iniciador d'aplicació"
 
 #: ../data/ui/edit.ui.h:15
 msgid "What kind of starter do you want?"
-msgstr ""
+msgstr "Quin tipus d'iniciador voleu crear?"
 
 #: ../data/ui/edit.ui.h:16
 msgid "This is a starter for an application"
-msgstr ""
+msgstr "Aquest és un iniciador per a una aplicació"
 
 #: ../data/ui/edit.ui.h:17
 msgid "This is a starter for a file or a location"
-msgstr ""
+msgstr "Aquest és un iniciador per a un fitxer o ubicació"
 
 #: ../data/ui/edit.ui.h:18
 msgid "You can drop a starter here to load it."
-msgstr ""
+msgstr "Podeu deixar anar un iniciador aquí per a carregar-lo."
 
 #: ../data/ui/edit.ui.h:19
 msgid ""
 "The icon displayed for this starter. To change it, drop an image or a "
 "starter here or click."
 msgstr ""
+"La icona que es mostra per a aquest iniciador. Per a canviar-la, deixeu anar "
+"una imatge o un iniciador aquí, o feu clic."
 
 #: ../data/ui/edit.ui.h:20
 msgid "Title that is displayed for this starter file"
-msgstr ""
+msgstr "El nom que es mostra per a aquest iniciador"
 
 #: ../data/ui/edit.ui.h:21
 msgid "The command you want to start"
-msgstr ""
+msgstr "L'ordre que voleu iniciar."
 
 #: ../data/ui/edit.ui.h:22
-#, fuzzy
 msgid "Select ..."
 msgstr "Selecciona..."
 
 #: ../data/ui/edit.ui.h:23
 msgid "Browse the file system to select a command"
-msgstr ""
+msgstr "Examineu el sistema de fitxers per a seleccionar una ordre"
 
 #: ../data/ui/edit.ui.h:24
 msgid ""
 "Path to a folder that is used as the \n"
 "working folder for the program"
 msgstr ""
+"Ruta d'accés a una carpeta que s'utilitza com a \n"
+"carpeta de treball per a l'aplicació"
 
 #: ../data/ui/edit.ui.h:26
 msgid "Browse the file system to select a folder"
-msgstr ""
+msgstr "Examineu el sistema de fitxers per a seleccionar una carpeta"
 
 #: ../data/ui/edit.ui.h:27
 msgid "Hide this and any system wide starters with the same name."
 msgstr ""
+"Amaga aquest iniciador i qualsevol altre amb el mateix nom a tot els sistema."
 
 #: ../data/ui/edit.ui.h:28
 msgid ""
 "The application will show at least one window with the given string as its "
 "WM class or WM name hint"
 msgstr ""
+"L'aplicació mostrarà almenys una finestra amb la cadena proporcionada com la "
+"seva classe WM o com a pista de nom de WM"
 
 #: ../data/ui/edit.ui.h:29
 msgid "Tooltip for the entry"
-msgstr ""
+msgstr "Indicador de funció per a l'iniciador"
 
 #: ../data/ui/edit.ui.h:30
 msgid "If switched on the command is run in a Terminal window"
-msgstr ""
+msgstr "Si l'activeu, l'ordre s'executarà en una finestra de Terminal"
 
 #: ../data/ui/edit.ui.h:31
 msgid "Title:"
@@ -416,7 +421,7 @@ msgstr "Comentari:"
 
 #: ../data/ui/edit.ui.h:37
 msgid "Categories in which the entry should be shown in a menu"
-msgstr ""
+msgstr "Categories en les quals cal mostrar l'iniciador en un menú"
 
 #: ../data/ui/edit.ui.h:38
 msgid "Categories:"
@@ -428,28 +433,29 @@ msgstr "Obre en un Terminal:"
 
 #: ../data/ui/edit.ui.h:40
 msgid "Basic settings"
-msgstr ""
+msgstr "Ajustaments bàsics"
 
 #: ../data/ui/edit.ui.h:41
-#, fuzzy
 msgid "_Basic"
-msgstr "Bàsic"
+msgstr "_Bàsic"
 
 #: ../data/ui/edit.ui.h:42
 msgid "Select the environments that should show your starter."
-msgstr ""
+msgstr "Seleccioneu els entorns que han de mostrar el vostre iniciador."
 
 #: ../data/ui/edit.ui.h:43
 msgid "<small>Select the environments that should show your starter.</small>"
 msgstr ""
+"<small>Seleccioneu els entorns que han de mostrar el vostre iniciador.</"
+"small>"
 
 #: ../data/ui/edit.ui.h:44
 msgid "Do you want the starter to be visible only in some environments?"
-msgstr ""
+msgstr "Voleu que l'iniciador sigui visible només en alguns entorns?"
 
 #: ../data/ui/edit.ui.h:45
 msgid "_Show in"
-msgstr ""
+msgstr "Mo_strar a"
 
 #: ../data/ui/edit.ui.h:46
 msgid ""
@@ -457,18 +463,23 @@ msgid ""
 "They are used for example in the right-click menu of the Ubuntu Unity "
 "starter entries.</small>"
 msgstr ""
+"<small>Les llistes ràpides proporcionen accions addicionals per a un "
+"iniciador d'aplicació. S'utilitzen per exemple en el clic del botó dret del "
+"ratolí damunt els iniciadors del Unity d'Ubuntu.</small>"
 
 #: ../data/ui/edit.ui.h:47
 msgid "Titles of your quicklist items"
-msgstr ""
+msgstr "Nom dels elements de la vostra llista ràpida"
 
 #: ../data/ui/edit.ui.h:48
 msgid "Quicklists provide additional actions for an application starter. "
 msgstr ""
+"Les llistes ràpides proporcionen accions addicionals per a un iniciador "
+"d'aplicació. "
 
 #: ../data/ui/edit.ui.h:49
 msgid "_Quicklist"
-msgstr ""
+msgstr "Llista _ràpida"
 
 #: ../data/ui/edit.ui.h:50
 msgid ""
@@ -479,19 +490,24 @@ msgid ""
 "drag files into the text field to add their MIME types or use the "
 "\"Select ...\" button.</small>"
 msgstr ""
+"<small>Aquests són els tipus MIME que la vostra aplicació pot obrir. La "
+"vostra aplicació apareixerà en els diàlegs \"Obre amb...\" dels fitxers "
+"d'aquests tipus.\n"
+"Afegiu un tipus MIME per línia o bé separats per punt i coma (\";\"),\n"
+"arrossegueu fitxers damunt la caixa de text per a afegir els seus tipus MIME "
+"o feu servir el botó \"Selecciona...\".</small>"
 
 #: ../data/ui/edit.ui.h:53
 msgid "File types your command can open."
-msgstr ""
+msgstr "Tipus de fitxers que la vostra ordre pot obrir."
 
 #: ../data/ui/edit.ui.h:54
 msgid "The MIME types your application is able to open."
-msgstr ""
+msgstr "Els tipus MIME que la vostra aplicació pot obrir."
 
 #: ../data/ui/edit.ui.h:55
-#, fuzzy
 msgid "_MIME types"
-msgstr "Tipus MIME"
+msgstr "Tipus _MIME"
 
 #: ../data/ui/edit.ui.h:56
 msgid ""
@@ -499,63 +515,35 @@ msgid ""
 "Unity Dash) to find your application.\n"
 "Add Keywords one per line or separated by semicolons (\";\").</small>"
 msgstr ""
+"<small>Aquestes paraules clau s'utilitzen en algunes funcions de cerca (com "
+"ara al Taulell del Unity d'Ubuntu) per a trobar la vostra aplicació.\n"
+"Afegiu una Paraula clau per línia o bé separades per punts i coma (\";\").</"
+"small>"
 
 #: ../data/ui/edit.ui.h:58
 msgid "List of keywords that may be used for searching starters, e.g. in Unity"
 msgstr ""
+"Llista de paraules clau que s'utilitzaran en la cerca d'iniciadors, p. ex. "
+"al Unity"
 
 #: ../data/ui/edit.ui.h:59
 msgid "Keywords are used to some search functions to find your application."
 msgstr ""
+"Paraules clau utilitzades en algunes funcions de cerca per a trobar la "
+"vostra aplicació."
 
 #: ../data/ui/edit.ui.h:60
-#, fuzzy
 msgid "_Keywords"
-msgstr "Paraules clau"
+msgstr "Paraules c_lau"
 
 #: ../data/ui/quicklist.ui.h:1
-#, fuzzy
 msgid "Edit"
-msgstr "_Edita"
+msgstr "Edita"
 
 #: ../data/ui/quicklist.ui.h:2
-#, fuzzy
 msgid "_Command:"
-msgstr "Ordre:"
+msgstr "_Ordre:"
 
 #: ../data/ui/quicklist.ui.h:3
-#, fuzzy
 msgid "_Title:"
-msgstr "Nom:"
-
-#~ msgid "toolbutton1"
-#~ msgstr "toolbutton1"
-
-#~ msgid "Saving file ..."
-#~ msgstr "Desant el fitxer ..."
-
-#~ msgid "Arronax doesn't support this kind of starter yet"
-#~ msgstr "Arronax encara no ofereix suport per aquest tipus d'iniciador"
-
-#~ msgid "Advanced"
-#~ msgstr "Avançat"
-
-#~ msgid ""
-#~ "MIME types:\n"
-#~ "\n"
-#~ "seperated by \n"
-#~ "line breaks or\n"
-#~ "semicolons (\";\")"
-#~ msgstr ""
-#~ "Tipus MIME:\n"
-#~ "\n"
-#~ "separats per\n"
-#~ "salts de línia o\n"
-#~ "punts i coma (\";\")"
-
-#~ msgid ""
-#~ "Keywords:\n"
-#~ "(one per line)"
-#~ msgstr ""
-#~ "Paraules clau:\n"
-#~ "(una per línia)"
+msgstr "Nom"
