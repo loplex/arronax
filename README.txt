@@ -4,42 +4,92 @@
  What is Arronax?
 ==================
 
-Arronax is a plugin for Nautilus to create and modify application
-starters (.desktop files).
+Arronax is a program to create and modify starters (technically:
+.desktop files) for applications and locations (URLs).
 
-Arronax adds a menu item "Create starter for this file" to the context
-menu (that's the menu you get when you right-click a file in the file
-manager). If the file is a application starter you get an item "Modify
-this starter" instead.
+Arronax can be used as a standalone application or as a plugin for
+Nautilus, the default file manager of the Gnome and Unity desktop
+environments.  
+
+Arronax as Nautilus extension
+=============================
+
+As Nautilus plugin Arronax adds a menu item “Create starter for this
+file” or “Create a starter for this program” to the context menu
+(that’s the menu you get when you right-click a file in the file
+manager). If the file is a application starter you get an item “Modify
+this starter” instead.
 
 If you have icons on your desktop enabled Arronax adds a menu item
-"Create starter" to your desktop's context menu.
+“Create starter” to your desktop’s context menu.  
+
+Arronax as standalone application
+=================================
+
+Arronax as standalone application can be started just like any other
+application using the application menu or application search function
+of your desktop environment.  
+
+Drag & Drop
+===========
+
+Arronax supports Drag&Drop:
+
+* You can drag an icon for example from the Unity Dash or the Gnome
+  Classic application menu and drop it on an open Arronax
+  window. Don’t drop it on one of the input fields in the Arronax
+  window but on the free space beneath the icon.
+
+* You can drag files from the file manager and other applications and
+  drop them on the input area in the “MIME types” tab to add the
+  corresponding MIME types to the list. This will add every MIME type
+  only once, even if you add multiple files with the same MIME type.
+
+* You can drag image files from the file manager or other applications
+  and drop them on the icon selector at the left of the Arronax window
+  to use that image as icon for the starter. It is up to you tom take
+  care that the image has the right size.
+
+* You can drag a file or folder from the file manager or a URL from
+  your web browser and drop it on the “Command”, “Start in Folder” or
+  “File or URL” input area to use the corresponding file path.
 
 
 ========
  Status
 ========
 
-Unsettings is alpha software. So far it seems to work for me but it
-may have severe bugs I didn't noticed yet. **Use it at your own risk**.
+
+As far as I know there aren’t any serious bugs in Arronax.
 
 If you find a bug in Arronax please report it at the bugtracker at
-Launchpad so that I can fix it. Thank you.
+Launchpad so that I can fix it. Thank you.  
+
 
 ==============
- Requirements
+ Requirements 
 ==============
 
-Arronax is beeing developed and tested on Ubuntu 12.04 "Precise Pangolin".
-
-The .deb packages are installable on Debian 7.0 "Wheezy" and Linux
-Mint 13 "Maya", too and seem to work according to a short test.
+Arronax is beeing developed and tested on Ubuntu 12.04.3 “Precise Pangolin” and Ubuntu 14.04 “Trusty Tahr”.
 
 Arronax needs:
 
-  * Gnome 3.4
-  * Nautilus-Python 1.1
-  * PyGObject
+* Gnome 3.4 or later
+* Python 2.7
+* PyGObject
+* distribute
+* Nautilus-Python 1.1 or later
+
+If you install the .deb package this packages will be automatically
+installed if needed.  
+
+Enable icons on your desktop
+============================
+
+With Gnome Nautilus is by default configured not to show icons on your
+desktop. You can change that by opening a Terminal, type::
+
+    gsettings set org.gnome.desktop.background show-desktop-icons true
 
 
 =======================

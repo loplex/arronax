@@ -1,4 +1,4 @@
-arronax (0.06~1) trusty; urgency=low
+arronax (0.06) trusty; urgency=low
 
   * added support for quicklists
   * some UI improvements

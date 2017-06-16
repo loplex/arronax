@@ -249,6 +249,8 @@ class DesktopFile(object):
 
     def create_group_name(self, title):
         basename = ''.join(c for c in title if c.isalpha())
+        if basename == '':
+            basename = '0'
         name = basename
         cnt = 1
         while self.keyfile.has_group(ACTION_PREFIX + name):
