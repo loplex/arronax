@@ -66,6 +66,8 @@ setup(
          glob.glob('data/desktop/*.desktop')),
         ('/usr/share/nautilus-python/extensions/',
          glob.glob('nautilus/*.py')),
+        ('/usr/share/caja-python/extensions/',
+         glob.glob('caja/*.py')),
         ],
     entry_points = {
         'console_scripts': ['arronax=arronax.editor:main'],
