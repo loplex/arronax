@@ -11,6 +11,7 @@ def activate_drag_and_drop(widget, callback=None, field=None):
     widget.drag_dest_set(Gtk.DestDefaults.ALL, [],  
                          Gdk.DragAction.COPY)
     widget.drag_dest_add_uri_targets()
+    widget.drag_dest_add_text_targets()
 
 
 def create_toggle_renderer(treeview):

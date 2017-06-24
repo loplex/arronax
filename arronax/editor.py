@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 #-*- coding: utf-8-*-
 
+import gi
+gi.require_version('Gtk', '3.0')
+
 from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio
 import os, os.path, time, sys, urllib, urlparse
 from gettext import gettext as _
@@ -103,12 +106,32 @@ class Editor(object):
                               _("Loaded file '%s' ...") % path) as status:
             msg = self.dfile.load(path)
             if msg is not None:
-                dialogs.error(self['window1'], 
-                              _('Can not load starter'), msg)
-                status.set_end_msg(_("File not loaded."))
+                return False
             else:
                 self.filename = path
                 self.update_from_dfile()
+                return True
+
+
+    def use_file_or_uri_as_target(self, s, is_uri=False):
+        self.filename = None
+        self['e_command'].set_text(s)
+        if is_uri:
+            self.create_title_from_command(s, True)
+            self['cbox_type'].set_active(1)
+        else:
+            self.create_title_from_command(s, False)
+            is_exec = False
+            try:
+               is_exec = not os.path.isdir(s) and os.access(s, os.X_OK)
+            except Exception as e:
+                print(e)
+            if is_exec:
+                self['cbox_type'].set_active(0)
+            else:
+                self['cbox_type'].set_active(1)
+
+
 
         
     def update_window_title(self): 
@@ -118,13 +141,15 @@ class Editor(object):
             title = '%s: %s' % (settings.APP_NAME, self.filename)
         self['window1'].set_title(title)
         
-                
-    def create_title_from_command(self, command):
-        if (command in (None, '') or 
-            self['e_title'].get_text() != ''):
+               
+    def create_title_from_command(self, command, is_uri=False):
+        if command in (None, ''):
             return
-        title = os.path.basename(command)
-        self['e_title'].set_text(title.title())
+        if is_uri:
+            title = command
+        else:
+            title = os.path.basename(command)
+        self['e_title'].set_text(title)
         self['e_title'].select_region(0, len(title)+1)
 
 
@@ -317,20 +342,32 @@ class Editor(object):
 
     def on_window1_drag_data_received(self, widget, drag_context, x, y, data,
                                       info, time): 
+
+        if info != 0:
+            return
+        
         uris = data.get_uris()
-        if info == 0 and len(uris) > 0:           
+        if len(uris) > 0:           
             uri = urlparse.urlparse(uris[0])
             filename = None
             if uri.scheme == 'file':
                 filename = urllib.url2pathname(uri.path)
             elif uri.scheme == 'application':
                 filename = utils.get_path_for_application_uri(uri)
-            else:
-                statusbar.show_msg(
-                    _('This is not a local file. File not loaded.'))
+            else:  # some other URI
+                if self.maybe_confirm_unsaved():
+                    self.use_file_or_uri_as_target(uri.geturl(), True)
             if filename:
                 if self.maybe_confirm_unsaved():
-                    self.read_desktop_file(filename)
+                    if not self.read_desktop_file(filename):
+                       # not a valid .desktop file
+                       self.use_file_or_uri_as_target(filename)
+        else: # no uris
+            text = data.get_text()
+            if (text is not None and
+                    text != '' and
+                    self.maybe_confirm_unsaved()):
+                self.use_file_or_uri_as_target(text, True)
 
                 
     def on_urientry_drag_data_received(self, widget, drag_context, x, y, 
