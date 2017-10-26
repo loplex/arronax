@@ -2,6 +2,9 @@
 #-*- coding: utf-8-*-
 
 
+import gi
+gi.require_version('Nautilus', '3.0')
+ 
 from gi.repository import Nautilus, GObject, Gio
 import gettext
 from gettext import gettext as _
