@@ -72,9 +72,6 @@ def create_treeview_column(widget, title, col_no, renderer=None,
     column = Gtk.TreeViewColumn(title)
     widget.append_column(column)
 
-    if activatable:
-        renderer.set_activatable(True)
-        
     if sort_id is None:
         sort_id = col_no
         
@@ -85,7 +82,9 @@ def create_treeview_column(widget, title, col_no, renderer=None,
 
     renderer = add_cell_renderer(column, col_no, renderer,
                                  attr if obj_attr is None else None)
-
+    if activatable:
+        renderer.set_activatable(True)
+        
     if obj_attr is not None:
         column.set_cell_data_func(renderer,
                                   make_cell_data_func(obj_attr,
