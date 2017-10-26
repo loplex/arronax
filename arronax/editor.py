@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 #-*- coding: utf-8-*-
 
 import gi
@@ -9,7 +8,7 @@ import os, os.path, time, sys, urllib, urlparse
 from gettext import gettext as _
 import gettext
 
-import settings, desktopfile, clipboard, about, dialogs
+import settings, desktopfile, clipboard, about, dialogs, iconbrowser
 import statusbar, filechooser, tvtools, quicklist, utils, mimetypes
 
 IS_STANDALONE = False
@@ -64,9 +63,12 @@ class Editor(object):
             self.create_title_from_command(path)
             if type == TYPE_LINK:
                 self['cbox_type'].set_active(1)
+            utils.load_file_into_image(
+                self['img_icon'], 'application-x-executable')
         else:
             self.filename = path
-      
+            utils.load_file_into_image(
+                self['img_icon'], 'folder')
         self['window1'].show()
 
 
@@ -180,7 +182,6 @@ class Editor(object):
         try: # just to be sure
             really_quit =  self.maybe_confirm_unsaved()
         except Exception as e:
-            print 'QUIT:', e
             really_quit = True
         if really_quit:        
             if IS_STANDALONE:
@@ -188,7 +189,28 @@ class Editor(object):
             else:
                 self['window1'].destroy()
 
-    def select_icon(self):
+    def icon_browse_auto(self):
+        current = utils.get_name_from_image(self['img_icon'])
+        if '/' in current:
+            self.icon_browse_files()
+        else:
+            self.icon_browse_icons()
+
+            
+    def icon_browse_icons(self):
+        current = utils.get_name_from_image(self['img_icon'])
+        icon = iconbrowser.IconDlg(self['window1']).run(current)
+        if icon is not None:
+            self.set_icon(icon)
+    
+    def icon_browse_files(self):
+        current = utils.get_name_from_image(self['img_icon'])
+        if not '/' in current:
+            for dir in Gtk.IconTheme.get_default().get_search_path():
+                if os.path.exists(dir):
+                    current = dir
+                    break
+        
         preview = Gtk.Image()
 
         dialog = Gtk.FileChooserDialog(_("Select Icon"), self['window1'],
@@ -199,7 +221,7 @@ class Editor(object):
                                         Gtk.ResponseType.OK))
         dialog.set_preview_widget(preview)
         dialog.set_use_preview_label(False)
-        dialog.set_filename(settings.LAST_ICON)
+        dialog.set_filename(current)
 
         def update_preview(widget, *args):
             path = widget.get_preview_filename()
@@ -236,8 +258,6 @@ class Editor(object):
         msg = utils.load_file_into_image(img, path)
         if msg is not None:
             statusbar.show_msg(msg)
-        else:
-            settings.LAST_ICON = path
 
     def about(self):
         about.show_about_dialog()
@@ -491,7 +511,18 @@ class Editor(object):
 ## actions
 
     def on_ac_icon_activate(self, action, *args):
-        self.select_icon()
+        self.icon_browse_auto()
+
+
+    def on_ac_icon_browse_activate(self, action, *args):
+        mode = self['cbox_icon_browse_mode'].get_active_id()
+        print('MODE:', mode)
+        if mode == 'files':
+            self.icon_browse_files()
+        elif mode == 'icons':
+            self.icon_browse_icons()
+        else:
+            self.icon_browse_auto()
 
     def on_ac_save_activate(self, action, *args):
         self.save()
@@ -568,7 +599,4 @@ def main():
     except KeyboardInterrupt:
         Gtk.main_quit()    
 
-if __name__ == '__main__':
-    main()
-        
 

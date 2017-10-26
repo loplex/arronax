@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.16.1 -->
+<!-- Generated with glade 3.20.0 -->
 <interface>
   <requires lib="gtk+" version="3.0"/>
   <object class="GtkAction" id="ac_about">
@@ -18,8 +18,13 @@
   </object>
   <object class="GtkAction" id="ac_icon">
     <property name="label" translatable="yes">Select Icon</property>
-    <property name="tooltip" translatable="yes">Select an icon for this starter</property>
+    <property name="tooltip" translatable="yes">Select an file or  icon for this starter</property>
     <signal name="activate" handler="on_ac_icon_activate" swapped="no"/>
+  </object>
+  <object class="GtkAction" id="ac_icon_browse">
+    <property name="tooltip" translatable="yes">Browse files or icons to use as icon for this starter</property>
+    <property name="stock_id">gtk-open</property>
+    <signal name="activate" handler="on_ac_icon_browse_activate" swapped="no"/>
   </object>
   <object class="GtkAction" id="ac_new">
     <property name="tooltip" translatable="yes">Create a new application starter</property>
@@ -406,7 +411,80 @@
                         <property name="height_request">48</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
                         <property name="pixel_size">48</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFrame">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="margin_top">6</property>
+                    <property name="label_xalign">0</property>
+                    <property name="shadow_type">out</property>
+                    <child>
+                      <object class="GtkAlignment">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="left_padding">12</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_right">9</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">9</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkComboBoxText" id="cbox_icon_browse_mode">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_bottom">3</property>
+                                <property name="active_id">auto</property>
+                                <items>
+                                  <item id="files" translatable="yes">Browse image files</item>
+                                  <item id="icons" translatable="yes">Browse icon theme</item>
+                                  <item id="auto" translatable="yes">Browse auto</item>
+                                </items>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="b_icon_browse">
+                                <property name="use_action_appearance">True</property>
+                                <property name="related_action">ac_icon_browse</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="use_underline">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="label">
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Change icon:</property>
                       </object>
                     </child>
                   </object>
@@ -449,8 +527,6 @@
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">0</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -494,8 +570,6 @@
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">1</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -540,8 +614,6 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">3</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -555,8 +627,6 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">4</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -571,8 +641,6 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">6</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -587,8 +655,6 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">7</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -602,8 +668,6 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">2</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -613,14 +677,12 @@ working folder for the program</property>
                         <property name="tooltip_text" translatable="yes">Title that is displayed for this starter file</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">6</property>
-                        <property name="xalign">1</property>
                         <property name="label" translatable="yes">Title:</property>
+                        <property name="xalign">1</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">0</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -630,14 +692,12 @@ working folder for the program</property>
                         <property name="tooltip_text" translatable="yes">The command you want to start</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">12</property>
-                        <property name="xalign">1</property>
                         <property name="label" translatable="yes">Command:</property>
+                        <property name="xalign">1</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">1</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -648,14 +708,12 @@ working folder for the program</property>
 working folder for the program</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">3</property>
-                        <property name="xalign">1</property>
                         <property name="label" translatable="yes">Start in folder:</property>
+                        <property name="xalign">1</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">3</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -665,14 +723,12 @@ working folder for the program</property>
                         <property name="tooltip_text" translatable="yes">Hide this and any system wide starters with the same name.</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">12</property>
-                        <property name="xalign">1</property>
                         <property name="label" translatable="yes">Hidden:</property>
+                        <property name="xalign">1</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">4</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -682,14 +738,12 @@ working folder for the program</property>
                         <property name="tooltip_text" translatable="yes">The application will show at least one window with the given string as its WM class or WM name hint</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">12</property>
-                        <property name="xalign">1</property>
                         <property name="label" translatable="yes">Window Class:</property>
+                        <property name="xalign">1</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">6</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -699,14 +753,12 @@ working folder for the program</property>
                         <property name="tooltip_text" translatable="yes">Tooltip for the entry</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">12</property>
-                        <property name="xalign">1</property>
                         <property name="label" translatable="yes">Comment:</property>
+                        <property name="xalign">1</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">7</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -716,14 +768,12 @@ working folder for the program</property>
                         <property name="tooltip_text" translatable="yes">Categories in which the entry should be shown in a menu</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">3</property>
-                        <property name="xalign">1</property>
                         <property name="label" translatable="yes">Categories:</property>
+                        <property name="xalign">1</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">5</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -733,16 +783,14 @@ working folder for the program</property>
                         <property name="tooltip_text" translatable="yes">If switched on the command is run in a Terminal window</property>
                         <property name="margin_right">6</property>
                         <property name="margin_top">3</property>
-                        <property name="xalign">1</property>
                         <property name="label" translatable="yes">Run in Terminal:</property>
                         <property name="use_underline">True</property>
                         <property name="mnemonic_widget">sw_run_in_terminal</property>
+                        <property name="xalign">1</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
                         <property name="top_attach">2</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                     <child>
@@ -757,8 +805,6 @@ working folder for the program</property>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="top_attach">5</property>
-                        <property name="width">1</property>
-                        <property name="height">1</property>
                       </packing>
                     </child>
                   </object>
@@ -789,13 +835,13 @@ working folder for the program</property>
                         <property name="margin_right">12</property>
                         <property name="margin_top">12</property>
                         <property name="margin_bottom">12</property>
-                        <property name="xalign">0</property>
-                        <property name="yalign">0</property>
                         <property name="label" translatable="yes">&lt;small&gt;Select the environments that should show your starter.&lt;/small&gt;</property>
                         <property name="use_markup">True</property>
                         <property name="wrap">True</property>
                         <property name="width_chars">40</property>
                         <property name="max_width_chars">40</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -864,13 +910,13 @@ working folder for the program</property>
                         <property name="margin_right">12</property>
                         <property name="margin_top">12</property>
                         <property name="margin_bottom">12</property>
-                        <property name="xalign">0</property>
-                        <property name="yalign">0</property>
                         <property name="label" translatable="yes">&lt;small&gt;Quicklists provide additional actions for an application starter. They are used for example in the right-click menu of the Ubuntu Unity starter entries.&lt;/small&gt;</property>
                         <property name="use_markup">True</property>
                         <property name="wrap">True</property>
                         <property name="width_chars">40</property>
                         <property name="max_width_chars">40</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -1067,8 +1113,6 @@ working folder for the program</property>
                         <property name="margin_right">12</property>
                         <property name="margin_top">12</property>
                         <property name="margin_bottom">12</property>
-                        <property name="xalign">0</property>
-                        <property name="yalign">0</property>
                         <property name="label" translatable="yes">&lt;small&gt;This are the MIME types your application is able to open. Your application will be listed in "Open with..." dialogs for files of this types.
 Add MIME types one per line or separated by semicolons (";"), 
 drag files into the text field to add their MIME types or use the "Select ..." button.&lt;/small&gt;</property>
@@ -1076,6 +1120,8 @@ drag files into the text field to add their MIME types or use the "Select ..." b
                         <property name="wrap">True</property>
                         <property name="width_chars">40</property>
                         <property name="max_width_chars">40</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -1171,14 +1217,14 @@ drag files into the text field to add their MIME types or use the "Select ..." b
                         <property name="margin_right">12</property>
                         <property name="margin_top">12</property>
                         <property name="margin_bottom">12</property>
-                        <property name="xalign">0</property>
-                        <property name="yalign">0</property>
                         <property name="label" translatable="yes">&lt;small&gt;This keywords are used to some search functions (like the Ubuntu Unity Dash) to find your application.
 Add Keywords one per line or separated by semicolons (";").&lt;/small&gt;</property>
                         <property name="use_markup">True</property>
                         <property name="wrap">True</property>
                         <property name="width_chars">40</property>
                         <property name="max_width_chars">40</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>

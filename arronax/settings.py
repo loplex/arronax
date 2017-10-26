@@ -37,14 +37,12 @@ try:
 except:
     pass
 
-DEFAULT_ICON = '/usr/share/icons/hicolor/scalable/apps/nautilus.svg'
-if not os.path.isfile(DEFAULT_ICON):
-    DEFAULT_ICON='system-file-manager'
+DEFAULT_ICON='system-file-manager'
 
 DEFAULT_ICON_SIZE = 48
 DEFAULT_FILENAME = os.path.join(USER_DESKTOP_DIR, 'noname.desktop')
 
-LAST_ICON = DEFAULT_ICON 
+#LAST_ICON = DEFAULT_ICON 
 LAST_FILENAME = DEFAULT_FILENAME
 
 GETTEXT_DOMAIN='arronax'
