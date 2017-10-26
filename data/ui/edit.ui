@@ -389,6 +389,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">You can drop a starter here to load it.</property>
+                <property name="margin_right">6</property>
                 <property name="orientation">vertical</property>
                 <child>
                   <object class="GtkButton" id="bt_icon">
@@ -400,7 +401,6 @@
                     <property name="tooltip_text" translatable="yes">The icon displayed for this starter. To change it, drop an image or a starter here or click.</property>
                     <property name="valign">start</property>
                     <property name="margin_left">6</property>
-                    <property name="margin_right">6</property>
                     <property name="margin_top">6</property>
                     <property name="use_underline">True</property>
                     <property name="xalign">0.52999997138977051</property>
@@ -427,8 +427,9 @@
                   <object class="GtkFrame">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="margin_left">6</property>
                     <property name="margin_top">6</property>
-                    <property name="label_xalign">0</property>
+                    <property name="label_xalign">0.10000000149011612</property>
                     <property name="shadow_type">out</property>
                     <child>
                       <object class="GtkAlignment">
@@ -794,13 +795,40 @@ working folder for the program</property>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkEntry" id="e_categories">
+                      <object class="GtkBox">
                         <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="tooltip_text" translatable="yes">Categories in which the entry should be shown in a menu</property>
-                        <property name="margin_top">3</property>
-                        <property name="hexpand">True</property>
-                        <property name="invisible_char">•</property>
+                        <property name="can_focus">False</property>
+                        <child>
+                          <object class="GtkEntry" id="e_categories">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Categories in which the entry should be shown in a menu</property>
+                            <property name="margin_top">3</property>
+                            <property name="hexpand">True</property>
+                            <property name="invisible_char">•</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="bt_categories">
+                            <property name="label" translatable="yes">Select ...</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
+                            <property name="margin_left">6</property>
+                            <property name="margin_top">3</property>
+                            <signal name="clicked" handler="on_bt_categories_clicked" swapped="no"/>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
                       </object>
                       <packing>
                         <property name="left_attach">1</property>
