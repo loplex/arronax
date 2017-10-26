@@ -10,6 +10,7 @@ import gettext
 
 import settings, desktopfile, clipboard, about, dialogs, iconbrowser
 import statusbar, filechooser, tvtools, quicklist, utils, mimetypes
+import categoriesbrowser
 
 IS_STANDALONE = False
 
@@ -471,7 +472,15 @@ class Editor(object):
             utils.set_list_to_textview(self['tview_mime_types'], 
                                        sorted(mime_types))
 
-            
+    def on_bt_categories_clicked(self, *args):
+        cats = self['e_categories'].get_text()
+        cats = [c.strip() for c in cats.split(',') if c.strip() != '']
+        dlg = categoriesbrowser.CategoriesDlg(self['window1'], cats)
+        cats = dlg.run()
+        if cats is not None:
+            self['e_categories'].set_text(', '.join(cats))
+
+        
     def on_bt_uri_clicked(self, *args):
         uri = self['e_command'].get_text()
         if uri == '':
