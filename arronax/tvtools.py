@@ -149,7 +149,18 @@ def move_up_current_row(treeview):
         except ValueError:
             pass
 
-        
+def insert_row_after_current(treeview, row):
+    path, column = treeview.get_cursor()    
+    if path is None:
+        append_row(treeview, row)
+    else:
+        model = treeview.get_model()
+        aiter = model.get_iter(path)
+        biter = model.insert_after(aiter, row)
+        if biter is not None:
+            path = model.get_path(biter)
+            treeview.set_cursor(path)
+                
 def row_changed(tv, row):
        path = row.path
        model = tv.get_model()
