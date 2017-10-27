@@ -70,6 +70,7 @@ class Editor(object):
             self.filename = path
             utils.load_file_into_image(
                 self['img_icon'], 'folder')
+
         self['window1'].show()
 
 
@@ -438,10 +439,21 @@ class Editor(object):
         for name in app_only:
             self[name].set_sensitive(is_app)
         self['l_command'].set_label(command_label)
-            
+
+
 ###############
 ## buttons
 
+    def on_bt_icon_browse_files_clicked(self, *args):
+         self.icon_browse_files()
+         
+    def on_bt_icon_browse_icons_clicked(self, *args):
+         self.icon_browse_icons()
+
+    def on_bt_icon_browse_auto_clicked(self, *args):
+         self.icon_browse_auto()
+            
+           
     def on_bt_working_dir_clicked(self, *args):
         default =  self['e_working_dir'].get_text()
         if default =='':  
@@ -474,11 +486,11 @@ class Editor(object):
 
     def on_bt_categories_clicked(self, *args):
         cats = self['e_categories'].get_text()
-        cats = [c.strip() for c in cats.split(',') if c.strip() != '']
+        cats = [c.strip() for c in cats.split(';') if c.strip() != '']
         dlg = categoriesbrowser.CategoriesDlg(self['window1'], cats)
         cats = dlg.run()
         if cats is not None:
-            self['e_categories'].set_text(', '.join(cats))
+            self['e_categories'].set_text('; '.join(cats))
 
         
     def on_bt_uri_clicked(self, *args):
@@ -525,7 +537,6 @@ class Editor(object):
 
     def on_ac_icon_browse_activate(self, action, *args):
         mode = self['cbox_icon_browse_mode'].get_active_id()
-        print('MODE:', mode)
         if mode == 'files':
             self.icon_browse_files()
         elif mode == 'icons':

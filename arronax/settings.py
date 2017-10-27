@@ -39,7 +39,7 @@ except:
 
 DEFAULT_ICON='system-file-manager'
 
-DEFAULT_ICON_SIZE = 48
+DEFAULT_ICON_SIZE = 64
 DEFAULT_FILENAME = os.path.join(USER_DESKTOP_DIR, 'noname.desktop')
 
 #LAST_ICON = DEFAULT_ICON 
