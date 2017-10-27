@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-21 23:18+0200\n"
+"POT-Creation-Date: 2017-10-26 19:19+0200\n"
 "PO-Revision-Date: 2014-06-24 19:05+0000\n"
 "Last-Translator: metacibi <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Selected"
 msgstr "Seleccionat"
 
-#: ../arronax/mimetypes.py:58 ../arronax/editor.py:91
+#: ../arronax/mimetypes.py:58 ../arronax/editor.py:96
 msgid "Name"
 msgstr "Nom"
 
@@ -30,140 +30,128 @@ msgstr "Nom"
 msgid "Description"
 msgstr "Descripció"
 
-#: ../arronax/editor.py:86
+#: ../arronax/editor.py:91
 msgid "Enabled"
 msgstr "Habilitat"
 
-#: ../arronax/editor.py:102
+#: ../arronax/editor.py:107
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Carregant el fitxer '%s' ..."
 
-#: ../arronax/editor.py:103
+#: ../arronax/editor.py:108
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Fitxer '%s' carregat ..."
 
-#: ../arronax/editor.py:107
-msgid "Can not load starter"
-msgstr "No s'ha pogut carregar l'iniciador"
-
-#: ../arronax/editor.py:108
-msgid "File not loaded."
-msgstr "El fitxer no s'ha carregat."
-
-#: ../arronax/editor.py:134
+#: ../arronax/editor.py:161
 msgid "You need to provide a title."
 msgstr "Heu de proporcionar un nom."
 
-#: ../arronax/editor.py:137
+#: ../arronax/editor.py:164
 msgid "You need to provide a command."
 msgstr "Heu de proporcionar una ordre."
 
-#: ../arronax/editor.py:139
+#: ../arronax/editor.py:166
 msgid "You need to provide a URL or file name."
 msgstr "Heu de proporcionar una URL o un nom de fitxer."
 
-#: ../arronax/editor.py:147
+#: ../arronax/editor.py:174
 msgid "Save now?"
 msgstr "Voleu desar ara?"
 
-#: ../arronax/editor.py:148
+#: ../arronax/editor.py:175
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr "Teniu canvis sense desar. Voleu desar-los ara?"
 
-#: ../arronax/editor.py:169 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:216 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Seleccioneu una icona"
 
-#: ../arronax/editor.py:279
+#: ../arronax/editor.py:324
 msgid "Error"
 msgstr "S'ha produït un error"
 
-#: ../arronax/editor.py:282
+#: ../arronax/editor.py:327
 #, python-format
 msgid "Saving file %s ..."
 msgstr "Desant el fitxer %s ..."
 
-#: ../arronax/editor.py:283
+#: ../arronax/editor.py:328
 #, python-format
 msgid "File %s saved."
 msgstr "S'ha desat el fitxer %s."
 
-#: ../arronax/editor.py:293 ../arronax/editor.py:303
+#: ../arronax/editor.py:338 ../arronax/editor.py:348
 msgid "File not saved."
 msgstr "El fitxer no s'ha desat."
 
-#: ../arronax/editor.py:297
+#: ../arronax/editor.py:342
 #, python-format
 msgid "Saved file '%s'."
 msgstr "El fitxer '%s' s'ha desat."
 
-#: ../arronax/editor.py:301
+#: ../arronax/editor.py:346
 msgid "Can not save starter"
 msgstr "No es pot desar l'iniciador"
 
-#: ../arronax/editor.py:330
-msgid "This is not a local file. File not loaded."
-msgstr "No s'ha carregat el fitxer perquè no és un fitxer local."
-
-#: ../arronax/editor.py:379
+#: ../arronax/editor.py:436
 msgid "File or URL:"
 msgstr "Fitxer o URL:"
 
-#: ../arronax/editor.py:379 ../data/ui/edit.ui.h:32
+#: ../arronax/editor.py:436 ../data/ui/edit.ui.h:37
 msgid "Command:"
 msgstr "Ordre:"
 
-#: ../arronax/editor.py:447
+#: ../arronax/editor.py:504
 msgid "This is not an image. Icon not changed."
 msgstr "No s'ha canviat la icona perquè el fitxer no és una imatge."
 
-#: ../arronax/editor.py:450
+#: ../arronax/editor.py:507
 msgid "This is not a local file. Icon not changed."
 msgstr "No s'ha canviat la icona perquè el fitxer no és un fitxer local."
 
-#: ../arronax/editor.py:484
+#: ../arronax/editor.py:552
 msgid "Created new starter."
 msgstr "S'ha creat un nou iniciador."
 
-#: ../arronax/settings.py:60
+#: ../arronax/settings.py:58
 msgid "GNOME"
 msgstr "GNOME"
 
-#: ../arronax/settings.py:61
+#: ../arronax/settings.py:59
 msgid "KDE"
 msgstr "KDE"
 
-#: ../arronax/settings.py:62
+#: ../arronax/settings.py:60
 msgid "LXDE"
 msgstr "LXDE"
 
-#: ../arronax/settings.py:63
+#: ../arronax/settings.py:61
 msgid "MATE"
 msgstr "MATE"
 
-#: ../arronax/settings.py:64
+#: ../arronax/settings.py:62
 msgid "Razor-qt"
 msgstr "Razor-qt"
 
-#: ../arronax/settings.py:65
+#: ../arronax/settings.py:63
 msgid "ROX"
 msgstr "ROX"
 
-#: ../arronax/settings.py:66
+#: ../arronax/settings.py:64
 msgid "Trinity Desktop"
 msgstr "Trinity Desktop"
 
-#: ../arronax/settings.py:67
+#: ../arronax/settings.py:65
 msgid "Unity"
 msgstr "Unity"
 
-#: ../arronax/settings.py:68
+#: ../arronax/settings.py:66
 msgid "XFCE"
 msgstr "XFCE"
 
-#: ../arronax/settings.py:69
+#: ../arronax/settings.py:67
 msgid "Legacy environments"
 msgstr "Entorns heretats"
 
@@ -261,7 +249,7 @@ msgstr "Crea un iniciador"
 msgid "Create a starter for this file"
 msgstr "Crea un iniciador per a aquest fitxer"
 
-#: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:10
+#: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:11
 msgid "Arronax"
 msgstr "Arronax"
 
@@ -283,66 +271,72 @@ msgid "Show informations about Arronax"
 msgstr "Quant a Arronax"
 
 #: ../data/ui/edit.ui.h:3
-msgid "Select an icon for this starter"
+#, fuzzy
+msgid "Select an file or  icon for this starter"
 msgstr "Selecciona una icona per a l'iniciador"
 
 #: ../data/ui/edit.ui.h:4
+#, fuzzy
+msgid "Browse files or icons to use as icon for this starter"
+msgstr "Selecciona una icona per a l'iniciador"
+
+#: ../data/ui/edit.ui.h:5
 msgid "Create a new application starter"
 msgstr "Crea un nou iniciador d'aplicació"
 
-#: ../data/ui/edit.ui.h:5
+#: ../data/ui/edit.ui.h:6
 msgid "Open a application starter"
 msgstr "Obre un iniciador d'aplicació"
 
-#: ../data/ui/edit.ui.h:6
+#: ../data/ui/edit.ui.h:7
 msgid "Duplicate"
 msgstr "Duplica"
 
-#: ../data/ui/edit.ui.h:7
+#: ../data/ui/edit.ui.h:8
 msgid "Quit Arronax"
 msgstr "Surt d'Arronax"
 
-#: ../data/ui/edit.ui.h:8
+#: ../data/ui/edit.ui.h:9
 msgid "Save to application starter"
 msgstr "Desa en un iniciador d'aplicació"
 
-#: ../data/ui/edit.ui.h:9
+#: ../data/ui/edit.ui.h:10
 msgid "Save as another application starter"
 msgstr "Anomena i desa com un iniciador d'aplicació"
 
-#: ../data/ui/edit.ui.h:11
+#: ../data/ui/edit.ui.h:12
 msgid "_File"
 msgstr "_Fitxer"
 
-#: ../data/ui/edit.ui.h:12
+#: ../data/ui/edit.ui.h:13
 msgid "_Edit"
 msgstr "_Edita"
 
-#: ../data/ui/edit.ui.h:13
+#: ../data/ui/edit.ui.h:14
 msgid "_Help"
 msgstr "_Ajuda"
 
-#: ../data/ui/edit.ui.h:14
+#: ../data/ui/edit.ui.h:15
 msgid "Save current application starter"
 msgstr "Desa l'iniciador d'aplicació"
 
-#: ../data/ui/edit.ui.h:15
+#: ../data/ui/edit.ui.h:16
 msgid "What kind of starter do you want?"
 msgstr "Quin tipus d'iniciador voleu crear?"
 
-#: ../data/ui/edit.ui.h:16
+#: ../data/ui/edit.ui.h:17
 msgid "This is a starter for an application"
 msgstr "Aquest és un iniciador per a una aplicació"
 
-#: ../data/ui/edit.ui.h:17
+#: ../data/ui/edit.ui.h:18
 msgid "This is a starter for a file or a location"
 msgstr "Aquest és un iniciador per a un fitxer o ubicació"
 
-#: ../data/ui/edit.ui.h:18
+#: ../data/ui/edit.ui.h:19
 msgid "You can drop a starter here to load it."
 msgstr "Podeu deixar anar un iniciador aquí per a carregar-lo."
 
-#: ../data/ui/edit.ui.h:19
+#: ../data/ui/edit.ui.h:20
 msgid ""
 "The icon displayed for this starter. To change it, drop an image or a "
 "starter here or click."
@@ -350,23 +344,39 @@ msgstr ""
 "La icona que es mostra per a aquest iniciador. Per a canviar-la, deixeu anar "
 "una imatge o un iniciador aquí, o feu clic."
 
-#: ../data/ui/edit.ui.h:20
+#: ../data/ui/edit.ui.h:21
+msgid "Browse image files"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:22
+msgid "Browse icon theme"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:23
+msgid "Browse auto"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:24
+msgid "Change icon:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:25
 msgid "Title that is displayed for this starter file"
 msgstr "El nom que es mostra per a aquest iniciador"
 
-#: ../data/ui/edit.ui.h:21
+#: ../data/ui/edit.ui.h:26
 msgid "The command you want to start"
 msgstr "L'ordre que voleu iniciar."
 
-#: ../data/ui/edit.ui.h:22
+#: ../data/ui/edit.ui.h:27
 msgid "Select ..."
 msgstr "Selecciona..."
 
-#: ../data/ui/edit.ui.h:23
+#: ../data/ui/edit.ui.h:28
 msgid "Browse the file system to select a command"
 msgstr "Examineu el sistema de fitxers per a seleccionar una ordre"
 
-#: ../data/ui/edit.ui.h:24
+#: ../data/ui/edit.ui.h:29
 msgid ""
 "Path to a folder that is used as the \n"
 "working folder for the program"
@@ -374,16 +384,16 @@ msgstr ""
 "Ruta d'accés a una carpeta que s'utilitza com a \n"
 "carpeta de treball per a l'aplicació"
 
-#: ../data/ui/edit.ui.h:26
+#: ../data/ui/edit.ui.h:31
 msgid "Browse the file system to select a folder"
 msgstr "Examineu el sistema de fitxers per a seleccionar una carpeta"
 
-#: ../data/ui/edit.ui.h:27
+#: ../data/ui/edit.ui.h:32
 msgid "Hide this and any system wide starters with the same name."
 msgstr ""
 "Amaga aquest iniciador i qualsevol altre amb el mateix nom a tot els sistema."
 
-#: ../data/ui/edit.ui.h:28
+#: ../data/ui/edit.ui.h:33
 msgid ""
 "The application will show at least one window with the given string as its "
 "WM class or WM name hint"
@@ -391,73 +401,73 @@ msgstr ""
 "L'aplicació mostrarà almenys una finestra amb la cadena proporcionada com la "
 "seva classe WM o com a pista de nom de WM"
 
-#: ../data/ui/edit.ui.h:29
+#: ../data/ui/edit.ui.h:34
 msgid "Tooltip for the entry"
 msgstr "Indicador de funció per a l'iniciador"
 
-#: ../data/ui/edit.ui.h:30
+#: ../data/ui/edit.ui.h:35
 msgid "If switched on the command is run in a Terminal window"
 msgstr "Si l'activeu, l'ordre s'executarà en una finestra de Terminal"
 
-#: ../data/ui/edit.ui.h:31
+#: ../data/ui/edit.ui.h:36
 msgid "Title:"
 msgstr "Nom:"
 
-#: ../data/ui/edit.ui.h:33
+#: ../data/ui/edit.ui.h:38
 msgid "Start in folder:"
 msgstr "Carpeta d'inici:"
 
-#: ../data/ui/edit.ui.h:34
+#: ../data/ui/edit.ui.h:39
 msgid "Hidden:"
 msgstr "Ocult:"
 
-#: ../data/ui/edit.ui.h:35
+#: ../data/ui/edit.ui.h:40
 msgid "Window Class:"
 msgstr "Classe de finestra:"
 
-#: ../data/ui/edit.ui.h:36
+#: ../data/ui/edit.ui.h:41
 msgid "Comment:"
 msgstr "Comentari:"
 
-#: ../data/ui/edit.ui.h:37
+#: ../data/ui/edit.ui.h:42
 msgid "Categories in which the entry should be shown in a menu"
 msgstr "Categories en les quals cal mostrar l'iniciador en un menú"
 
-#: ../data/ui/edit.ui.h:38
+#: ../data/ui/edit.ui.h:43
 msgid "Categories:"
 msgstr "Categories:"
 
-#: ../data/ui/edit.ui.h:39
+#: ../data/ui/edit.ui.h:44
 msgid "Run in Terminal:"
 msgstr "Obre en un Terminal:"
 
-#: ../data/ui/edit.ui.h:40
+#: ../data/ui/edit.ui.h:45
 msgid "Basic settings"
 msgstr "Ajustaments bàsics"
 
-#: ../data/ui/edit.ui.h:41
+#: ../data/ui/edit.ui.h:46
 msgid "_Basic"
 msgstr "_Bàsic"
 
-#: ../data/ui/edit.ui.h:42
+#: ../data/ui/edit.ui.h:47
 msgid "Select the environments that should show your starter."
 msgstr "Seleccioneu els entorns que han de mostrar el vostre iniciador."
 
-#: ../data/ui/edit.ui.h:43
+#: ../data/ui/edit.ui.h:48
 msgid "<small>Select the environments that should show your starter.</small>"
 msgstr ""
 "<small>Seleccioneu els entorns que han de mostrar el vostre iniciador.</"
 "small>"
 
-#: ../data/ui/edit.ui.h:44
+#: ../data/ui/edit.ui.h:49
 msgid "Do you want the starter to be visible only in some environments?"
 msgstr "Voleu que l'iniciador sigui visible només en alguns entorns?"
 
-#: ../data/ui/edit.ui.h:45
+#: ../data/ui/edit.ui.h:50
 msgid "_Show in"
 msgstr "Mo_strar a"
 
-#: ../data/ui/edit.ui.h:46
+#: ../data/ui/edit.ui.h:51
 msgid ""
 "<small>Quicklists provide additional actions for an application starter. "
 "They are used for example in the right-click menu of the Ubuntu Unity "
@@ -467,21 +477,21 @@ msgstr ""
 "iniciador d'aplicació. S'utilitzen per exemple en el clic del botó dret del "
 "ratolí damunt els iniciadors del Unity d'Ubuntu.</small>"
 
-#: ../data/ui/edit.ui.h:47
+#: ../data/ui/edit.ui.h:52
 msgid "Titles of your quicklist items"
 msgstr "Nom dels elements de la vostra llista ràpida"
 
-#: ../data/ui/edit.ui.h:48
+#: ../data/ui/edit.ui.h:53
 msgid "Quicklists provide additional actions for an application starter. "
 msgstr ""
 "Les llistes ràpides proporcionen accions addicionals per a un iniciador "
 "d'aplicació. "
 
-#: ../data/ui/edit.ui.h:49
+#: ../data/ui/edit.ui.h:54
 msgid "_Quicklist"
 msgstr "Llista _ràpida"
 
-#: ../data/ui/edit.ui.h:50
+#: ../data/ui/edit.ui.h:55
 msgid ""
 "<small>This are the MIME types your application is able to open. Your "
 "application will be listed in \"Open with...\" dialogs for files of this "
@@ -497,19 +507,19 @@ msgstr ""
 "arrossegueu fitxers damunt la caixa de text per a afegir els seus tipus MIME "
 "o feu servir el botó \"Selecciona...\".</small>"
 
-#: ../data/ui/edit.ui.h:53
+#: ../data/ui/edit.ui.h:58
 msgid "File types your command can open."
 msgstr "Tipus de fitxers que la vostra ordre pot obrir."
 
-#: ../data/ui/edit.ui.h:54
+#: ../data/ui/edit.ui.h:59
 msgid "The MIME types your application is able to open."
 msgstr "Els tipus MIME que la vostra aplicació pot obrir."
 
-#: ../data/ui/edit.ui.h:55
+#: ../data/ui/edit.ui.h:60
 msgid "_MIME types"
 msgstr "Tipus _MIME"
 
-#: ../data/ui/edit.ui.h:56
+#: ../data/ui/edit.ui.h:61
 msgid ""
 "<small>This keywords are used to some search functions (like the Ubuntu "
 "Unity Dash) to find your application.\n"
@@ -520,19 +530,19 @@ msgstr ""
 "Afegiu una Paraula clau per línia o bé separades per punts i coma (\";\").</"
 "small>"
 
-#: ../data/ui/edit.ui.h:58
+#: ../data/ui/edit.ui.h:63
 msgid "List of keywords that may be used for searching starters, e.g. in Unity"
 msgstr ""
 "Llista de paraules clau que s'utilitzaran en la cerca d'iniciadors, p. ex. "
 "al Unity"
 
-#: ../data/ui/edit.ui.h:59
+#: ../data/ui/edit.ui.h:64
 msgid "Keywords are used to some search functions to find your application."
 msgstr ""
 "Paraules clau utilitzades en algunes funcions de cerca per a trobar la "
 "vostra aplicació."
 
-#: ../data/ui/edit.ui.h:60
+#: ../data/ui/edit.ui.h:65
 msgid "_Keywords"
 msgstr "Paraules c_lau"
 
@@ -547,3 +557,12 @@ msgstr "_Ordre:"
 #: ../data/ui/quicklist.ui.h:3
 msgid "_Title:"
 msgstr "Nom"
+
+#~ msgid "Can not load starter"
+#~ msgstr "No s'ha pogut carregar l'iniciador"
+
+#~ msgid "File not loaded."
+#~ msgstr "El fitxer no s'ha carregat."
+
+#~ msgid "This is not a local file. File not loaded."
+#~ msgstr "No s'ha carregat el fitxer perquè no és un fitxer local."

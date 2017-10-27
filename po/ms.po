@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-21 23:18+0200\n"
+"POT-Creation-Date: 2017-10-26 19:19+0200\n"
 "PO-Revision-Date: 2013-09-05 14:34+0000\n"
 "Last-Translator: abuyop <Unknown>\n"
 "Language-Team: Malay <ms@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Selected"
 msgstr ""
 
-#: ../arronax/mimetypes.py:58 ../arronax/editor.py:91
+#: ../arronax/mimetypes.py:58 ../arronax/editor.py:96
 msgid "Name"
 msgstr ""
 
@@ -30,141 +30,129 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: ../arronax/editor.py:86
+#: ../arronax/editor.py:91
 msgid "Enabled"
 msgstr ""
 
-#: ../arronax/editor.py:102
+#: ../arronax/editor.py:107
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Memuatkan fail '%s' ..."
 
-#: ../arronax/editor.py:103
+#: ../arronax/editor.py:108
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Fail '%s' dimuatkan ..."
 
-#: ../arronax/editor.py:107
-msgid "Can not load starter"
-msgstr "Tidak dapat muatkan pemula"
-
-#: ../arronax/editor.py:108
-msgid "File not loaded."
-msgstr "Fail tidak dimuatkan."
-
-#: ../arronax/editor.py:134
+#: ../arronax/editor.py:161
 msgid "You need to provide a title."
 msgstr "Anda perlu sediakan tajuk."
 
-#: ../arronax/editor.py:137
+#: ../arronax/editor.py:164
 msgid "You need to provide a command."
 msgstr "Anda perlu sediakan satu perintah."
 
-#: ../arronax/editor.py:139
+#: ../arronax/editor.py:166
 msgid "You need to provide a URL or file name."
 msgstr "Anda perlu sediakan satu URL atau nama fail."
 
-#: ../arronax/editor.py:147
+#: ../arronax/editor.py:174
 msgid "Save now?"
 msgstr "Simpan sekarang?"
 
-#: ../arronax/editor.py:148
+#: ../arronax/editor.py:175
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
 "Anda mempunyai perubahan tidak disimpan. Anda hendak simpan ia sekarang?"
 
-#: ../arronax/editor.py:169 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:216 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Pilih Ikon"
 
-#: ../arronax/editor.py:279
+#: ../arronax/editor.py:324
 msgid "Error"
 msgstr "Ralat"
 
-#: ../arronax/editor.py:282
+#: ../arronax/editor.py:327
 #, python-format
 msgid "Saving file %s ..."
 msgstr ""
 
-#: ../arronax/editor.py:283
+#: ../arronax/editor.py:328
 #, python-format
 msgid "File %s saved."
 msgstr ""
 
-#: ../arronax/editor.py:293 ../arronax/editor.py:303
+#: ../arronax/editor.py:338 ../arronax/editor.py:348
 msgid "File not saved."
 msgstr "Fail tidak disimpan."
 
-#: ../arronax/editor.py:297
+#: ../arronax/editor.py:342
 #, python-format
 msgid "Saved file '%s'."
 msgstr "Fail '%s' disimpan."
 
-#: ../arronax/editor.py:301
+#: ../arronax/editor.py:346
 msgid "Can not save starter"
 msgstr "Tidak dapat simpan pemula"
 
-#: ../arronax/editor.py:330
-msgid "This is not a local file. File not loaded."
-msgstr ""
-
-#: ../arronax/editor.py:379
+#: ../arronax/editor.py:436
 msgid "File or URL:"
 msgstr "Fail atau URL:"
 
-#: ../arronax/editor.py:379 ../data/ui/edit.ui.h:32
+#: ../arronax/editor.py:436 ../data/ui/edit.ui.h:37
 msgid "Command:"
 msgstr "Perintah:"
 
-#: ../arronax/editor.py:447
+#: ../arronax/editor.py:504
 msgid "This is not an image. Icon not changed."
 msgstr "Ia bukanlah imej. Ikon tidak berubah."
 
-#: ../arronax/editor.py:450
+#: ../arronax/editor.py:507
 msgid "This is not a local file. Icon not changed."
 msgstr "Ia bukanlah fail setempat. Ikon tidak berubah."
 
-#: ../arronax/editor.py:484
+#: ../arronax/editor.py:552
 msgid "Created new starter."
 msgstr "Pemula baru dicipta."
 
-#: ../arronax/settings.py:60
+#: ../arronax/settings.py:58
 msgid "GNOME"
 msgstr "GNOME"
 
-#: ../arronax/settings.py:61
+#: ../arronax/settings.py:59
 msgid "KDE"
 msgstr "KDE"
 
-#: ../arronax/settings.py:62
+#: ../arronax/settings.py:60
 msgid "LXDE"
 msgstr "LXDE"
 
-#: ../arronax/settings.py:63
+#: ../arronax/settings.py:61
 msgid "MATE"
 msgstr "MATE"
 
-#: ../arronax/settings.py:64
+#: ../arronax/settings.py:62
 msgid "Razor-qt"
 msgstr "Razor-qt"
 
-#: ../arronax/settings.py:65
+#: ../arronax/settings.py:63
 msgid "ROX"
 msgstr "ROX"
 
-#: ../arronax/settings.py:66
+#: ../arronax/settings.py:64
 msgid "Trinity Desktop"
 msgstr "Desktop Trinity"
 
-#: ../arronax/settings.py:67
+#: ../arronax/settings.py:65
 msgid "Unity"
 msgstr "Unity"
 
-#: ../arronax/settings.py:68
+#: ../arronax/settings.py:66
 msgid "XFCE"
 msgstr "XFCE"
 
-#: ../arronax/settings.py:69
+#: ../arronax/settings.py:67
 msgid "Legacy environments"
 msgstr "Persekitaran legasi"
 
@@ -262,7 +250,7 @@ msgstr "Cipta satu pemula"
 msgid "Create a starter for this file"
 msgstr "Cipta pemula untuk fail ini"
 
-#: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:10
+#: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:11
 msgid "Arronax"
 msgstr "Arronax"
 
@@ -281,88 +269,110 @@ msgid "Show informations about Arronax"
 msgstr "Tunjuk maklumat mengenai Arronax"
 
 #: ../data/ui/edit.ui.h:3
-msgid "Select an icon for this starter"
+#, fuzzy
+msgid "Select an file or  icon for this starter"
 msgstr "Pilih satu ikon untuk pemula ini"
 
 #: ../data/ui/edit.ui.h:4
+#, fuzzy
+msgid "Browse files or icons to use as icon for this starter"
+msgstr "Pilih satu ikon untuk pemula ini"
+
+#: ../data/ui/edit.ui.h:5
 msgid "Create a new application starter"
 msgstr "Cipta pemula aplikasi baru"
 
-#: ../data/ui/edit.ui.h:5
+#: ../data/ui/edit.ui.h:6
 msgid "Open a application starter"
 msgstr "Buka pemula aplikasi"
 
-#: ../data/ui/edit.ui.h:6
+#: ../data/ui/edit.ui.h:7
 msgid "Duplicate"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:7
+#: ../data/ui/edit.ui.h:8
 msgid "Quit Arronax"
 msgstr "Keluar Arronax"
 
-#: ../data/ui/edit.ui.h:8
+#: ../data/ui/edit.ui.h:9
 msgid "Save to application starter"
 msgstr "Simpan ke pemula aplikasi"
 
-#: ../data/ui/edit.ui.h:9
+#: ../data/ui/edit.ui.h:10
 msgid "Save as another application starter"
 msgstr "Simpan sebagai pemula aplikasi lain"
 
-#: ../data/ui/edit.ui.h:11
+#: ../data/ui/edit.ui.h:12
 msgid "_File"
 msgstr "_Fail"
 
-#: ../data/ui/edit.ui.h:12
+#: ../data/ui/edit.ui.h:13
 msgid "_Edit"
 msgstr "_Sunting"
 
-#: ../data/ui/edit.ui.h:13
+#: ../data/ui/edit.ui.h:14
 msgid "_Help"
 msgstr "_Bantuan"
 
-#: ../data/ui/edit.ui.h:14
+#: ../data/ui/edit.ui.h:15
 msgid "Save current application starter"
 msgstr "Simpan pemula aplikasi semasa"
 
-#: ../data/ui/edit.ui.h:15
+#: ../data/ui/edit.ui.h:16
 msgid "What kind of starter do you want?"
 msgstr "Apakah jenis pemula yang anda mahu?"
 
-#: ../data/ui/edit.ui.h:16
+#: ../data/ui/edit.ui.h:17
 msgid "This is a starter for an application"
 msgstr "Ia merupakan pemula untuk aplikasi"
 
-#: ../data/ui/edit.ui.h:17
+#: ../data/ui/edit.ui.h:18
 msgid "This is a starter for a file or a location"
 msgstr "Ia merupakan pemula untuk fail atau lokasi"
 
-#: ../data/ui/edit.ui.h:18
+#: ../data/ui/edit.ui.h:19
 msgid "You can drop a starter here to load it."
 msgstr ""
 
-#: ../data/ui/edit.ui.h:19
+#: ../data/ui/edit.ui.h:20
 msgid ""
 "The icon displayed for this starter. To change it, drop an image or a "
 "starter here or click."
 msgstr ""
 
-#: ../data/ui/edit.ui.h:20
-msgid "Title that is displayed for this starter file"
-msgstr "Tajuk yang dipaparkan untuk fail pemula ini"
-
 #: ../data/ui/edit.ui.h:21
-msgid "The command you want to start"
-msgstr "Perintah yang anda mahu mulakan"
+msgid "Browse image files"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:22
-msgid "Select ..."
+msgid "Browse icon theme"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:23
+msgid "Browse auto"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:24
+msgid "Change icon:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:25
+msgid "Title that is displayed for this starter file"
+msgstr "Tajuk yang dipaparkan untuk fail pemula ini"
+
+#: ../data/ui/edit.ui.h:26
+msgid "The command you want to start"
+msgstr "Perintah yang anda mahu mulakan"
+
+#: ../data/ui/edit.ui.h:27
+msgid "Select ..."
+msgstr ""
+
+#: ../data/ui/edit.ui.h:28
 msgid "Browse the file system to select a command"
 msgstr "Layar sistem fail untuk memilih perintah"
 
-#: ../data/ui/edit.ui.h:24
+#: ../data/ui/edit.ui.h:29
 msgid ""
 "Path to a folder that is used as the \n"
 "working folder for the program"
@@ -370,16 +380,16 @@ msgstr ""
 "Laluan ke folder yang diguna sebagai\n"
 "folder kerja untuk program"
 
-#: ../data/ui/edit.ui.h:26
+#: ../data/ui/edit.ui.h:31
 msgid "Browse the file system to select a folder"
 msgstr "Layar sistem fail untuk memilih satu folder"
 
-#: ../data/ui/edit.ui.h:27
+#: ../data/ui/edit.ui.h:32
 msgid "Hide this and any system wide starters with the same name."
 msgstr ""
 "Sembunyi ini dan mana-mana pemula menyeluruhi sistem dengan nama yang serupa."
 
-#: ../data/ui/edit.ui.h:28
+#: ../data/ui/edit.ui.h:33
 msgid ""
 "The application will show at least one window with the given string as its "
 "WM class or WM name hint"
@@ -387,90 +397,90 @@ msgstr ""
 "Aplikasi akan tunjukkan sekurang-kurangnya satu tetingkap dengan rentetan "
 "yang diberi sebagai kelas WMnya atau pembayang nama WM"
 
-#: ../data/ui/edit.ui.h:29
+#: ../data/ui/edit.ui.h:34
 msgid "Tooltip for the entry"
 msgstr "Tip alat untuk masukan"
 
-#: ../data/ui/edit.ui.h:30
+#: ../data/ui/edit.ui.h:35
 msgid "If switched on the command is run in a Terminal window"
 msgstr "Jika ditukar semasa perintah dijalankan dalam tetingkap Terminal"
 
-#: ../data/ui/edit.ui.h:31
+#: ../data/ui/edit.ui.h:36
 msgid "Title:"
 msgstr "Tajuk:"
 
-#: ../data/ui/edit.ui.h:33
+#: ../data/ui/edit.ui.h:38
 msgid "Start in folder:"
 msgstr "Mula dalam folder:"
 
-#: ../data/ui/edit.ui.h:34
+#: ../data/ui/edit.ui.h:39
 msgid "Hidden:"
 msgstr "Tersembunyi:"
 
-#: ../data/ui/edit.ui.h:35
+#: ../data/ui/edit.ui.h:40
 msgid "Window Class:"
 msgstr "Kelas Tetingkap:"
 
-#: ../data/ui/edit.ui.h:36
+#: ../data/ui/edit.ui.h:41
 msgid "Comment:"
 msgstr "Ulasan:"
 
-#: ../data/ui/edit.ui.h:37
+#: ../data/ui/edit.ui.h:42
 msgid "Categories in which the entry should be shown in a menu"
 msgstr "Kategori yang mana masukan patut ditunjukkan dalam menu"
 
-#: ../data/ui/edit.ui.h:38
+#: ../data/ui/edit.ui.h:43
 msgid "Categories:"
 msgstr "Kategori:"
 
-#: ../data/ui/edit.ui.h:39
+#: ../data/ui/edit.ui.h:44
 msgid "Run in Terminal:"
 msgstr "Jalankan dalam Terminal:"
 
-#: ../data/ui/edit.ui.h:40
+#: ../data/ui/edit.ui.h:45
 msgid "Basic settings"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:41
+#: ../data/ui/edit.ui.h:46
 msgid "_Basic"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:42
+#: ../data/ui/edit.ui.h:47
 msgid "Select the environments that should show your starter."
 msgstr ""
 
-#: ../data/ui/edit.ui.h:43
+#: ../data/ui/edit.ui.h:48
 msgid "<small>Select the environments that should show your starter.</small>"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:44
+#: ../data/ui/edit.ui.h:49
 msgid "Do you want the starter to be visible only in some environments?"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:45
+#: ../data/ui/edit.ui.h:50
 msgid "_Show in"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:46
+#: ../data/ui/edit.ui.h:51
 msgid ""
 "<small>Quicklists provide additional actions for an application starter. "
 "They are used for example in the right-click menu of the Ubuntu Unity "
 "starter entries.</small>"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:47
+#: ../data/ui/edit.ui.h:52
 msgid "Titles of your quicklist items"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:48
+#: ../data/ui/edit.ui.h:53
 msgid "Quicklists provide additional actions for an application starter. "
 msgstr ""
 
-#: ../data/ui/edit.ui.h:49
+#: ../data/ui/edit.ui.h:54
 msgid "_Quicklist"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:50
+#: ../data/ui/edit.ui.h:55
 msgid ""
 "<small>This are the MIME types your application is able to open. Your "
 "application will be listed in \"Open with...\" dialogs for files of this "
@@ -480,35 +490,35 @@ msgid ""
 "\"Select ...\" button.</small>"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:53
+#: ../data/ui/edit.ui.h:58
 msgid "File types your command can open."
 msgstr "Jenis fail yang mana perintah anda boleh buka."
 
-#: ../data/ui/edit.ui.h:54
+#: ../data/ui/edit.ui.h:59
 msgid "The MIME types your application is able to open."
 msgstr ""
 
-#: ../data/ui/edit.ui.h:55
+#: ../data/ui/edit.ui.h:60
 msgid "_MIME types"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:56
+#: ../data/ui/edit.ui.h:61
 msgid ""
 "<small>This keywords are used to some search functions (like the Ubuntu "
 "Unity Dash) to find your application.\n"
 "Add Keywords one per line or separated by semicolons (\";\").</small>"
 msgstr ""
 
-#: ../data/ui/edit.ui.h:58
+#: ../data/ui/edit.ui.h:63
 msgid "List of keywords that may be used for searching starters, e.g. in Unity"
 msgstr ""
 "Senarai kata kunci yang diguna untuk menggelintar pemula, cth. dalam Unity"
 
-#: ../data/ui/edit.ui.h:59
+#: ../data/ui/edit.ui.h:64
 msgid "Keywords are used to some search functions to find your application."
 msgstr ""
 
-#: ../data/ui/edit.ui.h:60
+#: ../data/ui/edit.ui.h:65
 msgid "_Keywords"
 msgstr ""
 
@@ -523,3 +533,9 @@ msgstr ""
 #: ../data/ui/quicklist.ui.h:3
 msgid "_Title:"
 msgstr ""
+
+#~ msgid "Can not load starter"
+#~ msgstr "Tidak dapat muatkan pemula"
+
+#~ msgid "File not loaded."
+#~ msgstr "Fail tidak dimuatkan."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-21 23:18+0200\n"
+"POT-Creation-Date: 2017-10-26 19:19+0200\n"
 "PO-Revision-Date: 2014-07-03 17:35+0000\n"
 "Last-Translator: Tobias Bannert <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Selected"
 msgstr "Ausgewählt"
 
-#: ../arronax/mimetypes.py:58 ../arronax/editor.py:91
+#: ../arronax/mimetypes.py:58 ../arronax/editor.py:96
 msgid "Name"
 msgstr "Name"
 
@@ -30,141 +30,129 @@ msgstr "Name"
 msgid "Description"
 msgstr "Beschreibung"
 
-#: ../arronax/editor.py:86
+#: ../arronax/editor.py:91
 msgid "Enabled"
 msgstr "Aktiviert"
 
-#: ../arronax/editor.py:102
+#: ../arronax/editor.py:107
 #, python-format
 msgid "Loading file '%s' ..."
 msgstr "Lade Datei '%s' ..."
 
-#: ../arronax/editor.py:103
+#: ../arronax/editor.py:108
 #, python-format
 msgid "Loaded file '%s' ..."
 msgstr "Datei '%s' geladen."
 
-#: ../arronax/editor.py:107
-msgid "Can not load starter"
-msgstr "Starter kann nicht geladen werden"
-
-#: ../arronax/editor.py:108
-msgid "File not loaded."
-msgstr "Datei nicht geladen."
-
-#: ../arronax/editor.py:134
+#: ../arronax/editor.py:161
 msgid "You need to provide a title."
 msgstr "Sie müssen einen Titel angeben."
 
-#: ../arronax/editor.py:137
+#: ../arronax/editor.py:164
 msgid "You need to provide a command."
 msgstr "Sie müssen einen Befehl angeben."
 
-#: ../arronax/editor.py:139
+#: ../arronax/editor.py:166
 msgid "You need to provide a URL or file name."
 msgstr "Sie müssen eine URL oder einen Dateinamen angeben."
 
-#: ../arronax/editor.py:147
+#: ../arronax/editor.py:174
 msgid "Save now?"
 msgstr "Jetzt speichern?"
 
-#: ../arronax/editor.py:148
+#: ../arronax/editor.py:175
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
 "Einige Änderungen wurden noch nicht gespeichert. Wollen Sie jetzt speichern?"
 
-#: ../arronax/editor.py:169 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:216 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Wählen Sie ein Symbol"
 
-#: ../arronax/editor.py:279
+#: ../arronax/editor.py:324
 msgid "Error"
 msgstr "Fehler"
 
-#: ../arronax/editor.py:282
+#: ../arronax/editor.py:327
 #, python-format
 msgid "Saving file %s ..."
 msgstr "Speichere Datei %s"
 
-#: ../arronax/editor.py:283
+#: ../arronax/editor.py:328
 #, python-format
 msgid "File %s saved."
 msgstr "Datei %s gespeichert."
 
-#: ../arronax/editor.py:293 ../arronax/editor.py:303
+#: ../arronax/editor.py:338 ../arronax/editor.py:348
 msgid "File not saved."
 msgstr "Datei nicht gespeichert."
 
-#: ../arronax/editor.py:297
+#: ../arronax/editor.py:342
 #, python-format
 msgid "Saved file '%s'."
 msgstr "Datei '%s' gespeichert."
 
-#: ../arronax/editor.py:301
+#: ../arronax/editor.py:346
 msgid "Can not save starter"
 msgstr "Starter kann nicht gespeichert werden"
 
-#: ../arronax/editor.py:330
-msgid "This is not a local file. File not loaded."
-msgstr "Dies ist keine lokale Datei. Datei nicht geladen."
-
-#: ../arronax/editor.py:379
+#: ../arronax/editor.py:436
 msgid "File or URL:"
 msgstr "Datei oder Ort (URL):"
 
-#: ../arronax/editor.py:379 ../data/ui/edit.ui.h:32
+#: ../arronax/editor.py:436 ../data/ui/edit.ui.h:37
 msgid "Command:"
 msgstr "Befehl:"
 
-#: ../arronax/editor.py:447
+#: ../arronax/editor.py:504
 msgid "This is not an image. Icon not changed."
 msgstr "Das ist keine Bild-Datei. Symbol nicht geändert."
 
-#: ../arronax/editor.py:450
+#: ../arronax/editor.py:507
 msgid "This is not a local file. Icon not changed."
 msgstr "Das ist keine lokale Datei. Symbol nicht geändert."
 
-#: ../arronax/editor.py:484
+#: ../arronax/editor.py:552
 msgid "Created new starter."
 msgstr "Neuen Starter angelegt."
 
-#: ../arronax/settings.py:60
+#: ../arronax/settings.py:58
 msgid "GNOME"
 msgstr "GNOME"
 
-#: ../arronax/settings.py:61
+#: ../arronax/settings.py:59
 msgid "KDE"
 msgstr "KDE"
 
-#: ../arronax/settings.py:62
+#: ../arronax/settings.py:60
 msgid "LXDE"
 msgstr "LXDE"
 
-#: ../arronax/settings.py:63
+#: ../arronax/settings.py:61
 msgid "MATE"
 msgstr "MATE"
 
-#: ../arronax/settings.py:64
+#: ../arronax/settings.py:62
 msgid "Razor-qt"
 msgstr "Razor-qt"
 
-#: ../arronax/settings.py:65
+#: ../arronax/settings.py:63
 msgid "ROX"
 msgstr "ROX"
 
-#: ../arronax/settings.py:66
+#: ../arronax/settings.py:64
 msgid "Trinity Desktop"
 msgstr "Trinity Arbeitsumgebung"
 
-#: ../arronax/settings.py:67
+#: ../arronax/settings.py:65
 msgid "Unity"
 msgstr "Unity"
 
-#: ../arronax/settings.py:68
+#: ../arronax/settings.py:66
 msgid "XFCE"
 msgstr "XFCE"
 
-#: ../arronax/settings.py:69
+#: ../arronax/settings.py:67
 msgid "Legacy environments"
 msgstr "traditionelle Arbeitsumgebungen"
 
@@ -263,7 +251,7 @@ msgstr "Einen Starter anlegen"
 msgid "Create a starter for this file"
 msgstr "Einen Starter für diese Datei anlegen"
 
-#: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:10
+#: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:11
 msgid "Arronax"
 msgstr "Arronax"
 
@@ -285,66 +273,72 @@ msgid "Show informations about Arronax"
 msgstr "Informationen über Arronax anzeigen"
 
 #: ../data/ui/edit.ui.h:3
-msgid "Select an icon for this starter"
+#, fuzzy
+msgid "Select an file or  icon for this starter"
 msgstr "Wählen Sie einen Symbol für diesen Starter"
 
 #: ../data/ui/edit.ui.h:4
+#, fuzzy
+msgid "Browse files or icons to use as icon for this starter"
+msgstr "Wählen Sie einen Symbol für diesen Starter"
+
+#: ../data/ui/edit.ui.h:5
 msgid "Create a new application starter"
 msgstr "Einen neuen Starter anlegen"
 
-#: ../data/ui/edit.ui.h:5
+#: ../data/ui/edit.ui.h:6
 msgid "Open a application starter"
 msgstr "Einen Starter öffnen"
 
-#: ../data/ui/edit.ui.h:6
+#: ../data/ui/edit.ui.h:7
 msgid "Duplicate"
 msgstr "Verdoppeln"
 
-#: ../data/ui/edit.ui.h:7
+#: ../data/ui/edit.ui.h:8
 msgid "Quit Arronax"
 msgstr "Arronax beenden"
 
-#: ../data/ui/edit.ui.h:8
+#: ../data/ui/edit.ui.h:9
 msgid "Save to application starter"
 msgstr "Den Starter speichern"
 
-#: ../data/ui/edit.ui.h:9
+#: ../data/ui/edit.ui.h:10
 msgid "Save as another application starter"
 msgstr "Als einen anderen Starter speichern"
 
-#: ../data/ui/edit.ui.h:11
+#: ../data/ui/edit.ui.h:12
 msgid "_File"
 msgstr "_Datei"
 
-#: ../data/ui/edit.ui.h:12
+#: ../data/ui/edit.ui.h:13
 msgid "_Edit"
 msgstr "_Bearbeiten"
 
-#: ../data/ui/edit.ui.h:13
+#: ../data/ui/edit.ui.h:14
 msgid "_Help"
 msgstr "_Hilfe"
 
-#: ../data/ui/edit.ui.h:14
+#: ../data/ui/edit.ui.h:15
 msgid "Save current application starter"
 msgstr "Den aktuellen Starter speichern"
 
-#: ../data/ui/edit.ui.h:15
+#: ../data/ui/edit.ui.h:16
 msgid "What kind of starter do you want?"
 msgstr "Welche Art von Starter wollen Sie?"
 
-#: ../data/ui/edit.ui.h:16
+#: ../data/ui/edit.ui.h:17
 msgid "This is a starter for an application"
 msgstr "Dies ist ein Starter für ein Programm"
 
-#: ../data/ui/edit.ui.h:17
+#: ../data/ui/edit.ui.h:18
 msgid "This is a starter for a file or a location"
 msgstr "Dies ist ein Starter für eine Datei oder einen Ort"
 
-#: ../data/ui/edit.ui.h:18
+#: ../data/ui/edit.ui.h:19
 msgid "You can drop a starter here to load it."
 msgstr "Sie können einen Starter hierher ziehen, um ihn zu öffnen."
 
-#: ../data/ui/edit.ui.h:19
+#: ../data/ui/edit.ui.h:20
 msgid ""
 "The icon displayed for this starter. To change it, drop an image or a "
 "starter here or click."
@@ -352,39 +346,55 @@ msgstr ""
 "Das Symbol für den Starter. Sie können ein Bild hierher ziehen oder hier "
 "klicken, um das Symbol zu ändern."
 
-#: ../data/ui/edit.ui.h:20
+#: ../data/ui/edit.ui.h:21
+msgid "Browse image files"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:22
+msgid "Browse icon theme"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:23
+msgid "Browse auto"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:24
+msgid "Change icon:"
+msgstr ""
+
+#: ../data/ui/edit.ui.h:25
 msgid "Title that is displayed for this starter file"
 msgstr "Titel, der für diesen Starter angezeigt wird"
 
-#: ../data/ui/edit.ui.h:21
+#: ../data/ui/edit.ui.h:26
 msgid "The command you want to start"
 msgstr "Der Befehl, den Sie starten wollen"
 
-#: ../data/ui/edit.ui.h:22
+#: ../data/ui/edit.ui.h:27
 msgid "Select ..."
 msgstr "Auswählen ..."
 
-#: ../data/ui/edit.ui.h:23
+#: ../data/ui/edit.ui.h:28
 msgid "Browse the file system to select a command"
 msgstr "Durchsuchen Sie das Dateisystem, um einen Befehl auszuwählen"
 
-#: ../data/ui/edit.ui.h:24
+#: ../data/ui/edit.ui.h:29
 msgid ""
 "Path to a folder that is used as the \n"
 "working folder for the program"
 msgstr ""
 "Pfad des Ordners, der als aktueller Ordner für das Programm verwendet wird"
 
-#: ../data/ui/edit.ui.h:26
+#: ../data/ui/edit.ui.h:31
 msgid "Browse the file system to select a folder"
 msgstr "Durchsuchen Sie das Dateisystem, um einen Ordner auszuwählen."
 
-#: ../data/ui/edit.ui.h:27
+#: ../data/ui/edit.ui.h:32
 msgid "Hide this and any system wide starters with the same name."
 msgstr ""
 "Verstecke diesen Starter und alle systemweiten Starter mit dem gleichen Namen"
 
-#: ../data/ui/edit.ui.h:28
+#: ../data/ui/edit.ui.h:33
 msgid ""
 "The application will show at least one window with the given string as its "
 "WM class or WM name hint"
@@ -392,75 +402,75 @@ msgstr ""
 "Das Programm wird mindestens ein Fenster anzeigen, das diesen Wert als "
 "WM_CLASS oder WM_NAME benutzt"
 
-#: ../data/ui/edit.ui.h:29
+#: ../data/ui/edit.ui.h:34
 msgid "Tooltip for the entry"
 msgstr "Minihilfe für den Starter"
 
-#: ../data/ui/edit.ui.h:30
+#: ../data/ui/edit.ui.h:35
 msgid "If switched on the command is run in a Terminal window"
 msgstr "Wenn aktiviert, wird das Programm in einem Terminal-Fenster ausgeführt"
 
-#: ../data/ui/edit.ui.h:31
+#: ../data/ui/edit.ui.h:36
 msgid "Title:"
 msgstr "Titel:"
 
-#: ../data/ui/edit.ui.h:33
+#: ../data/ui/edit.ui.h:38
 msgid "Start in folder:"
 msgstr "Starte in Ordner:"
 
-#: ../data/ui/edit.ui.h:34
+#: ../data/ui/edit.ui.h:39
 msgid "Hidden:"
 msgstr "Verborgen:"
 
-#: ../data/ui/edit.ui.h:35
+#: ../data/ui/edit.ui.h:40
 msgid "Window Class:"
 msgstr "Fenster-Klasse:"
 
-#: ../data/ui/edit.ui.h:36
+#: ../data/ui/edit.ui.h:41
 msgid "Comment:"
 msgstr "Bemerkung:"
 
-#: ../data/ui/edit.ui.h:37
+#: ../data/ui/edit.ui.h:42
 msgid "Categories in which the entry should be shown in a menu"
 msgstr "Kategorien, in denen dieser Starter in einem Menü erscheinen soll"
 
-#: ../data/ui/edit.ui.h:38
+#: ../data/ui/edit.ui.h:43
 msgid "Categories:"
 msgstr "Kategorien:"
 
-#: ../data/ui/edit.ui.h:39
+#: ../data/ui/edit.ui.h:44
 msgid "Run in Terminal:"
 msgstr "Im Terminal ausführen:"
 
-#: ../data/ui/edit.ui.h:40
+#: ../data/ui/edit.ui.h:45
 msgid "Basic settings"
 msgstr "Grundeinstellungen"
 
-#: ../data/ui/edit.ui.h:41
+#: ../data/ui/edit.ui.h:46
 msgid "_Basic"
 msgstr "_Allgemein"
 
-#: ../data/ui/edit.ui.h:42
+#: ../data/ui/edit.ui.h:47
 msgid "Select the environments that should show your starter."
 msgstr "Wählen Sie die Arbeitsumgebungen, in denen der Starter sichtbar ist"
 
-#: ../data/ui/edit.ui.h:43
+#: ../data/ui/edit.ui.h:48
 msgid "<small>Select the environments that should show your starter.</small>"
 msgstr ""
 "<small>Wählen Sie die Arbeitsumgebungen, in denen der Starter sichtbar ist</"
 "small>"
 
-#: ../data/ui/edit.ui.h:44
+#: ../data/ui/edit.ui.h:49
 msgid "Do you want the starter to be visible only in some environments?"
 msgstr ""
 "Wollen Sie, dass der Starter nur in bestimmten Arbeitsumgebungen sichtbar "
 "ist?"
 
-#: ../data/ui/edit.ui.h:45
+#: ../data/ui/edit.ui.h:50
 msgid "_Show in"
 msgstr "Sichtbarkeit"
 
-#: ../data/ui/edit.ui.h:46
+#: ../data/ui/edit.ui.h:51
 msgid ""
 "<small>Quicklists provide additional actions for an application starter. "
 "They are used for example in the right-click menu of the Ubuntu Unity "
@@ -470,19 +480,19 @@ msgstr ""
 "Sie werden zum Beispiel im Rechtsklick-Menü der Starterleiste von Ubuntu "
 "Unity verwendet.</small>"
 
-#: ../data/ui/edit.ui.h:47
+#: ../data/ui/edit.ui.h:52
 msgid "Titles of your quicklist items"
 msgstr "Titel der Aktionslisten"
 
-#: ../data/ui/edit.ui.h:48
+#: ../data/ui/edit.ui.h:53
 msgid "Quicklists provide additional actions for an application starter. "
 msgstr "Aktionslisten enthalten zusätzliche Aktionen für Programm-Starter. "
 
-#: ../data/ui/edit.ui.h:49
+#: ../data/ui/edit.ui.h:54
 msgid "_Quicklist"
 msgstr "_Aktionsliste"
 
-#: ../data/ui/edit.ui.h:50
+#: ../data/ui/edit.ui.h:55
 msgid ""
 "<small>This are the MIME types your application is able to open. Your "
 "application will be listed in \"Open with...\" dialogs for files of this "
@@ -499,19 +509,19 @@ msgstr ""
 "Ziehen Sie die Dateien in das Textfeld, oder verwenden Sie die Schaltfläche "
 "\"Auswählen ...\", um MIME-Typen von Dateien hinzufügen </small>"
 
-#: ../data/ui/edit.ui.h:53
+#: ../data/ui/edit.ui.h:58
 msgid "File types your command can open."
 msgstr "Dateitypen, die das Programm öffnen kann"
 
-#: ../data/ui/edit.ui.h:54
+#: ../data/ui/edit.ui.h:59
 msgid "The MIME types your application is able to open."
 msgstr "Die MIME-Typen, die das Programm öffnen kann"
 
-#: ../data/ui/edit.ui.h:55
+#: ../data/ui/edit.ui.h:60
 msgid "_MIME types"
 msgstr "_MIME-Typen"
 
-#: ../data/ui/edit.ui.h:56
+#: ../data/ui/edit.ui.h:61
 msgid ""
 "<small>This keywords are used to some search functions (like the Ubuntu "
 "Unity Dash) to find your application.\n"
@@ -522,19 +532,19 @@ msgstr ""
 "Sie können Schlagwörter eines pro Zeile oder durch ein Semikolon (\";\") "
 "getrennt hinzufügen. </small>"
 
-#: ../data/ui/edit.ui.h:58
+#: ../data/ui/edit.ui.h:63
 msgid "List of keywords that may be used for searching starters, e.g. in Unity"
 msgstr ""
 "Liste mit Schlüsselwörtern, die in Suchfunktionen benutzt werde können, z.B. "
 "unter Unity"
 
-#: ../data/ui/edit.ui.h:59
+#: ../data/ui/edit.ui.h:64
 msgid "Keywords are used to some search functions to find your application."
 msgstr ""
 "Diese Schlüsselwörter werden von einige Suchfunktionen verwendet, um Ihre "
 "Anwendung zu finden."
 
-#: ../data/ui/edit.ui.h:60
+#: ../data/ui/edit.ui.h:65
 msgid "_Keywords"
 msgstr "Schlüsselwörter"
 
@@ -549,3 +559,12 @@ msgstr "_Befehl:"
 #: ../data/ui/quicklist.ui.h:3
 msgid "_Title:"
 msgstr "_Titel:"
+
+#~ msgid "Can not load starter"
+#~ msgstr "Starter kann nicht geladen werden"
+
+#~ msgid "File not loaded."
+#~ msgstr "Datei nicht geladen."
+
+#~ msgid "This is not a local file. File not loaded."
+#~ msgstr "Dies ist keine lokale Datei. Datei nicht geladen."

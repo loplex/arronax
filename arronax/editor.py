@@ -54,6 +54,9 @@ class Editor(object):
                                                  self.builder)
         statusbar.init(self['statusbar'])        
         about.add_help_menu(self['menu_help'])
+
+        self.icon_has_changed = False
+        
         self.setup_tv_show_in()
         self['cbox_type'].set_active(0)
         if mode is MODE_EDIT:
@@ -102,7 +105,8 @@ class Editor(object):
     def update_from_dfile(self):
         data = self.dfile.get_as_dict()
         self.set_data_for_all_widgets(data)
-        self.update_window_title()        
+        self.update_window_title()
+        self.icon_has_changed = False
 
 
     def read_desktop_file(self, path):
@@ -114,7 +118,7 @@ class Editor(object):
             else:
                 self.filename = path
                 self.update_from_dfile()
-                return True
+                return True        
 
 
     def use_file_or_uri_as_target(self, s, is_uri=False):
@@ -170,6 +174,8 @@ class Editor(object):
 
     def maybe_confirm_unsaved(self):
         data = self.get_data_from_all_widgets()
+        if not self.icon_has_changed:
+            data['icon'] = ''
         answer = None
         if self.dfile.is_dirty(data):
             answer = dialogs.yes_no_cancel_question(
@@ -258,6 +264,7 @@ class Editor(object):
     def set_icon(self, path):
         img = self['img_icon']
         msg = utils.load_file_into_image(img, path)
+        self.icon_has_changed = True
         if msg is not None:
             statusbar.show_msg(msg)
 
