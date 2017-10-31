@@ -8,13 +8,14 @@ Arronax is a program to create and modify starters (technically:
 .desktop files) for applications and locations (URLs).
 
 Arronax can be used as a standalone application or as a plugin for
-Nautilus, the default file manager of the Gnome and Unity desktop
-environments.  
+Caja (default file manager of the MATE desktop environment)
+Nautilus (default file manager of the Gnome and Unity desktop
+environments)  and Nemo (default file manager of the Cinnamon desktop environment).  
 
-Arronax as Nautilus extension
+Arronax as file manager extension
 =============================
 
-As Nautilus plugin Arronax adds a menu item “Create starter for this
+As file manager plugin Arronax adds a menu item “Create starter for this
 file” or “Create a starter for this program” to the context menu
 (that’s the menu you get when you right-click a file in the file
 manager). If the file is a application starter you get an item “Modify
@@ -35,8 +36,7 @@ Drag & Drop
 
 Arronax supports Drag&Drop:
 
-* You can drag an icon for example from the Unity Dash or the Gnome
-  Classic application menu and drop it on an open Arronax
+* You can drag an application icon and drop it on an open Arronax
   window. Don’t drop it on one of the input fields in the Arronax
   window but on the free space beneath the icon.
 
@@ -70,15 +70,35 @@ Launchpad so that I can fix it. Thank you.
  Requirements 
 ==============
 
-Arronax is beeing developed and tested on Ubuntu 12.04.3 “Precise Pangolin” and Ubuntu 14.04 “Trusty Tahr”.
+Arronax is beeing developed and tested on Ubuntu.
 
 Arronax needs:
 
-* Gnome 3.4 or later
+* Gtk 3.x
 * Python 2.7
 * PyGObject
 * distribute
-* Nautilus-Python 1.1 or later
+
+The Caja plugin needs:
+
+* Caja
+* Python binding for Caja
+* GObject introspection data for Caja
+
+The Nautilus plugin needs:
+
+* Nautilus
+* Python binding for Nautilus
+* GObject introspection data for Nautilus
+
+The Nemo plugin needs:
+
+* Nemo
+* Python binding for Nemo
+* GObject introspection data for Nemo
+
+
+
 
 If you install the .deb package this packages will be automatically
 installed if needed.  
