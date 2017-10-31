@@ -3,7 +3,7 @@
 import os.path
 from gi.repository import Gtk, GdkPixbuf
 
-import settings
+import settings, entrytools
 
 class IconDlg():
     def __init__(self, parent):
@@ -13,6 +13,7 @@ class IconDlg():
         self.builder.add_from_file(
             os.path.join(settings.UI_DIR, "icondlg.ui"))
         self.builder.connect_signals(self)
+        entrytools.add_clear_button_to_builder_obj(self.builder)
         self.tv = self['tv']
         self.filter = ''
 

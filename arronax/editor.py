@@ -10,7 +10,7 @@ import gettext
 
 import settings, desktopfile, clipboard, about, dialogs, iconbrowser
 import statusbar, filechooser, tvtools, quicklist, utils, mimetypes
-import categoriesbrowser
+import categoriesbrowser, entrytools
 
 IS_STANDALONE = False
 
@@ -48,7 +48,8 @@ class Editor(object):
             'Comment')
         utils.activate_drag_and_drop(self['tview_mime_types'])
 
-        self.quicklist = quicklist.Quicklist(self['tv_quicklist'])
+        self.quicklist = quicklist.Quicklist(
+            self['window1'], self['tv_quicklist'])
         self.dfile = desktopfile.DesktopFile()
         self.clip = clipboard.ContainerClipboard(self['box_main'], 
                                                  self.builder)
@@ -87,6 +88,7 @@ class Editor(object):
         self.builder.add_from_file(os.path.join(settings.UI_DIR, 
                                                 'edit.ui'))
         self.builder.connect_signals(self)
+        entrytools.add_clear_button_to_builder_obj(self.builder)
 
 
     def setup_tv_show_in(self):
