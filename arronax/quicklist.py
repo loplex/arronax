@@ -18,25 +18,14 @@ from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio, GObject
 import os, os.path, time, sys, urllib, urlparse
 from gettext import gettext as _
 
-import tvtools, settings
+import tvtools, settings, entrytools
 
 class Quicklist(object):
 
-    def __init__(self, treeview):
+    def __init__(self, parent, treeview):
+        self.parent = parent
         self.tv = treeview
         self.setup_treeview()
-
-        self.builder = Gtk.Builder()
-        self.builder.set_translation_domain(settings.GETTEXT_DOMAIN)
-        self.builder.add_from_file(
-            os.path.join(settings.UI_DIR, "quicklist.ui"))
-
-        self.builder.connect_signals(self)
-
-        
-    
-    def __getitem__(self, key):
-        return self.builder.get_object(key)
 
     def setup_treeview(self):
         model = Gtk.ListStore(str, str, str)
@@ -51,7 +40,8 @@ class Quicklist(object):
         builder.set_translation_domain(settings.GETTEXT_DOMAIN)
         builder.add_from_file(os.path.join(settings.UI_DIR, 
                                                 'quicklist.ui'))
-
+        
+        entrytools.add_clear_button_to_builder_obj(builder)
         e_title = builder.get_object('e_title')
         e_title.set_text(title)
 
@@ -59,6 +49,8 @@ class Quicklist(object):
         e_command.set_text(command)
 
         dialog = builder.get_object('dialog')
+        dialog.set_transient_for(self.parent)
+
         dialog.connect('drag-data-received', 
                        self.on_drag_data_received, e_title, e_command)
         dialog.drag_dest_set(Gtk.DestDefaults.ALL, [],  
