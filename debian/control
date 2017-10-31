@@ -61,3 +61,17 @@ Description: Create and modify application, file and URI starters.
  This package contains the Caja plugin for Arronax. It adds a 
  "Create starter" menu item to the Desktop's context menu and to the file 
  context menu in Caja
+
+
+Package: arronax-nemo
+Architecture: all
+X-Python-Version: >= 2.7
+Depends: ${python:Depends}, ${misc:Depends}, python (>=2.7) , arronax-base, nemo, nemo-python
+Conflicts: arronax (<= 0.03)
+Description: Create and modify application, file and URI starters.
+ Arronax lets you create and modify starters (*.desktop files) for applications,
+ files and URIs.
+ .
+ This package contains the Nemo plugin for Arronax. It adds a 
+ "Create starter" menu item to the Desktop's context menu and to the file 
+ context menu in Nemo
