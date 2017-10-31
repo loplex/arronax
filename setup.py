@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #-*- coding: utf-8-*-
 #
-# Arronax - a Nautilus plugin to create and modify .desktop files
+# Arronax - a application and filemananer plugin to create and modify .desktop files
 #
 # Copyright (C) 2012 Florian Diesch <devel@florian-diesch.de>
 #
@@ -23,16 +23,6 @@
 
 import glob
 from setuptools import setup, find_packages
-
-
-from setup_helpers import (
-    description, find_doctests, get_version, long_description, require_python)
-from setuptools import setup, find_packages
-
-try:
-    from DistUtilsExtra.command import *
-except ImportError:
-    raise RuntimeError('To build Masna you need https://launchpad.net/python-distutils-extra')
 
 from deb_setup_helpers import (get_deb_version, get_deb_description)
 
@@ -66,28 +56,29 @@ setup(
          glob.glob('data/desktop/*.desktop')),
         ('/usr/share/nautilus-python/extensions/',
          glob.glob('nautilus/*.py')),
+        ('/usr/share/nemo-python/extensions/',
+         glob.glob('nemo/*.py')),
         ('/usr/share/caja-python/extensions/',
          glob.glob('caja/*.py')),
         ],
     entry_points = {
         'console_scripts': ['arronax=arronax.editor:main'],
         },
-    keywords = "Nautilus, extension, plugin, starter, desktop", 
+    keywords = "Nautilus, Nemo, Caja, extension, plugin, starter, desktop", 
     classifiers=[
-     'Development Status :: 3 - Alpha',
-     'Environment :: X11 Applications :: Gnome',
-     'Intended Audience :: End Users/Desktop',
-     'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
-     'Natural Language :: English',
-     'Natural Language :: German',
-     'Operating System :: POSIX :: Linux',
-     'Programming Language :: Python',
-     'Topic :: Desktop Environment :: File Managers',
-     'Topic :: Desktop Environment :: Gnome',
-     'Topic :: Utilities',
+        'Development Status :: 6 - Mature',
+        'Environment :: X11 Applications',
+        'Environment :: X11 Applications :: Gnome',
+        'Environment :: X11 Applications :: GTK',
+        'Intended Audience :: End Users/Desktop',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'Natural Language :: English',
+        'Natural Language :: German',
+        'Operating System :: POSIX :: Linux',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: Implementation :: CPython',
+        'Topic :: Desktop Environment :: File Managers',
+        'Topic :: Desktop Environment :: Gnome',
+        'Topic :: Utilities',
         ],
-    cmdclass = { "build" : build_extra.build_extra,
-                 "build_i18n" :  build_i18n.build_i18n,
-                 "build_help" :  build_help.build_help,
-                 "build_icons" :  build_icons.build_icons }
     )
