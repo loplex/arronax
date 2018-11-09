@@ -1,11 +1,23 @@
 include *.py
 include COPYING
+include MANIFEST.in
 include *.txt
 include setup.cfg
-recursive-include data *.png *.svg *.ui *.in
-recursive-include po *.po *.pot *.in
+
+recursive-include data *.png *.svg *.ui *.in *.mo
+recursive-include po *.po *.pot *.in 
 recursive-include debian *
+recursive-exclude debian *.log
+recursive-include scripts *.sh
 
+prune debian/arronax
+prune debian/arronax-base
+prune debian/arronax-caja
+prune debian/arronax-nautilus
+prune debian/arronax-nemo
+prune debian/tmp
+prune debian/.debhelper
 
+global-exclude *~
 
 
