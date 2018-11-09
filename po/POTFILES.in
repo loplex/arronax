@@ -1,19 +1,26 @@
-arronax/statusbar.py
-arronax/__init__.py
-arronax/mimetypes.py
-arronax/editor.py
-arronax/settings.py
 arronax/quicklist.py
-arronax/xdgpath.py
-arronax/tvtools.py
-arronax/utils.py
-arronax/filechooser.py
+arronax/clipboard.py
+arronax/editor.py
+arronax/statusbar.py
+arronax/xdgdirs.py
 arronax/about.py
 arronax/dialogs.py
+arronax/xdgpath.py
+arronax/mimetypes.py
+arronax/_meta.py
+arronax/categoriesbrowser.py
+arronax/plugin.py
+arronax/utils.py
+arronax/iconbrowser.py
+arronax/__init__.py
+arronax/filechooser.py
 arronax/desktopfile.py
-arronax/clipboard.py
-nautilus/nautilus-arronax.py
+arronax/tvtools.py
+arronax/entrytools.py
+arronax/settings.py
 data/desktop/arronax.desktop.in
 [type: gettext/glade]data/ui/mimetypes.ui
 [type: gettext/glade]data/ui/edit.ui
+[type: gettext/glade]data/ui/categoriesdlg.ui
 [type: gettext/glade]data/ui/quicklist.ui
+[type: gettext/glade]data/ui/icondlg.ui

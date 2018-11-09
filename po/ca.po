@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-26 19:19+0200\n"
+"POT-Creation-Date: 2018-10-31 14:03+0100\n"
 "PO-Revision-Date: 2014-06-24 19:05+0000\n"
 "Last-Translator: metacibi <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
@@ -18,146 +18,152 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-07-16 12:36+0000\n"
 "X-Generator: Launchpad (build 17112)\n"
 
-#: ../arronax/mimetypes.py:47
-msgid "Selected"
-msgstr "Seleccionat"
+#: ../arronax/quicklist.py:33
+msgid "Title"
+msgstr "Nom"
 
-#: ../arronax/mimetypes.py:58 ../arronax/editor.py:96
+#: ../arronax/editor.py:98
+msgid "Enabled"
+msgstr "Habilitat"
+
+#: ../arronax/editor.py:103 ../arronax/mimetypes.py:58
 msgid "Name"
 msgstr "Nom"
+
+#: ../arronax/editor.py:115
+#, python-format
+msgid "Loading file '%s' ..."
+msgstr "Carregant el fitxer '%s' ..."
+
+#: ../arronax/editor.py:116
+#, python-format
+msgid "Loaded file '%s' ..."
+msgstr "Fitxer '%s' carregat ..."
+
+#: ../arronax/editor.py:169
+msgid "You need to provide a title."
+msgstr "Heu de proporcionar un nom."
+
+#: ../arronax/editor.py:172
+msgid "You need to provide a command."
+msgstr "Heu de proporcionar una ordre."
+
+#: ../arronax/editor.py:174
+msgid "You need to provide a URL or file name."
+msgstr "Heu de proporcionar una URL o un nom de fitxer."
+
+#: ../arronax/editor.py:184
+msgid "Save now?"
+msgstr "Voleu desar ara?"
+
+#: ../arronax/editor.py:185
+msgid "You have unsaved changes.  Do you want to save them now?"
+msgstr "Teniu canvis sense desar. Voleu desar-los ara?"
+
+#: ../arronax/editor.py:226 ../data/ui/edit.ui.h:2 ../data/ui/icondlg.ui.h:1
+msgid "Select Icon"
+msgstr "Seleccioneu una icona"
+
+#: ../arronax/editor.py:335
+msgid "Error"
+msgstr "S'ha produït un error"
+
+#: ../arronax/editor.py:338
+#, python-format
+msgid "Saving file %s ..."
+msgstr "Desant el fitxer %s ..."
+
+#: ../arronax/editor.py:339
+#, python-format
+msgid "File %s saved."
+msgstr "S'ha desat el fitxer %s."
+
+#: ../arronax/editor.py:349 ../arronax/editor.py:359
+msgid "File not saved."
+msgstr "El fitxer no s'ha desat."
+
+#: ../arronax/editor.py:353
+#, python-format
+msgid "Saved file '%s'."
+msgstr "El fitxer '%s' s'ha desat."
+
+#: ../arronax/editor.py:357
+msgid "Can not save starter"
+msgstr "No es pot desar l'iniciador"
+
+#: ../arronax/editor.py:447
+msgid "File or URL:"
+msgstr "Fitxer o URL:"
+
+#: ../arronax/editor.py:447 ../data/ui/edit.ui.h:37
+msgid "Command:"
+msgstr "Ordre:"
+
+#: ../arronax/editor.py:534
+msgid "This is not an image. Icon not changed."
+msgstr "No s'ha canviat la icona perquè el fitxer no és una imatge."
+
+#: ../arronax/editor.py:537
+msgid "This is not a local file. Icon not changed."
+msgstr "No s'ha canviat la icona perquè el fitxer no és un fitxer local."
+
+#: ../arronax/editor.py:581
+msgid "Created new starter."
+msgstr "S'ha creat un nou iniciador."
+
+#: ../arronax/about.py:12
+msgid "Go to Web Page"
+msgstr "Ves a la Pàgina Web"
+
+#: ../arronax/about.py:21
+msgid "Ask a Question"
+msgstr "Tramet una pregunta"
+
+#: ../arronax/about.py:30
+msgid "Report a Bug"
+msgstr "Informeu d'un problema"
+
+#: ../arronax/about.py:36
+msgid "Help with Translations"
+msgstr "Ajudeu amb la Traducció"
+
+#: ../arronax/about.py:42
+msgid "Donate via Flattr"
+msgstr "Feu una donació via Flattr"
+
+#: ../arronax/about.py:48
+msgid "Donate via PayPal"
+msgstr "Feu una donació via PayPal"
+
+#: ../arronax/about.py:94
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  metacibi https://launchpad.net/~metacibi"
+
+#: ../arronax/mimetypes.py:47 ../arronax/categoriesbrowser.py:40
+msgid "Selected"
+msgstr "Seleccionat"
 
 #: ../arronax/mimetypes.py:60
 msgid "Description"
 msgstr "Descripció"
 
-#: ../arronax/editor.py:91
-msgid "Enabled"
-msgstr "Habilitat"
+#: ../arronax/plugin.py:23
+msgid "Create a starter for this program"
+msgstr "Crea un iniciador per a aquesta aplicació"
 
-#: ../arronax/editor.py:107
-#, python-format
-msgid "Loading file '%s' ..."
-msgstr "Carregant el fitxer '%s' ..."
+#: ../arronax/plugin.py:29
+msgid "Modify this starter"
+msgstr "Modifica aquest iniciador"
 
-#: ../arronax/editor.py:108
-#, python-format
-msgid "Loaded file '%s' ..."
-msgstr "Fitxer '%s' carregat ..."
+#: ../arronax/plugin.py:35
+msgid "Create a starter"
+msgstr "Crea un iniciador"
 
-#: ../arronax/editor.py:161
-msgid "You need to provide a title."
-msgstr "Heu de proporcionar un nom."
-
-#: ../arronax/editor.py:164
-msgid "You need to provide a command."
-msgstr "Heu de proporcionar una ordre."
-
-#: ../arronax/editor.py:166
-msgid "You need to provide a URL or file name."
-msgstr "Heu de proporcionar una URL o un nom de fitxer."
-
-#: ../arronax/editor.py:174
-msgid "Save now?"
-msgstr "Voleu desar ara?"
-
-#: ../arronax/editor.py:175
-msgid "You have unsaved changes.  Do you want to save them now?"
-msgstr "Teniu canvis sense desar. Voleu desar-los ara?"
-
-#: ../arronax/editor.py:216 ../data/ui/edit.ui.h:2
-msgid "Select Icon"
-msgstr "Seleccioneu una icona"
-
-#: ../arronax/editor.py:324
-msgid "Error"
-msgstr "S'ha produït un error"
-
-#: ../arronax/editor.py:327
-#, python-format
-msgid "Saving file %s ..."
-msgstr "Desant el fitxer %s ..."
-
-#: ../arronax/editor.py:328
-#, python-format
-msgid "File %s saved."
-msgstr "S'ha desat el fitxer %s."
-
-#: ../arronax/editor.py:338 ../arronax/editor.py:348
-msgid "File not saved."
-msgstr "El fitxer no s'ha desat."
-
-#: ../arronax/editor.py:342
-#, python-format
-msgid "Saved file '%s'."
-msgstr "El fitxer '%s' s'ha desat."
-
-#: ../arronax/editor.py:346
-msgid "Can not save starter"
-msgstr "No es pot desar l'iniciador"
-
-#: ../arronax/editor.py:436
-msgid "File or URL:"
-msgstr "Fitxer o URL:"
-
-#: ../arronax/editor.py:436 ../data/ui/edit.ui.h:37
-msgid "Command:"
-msgstr "Ordre:"
-
-#: ../arronax/editor.py:504
-msgid "This is not an image. Icon not changed."
-msgstr "No s'ha canviat la icona perquè el fitxer no és una imatge."
-
-#: ../arronax/editor.py:507
-msgid "This is not a local file. Icon not changed."
-msgstr "No s'ha canviat la icona perquè el fitxer no és un fitxer local."
-
-#: ../arronax/editor.py:552
-msgid "Created new starter."
-msgstr "S'ha creat un nou iniciador."
-
-#: ../arronax/settings.py:58
-msgid "GNOME"
-msgstr "GNOME"
-
-#: ../arronax/settings.py:59
-msgid "KDE"
-msgstr "KDE"
-
-#: ../arronax/settings.py:60
-msgid "LXDE"
-msgstr "LXDE"
-
-#: ../arronax/settings.py:61
-msgid "MATE"
-msgstr "MATE"
-
-#: ../arronax/settings.py:62
-msgid "Razor-qt"
-msgstr "Razor-qt"
-
-#: ../arronax/settings.py:63
-msgid "ROX"
-msgstr "ROX"
-
-#: ../arronax/settings.py:64
-msgid "Trinity Desktop"
-msgstr "Trinity Desktop"
-
-#: ../arronax/settings.py:65
-msgid "Unity"
-msgstr "Unity"
-
-#: ../arronax/settings.py:66
-msgid "XFCE"
-msgstr "XFCE"
-
-#: ../arronax/settings.py:67
-msgid "Legacy environments"
-msgstr "Entorns heretats"
-
-#: ../arronax/quicklist.py:44
-msgid "Title"
-msgstr "Nom"
+#: ../arronax/plugin.py:41
+msgid "Create a starter for this file"
+msgstr "Crea un iniciador per a aquest fitxer"
 
 #: ../arronax/filechooser.py:15
 msgid "Open File"
@@ -203,51 +209,45 @@ msgstr "Vés a la carpeta d'inici automàtic de l'usuari"
 msgid "System Autostart Folder"
 msgstr "Vés a la carpeta d'inici automàtic del sistema"
 
-#: ../arronax/about.py:12
-msgid "Go to Web Page"
-msgstr "Ves a la Pàgina Web"
+#: ../arronax/settings.py:88
+msgid "GNOME"
+msgstr "GNOME"
 
-#: ../arronax/about.py:21
-msgid "Ask a Question"
-msgstr "Tramet una pregunta"
+#: ../arronax/settings.py:89
+msgid "KDE"
+msgstr "KDE"
 
-#: ../arronax/about.py:30
-msgid "Report a Bug"
-msgstr "Informeu d'un problema"
+#: ../arronax/settings.py:90
+msgid "LXDE"
+msgstr "LXDE"
 
-#: ../arronax/about.py:36
-msgid "Help with Translations"
-msgstr "Ajudeu amb la Traducció"
+#: ../arronax/settings.py:91
+msgid "MATE"
+msgstr "MATE"
 
-#: ../arronax/about.py:42
-msgid "Donate via Flattr"
-msgstr "Feu una donació via Flattr"
+#: ../arronax/settings.py:92
+msgid "Razor-qt"
+msgstr "Razor-qt"
 
-#: ../arronax/about.py:48
-msgid "Donate via PayPal"
-msgstr "Feu una donació via PayPal"
+#: ../arronax/settings.py:93
+msgid "ROX"
+msgstr "ROX"
 
-#: ../arronax/about.py:94
-msgid "translator-credits"
-msgstr ""
-"Launchpad Contributions:\n"
-"  metacibi https://launchpad.net/~metacibi"
+#: ../arronax/settings.py:94
+msgid "Trinity Desktop"
+msgstr "Trinity Desktop"
 
-#: ../nautilus/nautilus-arronax.py:22
-msgid "Create a starter for this program"
-msgstr "Crea un iniciador per a aquesta aplicació"
+#: ../arronax/settings.py:95
+msgid "Unity"
+msgstr "Unity"
 
-#: ../nautilus/nautilus-arronax.py:28
-msgid "Modify this starter"
-msgstr "Modifica aquest iniciador"
+#: ../arronax/settings.py:96
+msgid "XFCE"
+msgstr "XFCE"
 
-#: ../nautilus/nautilus-arronax.py:34
-msgid "Create a starter"
-msgstr "Crea un iniciador"
-
-#: ../nautilus/nautilus-arronax.py:41
-msgid "Create a starter for this file"
-msgstr "Crea un iniciador per a aquest fitxer"
+#: ../arronax/settings.py:97
+msgid "Legacy environments"
+msgstr "Entorns heretats"
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:11
 msgid "Arronax"
@@ -345,15 +345,15 @@ msgstr ""
 "una imatge o un iniciador aquí, o feu clic."
 
 #: ../data/ui/edit.ui.h:21
-msgid "Browse image files"
+msgid "Use files"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:22
-msgid "Browse icon theme"
+msgid "Use icon theme"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:23
-msgid "Browse auto"
+msgid "Autodetect"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:24
@@ -557,6 +557,15 @@ msgstr "_Ordre:"
 #: ../data/ui/quicklist.ui.h:3
 msgid "_Title:"
 msgstr "Nom"
+
+#: ../data/ui/icondlg.ui.h:2
+#, fuzzy
+msgid "Loading icons..."
+msgstr "Carregant el fitxer '%s' ..."
+
+#: ../data/ui/icondlg.ui.h:3
+msgid "Filter:"
+msgstr ""
 
 #~ msgid "Can not load starter"
 #~ msgstr "No s'ha pogut carregar l'iniciador"

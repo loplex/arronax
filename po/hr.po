@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-26 19:19+0200\n"
+"POT-Creation-Date: 2018-10-31 14:03+0100\n"
 "PO-Revision-Date: 2012-07-12 07:01+0000\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
@@ -18,145 +18,151 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-07-16 12:36+0000\n"
 "X-Generator: Launchpad (build 17112)\n"
 
-#: ../arronax/mimetypes.py:47
-msgid "Selected"
+#: ../arronax/quicklist.py:33
+msgid "Title"
 msgstr ""
 
-#: ../arronax/mimetypes.py:58 ../arronax/editor.py:96
+#: ../arronax/editor.py:98
+msgid "Enabled"
+msgstr ""
+
+#: ../arronax/editor.py:103 ../arronax/mimetypes.py:58
 msgid "Name"
+msgstr ""
+
+#: ../arronax/editor.py:115
+#, python-format
+msgid "Loading file '%s' ..."
+msgstr "Učitavanje datoteke '%s' ..."
+
+#: ../arronax/editor.py:116
+#, python-format
+msgid "Loaded file '%s' ..."
+msgstr "'%s'  datoteka učitana..."
+
+#: ../arronax/editor.py:169
+msgid "You need to provide a title."
+msgstr "Morate unijeti naziv."
+
+#: ../arronax/editor.py:172
+msgid "You need to provide a command."
+msgstr "Morate unijeti naredbu."
+
+#: ../arronax/editor.py:174
+msgid "You need to provide a URL or file name."
+msgstr ""
+
+#: ../arronax/editor.py:184
+msgid "Save now?"
+msgstr "Spremite odmah?"
+
+#: ../arronax/editor.py:185
+msgid "You have unsaved changes.  Do you want to save them now?"
+msgstr "Imate nespremljenih promjena. Želite li ih spremiti odmah?"
+
+#: ../arronax/editor.py:226 ../data/ui/edit.ui.h:2 ../data/ui/icondlg.ui.h:1
+msgid "Select Icon"
+msgstr "Odaberi ikonu"
+
+#: ../arronax/editor.py:335
+msgid "Error"
+msgstr "Greška"
+
+#: ../arronax/editor.py:338
+#, python-format
+msgid "Saving file %s ..."
+msgstr ""
+
+#: ../arronax/editor.py:339
+#, python-format
+msgid "File %s saved."
+msgstr ""
+
+#: ../arronax/editor.py:349 ../arronax/editor.py:359
+msgid "File not saved."
+msgstr "Datoteka nije spremljena."
+
+#: ../arronax/editor.py:353
+#, python-format
+msgid "Saved file '%s'."
+msgstr "'%s' datoteka spremljena."
+
+#: ../arronax/editor.py:357
+msgid "Can not save starter"
+msgstr "Nemoguće je spremiti pokretač"
+
+#: ../arronax/editor.py:447
+msgid "File or URL:"
+msgstr ""
+
+#: ../arronax/editor.py:447 ../data/ui/edit.ui.h:37
+msgid "Command:"
+msgstr "Naredba:"
+
+#: ../arronax/editor.py:534
+msgid "This is not an image. Icon not changed."
+msgstr ""
+
+#: ../arronax/editor.py:537
+msgid "This is not a local file. Icon not changed."
+msgstr ""
+
+#: ../arronax/editor.py:581
+msgid "Created new starter."
+msgstr ""
+
+#: ../arronax/about.py:12
+msgid "Go to Web Page"
+msgstr ""
+
+#: ../arronax/about.py:21
+msgid "Ask a Question"
+msgstr ""
+
+#: ../arronax/about.py:30
+msgid "Report a Bug"
+msgstr ""
+
+#: ../arronax/about.py:36
+msgid "Help with Translations"
+msgstr ""
+
+#: ../arronax/about.py:42
+msgid "Donate via Flattr"
+msgstr ""
+
+#: ../arronax/about.py:48
+msgid "Donate via PayPal"
+msgstr ""
+
+#: ../arronax/about.py:94
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  gogo https://launchpad.net/~trebelnik-stefina"
+
+#: ../arronax/mimetypes.py:47 ../arronax/categoriesbrowser.py:40
+msgid "Selected"
 msgstr ""
 
 #: ../arronax/mimetypes.py:60
 msgid "Description"
 msgstr ""
 
-#: ../arronax/editor.py:91
-msgid "Enabled"
+#: ../arronax/plugin.py:23
+msgid "Create a starter for this program"
 msgstr ""
 
-#: ../arronax/editor.py:107
-#, python-format
-msgid "Loading file '%s' ..."
-msgstr "Učitavanje datoteke '%s' ..."
+#: ../arronax/plugin.py:29
+msgid "Modify this starter"
+msgstr "Uredi ovaj pokretač"
 
-#: ../arronax/editor.py:108
-#, python-format
-msgid "Loaded file '%s' ..."
-msgstr "'%s'  datoteka učitana..."
-
-#: ../arronax/editor.py:161
-msgid "You need to provide a title."
-msgstr "Morate unijeti naziv."
-
-#: ../arronax/editor.py:164
-msgid "You need to provide a command."
-msgstr "Morate unijeti naredbu."
-
-#: ../arronax/editor.py:166
-msgid "You need to provide a URL or file name."
+#: ../arronax/plugin.py:35
+msgid "Create a starter"
 msgstr ""
 
-#: ../arronax/editor.py:174
-msgid "Save now?"
-msgstr "Spremite odmah?"
-
-#: ../arronax/editor.py:175
-msgid "You have unsaved changes.  Do you want to save them now?"
-msgstr "Imate nespremljenih promjena. Želite li ih spremiti odmah?"
-
-#: ../arronax/editor.py:216 ../data/ui/edit.ui.h:2
-msgid "Select Icon"
-msgstr "Odaberi ikonu"
-
-#: ../arronax/editor.py:324
-msgid "Error"
-msgstr "Greška"
-
-#: ../arronax/editor.py:327
-#, python-format
-msgid "Saving file %s ..."
-msgstr ""
-
-#: ../arronax/editor.py:328
-#, python-format
-msgid "File %s saved."
-msgstr ""
-
-#: ../arronax/editor.py:338 ../arronax/editor.py:348
-msgid "File not saved."
-msgstr "Datoteka nije spremljena."
-
-#: ../arronax/editor.py:342
-#, python-format
-msgid "Saved file '%s'."
-msgstr "'%s' datoteka spremljena."
-
-#: ../arronax/editor.py:346
-msgid "Can not save starter"
-msgstr "Nemoguće je spremiti pokretač"
-
-#: ../arronax/editor.py:436
-msgid "File or URL:"
-msgstr ""
-
-#: ../arronax/editor.py:436 ../data/ui/edit.ui.h:37
-msgid "Command:"
-msgstr "Naredba:"
-
-#: ../arronax/editor.py:504
-msgid "This is not an image. Icon not changed."
-msgstr ""
-
-#: ../arronax/editor.py:507
-msgid "This is not a local file. Icon not changed."
-msgstr ""
-
-#: ../arronax/editor.py:552
-msgid "Created new starter."
-msgstr ""
-
-#: ../arronax/settings.py:58
-msgid "GNOME"
-msgstr ""
-
-#: ../arronax/settings.py:59
-msgid "KDE"
-msgstr ""
-
-#: ../arronax/settings.py:60
-msgid "LXDE"
-msgstr ""
-
-#: ../arronax/settings.py:61
-msgid "MATE"
-msgstr ""
-
-#: ../arronax/settings.py:62
-msgid "Razor-qt"
-msgstr ""
-
-#: ../arronax/settings.py:63
-msgid "ROX"
-msgstr ""
-
-#: ../arronax/settings.py:64
-msgid "Trinity Desktop"
-msgstr ""
-
-#: ../arronax/settings.py:65
-msgid "Unity"
-msgstr ""
-
-#: ../arronax/settings.py:66
-msgid "XFCE"
-msgstr ""
-
-#: ../arronax/settings.py:67
-msgid "Legacy environments"
-msgstr ""
-
-#: ../arronax/quicklist.py:44
-msgid "Title"
+#: ../arronax/plugin.py:41
+msgid "Create a starter for this file"
 msgstr ""
 
 #: ../arronax/filechooser.py:15
@@ -203,50 +209,44 @@ msgstr ""
 msgid "System Autostart Folder"
 msgstr ""
 
-#: ../arronax/about.py:12
-msgid "Go to Web Page"
+#: ../arronax/settings.py:88
+msgid "GNOME"
 msgstr ""
 
-#: ../arronax/about.py:21
-msgid "Ask a Question"
+#: ../arronax/settings.py:89
+msgid "KDE"
 msgstr ""
 
-#: ../arronax/about.py:30
-msgid "Report a Bug"
+#: ../arronax/settings.py:90
+msgid "LXDE"
 msgstr ""
 
-#: ../arronax/about.py:36
-msgid "Help with Translations"
+#: ../arronax/settings.py:91
+msgid "MATE"
 msgstr ""
 
-#: ../arronax/about.py:42
-msgid "Donate via Flattr"
+#: ../arronax/settings.py:92
+msgid "Razor-qt"
 msgstr ""
 
-#: ../arronax/about.py:48
-msgid "Donate via PayPal"
+#: ../arronax/settings.py:93
+msgid "ROX"
 msgstr ""
 
-#: ../arronax/about.py:94
-msgid "translator-credits"
-msgstr ""
-"Launchpad Contributions:\n"
-"  gogo https://launchpad.net/~trebelnik-stefina"
-
-#: ../nautilus/nautilus-arronax.py:22
-msgid "Create a starter for this program"
+#: ../arronax/settings.py:94
+msgid "Trinity Desktop"
 msgstr ""
 
-#: ../nautilus/nautilus-arronax.py:28
-msgid "Modify this starter"
-msgstr "Uredi ovaj pokretač"
-
-#: ../nautilus/nautilus-arronax.py:34
-msgid "Create a starter"
+#: ../arronax/settings.py:95
+msgid "Unity"
 msgstr ""
 
-#: ../nautilus/nautilus-arronax.py:41
-msgid "Create a starter for this file"
+#: ../arronax/settings.py:96
+msgid "XFCE"
+msgstr ""
+
+#: ../arronax/settings.py:97
+msgid "Legacy environments"
 msgstr ""
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:11
@@ -340,15 +340,15 @@ msgid ""
 msgstr ""
 
 #: ../data/ui/edit.ui.h:21
-msgid "Browse image files"
+msgid "Use files"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:22
-msgid "Browse icon theme"
+msgid "Use icon theme"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:23
-msgid "Browse auto"
+msgid "Autodetect"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:24
@@ -525,6 +525,15 @@ msgstr ""
 
 #: ../data/ui/quicklist.ui.h:3
 msgid "_Title:"
+msgstr ""
+
+#: ../data/ui/icondlg.ui.h:2
+#, fuzzy
+msgid "Loading icons..."
+msgstr "Učitavanje datoteke '%s' ..."
+
+#: ../data/ui/icondlg.ui.h:3
+msgid "Filter:"
 msgstr ""
 
 #~ msgid "Can not load starter"
