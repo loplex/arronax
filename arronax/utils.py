@@ -148,7 +148,7 @@ def is_desktop_file(uri):
                                 Gio.FileQueryInfoFlags.NONE, None)
         return info.get_content_type() == 'application/x-desktop'
     except Exception as e:
-        print 'IS_DESKTOP_FILE:', e
+        print('IS_DESKTOP_FILE:', e)
         return False
 
 def get_info_from_uri(uri_string, desktop_field=None):

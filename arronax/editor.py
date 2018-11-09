@@ -1,30 +1,40 @@
 #-*- coding: utf-8-*-
+#
+# Arronax - a application and filemanager plugin to create and modify .desktop files
+#
+# Copyright (C) 2012 Florian Diesch <devel@florian-diesch.de>
+#
+# Homepage: http://www.florian-diesch.de/software/arronax/
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
 
 import gi
 gi.require_version('Gtk', '3.0')
 
 from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio
-import os, os.path, time, sys, urllib, urlparse
+import os, os.path, time, sys, urllib, urlparse, argparse
 from gettext import gettext as _
 import gettext
 
-import settings, desktopfile, clipboard, about, dialogs, iconbrowser
-import statusbar, filechooser, tvtools, quicklist, utils, mimetypes
-import categoriesbrowser, entrytools
-
-IS_STANDALONE = False
-
-MODE_EDIT = 'edit'
-MODE_NEW = 'new'
-MODE_CREATE_FOR = 'create for'
-MODE_CREATE_IN = 'create_in'
-
-TYPE_APPLICATION = 0
-TYPE_LINK = 1
+from arronax import settings, desktopfile, clipboard, about, dialogs, iconbrowser
+from arronax import statusbar, filechooser, tvtools, quicklist, utils, mimetypes
+from arronax import categoriesbrowser, entrytools, parsecli
 
 class Editor(object):
 
-    def __init__(self, path, mode, type=TYPE_APPLICATION):
+    def __init__(self, path, is_link, basedir=None):
         self.create_builder()
 
         utils.activate_drag_and_drop(self['window1'])
@@ -60,20 +70,27 @@ class Editor(object):
         
         self.setup_tv_show_in()
         self['cbox_type'].set_active(0)
-        if mode is MODE_EDIT:
+        
+        if utils.is_desktop_file(path):
             self.read_desktop_file(path)
-        elif mode is MODE_CREATE_FOR:
-            self.filename = None
-            self['e_command'].set_text(path)
-            self.create_title_from_command(path)
-            if type == TYPE_LINK:
-                self['cbox_type'].set_active(1)
-            utils.load_file_into_image(
-                self['img_icon'], 'application-x-executable')
         else:
-            self.filename = path
-            utils.load_file_into_image(
-                self['img_icon'], 'folder')
+            if basedir:
+                self.filename = basedir
+            else:
+                self.filename = None
+                
+            if path:
+                self['e_command'].set_text(path)
+                self.create_title_from_command(path)
+                
+            if is_link or not path or not os.access(path, os.X_OK):
+                self['cbox_type'].set_active(1)
+
+            if os.access(path, os.X_OK):
+                icon = 'application-x-executable'
+            else:
+                icon =  'folder'
+            utils.load_file_into_image(self['img_icon'], icon)
 
         self['window1'].show()
 
@@ -140,8 +157,6 @@ class Editor(object):
                 self['cbox_type'].set_active(0)
             else:
                 self['cbox_type'].set_active(1)
-
-
 
         
     def update_window_title(self): 

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 #-*- coding: utf-8-*-
 #
 # Arronax - a application and filemananer plugin to create and modify .desktop files
@@ -24,45 +24,35 @@
 import glob
 from setuptools import setup, find_packages
 
-from deb_setup_helpers import (get_deb_version, get_deb_description)
-
-def read_from_file(path):
-    with open(path) as input:
-        return input.read()
-
 
 setup(
-    name='arronax',
-    version=get_deb_version(full=False),
+     install_requires=[
+        'pygobject',
+        'setuptools >= 30.3.0',
+    ],
+
     packages=find_packages(),
     include_package_data=True,
-    maintainer='Florian Diesch',
-    maintainer_email='devel@florian-diesch.de',
-    author = "Florian Diesch",
-    author_email = "devel@florian-diesch.de",    
-    description=get_deb_description(),
-    long_description=read_from_file(
-        'README.txt',
-        ),
-    license='GPLv3',
-    url='http://www.florian-diesch.de/software/arronax/',
-    download_url='http://www.florian-diesch.de/software/arronax/',
+
     data_files=[
-        ('/usr/share/arronax/ui/',
+        ('share/man/man1',
+         glob.glob('data/man/*.1')),
+        ('share/arronax/ui/',
          glob.glob('data/ui/*.ui')),
-        ('/usr/share/arronax/icons/',
+        ('share/arronax/icons/',
          glob.glob('data/icons/*.png')),
-        ('/usr/share/applications',
+        ('share/applications',
          glob.glob('data/desktop/*.desktop')),
-        ('/usr/share/nautilus-python/extensions/',
-         glob.glob('nautilus/*.py')),
-        ('/usr/share/nemo-python/extensions/',
-         glob.glob('nemo/*.py')),
-        ('/usr/share/caja-python/extensions/',
-         glob.glob('caja/*.py')),
-        ],
+        ('share/nautilus-python/extensions/',
+         glob.glob('plugins/nautilus-arronax.py')),
+        ('share/nemo-python/extensions/',
+         glob.glob('plugins/nemo-arronax.py')),
+        ('share/caja-python/extensions/',
+         glob.glob('plugins/caja-arronax.py')),
+        ] + [('share/locale/%s/LC_MESSAGES/'%(mo[8:-3]), [mo])
+             for mo in glob.glob('data/mo/*.mo')],
     entry_points = {
-        'console_scripts': ['arronax=arronax.editor:main'],
+        'gui_scripts': ['arronax=arronax.editor:main'],
         },
     keywords = "Nautilus, Nemo, Caja, extension, plugin, starter, desktop", 
     classifiers=[
