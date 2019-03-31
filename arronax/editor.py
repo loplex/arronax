@@ -24,9 +24,10 @@ import gi
 gi.require_version('Gtk', '3.0')
 
 from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio
-import os, os.path, time, sys, urllib, urlparse, argparse
+import os, os.path, time, sys, urllib.request, urllib.parse, urllib.error, urllib.parse, argparse
 from gettext import gettext as _
 import gettext
+import logging
 
 from arronax import settings, desktopfile, clipboard, about, dialogs, iconbrowser
 from arronax import statusbar, filechooser, tvtools, quicklist, utils, mimetypes
@@ -34,7 +35,10 @@ from arronax import categoriesbrowser, entrytools, parsecli
 
 class Editor(object):
 
-    def __init__(self, path, is_link, basedir=None):
+    def __init__(self, path, stype, basedir=None):
+
+        logging.info('Editor: p:{} il:{} bd:{}'.format(
+            path, stype, basedir))
         self.create_builder()
 
         utils.activate_drag_and_drop(self['window1'])
@@ -70,8 +74,15 @@ class Editor(object):
         
         self.setup_tv_show_in()
         self['cbox_type'].set_active(0)
+
+
+        is_link = stype is parsecli.StarterType.Link
+        is_app = stype is parsecli.StarterType.Application
+
+        logging.debug('is_l:{} is_a:{}'.format(is_link, is_app))
         
         if utils.is_desktop_file(path):
+            logging.debug('is desktop')
             self.read_desktop_file(path)
         else:
             if basedir:
@@ -82,16 +93,23 @@ class Editor(object):
             if path:
                 self['e_command'].set_text(path)
                 self.create_title_from_command(path)
-                
-            if is_link or not path or not os.access(path, os.X_OK):
+            
+            if not is_app and (is_link or not path or
+                not os.path.isfile(path) or 
+                not os.access(path, os.X_OK)):
+                logging.debug('Link')
                 self['cbox_type'].set_active(1)
-
-            if os.access(path, os.X_OK):
-                icon = 'application-x-executable'
+                self.dfile.type = 1
+                icon = 'folder'
             else:
-                icon =  'folder'
-            utils.load_file_into_image(self['img_icon'], icon)
+                logging.debug('App')
+                self['cbox_type'].set_active(0)
+                self.dfile.type = 0
+                icon = 'application-x-executable'
 
+            self.set_icon(icon)
+            self.dfile.icon = icon
+        self.dfile.dirty_flag = False
         self['window1'].show()
 
 
@@ -118,7 +136,7 @@ class Editor(object):
                                        attr='active'
                                    )
         tvtools.create_treeview_column(tv, _('Name'), 1)
-        for field, name in sorted(settings.KNOWN_DESKTOPS.iteritems()):
+        for field, name in sorted(settings.KNOWN_DESKTOPS.items()):
             model.append([True, name, field])
     
     def update_from_dfile(self):
@@ -129,6 +147,7 @@ class Editor(object):
 
 
     def read_desktop_file(self, path):
+        logging.info("Loading {}".format(path))
         with statusbar.Status(_("Loading file '%s' ...") % path,
                               _("Loaded file '%s' ...") % path) as status:
             msg = self.dfile.load(path)
@@ -152,7 +171,8 @@ class Editor(object):
             try:
                is_exec = not os.path.isdir(s) and os.access(s, os.X_OK)
             except Exception as e:
-                print(e)
+                logging.error(
+                    'use_file_or_uri_as_target: error:{}'.format(e))
             if is_exec:
                 self['cbox_type'].set_active(0)
             else:
@@ -164,6 +184,7 @@ class Editor(object):
             title = settings.APP_NAME
         else:
             title = '%s: %s' % (settings.APP_NAME, self.filename)
+        logging.debug('New title: "{}"'.format(title))
         self['window1'].set_title(title)
         
                
@@ -191,8 +212,8 @@ class Editor(object):
 
     def maybe_confirm_unsaved(self):
         data = self.get_data_from_all_widgets()
-        if not self.icon_has_changed:
-            data['icon'] = ''
+        # if not self.icon_has_changed:
+        #     data['icon'] = ''
         answer = None
         if self.dfile.is_dirty(data):
             answer = dialogs.yes_no_cancel_question(
@@ -207,12 +228,10 @@ class Editor(object):
         try: # just to be sure
             really_quit =  self.maybe_confirm_unsaved()
         except Exception as e:
+            logging.error("Exception on qut: {}".format(e))
             really_quit = True
         if really_quit:        
-            if IS_STANDALONE:
-                Gtk.main_quit()            
-            else:
-                self['window1'].destroy()
+            Gtk.main_quit()            
 
     def icon_browse_auto(self):
         current = utils.get_name_from_image(self['img_icon'])
@@ -227,7 +246,18 @@ class Editor(object):
         icon = iconbrowser.IconDlg(self['window1']).run(current)
         if icon is not None:
             self.set_icon(icon)
-    
+            
+    def icon_browse_apps(self):
+        current = utils.get_name_from_image(self['img_icon'])
+        app = utils.select_app(self['window1'], current)
+        if not app:
+            return
+
+        uri = urllib.parse.urlparse('application://'+app)
+        path = utils.get_path_for_application_uri(uri)
+        icon = utils.get_field_from_desktop_file(path, 'Icon')
+        self.set_icon(icon)
+            
     def icon_browse_files(self):
         current = utils.get_name_from_image(self['img_icon'])
         if not '/' in current:
@@ -257,8 +287,8 @@ class Editor(object):
                     path,
                     settings.DEFAULT_ICON_SIZE,
                     settings.DEFAULT_ICON_SIZE)
-            except GLib.GError, e:
-                print e
+            except GLib.GError as e:
+                print(e)
                 return
             
             preview.set_from_pixbuf(pixbuf)
@@ -279,6 +309,11 @@ class Editor(object):
         return self.builder.get_object(key)
 
     def set_icon(self, path):
+        logging.debug('set_icon: {}'.format(path))
+        if path is None:
+            return
+        self['l_icon'].set_text(path)
+        self['l_icon'].set_tooltip_text(path)
         img = self['img_icon']
         msg = utils.load_file_into_image(img, path)
         self.icon_has_changed = True
@@ -307,6 +342,7 @@ class Editor(object):
             'show_in': utils.get_desktops_from_tv(self['tv_show_in']),
             'quicklist': utils.get_quicklist_from_tv(self['tv_quicklist'])
         }
+        logging.debug('all data: {}'.format(data))
         return data
 
 
@@ -394,10 +430,10 @@ class Editor(object):
         
         uris = data.get_uris()
         if len(uris) > 0:           
-            uri = urlparse.urlparse(uris[0])
+            uri = urllib.parse.urlparse(uris[0])
             filename = None
             if uri.scheme == 'file':
-                filename = urllib.url2pathname(uri.path)
+                filename = urllib.request.url2pathname(uri.path)
             elif uri.scheme == 'application':
                 filename = utils.get_path_for_application_uri(uri)
             else:  # some other URI
@@ -420,9 +456,9 @@ class Editor(object):
                                        data, info, time):
         uris = data.get_uris()
         if uris:
-            uri = urlparse.urlparse(uris[0])
+            uri = urllib.parse.urlparse(uris[0])
             if uri.scheme == 'file':
-                text = urllib.url2pathname(uri.path)
+                text = urllib.request.url2pathname(uri.path)
             else:
                 text = uris[0]
             widget.set_text(text)
@@ -476,8 +512,10 @@ class Editor(object):
 
     def on_bt_icon_browse_auto_clicked(self, *args):
          self.icon_browse_auto()
-            
-           
+
+    def on_bt_icon_by_app_clicked(self, *args):
+         self.icon_browse_apps()
+         
     def on_bt_working_dir_clicked(self, *args):
         default =  self['e_working_dir'].get_text()
         if default =='':  
@@ -530,7 +568,7 @@ class Editor(object):
                                       info, time):
         uris = data.get_uris()
         if info == 0 and len(uris) > 0:
-            uri = urlparse.urlparse(uris[0])
+            uri = urllib.parse.urlparse(uris[0])
             if uri.scheme == 'application':
                 path = utils.get_path_for_application_uri(uri)
                 icon = utils.get_field_from_desktop_file(path, 'Icon')
@@ -587,7 +625,15 @@ class Editor(object):
                                          
         if filename is not None:
             self.read_desktop_file(filename)
-
+            
+    def on_ac_open_app_activate(self, action, *args):
+        if self.maybe_confirm_unsaved():
+            app = utils.select_app(self['window1'], None)
+            if app is not None:
+                uri = urllib.parse.urlparse('application://'+app)
+                path = utils.get_path_for_application_uri(uri)
+                self.read_desktop_file(path)
+            
     def on_ac_new_activate(self, action, *args):
         if self.maybe_confirm_unsaved():
             self.filename = None
@@ -617,26 +663,9 @@ class Editor(object):
 
 
 def main():
-    global IS_STANDALONE
-    IS_STANDALONE = True
-    if len(sys.argv) > 1:
-        path = sys.argv[1]
-        if os.path.isfile(path):
-            if os.path.splitext(path)[1] == '.desktop':                
-                editor = Editor(path=path, mode=MODE_EDIT)
-            else:
-                if os.access(path, os.X_OK):
-                    type=TYPE_APPLICATION
-                else:
-                    type=TYPE_LINK
-                editor = Editor(path=path, mode=MODE_CREATE_FOR, 
-                                type=type) 
-        elif os.path.isdir(path):
-            editor = Editor(path=path, mode=MODE_CREATE_IN)
-        else:
-            editor = Editor(path=path, mode=MODE_NEW) 
-    else:
-        editor = Editor(path=None, mode=MODE_NEW) 
+    args = parsecli.parse_cli_args()
+    editor = Editor(args.path, args.stype, args.dir)
+    
 
     try:
         Gtk.main()

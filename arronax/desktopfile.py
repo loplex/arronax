@@ -5,9 +5,9 @@
 from gi.repository import Gtk, Gio, GLib
 from gettext import gettext as _
 
-import os, os.path, stat
+import os, os.path, stat, logging
 
-import dialogs
+from . import dialogs
 
 GROUP = 'Desktop Entry'
 #ACTION_TEMPLATE = ' Shortcut Group'
@@ -31,7 +31,7 @@ class DesktopFile(object):
             if self.has_key(group, key):
                 self.keyfile.remove_key(group, key)
         except Exception as e:
-            print('RM KEY:', e)
+            logging.error('rm key: {}'.format(e))
             
 
     def get_string(self, group, key, default):
@@ -287,7 +287,7 @@ class DesktopFile(object):
 
     def set_from_dict(self, data):
         self.type = data['type'] # needs to be set first
-        for key, value in data.iteritems():
+        for key, value in data.items():
             setattr(self, key, value)
 
     def get_as_dict(self):
@@ -302,16 +302,20 @@ class DesktopFile(object):
         return data
 
     def is_dirty(self, data):
+        logging.debug('dirty: flag:{}  data:{}'.format(
+            self.dirty_flag, data))
         if self.dirty_flag:
             return True
         list_fields = set(('keywords', 'categories', 'mime_type', 
                            'show_in'))
-        for key, value in data.iteritems():
+        for key, value in data.items():
             my_value = getattr(self, key)
             if key in list_fields:
                 value = str(value).rstrip(';')
                 my_value = str(my_value).rstrip(';')
             if my_value != value:
+                logging.debug('dirty: {}: "{}" != "{}"'.format(
+                    key, value, my_value))
                 return True
         else:
             return False
@@ -340,7 +344,7 @@ class DesktopFile(object):
                 path,
                 GLib.KeyFileFlags.KEEP_COMMENTS | 
                 GLib.KeyFileFlags.KEEP_TRANSLATIONS)
-        except Exception, e:
+        except Exception as e:
             return str(e)
         self.dirty_flag = False
 
@@ -350,15 +354,15 @@ class DesktopFile(object):
 
         try:
             os.rename(path, '%s~' % path)
-        except Exception, e:
-            print e
+        except Exception as e:
+            logging.error('os.rename: p:{} e:{}'.format(path, e))
         try:
             with open(path, 'w') as _file:
                 _file.write(content)
             self.dirty_flag = False
             mode = os.stat(path).st_mode
             os.chmod(path, mode | stat.S_IEXEC)
-        except Exception, e:
+        except Exception as e:
            return str(e)
         return None
 

@@ -2,43 +2,39 @@ Source: arronax
 Section: gnome
 Priority: optional
 Maintainer: Florian Diesch <devel@florian-diesch.de>
-Build-Depends: debhelper (>= 11.0.0), gettext, intltool, python (>= 2.7), 
- python-distutils-extra, python-setuptools, python-pkg-resources, dh-python
+Build-Depends: debhelper (>= 11.0.0), gettext, intltool, python3 (>= 3.4),
+ python3-setuptools, dh-python
 Standards-Version: 3.9.4
 Homepage:  http://www.florian-diesch.de/software/arronax/
-X-Python-Version: >= 2.7
+X-Python-Version: >= 3.4
 
 
 Package: arronax
 Architecture: all
-X-Python-Version: >= 2.7
-Depends: arronax-base
+X-Python-Version: >= 3.4
+Depends: ${python3:Depends}, ${misc:Depends}, gir1.2-glib-2.0,  gir1.2-gtk-3.0, python-gobject (>= 2.90), gir1.2-gdkpixbuf-2.0, python-pkg-resources, python-xdg
 Description: Create and modify application, file and URI starters.
  Arronax lets you create and modify starters (*.desktop files) for
  aplications, files, and URIs.	     
+ .
+ This package contains the standalone version of Arronax. 
+
+
+Package: arronax-base
+Architecture: all
+X-Python-Version: >= 3.4
+Depends: arronax 
+Description: Create and modify application, file and URI starters.
+ Arronax lets you create and modify starters (*.desktop files) for
+ applications, files, and URIs.
  .
  This is a metapackage that depends on the standalone version of
  Arronax. It doesn't contain any important files and may be removed
  without doing any harm.
 
-
-Package: arronax-base
-Architecture: all
-X-Python-Version: >= 2.7
-Depends:  ${python:Depends}, ${misc:Depends}, gir1.2-glib-2.0,  gir1.2-gtk-3.0, python-gobject (>= 2.90), gir1.2-gdkpixbuf-2.0, python-pkg-resources, python-xdg
-Conflicts: arronax (<= 0.03)
-Description: Create and modify application, file and URI starters.
- Arronax lets you create and modify starters (*.desktop files) for
- applications, files, and URIs.
- .
- This package contains the standalone version of Arronax. 
-
-
 Package: arronax-nautilus
 Architecture: all
-X-Python-Version: >= 2.7
-Depends: ${python:Depends}, ${misc:Depends}, python (>=2.7) , arronax-base, nautilus (>= 3.4.1), python-nautilus
-Conflicts: arronax (<= 0.03)
+Depends: arronax, python-nautilus
 Description: Create and modify application, file and URI starters.
  Arronax lets you create and modify starters (*.desktop files) for
  applications, files, and URIs.
@@ -50,9 +46,7 @@ Description: Create and modify application, file and URI starters.
 
 Package: arronax-caja
 Architecture: all
-X-Python-Version: >= 2.7
-Depends: ${python:Depends}, ${misc:Depends}, python (>=2.7) , arronax-base, caja, python-caja
-Conflicts: arronax (<= 0.03)
+Depends: arronax, python-caja
 Description: Create and modify application, file and URI starters.
  Arronax lets you create and modify starters (*.desktop files) for
  applications, files, and URIs.
@@ -64,9 +58,7 @@ Description: Create and modify application, file and URI starters.
 
 Package: arronax-nemo
 Architecture: all
-X-Python-Version: >= 2.7
-Depends: ${python:Depends}, ${misc:Depends}, python (>=2.7) , arronax-base, nemo, nemo-python
-Conflicts: arronax (<= 0.03)
+Depends: arronax, nemo-python
 Description: Create and modify application, file and URI starters.
  Arronax lets you create and modify starters (*.desktop files) for
  applications, files, and URIs.
@@ -74,3 +66,4 @@ Description: Create and modify application, file and URI starters.
  This package contains the Nemo plugin for Arronax. It adds a 
  "Create starter" menu item to the Desktop's context menu and to the file 
  context menu in Nemo
+ 

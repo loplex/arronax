@@ -131,7 +131,7 @@ def move_down_current_row(treeview):
         model = treeview.get_model()
         aiter = model.get_iter(path)
         try:
-            path.next()
+            next(path)
             dest = model.get_iter(path)
             model.move_after(aiter, dest)
         except ValueError:

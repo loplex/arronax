@@ -1,11 +1,11 @@
 #-*- coding: utf-8-*-
 
 from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio
-import os, os.path, time, sys, urllib, urlparse
+import os, os.path, time, sys, urllib.request, urllib.parse, urllib.error, urllib.parse
 from gettext import gettext as _
 import gettext
 
-import settings
+from . import settings
 
 gettext.bindtextdomain(settings.GETTEXT_DOMAIN)
 gettext.textdomain(settings.GETTEXT_DOMAIN)
@@ -81,7 +81,7 @@ def create_dir_buttons_filechooser_dlg(title, action,
             try:
                 os.makedirs(path)
             except Exception as e:
-                print e
+                print(e)
         dlg.set_current_folder(path)
 
     cbox.connect('changed', callback)

@@ -62,8 +62,8 @@ def get_user_dir(name, default):
 
 
 if __name__ == '__main__':
-    print _get_user_dirs()
-    print 'DESKTOP:', get_user_dir('desktop', os.path.expanduser('~/Desktop'))
-    print 'FOO:', get_user_dir('foo', os.path.expanduser('~/bar'))
+    print(_get_user_dirs())
+    print('DESKTOP:', get_user_dir('desktop', os.path.expanduser('~/Desktop')))
+    print('FOO:', get_user_dir('foo', os.path.expanduser('~/bar')))
 
 

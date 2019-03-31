@@ -52,6 +52,7 @@ setup(
         ] + [('share/locale/%s/LC_MESSAGES/'%(mo[8:-3]), [mo])
              for mo in glob.glob('data/mo/*.mo')],
     entry_points = {
+
         'gui_scripts': ['arronax=arronax.editor:main'],
         },
     keywords = "Nautilus, Nemo, Caja, extension, plugin, starter, desktop", 

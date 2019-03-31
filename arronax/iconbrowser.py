@@ -3,7 +3,7 @@
 import os.path
 from gi.repository import Gtk, GdkPixbuf
 
-import settings, entrytools
+from . import settings, entrytools
 
 class IconDlg():
     def __init__(self, parent):
@@ -87,7 +87,7 @@ class IconDlg():
             try:
                 pixbuf = self._get_icon_pixbuf(theme, name)
             except Exception as e:
-                print(name, e)
+                print((name, e))
                 continue
             pos = model.append([pixbuf, name])
             if name == current:

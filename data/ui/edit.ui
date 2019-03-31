@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.20.0 -->
+<!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.0"/>
   <object class="GtkAction" id="ac_about">
@@ -35,6 +35,12 @@
     <property name="tooltip" translatable="yes">Open a application starter</property>
     <property name="stock_id">gtk-open</property>
     <signal name="activate" handler="on_ac_open_activate" swapped="no"/>
+  </object>
+  <object class="GtkAction" id="ac_open_app">
+    <property name="label" translatable="yes">Open application</property>
+    <property name="short_label" translatable="yes">Open application</property>
+    <property name="stock_id">gtk-open</property>
+    <signal name="activate" handler="on_ac_open_app_activate" swapped="no"/>
   </object>
   <object class="GtkAction" id="ac_paste">
     <property name="stock_id">gtk-paste</property>
@@ -87,6 +93,9 @@
     <signal name="delete-event" handler="on_window1_delete_event" swapped="no"/>
     <signal name="drag-data-received" handler="on_window1_drag_data_received" swapped="no"/>
     <child>
+      <placeholder/>
+    </child>
+    <child>
       <object class="GtkBox" id="box_main">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
@@ -119,6 +128,16 @@
                       <object class="GtkImageMenuItem" id="imagemenuitem2">
                         <property name="use_action_appearance">True</property>
                         <property name="related_action">ac_open</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem">
+                        <property name="use_action_appearance">True</property>
+                        <property name="related_action">ac_open_app</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="use_underline">True</property>
@@ -398,7 +417,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
-                    <property name="tooltip_text" translatable="yes">The icon displayed for this starter. To change it, drop an image or a starter here or click.</property>
+                    <property name="tooltip_text" translatable="yes">The icon displayed for this starter. To change it, drop an image or a starter here or click or use the buttons below.</property>
                     <property name="halign">center</property>
                     <property name="valign">start</property>
                     <property name="margin_left">6</property>
@@ -426,11 +445,29 @@
                   </packing>
                 </child>
                 <child>
+                  <object class="GtkLabel" id="l_icon">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="margin_left">6</property>
+                    <property name="margin_right">6</property>
+                    <property name="margin_top">6</property>
+                    <property name="selectable">True</property>
+                    <property name="ellipsize">middle</property>
+                    <property name="single_line_mode">True</property>
+                    <property name="track_visited_links">False</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
                   <object class="GtkFrame">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="margin_left">6</property>
-                    <property name="margin_top">12</property>
+                    <property name="margin_top">18</property>
                     <property name="label_xalign">0.10000000149011612</property>
                     <property name="shadow_type">out</property>
                     <child>
@@ -439,20 +476,22 @@
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkButtonBox">
+                          <object class="GtkBox">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="margin_right">9</property>
-                            <property name="margin_top">3</property>
-                            <property name="margin_bottom">9</property>
+                            <property name="margin_right">6</property>
+                            <property name="margin_top">6</property>
+                            <property name="margin_bottom">6</property>
                             <property name="orientation">vertical</property>
-                            <property name="layout_style">start</property>
+                            <property name="spacing">6</property>
                             <child>
                               <object class="GtkButton" id="bt_icon_browse_files">
-                                <property name="label" translatable="yes">Use files</property>
+                                <property name="label" translatable="yes">Browse files</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <property name="tooltip_text" translatable="yes">Choose a file to use as icon</property>
+                                <property name="valign">center</property>
                                 <signal name="clicked" handler="on_bt_icon_browse_files_clicked" swapped="no"/>
                               </object>
                               <packing>
@@ -463,10 +502,12 @@
                             </child>
                             <child>
                               <object class="GtkButton" id="bt_icon_browse_icons">
-                                <property name="label" translatable="yes">Use icon theme</property>
+                                <property name="label" translatable="yes">Browse icon theme</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <property name="tooltip_text" translatable="yes">Choose an icon from the current icon theme</property>
+                                <property name="valign">center</property>
                                 <signal name="clicked" handler="on_bt_icon_browse_icons_clicked" swapped="no"/>
                               </object>
                               <packing>
@@ -476,12 +517,14 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkButton" id="bt_icon_browse_auto">
-                                <property name="label" translatable="yes">Autodetect</property>
+                              <object class="GtkButton" id="bt_icon_by_app">
+                                <property name="label" translatable="yes">Select by application</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
-                                <signal name="clicked" handler="on_bt_icon_browse_auto_clicked" swapped="no"/>
+                                <property name="tooltip_text" translatable="yes">Choose an application to use its icon</property>
+                                <property name="valign">center</property>
+                                <signal name="clicked" handler="on_bt_icon_by_app_clicked" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -504,7 +547,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">1</property>
+                    <property name="position">2</property>
                   </packing>
                 </child>
               </object>

@@ -1,0 +1,36 @@
+
+[Desktop Entry]
+Type=Application
+Version=1.0
+Hidden=false
+Terminal=false
+Icon=/usr/share/arronax/icons/arronax.png
+Name=Arronax
+Name[bg]=Arronax
+Name[ca]=Arronax
+Name[de]=Arronax
+Name[es]=Arronax
+Name[fr]=Arronax
+Name[gl]=Arronax
+Name[hr]=Arronax
+Name[it]=Arronax
+Name[ms]=Arronax
+Name[pt_BR]=Arronax
+Name[ru]=Arronax
+Name[zh_CN]=Arronax
+Comment=Create and edit application starters
+Comment[bg]=Създаване и редактиране на стартери за приложения
+Comment[ca]=Crea i edita iniciadors d'aplicació
+Comment[de]=Programm-Starter anlegen und ändern
+Comment[es]=Cree y edite accesos directos a aplicaciones
+Comment[fr]=Créer et modifier des lanceurs d'applications
+Comment[gl]=Crear e editar lanzadores de aplicacion
+Comment[hr]=Stvori i uredi pokretače aplikacija
+Comment[it]=Crea e modifica avviatori applicazione
+Comment[ms]=Cipta dan sunting pemula aplikasi
+Comment[pt_BR]=Criar e editar inicializadores de aplicativos
+Comment[ru]=Создание и изменение ярлыков запуска приложений
+Comment[zh_CN]=创建并编辑应用启动器
+Exec=arronax %f
+Categories=Utility;GNOME
+MimeType=application/x-desktop

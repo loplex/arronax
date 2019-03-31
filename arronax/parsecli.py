@@ -21,9 +21,15 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-import argparse, logging
+import argparse, logging, enum
 
 from arronax import settings
+
+
+class StarterType(enum.Enum):
+    Link = enum.auto()
+    Application = enum.auto()
+
 
 def setup_logging(args):
     if args.loglevel == 'debug':
@@ -46,17 +52,17 @@ def parse_cli_args():
 
     parser = argparse.ArgumentParser(
         description='Create and modify .desktop files',
-        prog=app_name, parents=[common],
+        prog=settings.app_name, parents=[common],
         allow_abbrev=False)
     parser.add_argument('--version', action='version',
           version='{} {}'.format(settings.APP_TITLE, settings.APP_VERSION))
     parser.add_argument('--dir', '-d')
 
     typeargs = parser.add_mutually_exclusive_group()
-    typeargs.add_argument('--link', '-l', default=True,
-                          action='store_true', dest='is_link')
-    typeargs.add_argument('--application', '-a', 
-                          action='store_false', dest='is_link')
+    typeargs.add_argument('--link', '-l', default=None,
+        const=StarterType.Link, action='store_const', dest='stype')
+    typeargs.add_argument('--application', '-a', default=None,
+        const=StarterType.Application, action='store_const', dest='stype')
     
     parser.add_argument('path', nargs='?', default=None)
     

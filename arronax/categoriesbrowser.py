@@ -3,7 +3,7 @@
 from gi.repository import Gtk, GdkPixbuf
 
 import os.path
-import settings, tvtools
+from . import settings, tvtools
 
 from gettext import gettext as _
 

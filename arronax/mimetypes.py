@@ -19,7 +19,7 @@
 from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio, GObject, Pango
 import os, os.path
 from gettext import gettext as _
-import  settings, tvtools, utils
+from . import  settings, tvtools, utils
 
 
 class MimetypesDlg:

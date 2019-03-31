@@ -3,9 +3,9 @@
 from gi.repository import Gtk, Gio
 from gettext import gettext as _
 import textwrap
-from urlparse import urlparse
+from urllib.parse import urlparse
 
-import settings
+from . import settings
 
 def add_help_menu(submenu):
     

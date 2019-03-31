@@ -15,10 +15,10 @@
 #
 
 from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio, GObject
-import os, os.path, time, sys, urllib, urlparse
+import os, os.path, time, sys, urllib.request, urllib.parse, urllib.error, urllib.parse
 from gettext import gettext as _
 
-import tvtools, settings, entrytools
+from . import tvtools, settings, entrytools
 
 class Quicklist(object):
 
@@ -109,14 +109,14 @@ class Quicklist(object):
 
     def get_row_from_drag_and_drop(self, uris, info):
         if info == 0 and len(uris) > 0:            
-            uri = urlparse.urlparse(uris[0])
+            uri = urllib.parse.urlparse(uris[0])
             filename = None
             if uri.scheme == 'file':
                 gfile = Gio.File.new_for_uri(uris[0])
                 ginfo = gfile.query_info("standard::*", 
                                         Gio.FileQueryInfoFlags.NONE, None)
                 mimetype = ginfo.get_content_type()
-                filename = urllib.url2pathname(uri.path)
+                filename = urllib.request.url2pathname(uri.path)
                 title = ginfo.get_display_name()
             elif uri.scheme == 'application':
                 appinfo = Gio.DesktopAppInfo.new(uri.netloc)
@@ -136,8 +136,8 @@ class Quicklist(object):
             keyfile.load_from_file(path,
                                    GLib.KeyFileFlags.KEEP_COMMENTS | 
                                    GLib.KeyFileFlags.KEEP_TRANSLATIONS)
-        except Exception, e:
-            print str(e)
+        except Exception as e:
+            print(str(e))
         group = 'Desktop Entry'
         title = keyfile.get_string(group, 'Name')
         command = keyfile.get_string(group, 'Exec')
