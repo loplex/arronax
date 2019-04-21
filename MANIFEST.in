@@ -10,13 +10,14 @@ recursive-include debian *
 recursive-exclude debian *.log
 recursive-include scripts *.sh
 
-prune debian/arronax
+prune debian/python3-arronax
 prune debian/arronax-base
 prune debian/arronax-caja
 prune debian/arronax-nautilus
 prune debian/arronax-nemo
 prune debian/tmp
 prune debian/.debhelper
+prune */__pycache__
 
 global-exclude *~
 
