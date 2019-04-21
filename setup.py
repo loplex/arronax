@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 #-*- coding: utf-8-*-
 #
 # Arronax - a application and filemananer plugin to create and modify .desktop files
@@ -26,11 +26,6 @@ from setuptools import setup, find_packages
 
 
 setup(
-     install_requires=[
-        'pygobject',
-        'setuptools >= 30.3.0',
-    ],
-
     packages=find_packages(),
     include_package_data=True,
 
@@ -49,11 +44,11 @@ setup(
          glob.glob('plugins/nemo-arronax.py')),
         ('share/caja-python/extensions/',
          glob.glob('plugins/caja-arronax.py')),
-        ] + [('share/locale/%s/LC_MESSAGES/'%(mo[8:-3]), [mo])
-             for mo in glob.glob('data/mo/*.mo')],
+        ] + [('share/locale/%s/LC_MESSAGES/'%mo.split('/')[2], [mo])
+             for mo in glob.glob('data/mo/*/arronax.mo')],
     entry_points = {
 
-        'gui_scripts': ['arronax=arronax.editor:main'],
+        'console_scripts': ['arronax=arronax.editor:main'],
         },
     keywords = "Nautilus, Nemo, Caja, extension, plugin, starter, desktop", 
     classifiers=[
