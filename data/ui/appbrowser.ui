@@ -140,7 +140,7 @@
                 <property name="can_focus">False</property>
                 <property name="margin_top">12</property>
                 <property name="margin_bottom">6</property>
-                <property name="label" translatable="yes">If you can't find your application here you have to create a starter for it first.</property>
+                <property name="label" translatable="yes">If you can't find your application here you have to create a .desktop file for it first.</property>
                 <property name="use_markup">True</property>
                 <property name="wrap">True</property>
               </object>
