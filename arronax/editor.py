@@ -81,6 +81,8 @@ class Editor(object):
 
         logging.debug('is_l:{} is_a:{}'.format(is_link, is_app))
         
+        self['window1'].show()
+
         if utils.is_desktop_file(path):
             logging.debug('is desktop')
             self.read_desktop_file(path)
@@ -110,13 +112,16 @@ class Editor(object):
             self.set_icon(icon)
             self.dfile.icon = icon
         self.dfile.dirty_flag = False
-        self['window1'].show()
 
 
     def create_builder(self):
         self.builder = Gtk.Builder()
+        logging.debug('LOCALES: domain:{} dir:{}'.format(
+            settings.GETTEXT_DOMAIN,
+            settings.LOCALE_DIR))
         self.builder.set_translation_domain(settings.GETTEXT_DOMAIN)
-        gettext.bindtextdomain(settings.GETTEXT_DOMAIN)
+        gettext.bindtextdomain(settings.GETTEXT_DOMAIN,
+                               settings.LOCALE_DIR)
         gettext.textdomain(settings.GETTEXT_DOMAIN)
         gettext.bind_textdomain_codeset(settings.GETTEXT_DOMAIN, 'UTF-8')
 
@@ -152,6 +157,12 @@ class Editor(object):
                               _("Loaded file '%s' ...") % path) as status:
             msg = self.dfile.load(path)
             if msg is not None:
+                while Gtk.events_pending():
+                    Gtk.main_iteration()
+                dialogs.error(self['window1'], _('Error'),
+                              _("Can't load file '%s':\n %s" % (path, msg)))
+                status.set_end_msg(_("Can't load file '%s'")%path)
+
                 return False
             else:
                 self.filename = path

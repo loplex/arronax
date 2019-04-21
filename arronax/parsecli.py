@@ -27,8 +27,8 @@ from arronax import settings
 
 
 class StarterType(enum.Enum):
-    Link = enum.auto()
-    Application = enum.auto()
+    Link = 1
+    Application = 2
 
 
 def setup_logging(args):

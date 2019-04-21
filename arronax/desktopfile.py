@@ -353,7 +353,8 @@ class DesktopFile(object):
         content = self.keyfile.to_data()[0]
 
         try:
-            os.rename(path, '%s~' % path)
+            if os.path.exists(path):
+                os.rename(path, '%s~' % path)
         except Exception as e:
             logging.error('os.rename: p:{} e:{}'.format(path, e))
         try:
