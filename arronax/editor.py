@@ -153,15 +153,18 @@ class Editor(object):
 
     def read_desktop_file(self, path):
         logging.info("Loading {}".format(path))
-        with statusbar.Status(_("Loading file '%s' ...") % path,
-                              _("Loaded file '%s' ...") % path) as status:
+        start_msg = _("Loading file '{path}' ...").format(path=path)
+        end_msg = _("Loaded file '{path}' ...").format(path=path)
+        with statusbar.Status(start_msg, end_msg) as status:
             msg = self.dfile.load(path)
             if msg is not None:
                 while Gtk.events_pending():
                     Gtk.main_iteration()
-                dialogs.error(self['window1'], _('Error'),
-                              _("Can't load file '%s':\n %s" % (path, msg)))
-                status.set_end_msg(_("Can't load file '%s'")%path)
+                err_msg = _("Can't load file '{path}':\n {error}").format(
+                    path=path, error=msg)
+                dialogs.error(self['window1'], _('Error'), err_msg)
+                end_msg = _("Can't load file '{path}'").format(path=path)
+                status.set_end_msg(end_msg)
 
                 return False
             else:
@@ -194,7 +197,8 @@ class Editor(object):
         if self.filename is None:
             title = settings.APP_NAME
         else:
-            title = '%s: %s' % (settings.APP_NAME, self.filename)
+            title = '{app_name}: {file_name}'.format(
+                app_name=settings.APP_NAME, file_name=self.filename)
         logging.debug('New title: "{}"'.format(title))
         self['window1'].set_title(title)
         
@@ -397,8 +401,10 @@ class Editor(object):
             dialogs.error(self['window1'], _('Error'), msg)
             return False
 
-        status_msg = _("Saving file %s ...") % (self.filename or '')
-        end_msg = _("File %s saved.") % (self.filename or '')
+        status_msg = _("Saving file '{path}' ...").format(
+            path=self.filename or '')
+        end_msg = _("File '{path}' saved.").format(
+            path=self.filename or '')
 
         with statusbar.Status(status_msg, end_msg) as status:            
             if (is_save_as or (self.filename is None or 
@@ -412,7 +418,9 @@ class Editor(object):
                     return
                 else:
                     self.filename = filename
-                    status.set_end_msg(_("Saved file '%s'.")% self.filename)
+                    end_msg = _("Saved file '{path}'.").format(
+                        path=self.filename)
+                    status.set_end_msg(end_msg)
                     self.update_window_title()
             msg = self.dfile.save(self.filename)
             if msg is not None:

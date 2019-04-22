@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-21 15:06+0200\n"
+"POT-Creation-Date: 2019-04-22 10:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,104 +61,104 @@ msgstr ""
 msgid "System Autostart Folder"
 msgstr ""
 
-#: ../arronax/editor.py:134
+#: ../arronax/editor.py:138
 msgid "Enabled"
 msgstr ""
 
-#: ../arronax/editor.py:139 ../arronax/mimetypes.py:58
+#: ../arronax/editor.py:143 ../arronax/mimetypes.py:58
 msgid "Name"
 msgstr ""
 
-#: ../arronax/editor.py:152
-#, python-format
-msgid "Loading file '%s' ..."
+#: ../arronax/editor.py:156
+#, python-brace-format
+msgid "Loading file '{path}' ..."
 msgstr ""
 
-#: ../arronax/editor.py:153
-#, python-format
-msgid "Loaded file '%s' ..."
+#: ../arronax/editor.py:157
+#, python-brace-format
+msgid "Loaded file '{path}' ..."
 msgstr ""
 
-#: ../arronax/editor.py:158 ../arronax/editor.py:393
+#: ../arronax/editor.py:163
+#, python-brace-format
+msgid ""
+"Can't load file '{path}':\n"
+" {error}"
+msgstr ""
+
+#: ../arronax/editor.py:165 ../arronax/editor.py:401
 msgid "Error"
 msgstr ""
 
-#: ../arronax/editor.py:159
-#, python-format
-msgid ""
-"Can't load file '%s':\n"
-" %s"
+#: ../arronax/editor.py:166
+#, python-brace-format
+msgid "Can't load file '{path}'"
 msgstr ""
 
-#: ../arronax/editor.py:160
-#, python-format
-msgid "Can't load file '%s'"
-msgstr ""
-
-#: ../arronax/editor.py:212
+#: ../arronax/editor.py:220
 msgid "You need to provide a title."
 msgstr ""
 
-#: ../arronax/editor.py:215
+#: ../arronax/editor.py:223
 msgid "You need to provide a command."
 msgstr ""
 
-#: ../arronax/editor.py:217
+#: ../arronax/editor.py:225
 msgid "You need to provide a URL or file name."
 msgstr ""
 
-#: ../arronax/editor.py:227
+#: ../arronax/editor.py:235
 msgid "Save now?"
 msgstr ""
 
-#: ../arronax/editor.py:228
+#: ../arronax/editor.py:236
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
 
-#: ../arronax/editor.py:278 ../data/ui/icondlg.ui.h:1 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:286 ../data/ui/icondlg.ui.h:1 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr ""
 
-#: ../arronax/editor.py:396
-#, python-format
-msgid "Saving file %s ..."
+#: ../arronax/editor.py:404
+#, python-brace-format
+msgid "Saving file '{path}' ..."
 msgstr ""
 
-#: ../arronax/editor.py:397
-#, python-format
-msgid "File %s saved."
+#: ../arronax/editor.py:406
+#, python-brace-format
+msgid "File '{path}' saved."
 msgstr ""
 
-#: ../arronax/editor.py:407 ../arronax/editor.py:417
+#: ../arronax/editor.py:417 ../arronax/editor.py:429
 msgid "File not saved."
 msgstr ""
 
-#: ../arronax/editor.py:411
-#, python-format
-msgid "Saved file '%s'."
+#: ../arronax/editor.py:421
+#, python-brace-format
+msgid "Saved file '{path}'."
 msgstr ""
 
-#: ../arronax/editor.py:415
+#: ../arronax/editor.py:427
 msgid "Can not save starter"
 msgstr ""
 
-#: ../arronax/editor.py:505
+#: ../arronax/editor.py:517
 msgid "File or URL:"
 msgstr ""
 
-#: ../arronax/editor.py:505 ../data/ui/edit.ui.h:41
+#: ../arronax/editor.py:517 ../data/ui/edit.ui.h:41
 msgid "Command:"
 msgstr ""
 
-#: ../arronax/editor.py:594
+#: ../arronax/editor.py:606
 msgid "This is not an image. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:597
+#: ../arronax/editor.py:609
 msgid "This is not a local file. Icon not changed."
 msgstr ""
 
-#: ../arronax/editor.py:649
+#: ../arronax/editor.py:661
 msgid "Created new starter."
 msgstr ""
 
