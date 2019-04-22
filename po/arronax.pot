@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-22 10:32+0200\n"
+"POT-Creation-Date: 2019-04-22 22:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Enabled"
 msgstr ""
 
-#: ../arronax/editor.py:143 ../arronax/mimetypes.py:58
+#: ../arronax/editor.py:143 ../arronax/mimetypes.py:74
 msgid "Name"
 msgstr ""
 
@@ -162,11 +162,11 @@ msgstr ""
 msgid "Created new starter."
 msgstr ""
 
-#: ../arronax/mimetypes.py:47 ../arronax/categoriesbrowser.py:40
+#: ../arronax/mimetypes.py:64 ../arronax/categoriesbrowser.py:40
 msgid "Selected"
 msgstr ""
 
-#: ../arronax/mimetypes.py:60
+#: ../arronax/mimetypes.py:77
 msgid "Description"
 msgstr ""
 
@@ -292,7 +292,8 @@ msgstr ""
 msgid "Loading icons..."
 msgstr ""
 
-#: ../data/ui/icondlg.ui.h:3 ../data/ui/appbrowser.ui.h:2
+#: ../data/ui/icondlg.ui.h:3 ../data/ui/mimetypes.ui.h:3
+#: ../data/ui/appbrowser.ui.h:2
 msgid "Filter:"
 msgstr ""
 
@@ -312,6 +313,10 @@ msgstr ""
 
 #: ../data/ui/quicklist.ui.h:3
 msgid "_Title:"
+msgstr ""
+
+#: ../data/ui/categoriesdlg.ui.h:1
+msgid "Choose categories"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:1

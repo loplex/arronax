@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-21 15:06+0200\n"
+"POT-Creation-Date: 2019-04-22 22:46+0200\n"
 "PO-Revision-Date: 2014-06-24 19:05+0000\n"
 "Last-Translator: metacibi <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-07-16 12:36+0000\n"
-"X-Generator: Launchpad (build 17112)\n"
+"X-Launchpad-Export-Date: 2019-04-22 12:12+0000\n"
+"X-Generator: Launchpad (build 18928)\n"
 
 #: ../arronax/filechooser.py:15
 msgid "Open File"
@@ -62,112 +62,112 @@ msgstr "Vés a la carpeta d'inici automàtic de l'usuari"
 msgid "System Autostart Folder"
 msgstr "Vés a la carpeta d'inici automàtic del sistema"
 
-#: ../arronax/editor.py:134
+#: ../arronax/editor.py:138
 msgid "Enabled"
 msgstr "Habilitat"
 
-#: ../arronax/editor.py:139 ../arronax/mimetypes.py:58
+#: ../arronax/editor.py:143 ../arronax/mimetypes.py:74
 msgid "Name"
 msgstr "Nom"
 
-#: ../arronax/editor.py:152
-#, python-format
-msgid "Loading file '%s' ..."
-msgstr "Carregant el fitxer '%s' ..."
+#: ../arronax/editor.py:156
+#, python-brace-format
+msgid "Loading file '{path}' ..."
+msgstr ""
 
-#: ../arronax/editor.py:153
-#, python-format
-msgid "Loaded file '%s' ..."
-msgstr "Fitxer '%s' carregat ..."
+#: ../arronax/editor.py:157
+#, python-brace-format
+msgid "Loaded file '{path}' ..."
+msgstr ""
 
-#: ../arronax/editor.py:158 ../arronax/editor.py:393
+#: ../arronax/editor.py:163
+#, python-brace-format
+msgid ""
+"Can't load file '{path}':\n"
+" {error}"
+msgstr ""
+
+#: ../arronax/editor.py:165 ../arronax/editor.py:401
 msgid "Error"
 msgstr "S'ha produït un error"
 
-#: ../arronax/editor.py:159
-#, fuzzy, python-format
-msgid ""
-"Can't load file '%s':\n"
-" %s"
-msgstr "Fitxer '%s' carregat ..."
+#: ../arronax/editor.py:166
+#, python-brace-format
+msgid "Can't load file '{path}'"
+msgstr ""
 
-#: ../arronax/editor.py:160
-#, fuzzy, python-format
-msgid "Can't load file '%s'"
-msgstr "El fitxer '%s' s'ha desat."
-
-#: ../arronax/editor.py:212
+#: ../arronax/editor.py:220
 msgid "You need to provide a title."
 msgstr "Heu de proporcionar un nom."
 
-#: ../arronax/editor.py:215
+#: ../arronax/editor.py:223
 msgid "You need to provide a command."
 msgstr "Heu de proporcionar una ordre."
 
-#: ../arronax/editor.py:217
+#: ../arronax/editor.py:225
 msgid "You need to provide a URL or file name."
 msgstr "Heu de proporcionar una URL o un nom de fitxer."
 
-#: ../arronax/editor.py:227
+#: ../arronax/editor.py:235
 msgid "Save now?"
 msgstr "Voleu desar ara?"
 
-#: ../arronax/editor.py:228
+#: ../arronax/editor.py:236
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr "Teniu canvis sense desar. Voleu desar-los ara?"
 
-#: ../arronax/editor.py:278 ../data/ui/icondlg.ui.h:1 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:286 ../data/ui/icondlg.ui.h:1 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Seleccioneu una icona"
 
-#: ../arronax/editor.py:396
-#, python-format
-msgid "Saving file %s ..."
-msgstr "Desant el fitxer %s ..."
+#: ../arronax/editor.py:404
+#, python-brace-format
+msgid "Saving file '{path}' ..."
+msgstr ""
 
-#: ../arronax/editor.py:397
-#, python-format
-msgid "File %s saved."
-msgstr "S'ha desat el fitxer %s."
+#: ../arronax/editor.py:406
+#, python-brace-format
+msgid "File '{path}' saved."
+msgstr ""
 
-#: ../arronax/editor.py:407 ../arronax/editor.py:417
+#: ../arronax/editor.py:417 ../arronax/editor.py:429
 msgid "File not saved."
 msgstr "El fitxer no s'ha desat."
 
-#: ../arronax/editor.py:411
-#, python-format
-msgid "Saved file '%s'."
-msgstr "El fitxer '%s' s'ha desat."
+#: ../arronax/editor.py:421
+#, python-brace-format
+msgid "Saved file '{path}'."
+msgstr ""
 
-#: ../arronax/editor.py:415
+#: ../arronax/editor.py:427
 msgid "Can not save starter"
 msgstr "No es pot desar l'iniciador"
 
-#: ../arronax/editor.py:505
+#: ../arronax/editor.py:517
 msgid "File or URL:"
 msgstr "Fitxer o URL:"
 
-#: ../arronax/editor.py:505 ../data/ui/edit.ui.h:41
+#: ../arronax/editor.py:517 ../data/ui/edit.ui.h:41
 msgid "Command:"
 msgstr "Ordre:"
 
-#: ../arronax/editor.py:594
+#: ../arronax/editor.py:606
 msgid "This is not an image. Icon not changed."
 msgstr "No s'ha canviat la icona perquè el fitxer no és una imatge."
 
-#: ../arronax/editor.py:597
+#: ../arronax/editor.py:609
 msgid "This is not a local file. Icon not changed."
 msgstr "No s'ha canviat la icona perquè el fitxer no és un fitxer local."
 
-#: ../arronax/editor.py:649
+#: ../arronax/editor.py:661
 msgid "Created new starter."
 msgstr "S'ha creat un nou iniciador."
 
-#: ../arronax/mimetypes.py:47 ../arronax/categoriesbrowser.py:40
+#: ../arronax/mimetypes.py:64 ../arronax/categoriesbrowser.py:40
 msgid "Selected"
 msgstr "Seleccionat"
 
-#: ../arronax/mimetypes.py:60
+#: ../arronax/mimetypes.py:77
 msgid "Description"
 msgstr "Descripció"
 
@@ -202,78 +202,64 @@ msgstr ""
 "  metacibi https://launchpad.net/~metacibi"
 
 #: ../arronax/settings.py:92
-#, fuzzy
 msgid "GNOME Desktop"
-msgstr "Escriptori"
+msgstr ""
 
 #: ../arronax/settings.py:93
-#, fuzzy
 msgid "KDE Desktop"
-msgstr "Escriptori"
+msgstr ""
 
 #: ../arronax/settings.py:94
-#, fuzzy
 msgid "LXDE Desktop"
-msgstr "Escriptori"
+msgstr ""
 
 #: ../arronax/settings.py:95
-#, fuzzy
 msgid "LXQt Desktop"
-msgstr "Escriptori"
+msgstr ""
 
 #: ../arronax/settings.py:96
-#, fuzzy
 msgid "MATE Desktop"
-msgstr "Escriptori"
+msgstr ""
 
 #: ../arronax/settings.py:97
-#, fuzzy
 msgid "Razor-qt Desktop"
-msgstr "Razor-qt"
+msgstr ""
 
 #: ../arronax/settings.py:98
-#, fuzzy
 msgid "ROX Desktop"
-msgstr "Escriptori"
+msgstr ""
 
 #: ../arronax/settings.py:99
 msgid "Trinity Desktop"
 msgstr "Trinity Desktop"
 
 #: ../arronax/settings.py:100
-#, fuzzy
 msgid "Unity Desktop"
-msgstr "Trinity Desktop"
+msgstr ""
 
 #: ../arronax/settings.py:101
-#, fuzzy
 msgid "XFCE Desktop"
-msgstr "Escriptori"
+msgstr ""
 
 #: ../arronax/settings.py:102
-#, fuzzy
 msgid "EDE Desktop"
-msgstr "Escriptori"
+msgstr ""
 
 #: ../arronax/settings.py:103
-#, fuzzy
 msgid "Cinnamon Desktop"
-msgstr "Trinity Desktop"
+msgstr ""
 
 #: ../arronax/settings.py:104
-#, fuzzy
 msgid "Pantheon Desktop"
-msgstr "Trinity Desktop"
+msgstr ""
 
 #: ../arronax/settings.py:105
-#, fuzzy
 msgid "Legacy menu systems"
-msgstr "Entorns heretats"
+msgstr ""
 
 #: ../arronax/plugin.py:65
-#, fuzzy
 msgid "Create a starter for this location"
-msgstr "Crea un iniciador per a aquest fitxer"
+msgstr ""
 
 #: ../arronax/plugin.py:67
 msgid "Modify this starter"
@@ -306,11 +292,11 @@ msgid "Create and edit application starters"
 msgstr "Crea i edita iniciadors d'aplicació"
 
 #: ../data/ui/icondlg.ui.h:2
-#, fuzzy
 msgid "Loading icons..."
-msgstr "Carregant el fitxer '%s' ..."
+msgstr ""
 
-#: ../data/ui/icondlg.ui.h:3 ../data/ui/appbrowser.ui.h:2
+#: ../data/ui/icondlg.ui.h:3 ../data/ui/mimetypes.ui.h:3
+#: ../data/ui/appbrowser.ui.h:2
 msgid "Filter:"
 msgstr ""
 
@@ -335,19 +321,22 @@ msgstr "_Ordre:"
 msgid "_Title:"
 msgstr "Nom"
 
+#: ../data/ui/categoriesdlg.ui.h:1
+#, fuzzy
+msgid "Choose categories"
+msgstr "Categories:"
+
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
 msgstr "Quant a Arronax"
 
 #: ../data/ui/edit.ui.h:3
-#, fuzzy
 msgid "Select an file or  icon for this starter"
-msgstr "Selecciona una icona per a l'iniciador"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:4
-#, fuzzy
 msgid "Browse files or icons to use as icon for this starter"
-msgstr "Selecciona una icona per a l'iniciador"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:5
 msgid "Create a new application starter"
@@ -358,9 +347,8 @@ msgid "Open a application starter"
 msgstr "Obre un iniciador d'aplicació"
 
 #: ../data/ui/edit.ui.h:7
-#, fuzzy
 msgid "Open application"
-msgstr "Obre un iniciador d'aplicació"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:8
 msgid "Duplicate"
@@ -411,22 +399,18 @@ msgid "You can drop a starter here to load it."
 msgstr "Podeu deixar anar un iniciador aquí per a carregar-lo."
 
 #: ../data/ui/edit.ui.h:21
-#, fuzzy
 msgid ""
 "The icon displayed for this starter. To change it, drop an image or a "
 "starter here or click or use the buttons below."
 msgstr ""
-"La icona que es mostra per a aquest iniciador. Per a canviar-la, deixeu anar "
-"una imatge o un iniciador aquí, o feu clic."
 
 #: ../data/ui/edit.ui.h:22
 msgid "Browse files"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:23
-#, fuzzy
 msgid "Choose a file to use as icon"
-msgstr "Examineu el sistema de fitxers per a seleccionar una ordre"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:24
 msgid "Browse icon theme"
@@ -437,9 +421,8 @@ msgid "Choose an icon from the current icon theme"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:26
-#, fuzzy
 msgid "Select by application"
-msgstr "Desa en un iniciador d'aplicació"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:27
 msgid "Choose an application to use its icon"
@@ -636,9 +619,8 @@ msgid "_Keywords"
 msgstr "Paraules c_lau"
 
 #: ../data/ui/appbrowser.ui.h:1
-#, fuzzy
 msgid "Select Application"
-msgstr "Seleccioneu una icona"
+msgstr ""
 
 #: ../data/ui/appbrowser.ui.h:3
 msgid ""
@@ -646,32 +628,17 @@ msgid ""
 "for it first."
 msgstr ""
 
-#~ msgid "GNOME"
-#~ msgstr "GNOME"
+#~ msgid "Loaded file '%s' ..."
+#~ msgstr "Fitxer '%s' carregat ..."
 
-#~ msgid "KDE"
-#~ msgstr "KDE"
+#~ msgid "Loading file '%s' ..."
+#~ msgstr "Carregant el fitxer '%s' ..."
 
-#~ msgid "LXDE"
-#~ msgstr "LXDE"
+#~ msgid "File %s saved."
+#~ msgstr "S'ha desat el fitxer %s."
 
-#~ msgid "MATE"
-#~ msgstr "MATE"
+#~ msgid "Saving file %s ..."
+#~ msgstr "Desant el fitxer %s ..."
 
-#~ msgid "ROX"
-#~ msgstr "ROX"
-
-#~ msgid "Unity"
-#~ msgstr "Unity"
-
-#~ msgid "XFCE"
-#~ msgstr "XFCE"
-
-#~ msgid "Can not load starter"
-#~ msgstr "No s'ha pogut carregar l'iniciador"
-
-#~ msgid "File not loaded."
-#~ msgstr "El fitxer no s'ha carregat."
-
-#~ msgid "This is not a local file. File not loaded."
-#~ msgstr "No s'ha carregat el fitxer perquè no és un fitxer local."
+#~ msgid "Saved file '%s'."
+#~ msgstr "El fitxer '%s' s'ha desat."

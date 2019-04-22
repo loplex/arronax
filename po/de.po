@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-21 15:06+0200\n"
-"PO-Revision-Date: 2014-07-03 17:35+0000\n"
-"Last-Translator: Tobias Bannert <Unknown>\n"
+"POT-Creation-Date: 2019-04-22 22:46+0200\n"
+"PO-Revision-Date: 2019-04-22 09:44+0000\n"
+"Last-Translator: Florian Diesch <diesch@spamfence.net>\n"
 "Language-Team: German <de@li.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-07-16 12:36+0000\n"
-"X-Generator: Launchpad (build 17112)\n"
+"X-Launchpad-Export-Date: 2019-04-22 12:12+0000\n"
+"X-Generator: Launchpad (build 18928)\n"
 
 #: ../arronax/filechooser.py:15
 msgid "Open File"
@@ -62,113 +62,115 @@ msgstr "Ordner für Benutzer-Startprogramme"
 msgid "System Autostart Folder"
 msgstr "Ordern für System-Startprogramme"
 
-#: ../arronax/editor.py:134
+#: ../arronax/editor.py:138
 msgid "Enabled"
 msgstr "Aktiviert"
 
-#: ../arronax/editor.py:139 ../arronax/mimetypes.py:58
+#: ../arronax/editor.py:143 ../arronax/mimetypes.py:74
 msgid "Name"
 msgstr "Name"
 
-#: ../arronax/editor.py:152
-#, python-format
-msgid "Loading file '%s' ..."
-msgstr "Lade Datei '%s' ..."
+#: ../arronax/editor.py:156
+#, python-brace-format
+msgid "Loading file '{path}' ..."
+msgstr "Lade Datei '{path}' ..."
 
-#: ../arronax/editor.py:153
-#, python-format
-msgid "Loaded file '%s' ..."
-msgstr "Datei '%s' geladen."
+#: ../arronax/editor.py:157
+#, python-brace-format
+msgid "Loaded file '{path}' ..."
+msgstr "Datei '{path}' geladen..."
 
-#: ../arronax/editor.py:158 ../arronax/editor.py:393
+#: ../arronax/editor.py:163
+#, python-brace-format
+msgid ""
+"Can't load file '{path}':\n"
+" {error}"
+msgstr ""
+"Kann Datei '{path}' nicht laden:\n"
+" {error}"
+
+#: ../arronax/editor.py:165 ../arronax/editor.py:401
 msgid "Error"
 msgstr "Fehler"
 
-#: ../arronax/editor.py:159
-#, fuzzy, python-format
-msgid ""
-"Can't load file '%s':\n"
-" %s"
-msgstr "Datei '%s' geladen."
+#: ../arronax/editor.py:166
+#, python-brace-format
+msgid "Can't load file '{path}'"
+msgstr "Kann Datei '{path}' nicht laden."
 
-#: ../arronax/editor.py:160
-#, fuzzy, python-format
-msgid "Can't load file '%s'"
-msgstr "Datei '%s' gespeichert."
-
-#: ../arronax/editor.py:212
+#: ../arronax/editor.py:220
 msgid "You need to provide a title."
 msgstr "Sie müssen einen Titel angeben."
 
-#: ../arronax/editor.py:215
+#: ../arronax/editor.py:223
 msgid "You need to provide a command."
 msgstr "Sie müssen einen Befehl angeben."
 
-#: ../arronax/editor.py:217
+#: ../arronax/editor.py:225
 msgid "You need to provide a URL or file name."
 msgstr "Sie müssen eine URL oder einen Dateinamen angeben."
 
-#: ../arronax/editor.py:227
+#: ../arronax/editor.py:235
 msgid "Save now?"
 msgstr "Jetzt speichern?"
 
-#: ../arronax/editor.py:228
+#: ../arronax/editor.py:236
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
 "Einige Änderungen wurden noch nicht gespeichert. Wollen Sie jetzt speichern?"
 
-#: ../arronax/editor.py:278 ../data/ui/icondlg.ui.h:1 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:286 ../data/ui/icondlg.ui.h:1 ../data/ui/edit.ui.h:2
 msgid "Select Icon"
 msgstr "Wählen Sie ein Symbol"
 
-#: ../arronax/editor.py:396
-#, python-format
-msgid "Saving file %s ..."
-msgstr "Speichere Datei %s"
+#: ../arronax/editor.py:404
+#, python-brace-format
+msgid "Saving file '{path}' ..."
+msgstr "Speichere Datei '{path}'..."
 
-#: ../arronax/editor.py:397
-#, python-format
-msgid "File %s saved."
-msgstr "Datei %s gespeichert."
+#: ../arronax/editor.py:406
+#, python-brace-format
+msgid "File '{path}' saved."
+msgstr "Datei '{path}' gespeichert."
 
-#: ../arronax/editor.py:407 ../arronax/editor.py:417
+#: ../arronax/editor.py:417 ../arronax/editor.py:429
 msgid "File not saved."
 msgstr "Datei nicht gespeichert."
 
-#: ../arronax/editor.py:411
-#, python-format
-msgid "Saved file '%s'."
-msgstr "Datei '%s' gespeichert."
+#: ../arronax/editor.py:421
+#, python-brace-format
+msgid "Saved file '{path}'."
+msgstr "Datei '{path}' gespeichert."
 
-#: ../arronax/editor.py:415
+#: ../arronax/editor.py:427
 msgid "Can not save starter"
 msgstr "Starter kann nicht gespeichert werden"
 
-#: ../arronax/editor.py:505
+#: ../arronax/editor.py:517
 msgid "File or URL:"
 msgstr "Datei oder Ort (URL):"
 
-#: ../arronax/editor.py:505 ../data/ui/edit.ui.h:41
+#: ../arronax/editor.py:517 ../data/ui/edit.ui.h:41
 msgid "Command:"
 msgstr "Befehl:"
 
-#: ../arronax/editor.py:594
+#: ../arronax/editor.py:606
 msgid "This is not an image. Icon not changed."
 msgstr "Das ist keine Bild-Datei. Symbol nicht geändert."
 
-#: ../arronax/editor.py:597
+#: ../arronax/editor.py:609
 msgid "This is not a local file. Icon not changed."
 msgstr "Das ist keine lokale Datei. Symbol nicht geändert."
 
-#: ../arronax/editor.py:649
+#: ../arronax/editor.py:661
 msgid "Created new starter."
 msgstr "Neuen Starter angelegt."
 
-#: ../arronax/mimetypes.py:47 ../arronax/categoriesbrowser.py:40
+#: ../arronax/mimetypes.py:64 ../arronax/categoriesbrowser.py:40
 msgid "Selected"
 msgstr "Ausgewählt"
 
-#: ../arronax/mimetypes.py:60
+#: ../arronax/mimetypes.py:77
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -200,82 +202,69 @@ msgstr "Spenden (PayPal)"
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  Dan Cooper https://launchpad.net/~pcfan1234\n"
 "  Florian Diesch https://launchpad.net/~diesch\n"
 "  Tobias Bannert https://launchpad.net/~toba"
 
 #: ../arronax/settings.py:92
-#, fuzzy
 msgid "GNOME Desktop"
-msgstr "Arbeitsfläche"
+msgstr "GNOME Desktop"
 
 #: ../arronax/settings.py:93
-#, fuzzy
 msgid "KDE Desktop"
-msgstr "Arbeitsfläche"
+msgstr "KDE Desktop"
 
 #: ../arronax/settings.py:94
-#, fuzzy
 msgid "LXDE Desktop"
-msgstr "Arbeitsfläche"
+msgstr "LXDE Desktop"
 
 #: ../arronax/settings.py:95
-#, fuzzy
 msgid "LXQt Desktop"
-msgstr "Arbeitsfläche"
+msgstr "LXQt Desktop"
 
 #: ../arronax/settings.py:96
-#, fuzzy
 msgid "MATE Desktop"
-msgstr "Arbeitsfläche"
+msgstr "MATE Desktop"
 
 #: ../arronax/settings.py:97
-#, fuzzy
 msgid "Razor-qt Desktop"
-msgstr "Razor-qt"
+msgstr "Razor-qt Desktop"
 
 #: ../arronax/settings.py:98
-#, fuzzy
 msgid "ROX Desktop"
-msgstr "Arbeitsfläche"
+msgstr "ROX Desktop"
 
 #: ../arronax/settings.py:99
 msgid "Trinity Desktop"
 msgstr "Trinity Arbeitsumgebung"
 
 #: ../arronax/settings.py:100
-#, fuzzy
 msgid "Unity Desktop"
-msgstr "Trinity Arbeitsumgebung"
+msgstr "Unity Desktop"
 
 #: ../arronax/settings.py:101
-#, fuzzy
 msgid "XFCE Desktop"
-msgstr "Arbeitsfläche"
+msgstr "XFCE Desktop"
 
 #: ../arronax/settings.py:102
-#, fuzzy
 msgid "EDE Desktop"
-msgstr "Arbeitsfläche"
+msgstr "EDE Desktop"
 
 #: ../arronax/settings.py:103
-#, fuzzy
 msgid "Cinnamon Desktop"
-msgstr "Trinity Arbeitsumgebung"
+msgstr "Cinnamon Desktop"
 
 #: ../arronax/settings.py:104
-#, fuzzy
 msgid "Pantheon Desktop"
-msgstr "Trinity Arbeitsumgebung"
+msgstr "Pantheon Desktop"
 
 #: ../arronax/settings.py:105
-#, fuzzy
 msgid "Legacy menu systems"
-msgstr "traditionelle Arbeitsumgebungen"
+msgstr ""
 
 #: ../arronax/plugin.py:65
-#, fuzzy
 msgid "Create a starter for this location"
-msgstr "Einen Starter für diese Datei anlegen"
+msgstr ""
 
 #: ../arronax/plugin.py:67
 msgid "Modify this starter"
@@ -308,13 +297,13 @@ msgid "Create and edit application starters"
 msgstr "Programm-Starter anlegen und ändern"
 
 #: ../data/ui/icondlg.ui.h:2
-#, fuzzy
 msgid "Loading icons..."
-msgstr "Lade Datei '%s' ..."
+msgstr "Lade Symbole ..."
 
-#: ../data/ui/icondlg.ui.h:3 ../data/ui/appbrowser.ui.h:2
+#: ../data/ui/icondlg.ui.h:3 ../data/ui/mimetypes.ui.h:3
+#: ../data/ui/appbrowser.ui.h:2
 msgid "Filter:"
-msgstr ""
+msgstr "Filter:"
 
 #: ../data/ui/mimetypes.ui.h:1
 msgid ""
@@ -337,19 +326,22 @@ msgstr "_Befehl:"
 msgid "_Title:"
 msgstr "_Titel:"
 
+#: ../data/ui/categoriesdlg.ui.h:1
+#, fuzzy
+msgid "Choose categories"
+msgstr "Kategorien:"
+
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
 msgstr "Informationen über Arronax anzeigen"
 
 #: ../data/ui/edit.ui.h:3
-#, fuzzy
 msgid "Select an file or  icon for this starter"
-msgstr "Wählen Sie einen Symbol für diesen Starter"
+msgstr "Datei oder Icon für diesen Starter auswählen"
 
 #: ../data/ui/edit.ui.h:4
-#, fuzzy
 msgid "Browse files or icons to use as icon for this starter"
-msgstr "Wählen Sie einen Symbol für diesen Starter"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:5
 msgid "Create a new application starter"
@@ -360,9 +352,8 @@ msgid "Open a application starter"
 msgstr "Einen Starter öffnen"
 
 #: ../data/ui/edit.ui.h:7
-#, fuzzy
 msgid "Open application"
-msgstr "Einen Starter öffnen"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:8
 msgid "Duplicate"
@@ -413,22 +404,18 @@ msgid "You can drop a starter here to load it."
 msgstr "Sie können einen Starter hierher ziehen, um ihn zu öffnen."
 
 #: ../data/ui/edit.ui.h:21
-#, fuzzy
 msgid ""
 "The icon displayed for this starter. To change it, drop an image or a "
 "starter here or click or use the buttons below."
 msgstr ""
-"Das Symbol für den Starter. Sie können ein Bild hierher ziehen oder hier "
-"klicken, um das Symbol zu ändern."
 
 #: ../data/ui/edit.ui.h:22
 msgid "Browse files"
-msgstr ""
+msgstr "Dateien durchsuchen"
 
 #: ../data/ui/edit.ui.h:23
-#, fuzzy
 msgid "Choose a file to use as icon"
-msgstr "Durchsuchen Sie das Dateisystem, um einen Befehl auszuwählen"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:24
 msgid "Browse icon theme"
@@ -439,9 +426,8 @@ msgid "Choose an icon from the current icon theme"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:26
-#, fuzzy
 msgid "Select by application"
-msgstr "Den Starter speichern"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:27
 msgid "Choose an application to use its icon"
@@ -449,7 +435,7 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:28
 msgid "Change icon:"
-msgstr ""
+msgstr "Icon ändern:"
 
 #: ../data/ui/edit.ui.h:29
 msgid "Title that is displayed for this starter file"
@@ -638,9 +624,8 @@ msgid "_Keywords"
 msgstr "Schlüsselwörter"
 
 #: ../data/ui/appbrowser.ui.h:1
-#, fuzzy
 msgid "Select Application"
-msgstr "Wählen Sie ein Symbol"
+msgstr "Anwendung auswählen"
 
 #: ../data/ui/appbrowser.ui.h:3
 msgid ""
@@ -648,32 +633,17 @@ msgid ""
 "for it first."
 msgstr ""
 
-#~ msgid "GNOME"
-#~ msgstr "GNOME"
+#~ msgid "Loaded file '%s' ..."
+#~ msgstr "Datei '%s' geladen."
 
-#~ msgid "KDE"
-#~ msgstr "KDE"
+#~ msgid "Loading file '%s' ..."
+#~ msgstr "Lade Datei '%s' ..."
 
-#~ msgid "LXDE"
-#~ msgstr "LXDE"
+#~ msgid "Saved file '%s'."
+#~ msgstr "Datei '%s' gespeichert."
 
-#~ msgid "MATE"
-#~ msgstr "MATE"
+#~ msgid "File %s saved."
+#~ msgstr "Datei %s gespeichert."
 
-#~ msgid "ROX"
-#~ msgstr "ROX"
-
-#~ msgid "Unity"
-#~ msgstr "Unity"
-
-#~ msgid "XFCE"
-#~ msgstr "XFCE"
-
-#~ msgid "Can not load starter"
-#~ msgstr "Starter kann nicht geladen werden"
-
-#~ msgid "File not loaded."
-#~ msgstr "Datei nicht geladen."
-
-#~ msgid "This is not a local file. File not loaded."
-#~ msgstr "Dies ist keine lokale Datei. Datei nicht geladen."
+#~ msgid "Saving file %s ..."
+#~ msgstr "Speichere Datei %s"
