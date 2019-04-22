@@ -34,8 +34,6 @@ setup(
          glob.glob('data/man/*.1')),
         ('share/arronax/ui/',
          glob.glob('data/ui/*.ui')),
-        ('share/arronax/icons/',
-         glob.glob('data/icons/*.png')),
         ('share/applications',
          glob.glob('data/desktop/*.desktop')),
         ('share/nautilus-python/extensions/',
@@ -44,8 +42,14 @@ setup(
          glob.glob('plugins/nemo-arronax.py')),
         ('share/caja-python/extensions/',
          glob.glob('plugins/caja-arronax.py')),
-        ] + [('share/locale/%s/LC_MESSAGES/'%mo.split('/')[2], [mo])
-             for mo in glob.glob('data/mo/*/arronax.mo')],
+        ('share/icons/hicolor/scalable/apps/',
+         ['data/icons/arronax.svg']),
+        ] + \
+        [('share/locale/%s/LC_MESSAGES/'%mo.split('/')[2], [mo])
+             for mo in glob.glob('data/mo/*/arronax.mo')] + \
+        [('share/icons/hicolor/{s}x{s}'.format(s=i.split('/')[2]), [i])
+             for i in glob.glob('data/icons/*/arronax.png')], 
+
     entry_points = {
 
         'console_scripts': ['arronax=arronax.editor:main'],

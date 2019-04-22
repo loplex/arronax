@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.16.1 -->
+<!-- Generated with glade 3.22.0 -->
 <interface>
-  <requires lib="gtk+" version="3.0"/>
+  <requires lib="gtk+" version="3.18"/>
   <object class="GtkDialog" id="dialog1">
     <property name="width_request">700</property>
     <property name="height_request">500</property>
@@ -60,6 +60,10 @@
           <object class="GtkBox" id="box1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="margin_left">6</property>
+            <property name="margin_right">6</property>
+            <property name="margin_top">6</property>
+            <property name="margin_bottom">6</property>
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkLabel" id="l_intro">
@@ -69,20 +73,57 @@
                 <property name="margin_right">12</property>
                 <property name="margin_top">12</property>
                 <property name="margin_bottom">12</property>
-                <property name="xalign">0</property>
-                <property name="yalign">0</property>
-                <property name="xpad">6</property>
-                <property name="ypad">6</property>
                 <property name="label" translatable="yes">&lt;small&gt;This are all MIME types that are registered on your system.
 You can drag files into the list to select their MIME types.&lt;/small&gt;</property>
                 <property name="use_markup">True</property>
                 <property name="wrap">True</property>
                 <property name="selectable">True</property>
+                <property name="xalign">0</property>
+                <property name="yalign">0</property>
               </object>
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
                 <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="margin_right">6</property>
+                    <property name="label" translatable="yes">Filter:</property>
+                    <property name="xalign">1</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="e_filter">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="margin_top">6</property>
+                    <property name="margin_bottom">6</property>
+                    <signal name="changed" handler="on_e_filter_changed" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
               </packing>
             </child>
             <child>
@@ -105,7 +146,7 @@ You can drag files into the list to select their MIME types.&lt;/small&gt;</prop
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">1</property>
+                <property name="position">2</property>
               </packing>
             </child>
             <child>
@@ -122,7 +163,7 @@ You can drag files into the list to select their MIME types.&lt;/small&gt;</prop
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="position">2</property>
+                <property name="position">3</property>
               </packing>
             </child>
           </object>
@@ -138,5 +179,8 @@ You can drag files into the list to select their MIME types.&lt;/small&gt;</prop
       <action-widget response="-6">b_cancel</action-widget>
       <action-widget response="-5">b_ok</action-widget>
     </action-widgets>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
   </object>
 </interface>

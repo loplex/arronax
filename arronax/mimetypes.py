@@ -19,7 +19,7 @@
 from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio, GObject, Pango
 import os, os.path
 from gettext import gettext as _
-from . import  settings, tvtools, utils
+from . import  settings, tvtools, utils, entrytools
 
 
 class MimetypesDlg:
@@ -29,8 +29,10 @@ class MimetypesDlg:
         self.builder.add_from_file(os.path.join(settings.UI_DIR, 
                                                 "mimetypes.ui"))
         self.builder.connect_signals(self)
+        entrytools.add_clear_button_to_builder_obj(self.builder)
         
         self.mime_types = set(mime_types)
+        self.filter = ''
         self.setup_tv()
         utils.activate_drag_and_drop(self['dialog1'])
         
@@ -41,23 +43,38 @@ class MimetypesDlg:
             return key not in value
         tv.set_search_equal_func(func, None, None)
         model = Gtk.ListStore(bool, str, str)
-        model.set_sort_column_id(0, Gtk.SortType.DESCENDING)
-        tv.set_model(model)
+        model.set_sort_column_id(1, Gtk.SortType.ASCENDING)
+
+        fmodel = model.filter_new(None)
+        
+        def visifunc(model, iter, data):
+            if model[iter]:
+                name = model[iter][1].lower()
+                desc =  model[iter][2].lower()
+                return (self.filter == '' or
+                        self.filter.lower() in name or
+                        self.filter.lower() in desc
+                            )
+            else:
+                return True
+        fmodel.set_visible_func(visifunc)
+
+        tv.set_model(fmodel)
         tvtools.create_treeview_column(
             tv, _('Selected'), 0,
             utils.create_toggle_renderer(tv),
             activatable=True,
-            attr='active',
-            sort_column = 0
+            attr='active', 
         )
         renderer = Gtk.CellRendererText()
         renderer.set_property('ellipsize', Pango.EllipsizeMode.END)
         renderer.set_property('ellipsize-set', True)
         renderer.set_property('max-width-chars', 30)
+        col, ren = tvtools.create_treeview_column(
+            tv, _('Name'), 1, renderer=renderer, min_width=200)
+        col.set_sizing(Gtk.TreeViewColumnSizing.AUTOSIZE)
         tvtools.create_treeview_column(
-            tv, _('Name'), 1, renderer=renderer, sort_column=1)
-        tvtools.create_treeview_column(
-            tv, _('Description'), 2, sort_column = 2)
+            tv, _('Description'), 2)
         for name, desc in sorted(self.get_all_mime_types()):
             model.append([name in self.mime_types, name, desc])
 
@@ -115,6 +132,9 @@ class MimetypesDlg:
                 desc = Gio.content_type_get_description(mt)
                 model.append((True, mt, desc))
             
-        
+    def on_e_filter_changed(self, *args):
+        self.filter = self['e_filter'].get_text()
+        self['tv_mimetypes'].get_model().refilter()
+    
         
         

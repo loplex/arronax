@@ -47,8 +47,12 @@ def parse_cli_args():
     common = argparse.ArgumentParser(
         add_help=False)
     _loglevels = ['debug', 'info', 'warn', 'error', 'critical']
-    common.add_argument('--loglevel', choices=_loglevels, default='warn')
-    common.add_argument('--logfile', default=None)
+    common.add_argument(
+        '--loglevel', metavar='LEVEL', choices=_loglevels, default='warn',
+        help='Log messages with severity level LEVEL or above.\nPossible values for LEVEL are: {}'.format(', '.join(_loglevels)))
+    common.add_argument(
+        '--logfile', default=None, metavar='LOGFILE',
+        help='Use LOGFILE for logging')
 
     parser = argparse.ArgumentParser(
         description='Create and modify .desktop files',
@@ -56,15 +60,24 @@ def parse_cli_args():
         allow_abbrev=False)
     parser.add_argument('--version', action='version',
           version='{} {}'.format(settings.APP_TITLE, settings.APP_VERSION))
-    parser.add_argument('--dir', '-d')
+    parser.add_argument(
+        '--dir', '-d', metavar='PATH',
+        help='Crerate starter in folder PATH')
 
     typeargs = parser.add_mutually_exclusive_group()
-    typeargs.add_argument('--link', '-l', default=None,
+    typeargs.add_argument(
+        '--link', '-l', default=None, 
+        help='Create a starter for a location or URL',
         const=StarterType.Link, action='store_const', dest='stype')
-    typeargs.add_argument('--application', '-a', default=None,
+    typeargs.add_argument(
+        '--application', '-a', default=None,
+        help='Create a starter for an application',
         const=StarterType.Application, action='store_const', dest='stype')
     
-    parser.add_argument('path', nargs='?', default=None)
+    parser.add_argument(
+        'path', nargs='?', default=None,
+        help='command, path or URL to create a starter for'
+    )
     
     args = parser.parse_args()
 
