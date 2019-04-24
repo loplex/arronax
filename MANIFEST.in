@@ -4,7 +4,7 @@ include MANIFEST.in
 include *.txt
 include setup.cfg
 
-recursive-include data *.png *.svg *.ui *.in *.mo
+recursive-include data *.png *.svg *.ui *.in *.mo *.1
 recursive-include po *.po *.pot *.in 
 recursive-include debian *
 recursive-exclude debian *.log
@@ -17,7 +17,6 @@ prune debian/arronax-nautilus
 prune debian/arronax-nemo
 prune debian/tmp
 prune debian/.debhelper
-prune */__pycache__
 
 global-exclude *~
 
