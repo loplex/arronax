@@ -49,17 +49,18 @@ def parse_cli_args():
     _loglevels = ['debug', 'info', 'warn', 'error', 'critical']
     common.add_argument(
         '--loglevel', metavar='LEVEL', choices=_loglevels, default='warn',
-        help='Log messages with severity level LEVEL or above.\nPossible values for LEVEL are: {}'.format(', '.join(_loglevels)))
+        help='set log level to LEVEL.\nPossible values for LEVEL are: `debug`, `info`, `warn`,  `error`, `critical`')
     common.add_argument(
         '--logfile', default=None, metavar='LOGFILE',
-        help='Use LOGFILE for logging')
+        help='send log messages to file LOGFILE')
 
     parser = argparse.ArgumentParser(
         description='Create and modify .desktop files',
         prog=settings.app_name, parents=[common],
         allow_abbrev=False)
     parser.add_argument('--version', action='version',
-          version='{} {}'.format(settings.APP_TITLE, settings.APP_VERSION))
+        help="Show program's version number and exit",
+        version='{} {}'.format(settings.APP_TITLE, settings.APP_VERSION))
     parser.add_argument(
         '--dir', '-d', metavar='PATH',
         help='Crerate starter in folder PATH')
