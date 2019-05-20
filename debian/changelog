@@ -1,10 +1,16 @@
-arronax (0.07pre1) zesty; urgency=medium
+arronax (0.7.0) disco; urgency=low
 
-  * Plugin for Caja
+  * Plugins for Caja and Nemo (closes bug #1489763)
   * Fixed bug that caused shortcuts consisting only of non-alphanumerical
     chars to be removed
+  * Added command line switches an a manpage
+  * Fixed icon location (closes bug #1536723)
+  * Ported to Python3
+  * Added icon theme and applications browsers to select icon
+  * Added Czech, Slovenian, Serbian, Turkish translations
+  * Some UI improvements and bug fixes
 
- -- Florian Diesch <devel@florian-diesch.de>  Wed, 21 Jun 2017 23:07:39 +0200
+ -- Florian Diesch <devel@florian-diesch.de>  Sat, 18 May 2019 12:07:39 +0200
 
 arronax (0.06) trusty; urgency=low
 
@@ -29,7 +35,7 @@ arronax (0.04) quantal; urgency=low
 
 arronax (0.04~pre5) quantal; urgency=low
 
-  * some more bugfixes
+   * some more bugfixes
 
  -- Florian Diesch <devel@florian-diesch.de>  Fri, 08 Mar 2013 01:43:42 +0100
 

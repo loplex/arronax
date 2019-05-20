@@ -1,29 +1,29 @@
-arronax/utils.py
-arronax/filechooser.py
-arronax/statusbar.py
-arronax/desktopfile.py
-arronax/_meta.py
-arronax/editor.py
-arronax/mimetypes.py
-arronax/about.py
-arronax/categoriesbrowser.py
-arronax/parsecli.py
-arronax/settings.py
-arronax/xdgdirs.py
-arronax/clipboard.py
-arronax/plugin.py
-arronax/tvtools.py
-arronax/xdgpath.py
-arronax/iconbrowser.py
 arronax/quicklist.py
+arronax/clipboard.py
+arronax/editor.py
+arronax/statusbar.py
+arronax/xdgdirs.py
+arronax/about.py
 arronax/dialogs.py
-arronax/__init__.py
+arronax/xdgpath.py
+arronax/mimetypes.py
+arronax/_meta.py
+arronax/categoriesbrowser.py
 arronax/appbrowser.py
+arronax/plugin.py
+arronax/utils.py
+arronax/iconbrowser.py
+arronax/__init__.py
+arronax/filechooser.py
+arronax/parsecli.py
+arronax/desktopfile.py
+arronax/tvtools.py
 arronax/entrytools.py
+arronax/settings.py
 data/desktop/arronax.desktop.in
-[type: gettext/glade]data/ui/icondlg.ui
 [type: gettext/glade]data/ui/mimetypes.ui
-[type: gettext/glade]data/ui/quicklist.ui
-[type: gettext/glade]data/ui/categoriesdlg.ui
 [type: gettext/glade]data/ui/edit.ui
+[type: gettext/glade]data/ui/categoriesdlg.ui
+[type: gettext/glade]data/ui/quicklist.ui
 [type: gettext/glade]data/ui/appbrowser.ui
+[type: gettext/glade]data/ui/icondlg.ui

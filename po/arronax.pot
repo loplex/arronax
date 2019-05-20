@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-22 22:46+0200\n"
+"POT-Creation-Date: 2019-05-19 16:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,48 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../arronax/filechooser.py:15
-msgid "Open File"
-msgstr ""
-
-#: ../arronax/filechooser.py:19
-msgid "Save File"
-msgstr ""
-
-#: ../arronax/filechooser.py:22
-msgid "Select Folder"
-msgstr ""
-
-#: ../arronax/filechooser.py:25
-msgid "Select Program"
-msgstr ""
-
-#: ../arronax/filechooser.py:28
-msgid "Select File"
-msgstr ""
-
-#: ../arronax/filechooser.py:60
-msgid "Standard folders: "
-msgstr ""
-
-#: ../arronax/filechooser.py:68
-msgid "Desktop"
-msgstr ""
-
-#: ../arronax/filechooser.py:69
-msgid "User App Folder"
-msgstr ""
-
-#: ../arronax/filechooser.py:70
-msgid "System App Folder"
-msgstr ""
-
-#: ../arronax/filechooser.py:71
-msgid "User Autostart Folder"
-msgstr ""
-
-#: ../arronax/filechooser.py:72
-msgid "System Autostart Folder"
+#: ../arronax/quicklist.py:33
+msgid "Title"
 msgstr ""
 
 #: ../arronax/editor.py:138
@@ -115,7 +75,7 @@ msgstr ""
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr ""
 
-#: ../arronax/editor.py:286 ../data/ui/icondlg.ui.h:1 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:286 ../data/ui/edit.ui.h:2 ../data/ui/icondlg.ui.h:1
 msgid "Select Icon"
 msgstr ""
 
@@ -162,14 +122,6 @@ msgstr ""
 msgid "Created new starter."
 msgstr ""
 
-#: ../arronax/mimetypes.py:64 ../arronax/categoriesbrowser.py:40
-msgid "Selected"
-msgstr ""
-
-#: ../arronax/mimetypes.py:77
-msgid "Description"
-msgstr ""
-
 #: ../arronax/about.py:12
 msgid "Go to Web Page"
 msgstr ""
@@ -196,6 +148,80 @@ msgstr ""
 
 #: ../arronax/about.py:94
 msgid "translator-credits"
+msgstr ""
+
+#: ../arronax/mimetypes.py:64 ../arronax/categoriesbrowser.py:40
+msgid "Selected"
+msgstr ""
+
+#: ../arronax/mimetypes.py:77
+msgid "Description"
+msgstr ""
+
+#: ../arronax/plugin.py:65
+msgid "Create a starter for this location"
+msgstr ""
+
+#: ../arronax/plugin.py:67
+msgid "Modify this starter"
+msgstr ""
+
+#: ../arronax/plugin.py:70
+msgid "Create a starter for this program"
+msgstr ""
+
+#: ../arronax/plugin.py:72
+msgid "Create a starter for this file"
+msgstr ""
+
+#. a Gio.GFile
+#. a str
+#: ../arronax/plugin.py:95
+msgid "Create a starter"
+msgstr ""
+
+#: ../arronax/filechooser.py:15
+msgid "Open File"
+msgstr ""
+
+#: ../arronax/filechooser.py:19
+msgid "Save File"
+msgstr ""
+
+#: ../arronax/filechooser.py:22
+msgid "Select Folder"
+msgstr ""
+
+#: ../arronax/filechooser.py:25
+msgid "Select Program"
+msgstr ""
+
+#: ../arronax/filechooser.py:28
+msgid "Select File"
+msgstr ""
+
+#: ../arronax/filechooser.py:60
+msgid "Standard folders: "
+msgstr ""
+
+#: ../arronax/filechooser.py:68
+msgid "Desktop"
+msgstr ""
+
+#: ../arronax/filechooser.py:69
+msgid "User App Folder"
+msgstr ""
+
+#: ../arronax/filechooser.py:70
+msgid "System App Folder"
+msgstr ""
+
+#: ../arronax/filechooser.py:71
+msgid "User Autostart Folder"
+msgstr ""
+
+#: ../arronax/filechooser.py:72
+msgid "System Autostart Folder"
 msgstr ""
 
 #: ../arronax/settings.py:92
@@ -254,32 +280,6 @@ msgstr ""
 msgid "Legacy menu systems"
 msgstr ""
 
-#: ../arronax/plugin.py:65
-msgid "Create a starter for this location"
-msgstr ""
-
-#: ../arronax/plugin.py:67
-msgid "Modify this starter"
-msgstr ""
-
-#: ../arronax/plugin.py:70
-msgid "Create a starter for this program"
-msgstr ""
-
-#: ../arronax/plugin.py:72
-msgid "Create a starter for this file"
-msgstr ""
-
-#. a Gio.GFile
-#. a str
-#: ../arronax/plugin.py:95
-msgid "Create a starter"
-msgstr ""
-
-#: ../arronax/quicklist.py:33
-msgid "Title"
-msgstr ""
-
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:12
 msgid "Arronax"
 msgstr ""
@@ -288,35 +288,15 @@ msgstr ""
 msgid "Create and edit application starters"
 msgstr ""
 
-#: ../data/ui/icondlg.ui.h:2
-msgid "Loading icons..."
-msgstr ""
-
-#: ../data/ui/icondlg.ui.h:3 ../data/ui/mimetypes.ui.h:3
-#: ../data/ui/appbrowser.ui.h:2
-msgid "Filter:"
-msgstr ""
-
 #: ../data/ui/mimetypes.ui.h:1
 msgid ""
 "<small>This are all MIME types that are registered on your system.\n"
 "You can drag files into the list to select their MIME types.</small>"
 msgstr ""
 
-#: ../data/ui/quicklist.ui.h:1
-msgid "Edit"
-msgstr ""
-
-#: ../data/ui/quicklist.ui.h:2
-msgid "_Command:"
-msgstr ""
-
-#: ../data/ui/quicklist.ui.h:3
-msgid "_Title:"
-msgstr ""
-
-#: ../data/ui/categoriesdlg.ui.h:1
-msgid "Choose categories"
+#: ../data/ui/mimetypes.ui.h:3 ../data/ui/appbrowser.ui.h:2
+#: ../data/ui/icondlg.ui.h:3
+msgid "Filter:"
 msgstr ""
 
 #: ../data/ui/edit.ui.h:1
@@ -585,6 +565,22 @@ msgstr ""
 msgid "_Keywords"
 msgstr ""
 
+#: ../data/ui/categoriesdlg.ui.h:1
+msgid "Choose categories"
+msgstr ""
+
+#: ../data/ui/quicklist.ui.h:1
+msgid "Edit"
+msgstr ""
+
+#: ../data/ui/quicklist.ui.h:2
+msgid "_Command:"
+msgstr ""
+
+#: ../data/ui/quicklist.ui.h:3
+msgid "_Title:"
+msgstr ""
+
 #: ../data/ui/appbrowser.ui.h:1
 msgid "Select Application"
 msgstr ""
@@ -593,4 +589,8 @@ msgstr ""
 msgid ""
 "If you can't find your application here you have to create a .desktop file "
 "for it first."
+msgstr ""
+
+#: ../data/ui/icondlg.ui.h:2
+msgid "Loading icons..."
 msgstr ""

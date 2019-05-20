@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-22 22:46+0200\n"
+"POT-Creation-Date: 2019-05-19 16:08+0200\n"
 "PO-Revision-Date: 2014-03-31 13:07+0000\n"
 "Last-Translator: Andrea Luciano Damico <lehti@live.it>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -15,51 +15,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2019-04-22 12:12+0000\n"
-"X-Generator: Launchpad (build 18928)\n"
+"X-Launchpad-Export-Date: 2019-05-06 15:40+0000\n"
+"X-Generator: Launchpad (build 18953)\n"
 
-#: ../arronax/filechooser.py:15
-msgid "Open File"
-msgstr "Apri un File"
-
-#: ../arronax/filechooser.py:19
-msgid "Save File"
-msgstr "Salva File"
-
-#: ../arronax/filechooser.py:22
-msgid "Select Folder"
-msgstr "Seleziona una cartella"
-
-#: ../arronax/filechooser.py:25
-msgid "Select Program"
-msgstr "Seleziona un programma"
-
-#: ../arronax/filechooser.py:28
-msgid "Select File"
-msgstr "Seleziona File"
-
-#: ../arronax/filechooser.py:60
-msgid "Standard folders: "
-msgstr ""
-
-#: ../arronax/filechooser.py:68
-msgid "Desktop"
-msgstr "Scrivania"
-
-#: ../arronax/filechooser.py:69
-msgid "User App Folder"
-msgstr "Cartella Applicazioni Utente"
-
-#: ../arronax/filechooser.py:70
-msgid "System App Folder"
-msgstr "Cartella Applicazioni Sistema"
-
-#: ../arronax/filechooser.py:71
-msgid "User Autostart Folder"
-msgstr ""
-
-#: ../arronax/filechooser.py:72
-msgid "System Autostart Folder"
+#: ../arronax/quicklist.py:33
+msgid "Title"
 msgstr ""
 
 #: ../arronax/editor.py:138
@@ -116,7 +76,7 @@ msgstr "Salvare adesso?"
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr "Ci sono delle modifiche non salvate. Si desidera salvarle adesso?"
 
-#: ../arronax/editor.py:286 ../data/ui/icondlg.ui.h:1 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:286 ../data/ui/edit.ui.h:2 ../data/ui/icondlg.ui.h:1
 msgid "Select Icon"
 msgstr "Seleziona un'icona"
 
@@ -163,14 +123,6 @@ msgstr "Non è un file locale. Icona non modificata."
 msgid "Created new starter."
 msgstr "Nuovo avviatore creato."
 
-#: ../arronax/mimetypes.py:64 ../arronax/categoriesbrowser.py:40
-msgid "Selected"
-msgstr ""
-
-#: ../arronax/mimetypes.py:77
-msgid "Description"
-msgstr ""
-
 #: ../arronax/about.py:12
 msgid "Go to Web Page"
 msgstr "Vai alla Pagina Web"
@@ -202,6 +154,80 @@ msgstr ""
 "  Andrea Luciano Damico https://launchpad.net/~lehti\n"
 "  Florian Diesch https://launchpad.net/~diesch\n"
 "  Guybrush88 https://launchpad.net/~guybrush"
+
+#: ../arronax/mimetypes.py:64 ../arronax/categoriesbrowser.py:40
+msgid "Selected"
+msgstr ""
+
+#: ../arronax/mimetypes.py:77
+msgid "Description"
+msgstr ""
+
+#: ../arronax/plugin.py:65
+msgid "Create a starter for this location"
+msgstr ""
+
+#: ../arronax/plugin.py:67
+msgid "Modify this starter"
+msgstr "Modifica questo avviatore"
+
+#: ../arronax/plugin.py:70
+msgid "Create a starter for this program"
+msgstr "Crea un avviatore per questo programma"
+
+#: ../arronax/plugin.py:72
+msgid "Create a starter for this file"
+msgstr "Crea un avviatore per questo file"
+
+#. a Gio.GFile
+#. a str
+#: ../arronax/plugin.py:95
+msgid "Create a starter"
+msgstr "Crea un avviatore"
+
+#: ../arronax/filechooser.py:15
+msgid "Open File"
+msgstr "Apri un File"
+
+#: ../arronax/filechooser.py:19
+msgid "Save File"
+msgstr "Salva File"
+
+#: ../arronax/filechooser.py:22
+msgid "Select Folder"
+msgstr "Seleziona una cartella"
+
+#: ../arronax/filechooser.py:25
+msgid "Select Program"
+msgstr "Seleziona un programma"
+
+#: ../arronax/filechooser.py:28
+msgid "Select File"
+msgstr "Seleziona File"
+
+#: ../arronax/filechooser.py:60
+msgid "Standard folders: "
+msgstr ""
+
+#: ../arronax/filechooser.py:68
+msgid "Desktop"
+msgstr "Scrivania"
+
+#: ../arronax/filechooser.py:69
+msgid "User App Folder"
+msgstr "Cartella Applicazioni Utente"
+
+#: ../arronax/filechooser.py:70
+msgid "System App Folder"
+msgstr "Cartella Applicazioni Sistema"
+
+#: ../arronax/filechooser.py:71
+msgid "User Autostart Folder"
+msgstr ""
+
+#: ../arronax/filechooser.py:72
+msgid "System Autostart Folder"
+msgstr ""
 
 #: ../arronax/settings.py:92
 msgid "GNOME Desktop"
@@ -259,32 +285,6 @@ msgstr ""
 msgid "Legacy menu systems"
 msgstr ""
 
-#: ../arronax/plugin.py:65
-msgid "Create a starter for this location"
-msgstr ""
-
-#: ../arronax/plugin.py:67
-msgid "Modify this starter"
-msgstr "Modifica questo avviatore"
-
-#: ../arronax/plugin.py:70
-msgid "Create a starter for this program"
-msgstr "Crea un avviatore per questo programma"
-
-#: ../arronax/plugin.py:72
-msgid "Create a starter for this file"
-msgstr "Crea un avviatore per questo file"
-
-#. a Gio.GFile
-#. a str
-#: ../arronax/plugin.py:95
-msgid "Create a starter"
-msgstr "Crea un avviatore"
-
-#: ../arronax/quicklist.py:33
-msgid "Title"
-msgstr ""
-
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:12
 msgid "Arronax"
 msgstr "Arronax"
@@ -293,37 +293,16 @@ msgstr "Arronax"
 msgid "Create and edit application starters"
 msgstr "Crea e modifica avviatori applicazione"
 
-#: ../data/ui/icondlg.ui.h:2
-msgid "Loading icons..."
-msgstr ""
-
-#: ../data/ui/icondlg.ui.h:3 ../data/ui/mimetypes.ui.h:3
-#: ../data/ui/appbrowser.ui.h:2
-msgid "Filter:"
-msgstr ""
-
 #: ../data/ui/mimetypes.ui.h:1
 msgid ""
 "<small>This are all MIME types that are registered on your system.\n"
 "You can drag files into the list to select their MIME types.</small>"
 msgstr ""
 
-#: ../data/ui/quicklist.ui.h:1
-msgid "Edit"
+#: ../data/ui/mimetypes.ui.h:3 ../data/ui/appbrowser.ui.h:2
+#: ../data/ui/icondlg.ui.h:3
+msgid "Filter:"
 msgstr ""
-
-#: ../data/ui/quicklist.ui.h:2
-msgid "_Command:"
-msgstr ""
-
-#: ../data/ui/quicklist.ui.h:3
-msgid "_Title:"
-msgstr ""
-
-#: ../data/ui/categoriesdlg.ui.h:1
-#, fuzzy
-msgid "Choose categories"
-msgstr "Categorie:"
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
@@ -597,6 +576,22 @@ msgstr ""
 msgid "_Keywords"
 msgstr ""
 
+#: ../data/ui/categoriesdlg.ui.h:1
+msgid "Choose categories"
+msgstr ""
+
+#: ../data/ui/quicklist.ui.h:1
+msgid "Edit"
+msgstr ""
+
+#: ../data/ui/quicklist.ui.h:2
+msgid "_Command:"
+msgstr ""
+
+#: ../data/ui/quicklist.ui.h:3
+msgid "_Title:"
+msgstr ""
+
 #: ../data/ui/appbrowser.ui.h:1
 msgid "Select Application"
 msgstr ""
@@ -607,11 +602,6 @@ msgid ""
 "for it first."
 msgstr ""
 
-#~ msgid "Loading file '%s' ..."
-#~ msgstr "Caricamento del file '%s' in corso..."
-
-#~ msgid "Loaded file '%s' ..."
-#~ msgstr "File '%s' caricato..."
-
-#~ msgid "Saved file '%s'."
-#~ msgstr "File '%s' salvato."
+#: ../data/ui/icondlg.ui.h:2
+msgid "Loading icons..."
+msgstr ""

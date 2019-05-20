@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-22 22:46+0200\n"
+"POT-Creation-Date: 2019-05-19 16:08+0200\n"
 "PO-Revision-Date: 2014-06-24 19:05+0000\n"
 "Last-Translator: metacibi <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
@@ -15,52 +15,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2019-04-22 12:12+0000\n"
-"X-Generator: Launchpad (build 18928)\n"
+"X-Launchpad-Export-Date: 2019-05-06 15:40+0000\n"
+"X-Generator: Launchpad (build 18953)\n"
 
-#: ../arronax/filechooser.py:15
-msgid "Open File"
-msgstr "Obre un fitxer"
-
-#: ../arronax/filechooser.py:19
-msgid "Save File"
-msgstr "Desa el fitxer"
-
-#: ../arronax/filechooser.py:22
-msgid "Select Folder"
-msgstr "Selecciona una carpeta"
-
-#: ../arronax/filechooser.py:25
-msgid "Select Program"
-msgstr "Selecciona una aplicació"
-
-#: ../arronax/filechooser.py:28
-msgid "Select File"
-msgstr "Selecciona un fitxer"
-
-#: ../arronax/filechooser.py:60
-msgid "Standard folders: "
-msgstr "Carpetes estàndard "
-
-#: ../arronax/filechooser.py:68
-msgid "Desktop"
-msgstr "Escriptori"
-
-#: ../arronax/filechooser.py:69
-msgid "User App Folder"
-msgstr "Vés a la carpeta d'aplicacions de l'usuari"
-
-#: ../arronax/filechooser.py:70
-msgid "System App Folder"
-msgstr "Vés a la carpeta d'aplicacions del sistema"
-
-#: ../arronax/filechooser.py:71
-msgid "User Autostart Folder"
-msgstr "Vés a la carpeta d'inici automàtic de l'usuari"
-
-#: ../arronax/filechooser.py:72
-msgid "System Autostart Folder"
-msgstr "Vés a la carpeta d'inici automàtic del sistema"
+#: ../arronax/quicklist.py:33
+msgid "Title"
+msgstr "Nom"
 
 #: ../arronax/editor.py:138
 msgid "Enabled"
@@ -116,7 +76,7 @@ msgstr "Voleu desar ara?"
 msgid "You have unsaved changes.  Do you want to save them now?"
 msgstr "Teniu canvis sense desar. Voleu desar-los ara?"
 
-#: ../arronax/editor.py:286 ../data/ui/icondlg.ui.h:1 ../data/ui/edit.ui.h:2
+#: ../arronax/editor.py:286 ../data/ui/edit.ui.h:2 ../data/ui/icondlg.ui.h:1
 msgid "Select Icon"
 msgstr "Seleccioneu una icona"
 
@@ -163,14 +123,6 @@ msgstr "No s'ha canviat la icona perquè el fitxer no és un fitxer local."
 msgid "Created new starter."
 msgstr "S'ha creat un nou iniciador."
 
-#: ../arronax/mimetypes.py:64 ../arronax/categoriesbrowser.py:40
-msgid "Selected"
-msgstr "Seleccionat"
-
-#: ../arronax/mimetypes.py:77
-msgid "Description"
-msgstr "Descripció"
-
 #: ../arronax/about.py:12
 msgid "Go to Web Page"
 msgstr "Ves a la Pàgina Web"
@@ -200,6 +152,80 @@ msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  metacibi https://launchpad.net/~metacibi"
+
+#: ../arronax/mimetypes.py:64 ../arronax/categoriesbrowser.py:40
+msgid "Selected"
+msgstr "Seleccionat"
+
+#: ../arronax/mimetypes.py:77
+msgid "Description"
+msgstr "Descripció"
+
+#: ../arronax/plugin.py:65
+msgid "Create a starter for this location"
+msgstr ""
+
+#: ../arronax/plugin.py:67
+msgid "Modify this starter"
+msgstr "Modifica aquest iniciador"
+
+#: ../arronax/plugin.py:70
+msgid "Create a starter for this program"
+msgstr "Crea un iniciador per a aquesta aplicació"
+
+#: ../arronax/plugin.py:72
+msgid "Create a starter for this file"
+msgstr "Crea un iniciador per a aquest fitxer"
+
+#. a Gio.GFile
+#. a str
+#: ../arronax/plugin.py:95
+msgid "Create a starter"
+msgstr "Crea un iniciador"
+
+#: ../arronax/filechooser.py:15
+msgid "Open File"
+msgstr "Obre un fitxer"
+
+#: ../arronax/filechooser.py:19
+msgid "Save File"
+msgstr "Desa el fitxer"
+
+#: ../arronax/filechooser.py:22
+msgid "Select Folder"
+msgstr "Selecciona una carpeta"
+
+#: ../arronax/filechooser.py:25
+msgid "Select Program"
+msgstr "Selecciona una aplicació"
+
+#: ../arronax/filechooser.py:28
+msgid "Select File"
+msgstr "Selecciona un fitxer"
+
+#: ../arronax/filechooser.py:60
+msgid "Standard folders: "
+msgstr "Carpetes estàndard "
+
+#: ../arronax/filechooser.py:68
+msgid "Desktop"
+msgstr "Escriptori"
+
+#: ../arronax/filechooser.py:69
+msgid "User App Folder"
+msgstr "Vés a la carpeta d'aplicacions de l'usuari"
+
+#: ../arronax/filechooser.py:70
+msgid "System App Folder"
+msgstr "Vés a la carpeta d'aplicacions del sistema"
+
+#: ../arronax/filechooser.py:71
+msgid "User Autostart Folder"
+msgstr "Vés a la carpeta d'inici automàtic de l'usuari"
+
+#: ../arronax/filechooser.py:72
+msgid "System Autostart Folder"
+msgstr "Vés a la carpeta d'inici automàtic del sistema"
 
 #: ../arronax/settings.py:92
 msgid "GNOME Desktop"
@@ -257,32 +283,6 @@ msgstr ""
 msgid "Legacy menu systems"
 msgstr ""
 
-#: ../arronax/plugin.py:65
-msgid "Create a starter for this location"
-msgstr ""
-
-#: ../arronax/plugin.py:67
-msgid "Modify this starter"
-msgstr "Modifica aquest iniciador"
-
-#: ../arronax/plugin.py:70
-msgid "Create a starter for this program"
-msgstr "Crea un iniciador per a aquesta aplicació"
-
-#: ../arronax/plugin.py:72
-msgid "Create a starter for this file"
-msgstr "Crea un iniciador per a aquest fitxer"
-
-#. a Gio.GFile
-#. a str
-#: ../arronax/plugin.py:95
-msgid "Create a starter"
-msgstr "Crea un iniciador"
-
-#: ../arronax/quicklist.py:33
-msgid "Title"
-msgstr "Nom"
-
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:12
 msgid "Arronax"
 msgstr "Arronax"
@@ -290,15 +290,6 @@ msgstr "Arronax"
 #: ../data/desktop/arronax.desktop.in.h:2
 msgid "Create and edit application starters"
 msgstr "Crea i edita iniciadors d'aplicació"
-
-#: ../data/ui/icondlg.ui.h:2
-msgid "Loading icons..."
-msgstr ""
-
-#: ../data/ui/icondlg.ui.h:3 ../data/ui/mimetypes.ui.h:3
-#: ../data/ui/appbrowser.ui.h:2
-msgid "Filter:"
-msgstr ""
 
 #: ../data/ui/mimetypes.ui.h:1
 msgid ""
@@ -309,22 +300,10 @@ msgstr ""
 "Podeu arrossegar i deixar anar fitxers damunt la llista per a seleccionar-ne "
 "els tipus MIME.</small>"
 
-#: ../data/ui/quicklist.ui.h:1
-msgid "Edit"
-msgstr "Edita"
-
-#: ../data/ui/quicklist.ui.h:2
-msgid "_Command:"
-msgstr "_Ordre:"
-
-#: ../data/ui/quicklist.ui.h:3
-msgid "_Title:"
-msgstr "Nom"
-
-#: ../data/ui/categoriesdlg.ui.h:1
-#, fuzzy
-msgid "Choose categories"
-msgstr "Categories:"
+#: ../data/ui/mimetypes.ui.h:3 ../data/ui/appbrowser.ui.h:2
+#: ../data/ui/icondlg.ui.h:3
+msgid "Filter:"
+msgstr ""
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
@@ -618,6 +597,22 @@ msgstr ""
 msgid "_Keywords"
 msgstr "Paraules c_lau"
 
+#: ../data/ui/categoriesdlg.ui.h:1
+msgid "Choose categories"
+msgstr ""
+
+#: ../data/ui/quicklist.ui.h:1
+msgid "Edit"
+msgstr "Edita"
+
+#: ../data/ui/quicklist.ui.h:2
+msgid "_Command:"
+msgstr "_Ordre:"
+
+#: ../data/ui/quicklist.ui.h:3
+msgid "_Title:"
+msgstr "Nom"
+
 #: ../data/ui/appbrowser.ui.h:1
 msgid "Select Application"
 msgstr ""
@@ -628,17 +623,6 @@ msgid ""
 "for it first."
 msgstr ""
 
-#~ msgid "Loaded file '%s' ..."
-#~ msgstr "Fitxer '%s' carregat ..."
-
-#~ msgid "Loading file '%s' ..."
-#~ msgstr "Carregant el fitxer '%s' ..."
-
-#~ msgid "File %s saved."
-#~ msgstr "S'ha desat el fitxer %s."
-
-#~ msgid "Saving file %s ..."
-#~ msgstr "Desant el fitxer %s ..."
-
-#~ msgid "Saved file '%s'."
-#~ msgstr "El fitxer '%s' s'ha desat."
+#: ../data/ui/icondlg.ui.h:2
+msgid "Loading icons..."
+msgstr ""
