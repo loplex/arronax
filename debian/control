@@ -55,7 +55,7 @@ Description: Create and modify application, file and URI starters.
 
 Package: arronax-nemo
 Architecture: all
-Depends: ${misc:Depends}, arronax, nemo-python
+Depends: ${misc:Depends}, arronax, python-nemo|nemo-python
 Description: Create and modify application, file and URI starters.
  Arronax is a GTK based GUI program to create and modify starters
  (*.desktop files) for applications, files, and URIs.
