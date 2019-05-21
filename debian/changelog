@@ -1,3 +1,9 @@
+arronax (0.7.1) disco; urgency=low
+
+  * Changed dependency of arronax-nemo to work with Mint
+
+ -- Florian Diesch <devel@florian-diesch.de>  Mon, 20 May 2019 19:12:26 +0200
+
 arronax (0.7.0) disco; urgency=low
 
   * Plugins for Caja and Nemo (closes bug #1489763)
