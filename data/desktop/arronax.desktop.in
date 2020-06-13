@@ -6,7 +6,8 @@ Hidden=false
 Terminal=false
 Icon=arronax
 _Name=Arronax
-_Comment=Create and edit application starters
+_Comment=Create and edit application starters, .desktop files and
+         desktop shortcuts
 Exec=arronax %f
 Categories=Utility;GNOME
 MimeType=application/x-desktop
