@@ -92,27 +92,25 @@ def get_mime_types_from_uris(uris, error_func=None):
                 error_func(e)
     return result
 
-def get_name_from_image(img):
-    stype = img.get_storage_type()
-    if stype == Gtk.ImageType.PIXBUF:
-        return img.get_pixbuf().__arronax_filename
-    elif stype ==  Gtk.ImageType.ICON_NAME:
-        return img.get_icon_name()[0]
-    elif stype ==  Gtk.ImageType.EMPTY:
-        return ''
-    else:
-        return '???'
+# def get_name_from_image(img):
+#     stype = img.get_storage_type()
+#     if stype == Gtk.ImageType.PIXBUF:
+#         return img.get_pixbuf().__arronax_filename
+#     elif stype ==  Gtk.ImageType.ICON_NAME:
+#         return img.get_icon_name()[0]
+#     elif stype ==  Gtk.ImageType.EMPTY:
+#         return ''
+#     else:
+#         return '???'
 
     
-def load_file_into_image(img, path):
+def load_file_into_image(img, path, size):
     try:
         if '/' not in path:
-            img.set_from_icon_name(path, settings.DEFAULT_ICON_SIZE)
+            img.set_from_icon_name(path, size)
         else:
             pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(
-                path, 
-                settings.DEFAULT_ICON_SIZE,
-                settings.DEFAULT_ICON_SIZE)
+                path, size, size)
             pixbuf.__arronax_filename = path
             if pixbuf is not None:
                 img.set_from_pixbuf(pixbuf)

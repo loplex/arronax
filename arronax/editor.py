@@ -42,7 +42,7 @@ class Editor(object):
         self.create_builder()
 
         utils.activate_drag_and_drop(self['window1'])
-        utils.activate_drag_and_drop(self['bt_icon'])
+        utils.activate_drag_and_drop(self['grid_icon_img'])
         utils.activate_drag_and_drop(
             self['e_title'], self.on_entry_drag_data_received, 'Name')
         utils.activate_drag_and_drop(
@@ -249,7 +249,7 @@ class Editor(object):
             Gtk.main_quit()            
 
     def icon_browse_auto(self):
-        current = utils.get_name_from_image(self['img_icon'])
+        current = self['e_icon'].get_text()
         if '/' in current:
             self.icon_browse_files()
         else:
@@ -257,13 +257,13 @@ class Editor(object):
 
             
     def icon_browse_icons(self):
-        current = utils.get_name_from_image(self['img_icon'])
+        current = self['e_icon'].get_text()
         icon = iconbrowser.IconDlg(self['window1']).run(current)
         if icon is not None:
             self.set_icon(icon)
             
     def icon_browse_apps(self):
-        current = utils.get_name_from_image(self['img_icon'])
+        current = self['e_icon'].get_text()
         app = utils.select_app(self['window1'], current)
         if not app:
             return
@@ -274,7 +274,7 @@ class Editor(object):
         self.set_icon(icon)
             
     def icon_browse_files(self):
-        current = utils.get_name_from_image(self['img_icon'])
+        current = self['e_icon'].get_text()
         if not '/' in current:
             for dir in Gtk.IconTheme.get_default().get_search_path():
                 if os.path.exists(dir):
@@ -323,16 +323,18 @@ class Editor(object):
     def __getitem__(self, key):
         return self.builder.get_object(key)
 
-    def set_icon(self, path):
+    def set_icon(self, path, show_error=True):
         logging.debug('set_icon: {}'.format(path))
         if path is None:
             return
-        self['l_icon'].set_text(path)
-        self['l_icon'].set_tooltip_text(path)
-        img = self['img_icon']
-        msg = utils.load_file_into_image(img, path)
+        self['e_icon'].set_text(path)
+        for size in 64, 32, 24, 16:
+            img = self['img_icon_{}'.format(size)]
+            msg = utils.load_file_into_image(img, path, size)
+            if msg is not None:
+                break
         self.icon_has_changed = True
-        if msg is not None:
+        if show_error and msg is not None:
             statusbar.show_msg(msg)
 
     def about(self):
@@ -346,7 +348,7 @@ class Editor(object):
             'working_dir':  self['e_working_dir'].get_text(),
             'run_in_terminal': self['sw_run_in_terminal'].get_active(),
             'hidden': self['sw_hidden'].get_active(),
-            'icon': utils.get_name_from_image(self['img_icon']),
+            'icon': self['e_icon'].get_text(),
             'keywords': utils.make_keyfile_list_string(
                 utils.get_list_from_textview(self['tview_keywords'])),
             'categories': self['e_categories'].get_text(),
@@ -502,7 +504,13 @@ class Editor(object):
         utils.set_list_to_textview(self['tview_mime_types'], 
                                    sorted(mime_types))
 
+###############
+## entry
 
+    def on_e_icon_changed(self, *args):
+        text = self['e_icon'].get_text()
+        self.set_icon(text, show_error=False)
+        
 ###############
 ## type list
 
