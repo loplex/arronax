@@ -84,6 +84,7 @@
     <property name="stock_id">gtk-save-as</property>
     <signal name="activate" handler="on_ac_save_as_activate" swapped="no"/>
   </object>
+  <object class="GtkTextBuffer" id="tbuf_keywords"/>
   <object class="GtkWindow" id="window1">
     <property name="width_request">600</property>
     <property name="height_request">450</property>
@@ -533,20 +534,6 @@ working folder for the program</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkEntry" id="e_wm_class">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="tooltip_text" translatable="yes">The application will show at least one window with the given string as its WM class or WM name hint</property>
-                    <property name="margin_top">12</property>
-                    <property name="hexpand">True</property>
-                    <property name="invisible_char">•</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">1</property>
-                    <property name="top_attach">6</property>
-                  </packing>
-                </child>
-                <child>
                   <object class="GtkEntry" id="e_comment">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
@@ -735,6 +722,47 @@ working folder for the program</property>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="top_attach">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkEntry" id="e_wm_class">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">The application will show at least one window with the given string as its WM class or WM name hint</property>
+                        <property name="margin_top">12</property>
+                        <property name="hexpand">True</property>
+                        <property name="invisible_char">•</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="bt_window_class">
+                        <property name="label" translatable="yes">Select ...</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="margin_left">6</property>
+                        <property name="margin_top">12</property>
+                        <signal name="clicked" handler="on_bt_window_class_clicked" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">6</property>
                   </packing>
                 </child>
               </object>
@@ -1479,5 +1507,4 @@ Add Keywords one per line or separated by semicolons (";").&lt;/small&gt;</prope
       </object>
     </child>
   </object>
-  <object class="GtkTextBuffer" id="tbuf_keywords"/>
 </interface>

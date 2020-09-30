@@ -31,7 +31,7 @@ import logging
 
 from arronax import settings, desktopfile, clipboard, about, dialogs, iconbrowser
 from arronax import statusbar, filechooser, tvtools, quicklist, utils, mimetypes
-from arronax import categoriesbrowser, entrytools, parsecli
+from arronax import categoriesbrowser, entrytools, parsecli, winclass
 
 class Editor(object):
 
@@ -581,7 +581,11 @@ class Editor(object):
         if cats is not None:
             self['e_categories'].set_text('; '.join(cats))
 
-        
+    def on_bt_window_class_clicked(self, *args):
+        win = self['window1']
+        entry = self['e_wm_class']
+        winclass.WindowClassSelector(win, entry).run()
+            
     def on_bt_uri_clicked(self, *args):
         uri = self['e_command'].get_text()
         if uri == '':
