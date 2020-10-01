@@ -354,6 +354,10 @@ class Editor(object):
             'categories': self['e_categories'].get_text(),
             'wm_class': self['e_wm_class'].get_text(),
             'comment': self['e_comment'].get_text(),
+            'dbus_activatable': self['combo_dbus_activatable'].get_active_id(),
+            'try_exec': self['e_try_exec'].get_text(),
+            'startup_notify': self['combo_startup_notify'].get_active_id(),
+            'nondefault_gpu': self['combo_nondefault_gpu'].get_active_id(),
             'mime_type':utils.make_keyfile_list_string(
                 utils.get_list_from_textview(self['tview_mime_types'])),
             'show_in': utils.get_desktops_from_tv(self['tv_show_in']),
@@ -375,6 +379,10 @@ class Editor(object):
         self['e_categories'].set_text(data['categories'])
         self['e_wm_class'].set_text(data['wm_class'])
         self['e_comment'].set_text(data['comment'])
+        self['combo_dbus_activatable'].set_active_id(data['dbus_activatable']),
+        self['e_try_exec'].set_text(data['try_exec']),
+        self['combo_startup_notify'].set_active_id(data['startup_notify']),
+        self['combo_nondefault_gpu'].set_active_id(data['nondefault_gpu']),
         utils.set_list_to_textview(self['tview_mime_types'], 
                                    data['mime_type'])
         utils.load_desktops_into_tv(self['tv_show_in'], data['show_in'])
@@ -517,7 +525,8 @@ class Editor(object):
     def on_cbox_type_changed(self, widget):
         app_only = ('e_working_dir', 'l_working_dir', 'bt_working_dir',
                     'sw_run_in_terminal', 'l_run_in_terminal',
-                    'e_wm_class', 'l_wm_class',
+                    'e_wm_class', 'l_wm_class', 'bt_window_class',
+                    'l_tab_advanced', 'grid_advanced', 
                     'l_tab_quicklist', 'box_quicklist',
                     'l_tab_mime_types', 'box_mime_types',
                 )

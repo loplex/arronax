@@ -236,6 +236,82 @@ class DesktopFile(object):
 
 
     @property
+    def dbus_activatable(self):
+        try:
+            if self.keyfile.get_boolean(GROUP, 'DBusActivatable'):
+                return 'yes'
+            else:
+                return 'no'
+        except:
+            return 'unknown'
+        
+    @dbus_activatable.setter
+    def dbus_activatable(self, value):
+        if value == 'yes':
+            self.keyfile.set_boolean(GROUP, 'DBusActivatable', True)
+        elif value == 'no':
+            self.keyfile.set_boolean(GROUP, 'DBusActivatable', False)
+        else:            
+            self.remove_key(GROUP, 'DBusActivatable')
+        self.dirty_flag = True
+        
+    @property
+    def try_exec(self):
+        try:
+            return self.keyfile.get_string(GROUP, 'TryExec')
+        except:
+            return ''
+
+    @try_exec.setter
+    def try_exec(self, value):
+        if value == '':
+            self.remove_key(GROUP, 'TryExec')
+        else:
+            self.keyfile.set_string(GROUP, 'TryExec', value)
+        self.dirty_flag = True
+
+    @property
+    def startup_notify(self):
+        try:
+            if self.keyfile.get_boolean(GROUP, 'StartupNotify'):
+                return 'yes'
+            else:
+                return 'no'
+        except:
+            return 'unknown'
+
+    @startup_notify.setter
+    def startup_notify(self, value):
+        if value == 'yes':
+            self.keyfile.set_boolean(GROUP, 'StartupNotify', True)
+        elif value == 'no':
+            self.keyfile.set_boolean(GROUP, 'StartupNotify', False)
+        else:            
+            self.remove_key(GROUP, 'StartupNotify')
+        self.dirty_flag = True
+
+    @property
+    def nondefault_gpu(self):
+        try:
+            if self.keyfile.get_boolean(GROUP, 'PrefersNonDefaultGPU'):
+                return 'yes'
+            else:
+                return 'no'
+        except:
+            return 'unknown'
+        
+    @nondefault_gpu.setter
+    def nondefault_gpu(self, value):
+        if value == 'yes':
+            self.keyfile.set_boolean(GROUP, 'PrefersNonDefaultGPU', True)
+        elif value == 'no':
+            self.keyfile.set_boolean(GROUP, 'PrefersNonDefaultGPU', False)
+        else:            
+            self.remove_key(GROUP, 'PrefersNonDefaultGPU')
+        self.dirty_flag = True
+        
+        
+    @property
     def quicklist(self):
         result = []
         actions =  self.get_string(GROUP, 'Actions', '')
@@ -294,7 +370,8 @@ class DesktopFile(object):
         fields = (
             'type', 'title', 'command', 'working_dir', 'run_in_terminal',
             'hidden', 'icon', 'keywords', 'categories', 'wm_class', 
-            'comment', 'mime_type', 'show_in', 'quicklist'
+            'comment', 'dbus_activatable', 'try_exec', 'startup_notify',
+            'nondefault_gpu', 'mime_type', 'show_in', 'quicklist'
             )
         data = {}
         for f in fields:
@@ -333,6 +410,10 @@ class DesktopFile(object):
         self.categories = ''
         self.wm_class = ''
         self.comment = ''
+        self.dbus_activatable = False,
+        self.try_exec = '',
+        self.startup_notify = 'unknown'
+        self.nondefault_gpu = False
         self.mime_type = ''
         self.show_in = ''
         self.quicklist = []
