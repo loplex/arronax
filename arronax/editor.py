@@ -243,7 +243,7 @@ class Editor(object):
         try: # just to be sure
             really_quit =  self.maybe_confirm_unsaved()
         except Exception as e:
-            logging.error("Exception on qut: {}".format(e))
+            logging.error("Exception on quit: {}".format(e))
             really_quit = True
         if really_quit:        
             Gtk.main_quit()            
