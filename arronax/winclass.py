@@ -26,6 +26,8 @@ from gi.repository import Gtk, Gdk, Wnck
 
 from gettext import gettext as _
 
+from . import dialogs
+
 class WindowClassSelector:
 
     def __init__(self, parent, dest_widget):
@@ -48,16 +50,30 @@ class WindowClassSelector:
             Gtk.main_iteration()
         return window
     
+    def have_X11(self):
+        seat = self.get_default_seat()
+        pointer = seat.get_pointer()
+        screen, x, y = pointer.get_position()
+        screen = Wnck.Screen.get_default()
+        return screen != None
         
     def get_default_seat(self):
         display = Gdk.Display.get_default()
         return display.get_default_seat()
-    
+
+    def show_X11_error(self):
+        msg = _("This function needs a X11 session. "
+                "It doesn't work with Wayland.")
+        dialogs.error(self.parent, _('Error'), msg)
+        
     def get_window_class_at_pointer(self):
         seat = self.get_default_seat()
         pointer = seat.get_pointer()
         screen, x, y = pointer.get_position()
         screen = Wnck.Screen.get_default()
+        if screen is None:
+            self.show_X11_error()
+            return
         screen.force_update()
         wspace = screen.get_active_workspace()
         windows = screen.get_windows_stacked()
@@ -70,6 +86,9 @@ class WindowClassSelector:
     
 
     def run(self):
+        if not self.have_X11():
+            self.show_X11_error()
+            return
         window = self.create_window()
         win = window.get_window()
         cursor = Gdk.Cursor(Gdk.CursorType.HAND1)    
@@ -78,7 +97,8 @@ class WindowClassSelector:
         def callback(*args):
             try:
                 wclass = self.get_window_class_at_pointer()
-                self.dest_widget.set_text(wclass)
+                if wclass is not None:
+                    self.dest_widget.set_text(wclass)
             finally:
                 seat.ungrab()
                 window.destroy()
