@@ -625,7 +625,9 @@ working folder for the program</property>
                   <object class="GtkLabel" id="l_wm_class">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="tooltip_text" translatable="yes">The application will show at least one window with the given string as its WM class or WM name hint</property>
+                    <property name="tooltip_text" translatable="yes">The application will show at least one window with the given string as its WM class or WM name hint. 
+
+This can be used by docks and launchers to match and group application windows.</property>
                     <property name="margin_right">6</property>
                     <property name="margin_top">12</property>
                     <property name="label" translatable="yes">Window Class:</property>
@@ -732,7 +734,9 @@ working folder for the program</property>
                       <object class="GtkEntry" id="e_wm_class">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="tooltip_text" translatable="yes">The application will show at least one window with the given string as its WM class or WM name hint</property>
+                        <property name="tooltip_text" translatable="yes">The application will show at least one window with the given string as its WM class or WM name hint. 
+
+This can be used by docks and launchers to match and group application windows.</property>
                         <property name="margin_top">12</property>
                         <property name="hexpand">True</property>
                         <property name="invisible_char">•</property>
