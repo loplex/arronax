@@ -532,9 +532,19 @@ class Editor(object):
                 )
         is_app = widget.get_active() == 0
         command_label = ( _('File or URL:'), _('Command:'),)[is_app]
+        tt_app = _('The command you want to start.\n\n'
+                   '<tt>%f</tt> is replaced with a single file path, '
+                   '<tt>%F</tt> with multiple files, <tt>%u</tt> with '
+                   'a single URI, <tt>%U</tt> with multiple URIs.')
+        tt_file = _('File or URI you want to open')
+        
+        command_tooltip = (tt_file, tt_app)[is_app]
         for name in app_only:
             self[name].set_sensitive(is_app)
         self['l_command'].set_label(command_label)
+        self['l_command'].set_tooltip_markup(command_tooltip)
+        self['e_command'].set_tooltip_markup(command_tooltip)
+
 
 
 ###############
