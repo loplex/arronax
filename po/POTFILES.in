@@ -8,6 +8,7 @@ arronax/dialogs.py
 arronax/xdgpath.py
 arronax/mimetypes.py
 arronax/_meta.py
+arronax/winclass.py
 arronax/categoriesbrowser.py
 arronax/appbrowser.py
 arronax/plugin.py
