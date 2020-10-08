@@ -603,7 +603,12 @@ class Editor(object):
     def on_bt_window_class_clicked(self, *args):
         win = self['window1']
         entry = self['e_wm_class']
-        winclass.WindowClassSelector(win, entry).run()
+        try:
+            winclass.WindowClassSelector(win, entry).run()
+        except Exception as e:
+            msg = 'Error getting window class:  {}'.format(str(e))
+            dialogs.error(win, _('Error'), msg)
+
             
     def on_bt_uri_clicked(self, *args):
         uri = self['e_command'].get_text()
