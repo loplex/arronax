@@ -49,6 +49,10 @@ class WindowClassSelector:
         while Gtk.events_pending():
             Gtk.main_iteration()
         return window
+
+    def have_recent_enough_gdk(self):
+        display = Gdk.Display.get_default()
+        return hasattr(display, 'get_default_seat')
     
     def have_X11(self):
         seat = self.get_default_seat()
@@ -62,8 +66,12 @@ class WindowClassSelector:
         return display.get_default_seat()
 
     def show_X11_error(self):
-        msg = _("This function needs a X11 session. "
+        msg = _("Can't get window class: This function needs a X11 session. "
                 "It doesn't work with Wayland.")
+        dialogs.error(self.parent, _('Error'), msg)
+
+    def show_gdk_error(self):
+        msg = _("Can't get window class: This function needs GTK 3.20 or newer.")
         dialogs.error(self.parent, _('Error'), msg)
         
     def get_window_class_at_pointer(self):
@@ -86,6 +94,9 @@ class WindowClassSelector:
     
 
     def run(self):
+        if not self.have_recent_enough_gdk():
+            self.show_gdk_error()
+            return                                
         if not self.have_X11():
             self.show_X11_error()
             return
