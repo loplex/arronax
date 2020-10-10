@@ -91,7 +91,7 @@ LAST_FILENAME = DEFAULT_FILENAME
 
 KNOWN_DESKTOPS={'GNOME': _('GNOME Desktop'),
                 'GNOME-Classic': _('GNOME Classic Desktop'),
-                'GNOME-Flashback': _('GNOME Classic Desktop'),
+                'GNOME-Flashback': _('GNOME Flashback Desktop'),
                 'KDE': _('KDE Desktop'), 
                 'LXDE': _('LXDE Desktop'),
                 'LXQt':	_('LXQt Desktop'),
