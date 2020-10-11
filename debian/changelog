@@ -1,3 +1,12 @@
+arronax (0.8) focal; urgency=low
+
+  * Some UI changes
+  * Added some advanced options	
+  * Added button to pick window class from window
+  * Added Hungarian translations
+	
+ -- Florian Diesch <devel@florian-diesch.de>  Fri, 02 Oct 2020 15:22:27 +0200
+
 arronax (0.7.2) focal; urgency=low
 
   * Changed dependencies so plugins work with Python3, too
