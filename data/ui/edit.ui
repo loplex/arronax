@@ -406,8 +406,9 @@
             <property name="margin_right">6</property>
             <property name="margin_top">6</property>
             <property name="margin_bottom">6</property>
-            <property name="hexpand">True</property>
             <property name="vexpand">True</property>
+            <property name="scrollable">True</property>
+            <property name="enable_popup">True</property>
             <child>
               <object class="GtkGrid" id="grid_basic">
                 <property name="visible">True</property>
@@ -442,9 +443,6 @@
                       <object class="GtkEntry" id="e_command">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="tooltip_markup" translatable="yes">The command you want to start.
-
-&lt;tt&gt;%f&lt;/tt&gt; is replaced with a single file path, &lt;tt&gt;%F&lt;/tt&gt; with multiple files, &lt;tt&gt;%u&lt;/tt&gt; with a single URI, &lt;tt&gt;%U&lt;/tt&gt; with multiple URIs.</property>
                         <property name="margin_top">12</property>
                         <property name="hexpand">True</property>
                         <property name="invisible_char">•</property>
@@ -581,7 +579,6 @@ working folder for the program</property>
                   <object class="GtkLabel" id="l_command">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="tooltip_text" translatable="yes">&lt;tt&gt;%f&lt;/tt&gt; is replaced with a single file path, &lt;tt&gt;%F&lt;/tt&gt; with multiple files, &lt;tt&gt;%u&lt;/tt&gt; with a single URI, &lt;tt&gt;%U&lt;/tt&gt; with multiple URIs.</property>
                     <property name="margin_right">6</property>
                     <property name="margin_top">12</property>
                     <property name="label" translatable="yes">Command:</property>
@@ -1173,7 +1170,6 @@ This can be used by docks and launchers to match and group application windows.<
               </object>
               <packing>
                 <property name="position">2</property>
-                <property name="tab_expand">True</property>
               </packing>
             </child>
             <child type="tab">
@@ -1645,7 +1641,7 @@ Add Keywords one per line or separated by semicolons (";").&lt;/small&gt;</prope
             </child>
           </object>
           <packing>
-            <property name="expand">True</property>
+            <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">3</property>
           </packing>
