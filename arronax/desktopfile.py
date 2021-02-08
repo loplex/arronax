@@ -410,8 +410,8 @@ class DesktopFile(object):
         self.categories = ''
         self.wm_class = ''
         self.comment = ''
-        self.dbus_activatable = False,
-        self.try_exec = '',
+        self.dbus_activatable = False
+        self.try_exec = ''
         self.startup_notify = 'unknown'
         self.nondefault_gpu = False
         self.mime_type = ''
