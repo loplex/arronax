@@ -34,30 +34,17 @@ Description: Create and modify application, file and URI starters.
  This package contains the standalone version of Arronax. 
 
 
-Package: arronax-base
-Architecture: all
-Depends: ${misc:Depends},
-	 arronax 
-Description: Create and modify application, file and URI starters.
- Arronax is a GTK based GUI program to create and modify starters
- (*.desktop files) for applications, files, and URIs.
- .
- This is a metapackage that depends on the standalone version of
- Arronax. It doesn't contain any important files and may be removed
- without doing any harm.
-
 Package: arronax-nautilus
 Architecture: all
 Depends: ${misc:Depends},
-	 arronax,
+         arronax,
 	 python3-nautilus | python-nautilus
 Description: Create and modify application, file and URI starters.
  Arronax is a GTK based GUI program to create and modify starters
  (*.desktop files) for applications, files, and URIs.
  .
- This package contains the Nautilus plugin for Arronax. It adds a 
- "Create starter" menu item to the Desktop's context menu and to the file 
- context menu in Nautilus
+ This package contains the Nautilus plugin for Arronax. It adds a
+ "Create starter" menu item to the file context menu in Nautilus
 
 
 Package: arronax-caja
@@ -70,7 +57,7 @@ Description: Create and modify application, file and URI starters.
  (*.desktop files) for applications, files, and URIs.
  .
  This package contains the Caja plugin for Arronax. It adds a 
- "Create starter" menu item to the Desktop's context menu and to the file 
+ "Create starter" menu item to the desktop's context menu and to the file 
  context menu in Caja
 
 
@@ -84,6 +71,6 @@ Description: Create and modify application, file and URI starters.
  (*.desktop files) for applications, files, and URIs.
  .
  This package contains the Nemo plugin for Arronax. It adds a 
- "Create starter" menu item to the Desktop's context menu and to the file 
+ "Create starter" menu item to the desktop's context menu and to the file 
  context menu in Nemo
  
