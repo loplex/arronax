@@ -21,8 +21,7 @@
 #
 
 
-import gettext, os.path , subprocess, logging
-from gettext import gettext as _
+import gettext, locale, os.path, subprocess, logging
 
 import gi
 from gi.repository import GObject, Gio
@@ -38,18 +37,12 @@ print('VERS:',  sys.version_info)
 class Plugin(GObject.GObject,  Nautilus.MenuProvider):
 
     def __init__(self):
+        GObject.GObject.__init__(self)
+        locale_dir = self._get_locale_dir()
         print('Initializing Arronax from', __file__)
-        try:
-            t = gettext.translation(GETTEXT_DOMAIN, self._get_locale_dir())
-            _ = t.gettext
-        except Exception:
-            _ = lambda x: x
-        self.msg_create = _('Create a starter')
-        self.msg_location =  _('Create a starter for this location')
-        self.msg_modify = _('Modify this starter')
-        self.msg_program =  _('Create a starter for this program')
-        self.msg_file = _('Create a starter for this file')
-
+        locale_dir = self._get_locale_dir()
+        locale.bindtextdomain(GETTEXT_DOMAIN, locale_dir)
+        gettext.install(GETTEXT_DOMAIN, locale_dir)
 
     def _get_locale_dir(self):
         base_dir = os.path.dirname(os.path.dirname(
@@ -58,9 +51,11 @@ class Plugin(GObject.GObject,  Nautilus.MenuProvider):
         locale_dir = gettext.find(GETTEXT_DOMAIN, dir)
         if not locale_dir:
             locale_dir = gettext.find(GETTEXT_DOMAIN)
-        for i in range(3):
-            locale_dir = os.path.dirname(locale_dir)
-        return locale_dir
+            
+        if locale_dir:
+            for i in range(3):
+                locale_dir = os.path.dirname(locale_dir)
+            return locale_dir
         
     def _create_menu_item(self, label, path=None, basedir=None):
         def callback(*args):
@@ -73,7 +68,7 @@ class Plugin(GObject.GObject,  Nautilus.MenuProvider):
             subprocess.Popen(cmd)
         
         menuitem = Nautilus.MenuItem(name='Arronax::FileMenu', label=label,
-                            tip='', icon='')
+                            tip='', icon='arronax')
         menuitem.connect('activate', callback)
         
         return menuitem
@@ -85,15 +80,15 @@ class Plugin(GObject.GObject,  Nautilus.MenuProvider):
             Gio.FileQueryInfoFlags.NONE,
             None)    # a Gio.FileInfo
         
-        if os.path.isdir(path):
-            text = self.msg_location
+        if path is not None and os.path.isdir(path):
+            text =  _('Create a starter for this location')
         elif nfile.is_mime_type('application/x-desktop'):
-            text = self.msg_modify
+            text = _('Modify this starter')
         elif finfo.get_attribute_boolean(
                 Gio.FILE_ATTRIBUTE_ACCESS_CAN_EXECUTE):
-             text = self.msg_program
+             text = _('Create a starter for this program')
         else:
-            text = self.msg_file
+            text = _('Create a starter for this file')
 
         logging.debug('menu item: p:"{}" yt:"{}"'.format(path, text))
         return text
@@ -115,8 +110,8 @@ class Plugin(GObject.GObject,  Nautilus.MenuProvider):
     def get_background_items(self, window, file):
         gfile = file.get_location()  # a Gio.GFile 
         path = gfile.get_path()       # a str
-
-        text = self.msg_create
+        
+        text =  _('Create a starter')
         return [self._create_menu_item(text, basedir=path)]
 
 
