@@ -20,18 +20,20 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+
 import gi
 gi.require_version('Gtk', '3.0')
 
 from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio
 import os, os.path, time, sys, urllib.request, urllib.parse, urllib.error, urllib.parse, argparse
-from gettext import gettext as _
-import gettext
+import gettext, locale
 import logging
+
 
 from arronax import settings, desktopfile, clipboard, about, dialogs, iconbrowser
 from arronax import statusbar, filechooser, tvtools, quicklist, utils, mimetypes
 from arronax import categoriesbrowser, entrytools, parsecli, winclass
+
 
 class Editor(object):
 
@@ -115,16 +117,15 @@ class Editor(object):
 
 
     def create_builder(self):
+        locale.bindtextdomain(settings.GETTEXT_DOMAIN, settings.LOCALE_DIR)
+        gettext.install(settings.GETTEXT_DOMAIN, settings.LOCALE_DIR)
+
+        
         self.builder = Gtk.Builder()
         logging.debug('LOCALES: domain:{} dir:{}'.format(
             settings.GETTEXT_DOMAIN,
             settings.LOCALE_DIR))
         self.builder.set_translation_domain(settings.GETTEXT_DOMAIN)
-        gettext.bindtextdomain(settings.GETTEXT_DOMAIN,
-                               settings.LOCALE_DIR)
-        gettext.textdomain(settings.GETTEXT_DOMAIN)
-        gettext.bind_textdomain_codeset(settings.GETTEXT_DOMAIN, 'UTF-8')
-
         self.builder.add_from_file(os.path.join(settings.UI_DIR, 
                                                 'edit.ui'))
         self.builder.connect_signals(self)
