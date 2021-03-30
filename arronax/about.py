@@ -39,12 +39,6 @@ def add_help_menu(submenu):
     menu_item.connect('activate', on_menuitem_translations)
     submenu.append(menu_item)
         
-    menu_item = Gtk.ImageMenuItem(_('Donate via Flattr'))
-    menu_item.set_image(Gtk.Image.new_from_stock(Gtk.STOCK_JUMP_TO, 
-                                                 Gtk.IconSize.MENU))
-    menu_item.connect('activate', on_menuitem_flattr)
-    submenu.append(menu_item)
-
     menu_item = Gtk.ImageMenuItem(_('Donate via PayPal'))
     menu_item.set_image(Gtk.Image.new_from_stock(Gtk.STOCK_JUMP_TO, 
                                                  Gtk.IconSize.MENU))
