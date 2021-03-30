@@ -63,7 +63,7 @@ def parse_cli_args():
         version='{} {}'.format(settings.APP_TITLE, settings.APP_VERSION))
     parser.add_argument(
         '--dir', '-d', metavar='PATH',
-        help='Crerate starter in folder PATH')
+        help='Create starter in folder PATH')
 
     typeargs = parser.add_mutually_exclusive_group()
     typeargs.add_argument(
