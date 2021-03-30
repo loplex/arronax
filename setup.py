@@ -42,6 +42,8 @@ setup(
          glob.glob('plugins/nemo-arronax.py')),
         ('share/caja-python/extensions/',
          glob.glob('plugins/caja-arronax.py')),
+        ('share/thunarx-python/extensions/',
+         glob.glob('plugins/thunar-arronax.py')),
         ('share/icons/hicolor/scalable/apps/',
          ['data/icons/arronax.svg']),
         ] + \
