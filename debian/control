@@ -38,6 +38,7 @@ Package: arronax-nautilus
 Architecture: all
 Depends: ${misc:Depends},
          arronax,
+	 gir1.2-nautilus-3.0,
 	 python3-nautilus | python-nautilus
 Description: Create and modify application, file and URI starters.
  Arronax is a GTK based GUI program to create and modify starters
@@ -51,6 +52,7 @@ Package: arronax-caja
 Architecture: all
 Depends: ${misc:Depends},
 	 arronax,
+	 gir1.2-caja-2.0,
 	 python3-caja | python-caja
 Description: Create and modify application, file and URI starters.
  Arronax is a GTK based GUI program to create and modify starters
@@ -61,10 +63,26 @@ Description: Create and modify application, file and URI starters.
  context menu in Caja
 
 
+Package: arronax-thunar
+Architecture: all
+Depends: ${misc:Depends},
+	 arronax,
+	 gir1.2-thunarx-3.0,
+	 thunarx-python (>= 0.5.2)
+Description: Create and modify application, file and URI starters.
+ Arronax is a GTK based GUI program to create and modify starters
+ (*.desktop files) for applications, files, and URIs.
+ .
+ This package contains the Thunar plugin for Arronax. It adds a 
+ "Create starter" menu item to the desktop's context menu and to the file 
+ context menu in Thunar
+
+
 Package: arronax-nemo
 Architecture: all
 Depends: ${misc:Depends},
 	 arronax,
+	 gir1.2-nemo-3.0,
 	 python-nemo | nemo-python
 Description: Create and modify application, file and URI starters.
  Arronax is a GTK based GUI program to create and modify starters
