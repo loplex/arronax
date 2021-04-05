@@ -6,17 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-11 17:58+0200\n"
-"PO-Revision-Date: 2019-10-12 10:49+0000\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2020-10-10 13:10+0200\n"
+"PO-Revision-Date: 2020-12-27 12:29+0000\n"
 "Last-Translator: Toni Estevez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
-"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2020-10-08 03:08+0000\n"
-"X-Generator: Launchpad (build d50d1e75c500726862802414f880ee3e3bb759bf)\n"
+"X-Launchpad-Export-Date: 2021-04-05 09:48+0000\n"
+"X-Generator: Launchpad (build 57f1f603f707b9cfa764cae8dd0f3999026b4763)\n"
 
 #: ../arronax/quicklist.py:33
 msgid "Title"
@@ -121,10 +120,15 @@ msgid ""
 "<tt>%f</tt> is replaced with a single file path, <tt>%F</tt> with multiple "
 "files, <tt>%u</tt> with a single URI, <tt>%U</tt> with multiple URIs."
 msgstr ""
+"La orden que quiere iniciar.\n"
+"\n"
+"<tt>%f</tt> se reemplaza con una sola ruta de archivo, <tt>%F</tt> con "
+"múltiples archivos, <tt>%u</tt> con una sola ubicación, <tt>%U</tt> con "
+"múltiples ubicaciones."
 
 #: ../arronax/editor.py:539
 msgid "File or URI you want to open"
-msgstr ""
+msgstr "El archivo o la ubicación que quiere abrir"
 
 #: ../arronax/editor.py:642
 msgid "This is not an image. Icon not changed."
@@ -181,17 +185,21 @@ msgstr "Descripción"
 
 #: ../arronax/winclass.py:45
 msgid "Click a window to get its window class"
-msgstr ""
+msgstr "Haga clic en una ventana para obtener su clase de ventana"
 
 #: ../arronax/winclass.py:69
 msgid ""
 "Can't get window class: This function needs a X11 session. It doesn't work "
 "with Wayland."
 msgstr ""
+"No se puede obtener la clase de la ventana. Esta función requiere una sesión "
+"X11. No funciona con Wayland."
 
 #: ../arronax/winclass.py:74
 msgid "Can't get window class: This function needs GTK 3.20 or newer."
 msgstr ""
+"No se puede obtener la clase de la ventana. Esta función requiere GTK 3.20 o "
+"más reciente."
 
 #: ../arronax/plugin.py:65
 msgid "Create a starter for this location"
@@ -229,7 +237,7 @@ msgstr "Seleccionar una carpeta"
 
 #: ../arronax/filechooser.py:25
 msgid "Select Program"
-msgstr "Seleccionar un archivo"
+msgstr "Seleccionar un programa"
 
 #: ../arronax/filechooser.py:28
 msgid "Select File"
@@ -265,12 +273,11 @@ msgstr "Escritorio GNOME"
 
 #: ../arronax/settings.py:93
 msgid "GNOME Classic Desktop"
-msgstr ""
+msgstr "Escritorio GNOME Classic"
 
 #: ../arronax/settings.py:94
-#, fuzzy
 msgid "GNOME Flashback Desktop"
-msgstr "Escritorio GNOME"
+msgstr "Escritorio GNOME Flashback"
 
 #: ../arronax/settings.py:95
 msgid "KDE Desktop"
@@ -322,23 +329,22 @@ msgstr "Escritorio Pantheon"
 
 #: ../arronax/settings.py:107
 msgid "Legacy menu systems"
-msgstr "Sistemas de menús heredados"
+msgstr "Sistemas de menús obsoletos"
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:12
 msgid "Arronax"
 msgstr "Arronax"
 
 #: ../data/desktop/arronax.desktop.in.h:2
-msgid ""
-"Create and edit application starters, .desktop files and desktop shortcuts"
-msgstr ""
+msgid "Create and edit application starters, .desktop files and"
+msgstr "Crear y editar lanzadores de aplicaciones, archivos .desktop y"
 
 #: ../data/ui/mimetypes.ui.h:1
 msgid ""
 "<small>This are all MIME types that are registered on your system.\n"
 "You can drag files into the list to select their MIME types.</small>"
 msgstr ""
-"<small> Estos son todos los tipos MIME registrados en el sistema.\n"
+"<small>Estos son todos los tipos MIME registrados en el sistema.\n"
 "Puede arrastrar archivos a la lista para seleccionar sus tipos MIME.</small>"
 
 #: ../data/ui/mimetypes.ui.h:3 ../data/ui/appbrowser.ui.h:2
@@ -440,7 +446,8 @@ msgstr "Examine el sistema de archivos para seleccionar una carpeta"
 
 #: ../data/ui/edit.ui.h:26
 msgid "Hide this and any system wide starters with the same name."
-msgstr "Ocultar este y cualquier otro lanzador del sistema con el mismo nombre"
+msgstr ""
+"Ocultar este y cualquier otro lanzador del sistema con el mismo nombre"
 
 #: ../data/ui/edit.ui.h:27
 msgid "Tooltip for the entry"
@@ -471,6 +478,11 @@ msgid ""
 "This can be used by docks and launchers to match and group application "
 "windows."
 msgstr ""
+"La aplicación mostrará al menos una ventana con la cadena dada como su clase "
+"de ventana o como sugerencia del nombre de la ventana. \n"
+"\n"
+"Tableros y lanzadores pueden usar esta opción para combinar y agrupar las "
+"ventanas de la aplicación."
 
 #: ../data/ui/edit.ui.h:36
 msgid "Window Class:"
@@ -498,7 +510,7 @@ msgstr "Ajustes básicos"
 
 #: ../data/ui/edit.ui.h:42
 msgid "_Basic"
-msgstr "_Básico"
+msgstr "_Básicos"
 
 #: ../data/ui/edit.ui.h:43
 msgid ""
@@ -506,10 +518,13 @@ msgid ""
 "should still include Exec= lines in their desktop files for compatibility "
 "with implementations that do not understand the DBusActivatable key. "
 msgstr ""
+"Enviar un mensaje D-Bus para lanzar la aplicación. Las aplicaciones deben "
+"seguir incluyendo líneas Exec= en sus archivos .desktop para que sean "
+"compatibles con las implementaciones que no entiendan esta opción. "
 
 #: ../data/ui/edit.ui.h:44
 msgid "DBus activatable:"
-msgstr ""
+msgstr "Activable por D-BUS:"
 
 #: ../data/ui/edit.ui.h:45
 msgid ""
@@ -519,10 +534,15 @@ msgid ""
 "not executable, the entry may be ignored (not be used in menus, for "
 "example). "
 msgstr ""
+"Ruta a un archivo ejecutable que servirá para determinar si el programa está "
+"realmente instalado. Si la ruta no es una ruta absoluta, el archivo se "
+"buscará en la variable de entorno $PATH. Si el archivo no está presente o si "
+"no es ejecutable, se puede ignorar la entrada (no se utilizará en los menús, "
+"por ejemplo). "
 
 #: ../data/ui/edit.ui.h:46
 msgid "Try exec:"
-msgstr ""
+msgstr "Probar el ejecutable:"
 
 #: ../data/ui/edit.ui.h:47
 msgid ""
@@ -533,10 +553,17 @@ msgid ""
 "etc.). If absent, a reasonable handling is up to implementations (assuming "
 "false, using StartupWMClass, etc.). "
 msgstr ""
+"Si se activa, se SABE que la aplicación enviará un mensaje «eliminar» cuando "
+"se inicie con el conjunto de variables de entorno DESKTOP_STARTUP_ID. Si se "
+"desactiva, se SABE que la aplicación no funcionará con la notificación de "
+"inicio de ninguna manera (no mostrará ninguna ventana, se detendrá incluso "
+"al usar la clase de la ventana de inicio, etc.). Si está ausente, un manejo "
+"razonable dependerá de las implementaciones (asumiendo que no está activa, "
+"usando la clase de la ventana de inicio, etc.). "
 
 #: ../data/ui/edit.ui.h:48
 msgid "Startup notify:"
-msgstr ""
+msgstr "Notificación de inicio:"
 
 #: ../data/ui/edit.ui.h:49
 msgid ""
@@ -547,46 +574,52 @@ msgid ""
 "only a hint and support might not be present depending on the "
 "implementation. "
 msgstr ""
+"Si se activa, la aplicación prefiere ejecutarse en una GPU discreta más "
+"potente, si está disponible, que se describe como «una GPU distinta de la "
+"predeterminada» en esta especificación para evitar la necesidad de definir "
+"qué es una GPU discreta y en qué casos podría considerarse más potente que "
+"la GPU predeterminada. Esta opción solo es una sugerencia y puede que no "
+"esté presente dependiendo de la implementación. "
 
 #: ../data/ui/edit.ui.h:50
 msgid "Prefers non-default GPU:"
-msgstr ""
+msgstr "Preferir la GPU no predeterminada:"
 
 #: ../data/ui/edit.ui.h:51
 msgid "Yes"
-msgstr ""
+msgstr "Sí"
 
 #: ../data/ui/edit.ui.h:52
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: ../data/ui/edit.ui.h:53
 msgid "Unknown"
-msgstr ""
+msgstr "Ausente"
 
 #: ../data/ui/edit.ui.h:54
 msgid "Advanced"
-msgstr ""
+msgstr "Avanzados"
 
 #: ../data/ui/edit.ui.h:55
 msgid "64px"
-msgstr ""
+msgstr "64 px"
 
 #: ../data/ui/edit.ui.h:56
 msgid "32px"
-msgstr ""
+msgstr "32 px"
 
 #: ../data/ui/edit.ui.h:57
 msgid "24px"
-msgstr ""
+msgstr "24 px"
 
 #: ../data/ui/edit.ui.h:58
 msgid "16px"
-msgstr ""
+msgstr "16 px"
 
 #: ../data/ui/edit.ui.h:59
 msgid "Icon:"
-msgstr ""
+msgstr "Icono:"
 
 #: ../data/ui/edit.ui.h:60
 msgid "Browse files"
@@ -614,7 +647,7 @@ msgstr "Elija una aplicación para usar su icono"
 
 #: ../data/ui/edit.ui.h:66
 msgid "Icon"
-msgstr ""
+msgstr "Icono"
 
 #: ../data/ui/edit.ui.h:67
 msgid "Select the environments that should show your starter."
@@ -640,8 +673,8 @@ msgid ""
 "starter entries.</small>"
 msgstr ""
 "<small>Las listas rápidas proporcionan acciones adicionales para el lanzador "
-"de una aplicación. Se usan en el menú contextual de algunos escritorios.</"
-"small>"
+"de una aplicación. Se usan en el menú contextual de algunos "
+"escritorios.</small>"
 
 #: ../data/ui/edit.ui.h:72
 msgid "Titles of your quicklist items"
@@ -649,25 +682,25 @@ msgstr "Los nombres de los elementos de la lista rápida"
 
 #: ../data/ui/edit.ui.h:73
 msgid "_Up"
-msgstr ""
+msgstr "_Subir"
 
 #: ../data/ui/edit.ui.h:74
 msgid "_Down"
-msgstr ""
+msgstr "_Bajar"
 
 #: ../data/ui/edit.ui.h:75
 msgid "_New"
-msgstr ""
+msgstr "_Nueva"
 
 #: ../data/ui/edit.ui.h:76
 msgid "_Delete"
-msgstr ""
+msgstr "E_liminar"
 
 #: ../data/ui/edit.ui.h:77
 msgid "Quicklists provide additional actions for an application starter. "
 msgstr ""
 "Las listas rápidas proporcionan acciones adicionales para el lanzador de una "
-"aplicación "
+"aplicación. "
 
 #: ../data/ui/edit.ui.h:78
 msgid "_Quicklist"
@@ -679,13 +712,13 @@ msgid ""
 "application will be listed in \"Open with...\" dialogs for files of this "
 "types.\n"
 "Add MIME types one per line or separated by semicolons (\";\"), \n"
-"drag files into the text field to add their MIME types or use the "
-"\"Select ...\" button.</small>"
+"drag files into the text field to add their MIME types or use the \"Select "
+"...\" button.</small>"
 msgstr ""
 "<small>A continuación se muestran los tipos MIME que puede abrir la "
 "aplicación. La aplicación aparecerá en la lista del diálogo «Abrir con...» "
 "de estos tipos de archivo.\n"
-"Añada un tipo MIME por línea o sepárelos con un punto y coma («;»), \n"
+"Añada un tipo MIME por línea o sepárelos por punto y coma («;»), \n"
 "o bien arrastre archivos al campo de texto para añadir sus tipos MIME o use "
 "el botón «Seleccionar...».</small>"
 
@@ -707,14 +740,16 @@ msgid ""
 "Unity Dash) to find your application.\n"
 "Add Keywords one per line or separated by semicolons (\";\").</small>"
 msgstr ""
-"<small>Estas palabras clave se pueden usar en el cuadro de búsqueda de "
-"algunos escritorios para encontrar rápidamente la aplicación. Añada una "
-"palabra clave por línea o bien sepárelas con un punto y coma (\";\").</small>"
+"<small>Estas palabras clave se usan en el cuadro de búsqueda de algunos "
+"escritorios para encontrar la aplicación.\n"
+"Añada una palabra clave por línea o bien sepárelas con un punto y coma "
+"(\";\").</small>"
 
 #: ../data/ui/edit.ui.h:87
-msgid "List of keywords that may be used for searching starters, e.g. in Unity"
+msgid ""
+"List of keywords that may be used for searching starters, e.g. in Unity"
 msgstr ""
-"La lista de palabras clave que se pueden usar en la búsqueda de un lanzador"
+"La lista de palabras clave que se pueden usar para buscar un lanzador"
 
 #: ../data/ui/edit.ui.h:88
 msgid "Keywords are used to some search functions to find your application."
@@ -726,7 +761,7 @@ msgstr "_Palabras clave"
 
 #: ../data/ui/categoriesdlg.ui.h:1
 msgid "Choose categories"
-msgstr "Elegir las categorías"
+msgstr "Elegir categorías"
 
 #: ../data/ui/quicklist.ui.h:1
 msgid "Edit"
@@ -749,7 +784,7 @@ msgid ""
 "If you can't find your application here you have to create a .desktop file "
 "for it first."
 msgstr ""
-"Si no encuentra una aplicación aquí, cree un archivo «.desktop» para la "
+"Si no encuentra una aplicación aquí, cree un archivo .desktop para la "
 "aplicación."
 
 #: ../data/ui/icondlg.ui.h:2

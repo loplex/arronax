@@ -6,17 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-11 17:58+0200\n"
-"PO-Revision-Date: 2019-10-26 22:48+0000\n"
-"Last-Translator: Éfrit <Unknown>\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2020-10-10 13:10+0200\n"
+"PO-Revision-Date: 2020-12-26 10:35+0000\n"
+"Last-Translator: Lavet Jérémy <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2020-10-08 03:08+0000\n"
-"X-Generator: Launchpad (build d50d1e75c500726862802414f880ee3e3bb759bf)\n"
+"X-Launchpad-Export-Date: 2021-04-05 09:48+0000\n"
+"X-Generator: Launchpad (build 57f1f603f707b9cfa764cae8dd0f3999026b4763)\n"
 
 #: ../arronax/quicklist.py:33
 msgid "Title"
@@ -123,10 +122,14 @@ msgid ""
 "<tt>%f</tt> is replaced with a single file path, <tt>%F</tt> with multiple "
 "files, <tt>%u</tt> with a single URI, <tt>%U</tt> with multiple URIs."
 msgstr ""
+"La commande que vous voulez lancer.\n"
+"\n"
+"<tt>%f</tt> est replacé avec le chemin, <tt>%F</tt> avec des fichiers "
+"multiples, <tt>%u</tt> avec une URL, <tt>%U</tt> avec plusieurs URIs."
 
 #: ../arronax/editor.py:539
 msgid "File or URI you want to open"
-msgstr ""
+msgstr "Fichier ou URL à ouvrir"
 
 #: ../arronax/editor.py:642
 msgid "This is not an image. Icon not changed."
@@ -170,6 +173,7 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Eliovir https://launchpad.net/~eliovir\n"
 "  Jean-Marc https://launchpad.net/~m-balthazar\n"
+"  Lavet Jérémy https://launchpad.net/~8433rerem\n"
 "  Nico207 https://launchpad.net/~forums-t\n"
 "  Phan Hoang https://launchpad.net/~phahoatho\n"
 "  Sylvie Gallet https://launchpad.net/~sylvie-gallet\n"
@@ -187,17 +191,21 @@ msgstr "Description"
 
 #: ../arronax/winclass.py:45
 msgid "Click a window to get its window class"
-msgstr ""
+msgstr "Cliquer sur une fenêtre pour recupérer le mode d'affichage"
 
 #: ../arronax/winclass.py:69
 msgid ""
 "Can't get window class: This function needs a X11 session. It doesn't work "
 "with Wayland."
 msgstr ""
+"Impossible de récupérer le mode d'affichage : cette fonction nécessite une "
+"session X11. Ne fonctionne pas avec Wayland"
 
 #: ../arronax/winclass.py:74
 msgid "Can't get window class: This function needs GTK 3.20 or newer."
 msgstr ""
+"Impossible de récupérer le mode d'affichage : cette fonction nécessite GTK "
+"3.20 ou plus récent"
 
 #: ../arronax/plugin.py:65
 msgid "Create a starter for this location"
@@ -271,12 +279,11 @@ msgstr "Bureau GNOME"
 
 #: ../arronax/settings.py:93
 msgid "GNOME Classic Desktop"
-msgstr ""
+msgstr "Bureau GNOME Classique"
 
 #: ../arronax/settings.py:94
-#, fuzzy
 msgid "GNOME Flashback Desktop"
-msgstr "Bureau GNOME"
+msgstr "Bureau GNOME Flashback"
 
 #: ../arronax/settings.py:95
 msgid "KDE Desktop"
@@ -335,9 +342,8 @@ msgid "Arronax"
 msgstr "Arronax"
 
 #: ../data/desktop/arronax.desktop.in.h:2
-msgid ""
-"Create and edit application starters, .desktop files and desktop shortcuts"
-msgstr ""
+msgid "Create and edit application starters, .desktop files and"
+msgstr "Créer et modifier des démarreurs d'application, fichiers .desktop et"
 
 #: ../data/ui/mimetypes.ui.h:1
 msgid ""
@@ -478,6 +484,11 @@ msgid ""
 "This can be used by docks and launchers to match and group application "
 "windows."
 msgstr ""
+"L'application affichera au moins une fenêtre avec la chaîne donnée comme "
+"classe WM ou indice de nom WM. \n"
+"\n"
+"Cela peut être utilisé par les dicks et les lanceurs pour faire correspondre "
+"et regrouper les fenêtres d'application."
 
 #: ../data/ui/edit.ui.h:36
 msgid "Window Class:"
@@ -513,6 +524,10 @@ msgid ""
 "should still include Exec= lines in their desktop files for compatibility "
 "with implementations that do not understand the DBusActivatable key. "
 msgstr ""
+"et envoyer un message D-Bus pour démarrer l'application. Les applications "
+"doivent toujours inclure Exec= lignes dans leurs fichiers pour la "
+"compatibilité avec les implémentations qui ne comprennent pas la clé "
+"DBusActivatable "
 
 #: ../data/ui/edit.ui.h:44
 msgid "DBus activatable:"
@@ -526,10 +541,15 @@ msgid ""
 "not executable, the entry may be ignored (not be used in menus, for "
 "example). "
 msgstr ""
+"Chemin vers un fichier exécutable sur le disque utilisé pour déterminer si "
+"le programme est réellement installé. Si le chemin n'est pas un chemin "
+"absolu, le fichier est recherché dans la variable d'environnement $ PATH. Si "
+"le fichier n'est pas présent ou s'il n'est pas exécutable, l'entrée peut "
+"être ignorée (ne pas être utilisée dans les menus, par exemple). "
 
 #: ../data/ui/edit.ui.h:46
 msgid "Try exec:"
-msgstr ""
+msgstr "Essayer d'executer:"
 
 #: ../data/ui/edit.ui.h:47
 msgid ""
@@ -540,10 +560,18 @@ msgid ""
 "etc.). If absent, a reasonable handling is up to implementations (assuming "
 "false, using StartupWMClass, etc.). "
 msgstr ""
+"Si configuré comme vrai, il est CONNU que l'application enverra un message "
+"\"supprimer\" lorsqu'elle sera démarrée avec l'ensemble de variables "
+"d'environnement DESKTOP_STARTUP_ID. Si configuré comme faux, il est CONNU "
+"que l'application ne fonctionne pas du tout avec la notification de "
+"démarrage (n'affiche aucune fenêtre, se fige même lors de l'utilisation de "
+"StartupWMClass, etc.). En cas d'absence, une prise en charge raisonnable "
+"revient aux implémentations (en supposant configuré comme faux, en utilisant "
+"StartupWMClass, etc.). "
 
 #: ../data/ui/edit.ui.h:48
 msgid "Startup notify:"
-msgstr ""
+msgstr "Notification de démarrage"
 
 #: ../data/ui/edit.ui.h:49
 msgid ""
@@ -554,46 +582,52 @@ msgid ""
 "only a hint and support might not be present depending on the "
 "implementation. "
 msgstr ""
+"Si configuré sur vrai, l'application préfère être exécutée sur un GPU "
+"discret plus puissant si disponible, que nous décrivons comme \"un GPU autre "
+"que celui par défaut\" dans cette spécification pour éviter d'avoir à "
+"définir ce qu'est un GPU discret et dans quels cas il peut être considéré "
+"comme plus puissant que le GPU par défaut. Cette clé n'est qu'un indice et "
+"le support peut ne pas être présent selon l'implémentation. "
 
 #: ../data/ui/edit.ui.h:50
 msgid "Prefers non-default GPU:"
-msgstr ""
+msgstr "Préférer le GPU non déterminé par défaut"
 
 #: ../data/ui/edit.ui.h:51
 msgid "Yes"
-msgstr ""
+msgstr "Oui"
 
 #: ../data/ui/edit.ui.h:52
 msgid "No"
-msgstr ""
+msgstr "Non"
 
 #: ../data/ui/edit.ui.h:53
 msgid "Unknown"
-msgstr ""
+msgstr "Inconnu"
 
 #: ../data/ui/edit.ui.h:54
 msgid "Advanced"
-msgstr ""
+msgstr "Avancé"
 
 #: ../data/ui/edit.ui.h:55
 msgid "64px"
-msgstr ""
+msgstr "64 px"
 
 #: ../data/ui/edit.ui.h:56
 msgid "32px"
-msgstr ""
+msgstr "32 px"
 
 #: ../data/ui/edit.ui.h:57
 msgid "24px"
-msgstr ""
+msgstr "24 px"
 
 #: ../data/ui/edit.ui.h:58
 msgid "16px"
-msgstr ""
+msgstr "16 px"
 
 #: ../data/ui/edit.ui.h:59
 msgid "Icon:"
-msgstr ""
+msgstr "Icône :"
 
 #: ../data/ui/edit.ui.h:60
 msgid "Browse files"
@@ -621,17 +655,18 @@ msgstr "Choisir une application pour utiliser ses icônes"
 
 #: ../data/ui/edit.ui.h:66
 msgid "Icon"
-msgstr ""
+msgstr "Icône"
 
 #: ../data/ui/edit.ui.h:67
 msgid "Select the environments that should show your starter."
-msgstr "Sélectionner les environnements qui devraient afficher votre lanceur."
+msgstr ""
+"Sélectionner les environnements qui devraient afficher votre lanceur."
 
 #: ../data/ui/edit.ui.h:68
 msgid "<small>Select the environments that should show your starter.</small>"
 msgstr ""
-"<small>Sélectionner les environnements qui devraient afficher votre lanceur."
-"</small>"
+"<small>Sélectionner les environnements qui devraient afficher votre "
+"lanceur.</small>"
 
 #: ../data/ui/edit.ui.h:69
 msgid "Do you want the starter to be visible only in some environments?"
@@ -659,19 +694,19 @@ msgstr "Titres des items de votre liste rapide"
 
 #: ../data/ui/edit.ui.h:73
 msgid "_Up"
-msgstr ""
+msgstr "_Monter"
 
 #: ../data/ui/edit.ui.h:74
 msgid "_Down"
-msgstr ""
+msgstr "_Descendre"
 
 #: ../data/ui/edit.ui.h:75
 msgid "_New"
-msgstr ""
+msgstr "_Nouveau"
 
 #: ../data/ui/edit.ui.h:76
 msgid "_Delete"
-msgstr ""
+msgstr "_Supprimer"
 
 #: ../data/ui/edit.ui.h:77
 msgid "Quicklists provide additional actions for an application starter. "
@@ -689,8 +724,8 @@ msgid ""
 "application will be listed in \"Open with...\" dialogs for files of this "
 "types.\n"
 "Add MIME types one per line or separated by semicolons (\";\"), \n"
-"drag files into the text field to add their MIME types or use the "
-"\"Select ...\" button.</small>"
+"drag files into the text field to add their MIME types or use the \"Select "
+"...\" button.</small>"
 msgstr ""
 "<small>Ce sont les types de médias que votre application peut ouvrir. Votre "
 "application va être listée dans la boîte de dialogue « Ouvrir avec… » des "
@@ -724,7 +759,8 @@ msgstr ""
 "ligne.</small>"
 
 #: ../data/ui/edit.ui.h:87
-msgid "List of keywords that may be used for searching starters, e.g. in Unity"
+msgid ""
+"List of keywords that may be used for searching starters, e.g. in Unity"
 msgstr ""
 "La liste des mots-clés qui peuvent être utilisés pour rechercher les "
 "lanceurs, par exemple dans Unity."
