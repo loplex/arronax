@@ -4,6 +4,7 @@
 #export DH_VERBOSE=1
 #export PYBUILD_NAME=arronax
 export PYBUILD_DESTDIR=debian/tmp
+export PYBUILD_INSTALL_DIR=usr/lib/python3/dist-packages
 
 
 %:
