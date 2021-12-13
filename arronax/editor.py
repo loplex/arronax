@@ -152,10 +152,13 @@ class Editor(object):
         self.icon_has_changed = False
 
 
-    def read_desktop_file(self, path):
+    def read_desktop_file(self, path, show_msg=True):
         logging.info("Loading {}".format(path))
-        start_msg = _("Loading file '{path}' ...").format(path=path)
-        end_msg = _("Loaded file '{path}' ...").format(path=path)
+        if show_msg:
+            start_msg = _("Loading file '{path}' ...").format(path=path)
+            end_msg = _("Loaded file '{path}' ...").format(path=path)
+        else:
+            start_msg = end_msg = None
         with statusbar.Status(start_msg, end_msg) as status:
             msg = self.dfile.load(path)
             if msg is not None:
@@ -439,7 +442,7 @@ class Editor(object):
                               msg)
                 status.set_end_msg(_("File not saved."))
                 return False
-        self.read_desktop_file(self.filename)
+        self.read_desktop_file(self.filename, show_msg=False)
         return True
             
 #####################
