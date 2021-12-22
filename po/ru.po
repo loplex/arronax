@@ -8,37 +8,37 @@ msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-10 13:10+0200\n"
-"PO-Revision-Date: 2013-03-06 11:16+0000\n"
-"Last-Translator: Atanas Kovachki <Unknown>\n"
+"PO-Revision-Date: 2021-09-26 21:33+0000\n"
+"Last-Translator: Vyacheslav Dikonov <sdiconov@mail.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2021-04-05 09:48+0000\n"
-"X-Generator: Launchpad (build 57f1f603f707b9cfa764cae8dd0f3999026b4763)\n"
+"X-Launchpad-Export-Date: 2021-12-22 17:04+0000\n"
+"X-Generator: Launchpad (build adb364d6a74a28e7b95d51cd30446ec16160de6c)\n"
 "Language: ru\n"
 
 #: ../arronax/quicklist.py:33
 msgid "Title"
-msgstr ""
+msgstr "Название"
 
 #: ../arronax/editor.py:138
 msgid "Enabled"
-msgstr ""
+msgstr "Включено"
 
 #: ../arronax/editor.py:143 ../arronax/mimetypes.py:74
 msgid "Name"
-msgstr ""
+msgstr "Имя"
 
 #: ../arronax/editor.py:156
 #, python-brace-format
 msgid "Loading file '{path}' ..."
-msgstr ""
+msgstr "Открывается файл '{path}' ..."
 
 #: ../arronax/editor.py:157
 #, python-brace-format
 msgid "Loaded file '{path}' ..."
-msgstr ""
+msgstr "Открыт файл '{path}' ..."
 
 #: ../arronax/editor.py:163
 #, python-brace-format
@@ -46,6 +46,8 @@ msgid ""
 "Can't load file '{path}':\n"
 " {error}"
 msgstr ""
+"Невозможно открыть файл '{path}':\n"
+" {error}"
 
 #: ../arronax/editor.py:165 ../arronax/editor.py:411 ../arronax/editor.py:610
 #: ../arronax/winclass.py:71 ../arronax/winclass.py:75
@@ -55,11 +57,11 @@ msgstr "Oшибка"
 #: ../arronax/editor.py:166
 #, python-brace-format
 msgid "Can't load file '{path}'"
-msgstr ""
+msgstr "Невозможно открыть файл '{path}'"
 
 #: ../arronax/editor.py:220
 msgid "You need to provide a title."
-msgstr "Вам необходимо ввести название."
+msgstr "Необходимо ввести название."
 
 #: ../arronax/editor.py:223
 msgid "You need to provide a command."
@@ -67,7 +69,7 @@ msgstr "Нужно указать команду."
 
 #: ../arronax/editor.py:225
 msgid "You need to provide a URL or file name."
-msgstr ""
+msgstr "Нужно задать URL или имя файла."
 
 #: ../arronax/editor.py:235
 msgid "Save now?"
@@ -84,12 +86,12 @@ msgstr "Выберите значок"
 #: ../arronax/editor.py:414
 #, python-brace-format
 msgid "Saving file '{path}' ..."
-msgstr ""
+msgstr "Сохраняется файл '{path}' ..."
 
 #: ../arronax/editor.py:416
 #, python-brace-format
 msgid "File '{path}' saved."
-msgstr ""
+msgstr "Файл '{path}' сохранён."
 
 #: ../arronax/editor.py:427 ../arronax/editor.py:439
 msgid "File not saved."
@@ -98,7 +100,7 @@ msgstr "Файл не сохранён."
 #: ../arronax/editor.py:431
 #, python-brace-format
 msgid "Saved file '{path}'."
-msgstr ""
+msgstr "Сохоанён файл '{path}'."
 
 #: ../arronax/editor.py:437
 msgid "Can not save starter"
@@ -106,7 +108,7 @@ msgstr "Невозможно сохранить ярлык запуска"
 
 #: ../arronax/editor.py:534
 msgid "File or URL:"
-msgstr ""
+msgstr "Файл или URL:"
 
 #: ../arronax/editor.py:534 ../data/ui/edit.ui.h:30
 msgid "Command:"
@@ -119,34 +121,38 @@ msgid ""
 "<tt>%f</tt> is replaced with a single file path, <tt>%F</tt> with multiple "
 "files, <tt>%u</tt> with a single URI, <tt>%U</tt> with multiple URIs."
 msgstr ""
+"Команда для запуска.\n"
+"\n"
+"<tt>%f</tt> соответствует пути к одиночному файлу, <tt>%F</tt> - к "
+"нескольким файлам, <tt>%u</tt> - одному URI, <tt>%U</tt> - нескольким URI."
 
 #: ../arronax/editor.py:539
 msgid "File or URI you want to open"
-msgstr ""
+msgstr "Открываемый файл или URI"
 
 #: ../arronax/editor.py:642
 msgid "This is not an image. Icon not changed."
-msgstr ""
+msgstr "Это не изображение. Значок не изменён."
 
 #: ../arronax/editor.py:645
 msgid "This is not a local file. Icon not changed."
-msgstr ""
+msgstr "Это не локальный файл. Значок не изменён."
 
 #: ../arronax/editor.py:697
 msgid "Created new starter."
-msgstr ""
+msgstr "Создан новый ярлык запуска."
 
 #: ../arronax/about.py:12
 msgid "Go to Web Page"
-msgstr ""
+msgstr "Посетить веб-страницу"
 
 #: ../arronax/about.py:21
 msgid "Ask a Question"
-msgstr ""
+msgstr "Задать вопрос"
 
 #: ../arronax/about.py:30
 msgid "Report a Bug"
-msgstr "Сообщить о неполадке"
+msgstr "Сообщить об ошибке"
 
 #: ../arronax/about.py:36
 msgid "Help with Translations"
@@ -167,33 +173,38 @@ msgstr ""
 "  Aleksey Kabanov https://launchpad.net/~ak099\n"
 "  Atanas Kovachki https://launchpad.net/~zdar\n"
 "  Eugene Roskin https://launchpad.net/~lowrider\n"
-"  Florian Diesch https://launchpad.net/~diesch"
+"  Florian Diesch https://launchpad.net/~diesch\n"
+"  Vyacheslav Dikonov https://launchpad.net/~sdiconov"
 
 #: ../arronax/mimetypes.py:64 ../arronax/categoriesbrowser.py:40
 msgid "Selected"
-msgstr ""
+msgstr "Выбрано"
 
 #: ../arronax/mimetypes.py:77
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #: ../arronax/winclass.py:45
 msgid "Click a window to get its window class"
-msgstr ""
+msgstr "Щелкните окно, чтобы определить его класс"
 
 #: ../arronax/winclass.py:69
 msgid ""
 "Can't get window class: This function needs a X11 session. It doesn't work "
 "with Wayland."
 msgstr ""
+"Невозможно определить класс окна. Эта функция доступна в X11 и не работает в "
+"Wayland."
 
 #: ../arronax/winclass.py:74
 msgid "Can't get window class: This function needs GTK 3.20 or newer."
 msgstr ""
+"Невозможно определить класс окна. Эта функция требует GTK версии не ниже "
+"3.20."
 
 #: ../arronax/plugin.py:65
 msgid "Create a starter for this location"
-msgstr ""
+msgstr "Создать ярлык для этого места"
 
 #: ../arronax/plugin.py:67
 msgid "Modify this starter"
@@ -201,17 +212,17 @@ msgstr "Свойства ярлыка запуска"
 
 #: ../arronax/plugin.py:70
 msgid "Create a starter for this program"
-msgstr ""
+msgstr "Создать ярлык для приложения"
 
 #: ../arronax/plugin.py:72
 msgid "Create a starter for this file"
-msgstr ""
+msgstr "Создать ярлык для файла"
 
 #. a Gio.GFile
 #. a str
 #: ../arronax/plugin.py:95
 msgid "Create a starter"
-msgstr ""
+msgstr "Создать ярлык запуска"
 
 #: ../arronax/filechooser.py:15
 msgid "Open File"
@@ -219,7 +230,7 @@ msgstr "Открыть файл"
 
 #: ../arronax/filechooser.py:19
 msgid "Save File"
-msgstr ""
+msgstr "Сохранить файл"
 
 #: ../arronax/filechooser.py:22
 msgid "Select Folder"
@@ -231,11 +242,11 @@ msgstr "Выберите программу"
 
 #: ../arronax/filechooser.py:28
 msgid "Select File"
-msgstr ""
+msgstr "Выбрать файл"
 
 #: ../arronax/filechooser.py:60
 msgid "Standard folders: "
-msgstr ""
+msgstr "Стандартные папки: "
 
 #: ../arronax/filechooser.py:68
 msgid "Desktop"
@@ -247,79 +258,79 @@ msgstr "Папка приложений пользователя"
 
 #: ../arronax/filechooser.py:70
 msgid "System App Folder"
-msgstr ""
+msgstr "Системная папка приложений"
 
 #: ../arronax/filechooser.py:71
 msgid "User Autostart Folder"
-msgstr ""
+msgstr "Пользовательская папка автозапуска"
 
 #: ../arronax/filechooser.py:72
 msgid "System Autostart Folder"
-msgstr ""
+msgstr "Системная папка автозапуска"
 
 #: ../arronax/settings.py:92
 msgid "GNOME Desktop"
-msgstr ""
+msgstr "Рабочий стол GNOME"
 
 #: ../arronax/settings.py:93
 msgid "GNOME Classic Desktop"
-msgstr ""
+msgstr "Рабочий стол GNOME Classic"
 
 #: ../arronax/settings.py:94
 msgid "GNOME Flashback Desktop"
-msgstr ""
+msgstr "Рабочий стол GNOME Flashback"
 
 #: ../arronax/settings.py:95
 msgid "KDE Desktop"
-msgstr ""
+msgstr "Рабочий стол KDE"
 
 #: ../arronax/settings.py:96
 msgid "LXDE Desktop"
-msgstr ""
+msgstr "Рабочий стол LXDE"
 
 #: ../arronax/settings.py:97
 msgid "LXQt Desktop"
-msgstr ""
+msgstr "Рабочий стол LXQt"
 
 #: ../arronax/settings.py:98
 msgid "MATE Desktop"
-msgstr ""
+msgstr "Рабочий стол MATE"
 
 #: ../arronax/settings.py:99
 msgid "Razor-qt Desktop"
-msgstr ""
+msgstr "Рабочий стол Razor-qt"
 
 #: ../arronax/settings.py:100
 msgid "ROX Desktop"
-msgstr ""
+msgstr "Рабочий стол ROX"
 
 #: ../arronax/settings.py:101
 msgid "Trinity Desktop"
-msgstr ""
+msgstr "Рабочий стол Trinity"
 
 #: ../arronax/settings.py:102
 msgid "Unity Desktop"
-msgstr ""
+msgstr "Рабочий стол Unity"
 
 #: ../arronax/settings.py:103
 msgid "XFCE Desktop"
-msgstr ""
+msgstr "Рабочий стол XFCE"
 
 #: ../arronax/settings.py:104
 msgid "EDE Desktop"
-msgstr ""
+msgstr "Рабочий стол EDE"
 
 #: ../arronax/settings.py:105
 msgid "Cinnamon Desktop"
-msgstr ""
+msgstr "Рабочий стол Cinnamon"
 
 #: ../arronax/settings.py:106
 msgid "Pantheon Desktop"
-msgstr ""
+msgstr "Рабочий стол Pantheon"
 
 #: ../arronax/settings.py:107
 msgid "Legacy menu systems"
-msgstr ""
+msgstr "Старые системы меню"
 
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:12
 msgid "Arronax"
@@ -328,17 +339,20 @@ msgstr "Arronax"
 #: ../data/desktop/arronax.desktop.in.h:2
 msgid "Create and edit application starters, .desktop files and"
 msgstr ""
+"Создавайте и редактируйте ярлыки запуска приложений, файлы .desktop и"
 
 #: ../data/ui/mimetypes.ui.h:1
 msgid ""
 "<small>This are all MIME types that are registered on your system.\n"
 "You can drag files into the list to select their MIME types.</small>"
 msgstr ""
+"<small>Это все MIME-типы зарегистрированные в системе.\n"
+"Можно перетаскивать фалы в этот список для выбора их MIME-типов.</small>"
 
 #: ../data/ui/mimetypes.ui.h:3 ../data/ui/appbrowser.ui.h:2
 #: ../data/ui/icondlg.ui.h:3
 msgid "Filter:"
-msgstr ""
+msgstr "Фильтр:"
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
@@ -346,11 +360,11 @@ msgstr "Показать информацию об Arronax"
 
 #: ../data/ui/edit.ui.h:3
 msgid "Select an file or  icon for this starter"
-msgstr ""
+msgstr "Выберите файл или значок для ярлыка"
 
 #: ../data/ui/edit.ui.h:4
 msgid "Browse files or icons to use as icon for this starter"
-msgstr ""
+msgstr "Выбрать файлы или значки для ярлыка"
 
 #: ../data/ui/edit.ui.h:5
 msgid "Create a new application starter"
@@ -362,11 +376,11 @@ msgstr "Открыть ярлык запуска приложения"
 
 #: ../data/ui/edit.ui.h:7
 msgid "Open application"
-msgstr ""
+msgstr "Открыть ярлык приложения"
 
 #: ../data/ui/edit.ui.h:8
 msgid "Duplicate"
-msgstr ""
+msgstr "Дублировать"
 
 #: ../data/ui/edit.ui.h:9
 msgid "Quit Arronax"
@@ -374,11 +388,11 @@ msgstr "Выйти из Arronax"
 
 #: ../data/ui/edit.ui.h:10
 msgid "Save to application starter"
-msgstr "Сохранить в ярлык запуска приложения"
+msgstr "Сохранить как ярлык запуска приложения"
 
 #: ../data/ui/edit.ui.h:11
 msgid "Save as another application starter"
-msgstr "Сохранить как ярлык запуска другого приложения"
+msgstr "Сохранить как новый ярлык запуска приложения"
 
 #: ../data/ui/edit.ui.h:13
 msgid "_File"
@@ -398,57 +412,57 @@ msgstr "Сохранить текущий ярлык запуска прилож
 
 #: ../data/ui/edit.ui.h:17
 msgid "What kind of starter do you want?"
-msgstr ""
+msgstr "Какой ярлык нужно создать?"
 
 #: ../data/ui/edit.ui.h:18
 msgid "This is a starter for an application"
-msgstr ""
+msgstr "Ярлык запуска приложения"
 
 #: ../data/ui/edit.ui.h:19
 msgid "This is a starter for a file or a location"
-msgstr ""
+msgstr "Ярлык открытия файла или URI"
 
 #: ../data/ui/edit.ui.h:20
 msgid "Title that is displayed for this starter file"
-msgstr ""
+msgstr "Отображаемое название ярлыка"
 
 #: ../data/ui/edit.ui.h:21
 msgid "Select ..."
-msgstr ""
+msgstr "Выбрать ..."
 
 #: ../data/ui/edit.ui.h:22
 msgid "Browse the file system to select a command"
-msgstr ""
+msgstr "Выберите исполняемый файл"
 
 #: ../data/ui/edit.ui.h:23
 msgid ""
 "Path to a folder that is used as the \n"
 "working folder for the program"
-msgstr ""
+msgstr "Путь к папке, которая будет рабочим каталогом для программы"
 
 #: ../data/ui/edit.ui.h:25
 msgid "Browse the file system to select a folder"
-msgstr ""
+msgstr "Выберите папку"
 
 #: ../data/ui/edit.ui.h:26
 msgid "Hide this and any system wide starters with the same name."
-msgstr ""
+msgstr "Скрывать этот ярлык и все одноименные ему системные ярлыки."
 
 #: ../data/ui/edit.ui.h:27
 msgid "Tooltip for the entry"
-msgstr ""
+msgstr "Подсказка о назначении ярлыка"
 
 #: ../data/ui/edit.ui.h:28
 msgid "If switched on the command is run in a Terminal window"
-msgstr ""
+msgstr "Если включено, то команда будет запускаться в окне терминала"
 
 #: ../data/ui/edit.ui.h:29
 msgid "Title:"
-msgstr "Название"
+msgstr "Название:"
 
 #: ../data/ui/edit.ui.h:31
 msgid "Start in folder:"
-msgstr "Запустить в папке:"
+msgstr "Запускать в папке:"
 
 #: ../data/ui/edit.ui.h:32
 msgid "Hidden:"
@@ -462,6 +476,11 @@ msgid ""
 "This can be used by docks and launchers to match and group application "
 "windows."
 msgstr ""
+"Приложение будет создавать по меньшей мере одно окно с указанной строкой в "
+"качестве его класса или заголовка. \n"
+"\n"
+"Эти данные могут использоваться рабочими столами для группировки окон "
+"приложений."
 
 #: ../data/ui/edit.ui.h:36
 msgid "Window Class:"
@@ -473,7 +492,7 @@ msgstr "Описание:"
 
 #: ../data/ui/edit.ui.h:38
 msgid "Categories in which the entry should be shown in a menu"
-msgstr ""
+msgstr "Категории, в которые должен попадать значок приложения в меню"
 
 #: ../data/ui/edit.ui.h:39
 msgid "Categories:"
@@ -481,15 +500,15 @@ msgstr "Категории:"
 
 #: ../data/ui/edit.ui.h:40
 msgid "Run in Terminal:"
-msgstr "Запустить в терминале:"
+msgstr "Запускать в терминале:"
 
 #: ../data/ui/edit.ui.h:41
 msgid "Basic settings"
-msgstr ""
+msgstr "Основные свойства ярлыка"
 
 #: ../data/ui/edit.ui.h:42
 msgid "_Basic"
-msgstr ""
+msgstr "_Основные"
 
 #: ../data/ui/edit.ui.h:43
 msgid ""
@@ -497,10 +516,14 @@ msgid ""
 "should still include Exec= lines in their desktop files for compatibility "
 "with implementations that do not understand the DBusActivatable key. "
 msgstr ""
+"Активировать ключ и послать сообщение D-Bus для запуска приложения. Ярлыки "
+"запуска приложений всё-равно должны иметь строку Exec=  в .desktop файлах "
+"для совместимости с реализациями, которые не поддерживают ключ "
+"DBusActivatable. "
 
 #: ../data/ui/edit.ui.h:44
 msgid "DBus activatable:"
-msgstr ""
+msgstr "Активация через DBus:"
 
 #: ../data/ui/edit.ui.h:45
 msgid ""
@@ -510,10 +533,15 @@ msgid ""
 "not executable, the entry may be ignored (not be used in menus, for "
 "example). "
 msgstr ""
+"Путь к исполняемому файлу на диске, который используется для определения "
+"того, что программа установлена. Если дан относительный путь, то поиск файла "
+"идет в каталогах включенных в переменную окружения $PATH. Если файл "
+"отсутствует или не является запускаемым, то ярлык может игнорироваться "
+"(например, не будет виден в меню). "
 
 #: ../data/ui/edit.ui.h:46
 msgid "Try exec:"
-msgstr ""
+msgstr "Проверять доступность команды:"
 
 #: ../data/ui/edit.ui.h:47
 msgid ""
@@ -524,10 +552,17 @@ msgid ""
 "etc.). If absent, a reasonable handling is up to implementations (assuming "
 "false, using StartupWMClass, etc.). "
 msgstr ""
+"Если Да, то считается ИЗВЕСТНЫМ, что приложение будет посылать сигнал "
+"\"спрятать индикатор\" при запуске с заданной переменной окружения "
+"DESKTOP_STARTUP_ID. Если Нет, то считается ИЗВЕСТНЫМ, что приложение "
+"несовместимо с индикаторами запуска (не создаёт окон, вызывает ошибки даже "
+"при использовании StartupWMClass, и т.п.). Если Неизвестно, то поведение "
+"зависит от рабочей среды (которая может отключать индикацию, требовать "
+"задания StartupWMClass, и т.д.). "
 
 #: ../data/ui/edit.ui.h:48
 msgid "Startup notify:"
-msgstr ""
+msgstr "Индикация запуска:"
 
 #: ../data/ui/edit.ui.h:49
 msgid ""
@@ -538,26 +573,32 @@ msgid ""
 "only a hint and support might not be present depending on the "
 "implementation. "
 msgstr ""
+"Если Да, то приложение желательно запускать на другой, более мощной "
+"видеокарте, если таковая имеется. В спецификации применяется определение "
+"\"Видеокарта отличная от используемой по умолчанию\", чтобы избежать "
+"необходимости определения дискретных видеокарт и случаев, когда они "
+"считаются более мощными чем встроенные. Этот ключ является только подсказкой "
+"и может не поддерживаться в зависимости от реализации. "
 
 #: ../data/ui/edit.ui.h:50
 msgid "Prefers non-default GPU:"
-msgstr ""
+msgstr "Альтернативная видеокарта:"
 
 #: ../data/ui/edit.ui.h:51
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 #: ../data/ui/edit.ui.h:52
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 #: ../data/ui/edit.ui.h:53
 msgid "Unknown"
-msgstr ""
+msgstr "Неизвестно"
 
 #: ../data/ui/edit.ui.h:54
 msgid "Advanced"
-msgstr ""
+msgstr "Расширенные"
 
 #: ../data/ui/edit.ui.h:55
 msgid "64px"
@@ -577,51 +618,52 @@ msgstr ""
 
 #: ../data/ui/edit.ui.h:59
 msgid "Icon:"
-msgstr ""
+msgstr "Значок:"
 
 #: ../data/ui/edit.ui.h:60
 msgid "Browse files"
-msgstr ""
+msgstr "Файлы"
 
 #: ../data/ui/edit.ui.h:61
 msgid "Choose a file to use as icon"
-msgstr ""
+msgstr "Выберите файл, который содержит значок"
 
 #: ../data/ui/edit.ui.h:62
 msgid "Browse icon theme"
-msgstr ""
+msgstr "Текущая тема"
 
 #: ../data/ui/edit.ui.h:63
 msgid "Choose an icon from the current icon theme"
-msgstr ""
+msgstr "Выберите значок среди входящих в используемую сейчас тему"
 
 #: ../data/ui/edit.ui.h:64
 msgid "Select by application"
-msgstr ""
+msgstr "Значок приложения"
 
 #: ../data/ui/edit.ui.h:65
 msgid "Choose an application to use its icon"
-msgstr ""
+msgstr "Выберите приложение, чтобы позаимствовать его значок"
 
 #: ../data/ui/edit.ui.h:66
 msgid "Icon"
-msgstr ""
+msgstr "Значок"
 
 #: ../data/ui/edit.ui.h:67
 msgid "Select the environments that should show your starter."
-msgstr ""
+msgstr "Выберите рабочие столы, для которых ярлык должен быть видим."
 
 #: ../data/ui/edit.ui.h:68
 msgid "<small>Select the environments that should show your starter.</small>"
 msgstr ""
+"<small>Какие окружения рабочего стола должны показывать ярлык.</small>"
 
 #: ../data/ui/edit.ui.h:69
 msgid "Do you want the starter to be visible only in some environments?"
-msgstr ""
+msgstr "Вы хотите, чтобы ярлык был видим только в некоторых рабочих столах?"
 
 #: ../data/ui/edit.ui.h:70
 msgid "_Show in"
-msgstr ""
+msgstr "_Среда"
 
 #: ../data/ui/edit.ui.h:71
 msgid ""
@@ -629,34 +671,39 @@ msgid ""
 "They are used for example in the right-click menu of the Ubuntu Unity "
 "starter entries.</small>"
 msgstr ""
+"<small>Списки действий содержат дополнительные команды для приложения. Они "
+"используются, например, в меню открываемом по нажатию правой кнопки мыши на "
+"ярлыке в Ubuntu Unity.</small>"
 
 #: ../data/ui/edit.ui.h:72
 msgid "Titles of your quicklist items"
-msgstr ""
+msgstr "Названия действий"
 
 #: ../data/ui/edit.ui.h:73
 msgid "_Up"
-msgstr ""
+msgstr "_Выше"
 
 #: ../data/ui/edit.ui.h:74
 msgid "_Down"
-msgstr ""
+msgstr "_Ниже"
 
 #: ../data/ui/edit.ui.h:75
 msgid "_New"
-msgstr ""
+msgstr "_Новый"
 
 #: ../data/ui/edit.ui.h:76
 msgid "_Delete"
-msgstr ""
+msgstr "_Удалить"
 
 #: ../data/ui/edit.ui.h:77
 msgid "Quicklists provide additional actions for an application starter. "
 msgstr ""
+"Списки действий позволяют включить в ярлык дополнительные команды для "
+"приложения. "
 
 #: ../data/ui/edit.ui.h:78
 msgid "_Quicklist"
-msgstr ""
+msgstr "_Действия"
 
 #: ../data/ui/edit.ui.h:79
 msgid ""
@@ -667,18 +714,25 @@ msgid ""
 "drag files into the text field to add their MIME types or use the \"Select "
 "...\" button.</small>"
 msgstr ""
+"<small>MIME-типы файлов, которые может открывать приложение.\n"
+"Ваша программа будет включена в список \"Открывать с помощью...\" для файлов "
+"указанных здесь типов.\n"
+"Вводите названия MIME-типов по одному в строке или разделяйте их точками с "
+"запятой (\";\"), \n"
+"Перетащите файлы в текстовое поле, чтобы добавить их MIME-типы, или "
+"воспользуйтесь кнопкой \"Выбрать...\".</small>"
 
 #: ../data/ui/edit.ui.h:82
 msgid "File types your command can open."
-msgstr ""
+msgstr "Типы файлов, которые может открывать ваше приложение."
 
 #: ../data/ui/edit.ui.h:83
 msgid "The MIME types your application is able to open."
-msgstr ""
+msgstr "MIME-типы поддерживаемые вашим приложением."
 
 #: ../data/ui/edit.ui.h:84
 msgid "_MIME types"
-msgstr ""
+msgstr "_MIME"
 
 #: ../data/ui/edit.ui.h:85
 msgid ""
@@ -686,46 +740,53 @@ msgid ""
 "Unity Dash) to find your application.\n"
 "Add Keywords one per line or separated by semicolons (\";\").</small>"
 msgstr ""
+"<small>Ключевые слова используются некоторыми функциями поиска (напр. в "
+"Ubuntu Unity), для подбора приложений.\n"
+"Вводите ключевые слова по одному в строке или разделяйте их точками с "
+"запятой (\";\").</small>"
 
 #: ../data/ui/edit.ui.h:87
 msgid ""
 "List of keywords that may be used for searching starters, e.g. in Unity"
-msgstr ""
+msgstr "Список ключевых слов для поиска ярлыков приложений, например в Unity"
 
 #: ../data/ui/edit.ui.h:88
 msgid "Keywords are used to some search functions to find your application."
 msgstr ""
+"Ключевые слова используются в некоторых программах для поиска приложений."
 
 #: ../data/ui/edit.ui.h:89
 msgid "_Keywords"
-msgstr ""
+msgstr "_Ключевые слова"
 
 #: ../data/ui/categoriesdlg.ui.h:1
 msgid "Choose categories"
-msgstr ""
+msgstr "Выбрать категории"
 
 #: ../data/ui/quicklist.ui.h:1
 msgid "Edit"
-msgstr ""
+msgstr "Правка"
 
 #: ../data/ui/quicklist.ui.h:2
 msgid "_Command:"
-msgstr ""
+msgstr "_Команда:"
 
 #: ../data/ui/quicklist.ui.h:3
 msgid "_Title:"
-msgstr ""
+msgstr "_Название:"
 
 #: ../data/ui/appbrowser.ui.h:1
 msgid "Select Application"
-msgstr ""
+msgstr "Выбрать приложение"
 
 #: ../data/ui/appbrowser.ui.h:3
 msgid ""
 "If you can't find your application here you have to create a .desktop file "
 "for it first."
 msgstr ""
+"Если искомого приложения здесь нет, то сначала надо создать для него "
+".desktop файл."
 
 #: ../data/ui/icondlg.ui.h:2
 msgid "Loading icons..."
-msgstr ""
+msgstr "Загрузка значков..."

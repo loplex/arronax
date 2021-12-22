@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: arronax\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2020-10-10 13:10+0200\n"
-"PO-Revision-Date: 2020-12-27 12:29+0000\n"
+"PO-Revision-Date: 2021-04-10 12:10+0000\n"
 "Last-Translator: Toni Estevez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2021-04-05 09:48+0000\n"
-"X-Generator: Launchpad (build 57f1f603f707b9cfa764cae8dd0f3999026b4763)\n"
+"X-Launchpad-Export-Date: 2021-12-22 17:04+0000\n"
+"X-Generator: Launchpad (build adb364d6a74a28e7b95d51cd30446ec16160de6c)\n"
 
 #: ../arronax/quicklist.py:33
 msgid "Title"
@@ -136,7 +136,7 @@ msgstr "El archivo no es una imagen. No se ha cambiado el icono."
 
 #: ../arronax/editor.py:645
 msgid "This is not a local file. Icon not changed."
-msgstr "El archivo no es un archivo local. No se ha cambiado el icono."
+msgstr "Este archivo no es un archivo local. No se ha cambiado el icono."
 
 #: ../arronax/editor.py:697
 msgid "Created new starter."
@@ -185,7 +185,7 @@ msgstr "Descripción"
 
 #: ../arronax/winclass.py:45
 msgid "Click a window to get its window class"
-msgstr "Haga clic en una ventana para obtener su clase de ventana"
+msgstr "Haga clic en una ventana para obtener su clase"
 
 #: ../arronax/winclass.py:69
 msgid ""
@@ -199,7 +199,7 @@ msgstr ""
 msgid "Can't get window class: This function needs GTK 3.20 or newer."
 msgstr ""
 "No se puede obtener la clase de la ventana. Esta función requiere GTK 3.20 o "
-"más reciente."
+"una versión más reciente."
 
 #: ../arronax/plugin.py:65
 msgid "Create a starter for this location"
@@ -430,19 +430,19 @@ msgstr "Seleccionar..."
 
 #: ../data/ui/edit.ui.h:22
 msgid "Browse the file system to select a command"
-msgstr "Examine el sistema de archivos para seleccionar una orden"
+msgstr "Navegar por el sistema de archivos para seleccionar un programa"
 
 #: ../data/ui/edit.ui.h:23
 msgid ""
 "Path to a folder that is used as the \n"
 "working folder for the program"
 msgstr ""
-"Ruta de la carpeta de trabajo \n"
-"que usa la aplicación"
+"La ruta de la carpeta de trabajo \n"
+"para la aplicación"
 
 #: ../data/ui/edit.ui.h:25
 msgid "Browse the file system to select a folder"
-msgstr "Examine el sistema de archivos para seleccionar una carpeta"
+msgstr "Navegar por el sistema de archivos para seleccionar una carpeta"
 
 #: ../data/ui/edit.ui.h:26
 msgid "Hide this and any system wide starters with the same name."
@@ -479,7 +479,7 @@ msgid ""
 "windows."
 msgstr ""
 "La aplicación mostrará al menos una ventana con la cadena dada como su clase "
-"de ventana o como sugerencia del nombre de la ventana. \n"
+"o sugerencia de nombre. \n"
 "\n"
 "Tableros y lanzadores pueden usar esta opción para combinar y agrupar las "
 "ventanas de la aplicación."
@@ -494,7 +494,7 @@ msgstr "Comentario:"
 
 #: ../data/ui/edit.ui.h:38
 msgid "Categories in which the entry should be shown in a menu"
-msgstr "Categorías del menú en las que se mostrará el lanzador"
+msgstr "Las categorías del menú en las que se mostrará el lanzador"
 
 #: ../data/ui/edit.ui.h:39
 msgid "Categories:"
@@ -518,9 +518,9 @@ msgid ""
 "should still include Exec= lines in their desktop files for compatibility "
 "with implementations that do not understand the DBusActivatable key. "
 msgstr ""
-"Enviar un mensaje D-Bus para lanzar la aplicación. Las aplicaciones deben "
+"Enviar un mensaje de D-Bus para lanzar la aplicación. Las aplicaciones deben "
 "seguir incluyendo líneas Exec= en sus archivos .desktop para que sean "
-"compatibles con las implementaciones que no entiendan esta opción. "
+"compatibles con las implementaciones que no admitan esta opción. "
 
 #: ../data/ui/edit.ui.h:44
 msgid "DBus activatable:"
@@ -534,11 +534,10 @@ msgid ""
 "not executable, the entry may be ignored (not be used in menus, for "
 "example). "
 msgstr ""
-"Ruta a un archivo ejecutable que servirá para determinar si el programa está "
-"realmente instalado. Si la ruta no es una ruta absoluta, el archivo se "
-"buscará en la variable de entorno $PATH. Si el archivo no está presente o si "
-"no es ejecutable, se puede ignorar la entrada (no se utilizará en los menús, "
-"por ejemplo). "
+"La ruta a un archivo ejecutable que servirá para determinar si el programa "
+"está realmente instalado. Si no es una ruta completa, el archivo se buscará "
+"en la variable de entorno $PATH. Si el archivo no está presente o si no es "
+"ejecutable, se ignorará la entrada  (no se usará en los menús, por ejemplo). "
 
 #: ../data/ui/edit.ui.h:46
 msgid "Try exec:"
@@ -553,13 +552,13 @@ msgid ""
 "etc.). If absent, a reasonable handling is up to implementations (assuming "
 "false, using StartupWMClass, etc.). "
 msgstr ""
-"Si se activa, se SABE que la aplicación enviará un mensaje «eliminar» cuando "
-"se inicie con el conjunto de variables de entorno DESKTOP_STARTUP_ID. Si se "
-"desactiva, se SABE que la aplicación no funcionará con la notificación de "
-"inicio de ninguna manera (no mostrará ninguna ventana, se detendrá incluso "
-"al usar la clase de la ventana de inicio, etc.). Si está ausente, un manejo "
-"razonable dependerá de las implementaciones (asumiendo que no está activa, "
-"usando la clase de la ventana de inicio, etc.). "
+"Si se activa, la aplicación ENVIARÁ el mensaje «eliminar» al iniciarse con "
+"la variable de entorno DESKTOP_STARTUP_ID definida. Si se desactiva, la "
+"aplicación NO FUNCIONARÁ con la notificación de inicio de ninguna manera (no "
+"mostrará ninguna ventana, se interrumpirá incluso cuando se use la clase de "
+"la ventana, etc.). Si la opción está ausente, un manejo razonable dependerá "
+"de las implementaciones (asumiendo que no está activa, usando la clase de la "
+"ventana, etc.). "
 
 #: ../data/ui/edit.ui.h:48
 msgid "Startup notify:"
@@ -577,7 +576,7 @@ msgstr ""
 "Si se activa, la aplicación prefiere ejecutarse en una GPU discreta más "
 "potente, si está disponible, que se describe como «una GPU distinta de la "
 "predeterminada» en esta especificación para evitar la necesidad de definir "
-"qué es una GPU discreta y en qué casos podría considerarse más potente que "
+"qué es una GPU discreta y en qué casos se puede considerar más potente que "
 "la GPU predeterminada. Esta opción solo es una sugerencia y puede que no "
 "esté presente dependiendo de la implementación. "
 
@@ -623,7 +622,7 @@ msgstr "Icono:"
 
 #: ../data/ui/edit.ui.h:60
 msgid "Browse files"
-msgstr "Examinar archivos"
+msgstr "Examinar los archivos"
 
 #: ../data/ui/edit.ui.h:61
 msgid "Choose a file to use as icon"
@@ -718,9 +717,9 @@ msgstr ""
 "<small>A continuación se muestran los tipos MIME que puede abrir la "
 "aplicación. La aplicación aparecerá en la lista del diálogo «Abrir con...» "
 "de estos tipos de archivo.\n"
-"Añada un tipo MIME por línea o sepárelos por punto y coma («;»), \n"
-"o bien arrastre archivos al campo de texto para añadir sus tipos MIME o use "
-"el botón «Seleccionar...».</small>"
+"Añada un tipo MIME por línea o separado por punto y coma («;»), \n"
+"arrastre archivos al campo de texto para añadir sus tipos MIME o use el "
+"botón «Seleccionar...».</small>"
 
 #: ../data/ui/edit.ui.h:82
 msgid "File types your command can open."
@@ -742,7 +741,7 @@ msgid ""
 msgstr ""
 "<small>Estas palabras clave se usan en el cuadro de búsqueda de algunos "
 "escritorios para encontrar la aplicación.\n"
-"Añada una palabra clave por línea o bien sepárelas con un punto y coma "
+"Añada una palabra clave por línea o separada por un punto y coma "
 "(\";\").</small>"
 
 #: ../data/ui/edit.ui.h:87
@@ -789,4 +788,4 @@ msgstr ""
 
 #: ../data/ui/icondlg.ui.h:2
 msgid "Loading icons..."
-msgstr "Cargando iconos...."
+msgstr "Cargando iconos..."
