@@ -6,136 +6,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: arronax\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2020-10-10 13:10+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-26 15:35+0100\n"
 "PO-Revision-Date: 2020-04-16 19:27+0000\n"
 "Last-Translator: Daniel Slavu <Unknown>\n"
 "Language-Team: Romanian <ro@li.org>\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2021-12-22 17:04+0000\n"
 "X-Generator: Launchpad (build adb364d6a74a28e7b95d51cd30446ec16160de6c)\n"
-
-#: ../arronax/quicklist.py:33
-msgid "Title"
-msgstr "Titlu"
-
-#: ../arronax/editor.py:138
-msgid "Enabled"
-msgstr "Activată"
-
-#: ../arronax/editor.py:143 ../arronax/mimetypes.py:74
-msgid "Name"
-msgstr "Nume"
-
-#: ../arronax/editor.py:156
-#, python-brace-format
-msgid "Loading file '{path}' ..."
-msgstr "Se încarcă fișierul '{path}' ..."
-
-#: ../arronax/editor.py:157
-#, python-brace-format
-msgid "Loaded file '{path}' ..."
-msgstr "Fișierul încărcat '{path}' ..."
-
-#: ../arronax/editor.py:163
-#, python-brace-format
-msgid ""
-"Can't load file '{path}':\n"
-" {error}"
-msgstr ""
-"Nu se poate încărca fișierul '{path}':\n"
-" {error}"
-
-#: ../arronax/editor.py:165 ../arronax/editor.py:411 ../arronax/editor.py:610
-#: ../arronax/winclass.py:71 ../arronax/winclass.py:75
-msgid "Error"
-msgstr "Eroare"
-
-#: ../arronax/editor.py:166
-#, python-brace-format
-msgid "Can't load file '{path}'"
-msgstr "Nu se poate încărca fișierul '{path}'"
-
-#: ../arronax/editor.py:220
-msgid "You need to provide a title."
-msgstr "Trebuie să furnizați un titlu."
-
-#: ../arronax/editor.py:223
-msgid "You need to provide a command."
-msgstr "Trebuie să furnizați o comandă."
-
-#: ../arronax/editor.py:225
-msgid "You need to provide a URL or file name."
-msgstr "Trebuie să furnizați o comandă."
-
-#: ../arronax/editor.py:235
-msgid "Save now?"
-msgstr "Salvează acum?"
-
-#: ../arronax/editor.py:236
-msgid "You have unsaved changes.  Do you want to save them now?"
-msgstr "Aveți modificări nesalvate. Vrei să le salvezi acum?"
-
-#: ../arronax/editor.py:286 ../data/ui/edit.ui.h:2 ../data/ui/icondlg.ui.h:1
-msgid "Select Icon"
-msgstr "Selectare pictogramă"
-
-#: ../arronax/editor.py:414
-#, python-brace-format
-msgid "Saving file '{path}' ..."
-msgstr "Se salvează fișierul '{path}' ..."
-
-#: ../arronax/editor.py:416
-#, python-brace-format
-msgid "File '{path}' saved."
-msgstr "Fișierul '{path}' a fost salvat."
-
-#: ../arronax/editor.py:427 ../arronax/editor.py:439
-msgid "File not saved."
-msgstr "Fișier nesalvat."
-
-#: ../arronax/editor.py:431
-#, python-brace-format
-msgid "Saved file '{path}'."
-msgstr "Fișier salvat '{path}'."
-
-#: ../arronax/editor.py:437
-msgid "Can not save starter"
-msgstr "Nu se poate salva pornirea"
-
-#: ../arronax/editor.py:534
-msgid "File or URL:"
-msgstr "Fișier sau URL:"
-
-#: ../arronax/editor.py:534 ../data/ui/edit.ui.h:30
-msgid "Command:"
-msgstr "Comandă:"
-
-#: ../arronax/editor.py:535
-msgid ""
-"The command you want to start.\n"
-"\n"
-"<tt>%f</tt> is replaced with a single file path, <tt>%F</tt> with multiple "
-"files, <tt>%u</tt> with a single URI, <tt>%U</tt> with multiple URIs."
-msgstr ""
-
-#: ../arronax/editor.py:539
-msgid "File or URI you want to open"
-msgstr ""
-
-#: ../arronax/editor.py:642
-msgid "This is not an image. Icon not changed."
-msgstr "Aceasta nu este o imagine. Pictograma nu a fost schimbată."
-
-#: ../arronax/editor.py:645
-msgid "This is not a local file. Icon not changed."
-msgstr "Acesta nu este un fișier local. Pictograma nu a fost schimbată."
-
-#: ../arronax/editor.py:697
-msgid "Created new starter."
-msgstr "Crează o nouă pornire."
 
 #: ../arronax/about.py:12
 msgid "Go to Web Page"
@@ -154,63 +35,19 @@ msgid "Help with Translations"
 msgstr "Ajutor cu traduceri"
 
 #: ../arronax/about.py:42
-msgid "Donate via Flattr"
-msgstr "Donează prin Flattr"
-
-#: ../arronax/about.py:48
 msgid "Donate via PayPal"
 msgstr "Donează prin PayPal"
 
-#: ../arronax/about.py:94
+#: ../arronax/about.py:88
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Daniel Slavu https://launchpad.net/~eldanys\n"
 "  mihai cornel https://launchpad.net/~mhcrnl"
 
-#: ../arronax/mimetypes.py:64 ../arronax/categoriesbrowser.py:40
+#: ../arronax/categoriesbrowser.py:40 ../arronax/mimetypes.py:64
 msgid "Selected"
 msgstr "Selectat"
-
-#: ../arronax/mimetypes.py:77
-msgid "Description"
-msgstr "Descriere"
-
-#: ../arronax/winclass.py:45
-msgid "Click a window to get its window class"
-msgstr ""
-
-#: ../arronax/winclass.py:69
-msgid ""
-"Can't get window class: This function needs a X11 session. It doesn't work "
-"with Wayland."
-msgstr ""
-
-#: ../arronax/winclass.py:74
-msgid "Can't get window class: This function needs GTK 3.20 or newer."
-msgstr ""
-
-#: ../arronax/plugin.py:65
-msgid "Create a starter for this location"
-msgstr "Creați o pornire pentru această locație"
-
-#: ../arronax/plugin.py:67
-msgid "Modify this starter"
-msgstr "Modificați acestă pornire"
-
-#: ../arronax/plugin.py:70
-msgid "Create a starter for this program"
-msgstr "Creați o pornire pentru acest program"
-
-#: ../arronax/plugin.py:72
-msgid "Create a starter for this file"
-msgstr "Creați o pornire pentru acest fișier"
-
-#. a Gio.GFile
-#. a str
-#: ../arronax/plugin.py:95
-msgid "Create a starter"
-msgstr "Creați o pornire"
 
 #: ../arronax/filechooser.py:15
 msgid "Open File"
@@ -255,6 +92,40 @@ msgstr "Dosar Utilizator Autopornire"
 #: ../arronax/filechooser.py:72
 msgid "System Autostart Folder"
 msgstr "Dosar de Sistem cu Autopornire"
+
+#: ../arronax/mimetypes.py:74 ../arronax/editor.py:144
+msgid "Name"
+msgstr "Nume"
+
+#: ../arronax/mimetypes.py:77
+msgid "Description"
+msgstr "Descriere"
+
+#: ../arronax/plugin.py:65
+msgid "Create a starter for this location"
+msgstr "Creați o pornire pentru această locație"
+
+#: ../arronax/plugin.py:67
+msgid "Modify this starter"
+msgstr "Modificați acestă pornire"
+
+#: ../arronax/plugin.py:70
+msgid "Create a starter for this program"
+msgstr "Creați o pornire pentru acest program"
+
+#: ../arronax/plugin.py:72
+msgid "Create a starter for this file"
+msgstr "Creați o pornire pentru acest fișier"
+
+#. a Gio.GFile
+#. a str
+#: ../arronax/plugin.py:95
+msgid "Create a starter"
+msgstr "Creați o pornire"
+
+#: ../arronax/quicklist.py:33
+msgid "Title"
+msgstr "Titlu"
 
 #: ../arronax/settings.py:92
 msgid "GNOME Desktop"
@@ -320,27 +191,161 @@ msgstr "Desktop Pantheon"
 msgid "Legacy menu systems"
 msgstr "Sisteme de meniu vechi"
 
+#: ../arronax/winclass.py:45
+msgid "Click a window to get its window class"
+msgstr ""
+
+#: ../arronax/winclass.py:69
+msgid ""
+"Can't get window class: This function needs a X11 session. It doesn't work "
+"with Wayland."
+msgstr ""
+
+#: ../arronax/winclass.py:71 ../arronax/winclass.py:75 ../arronax/editor.py:169
+#: ../arronax/editor.py:415 ../arronax/editor.py:614
+msgid "Error"
+msgstr "Eroare"
+
+#: ../arronax/winclass.py:74
+msgid "Can't get window class: This function needs GTK 3.20 or newer."
+msgstr ""
+
+#: ../arronax/editor.py:139
+msgid "Enabled"
+msgstr "Activată"
+
+#: ../arronax/editor.py:158
+#, python-brace-format
+msgid "Loading file '{path}' ..."
+msgstr "Se încarcă fișierul '{path}' ..."
+
+#: ../arronax/editor.py:159
+#, python-brace-format
+msgid "Loaded file '{path}' ..."
+msgstr "Fișierul încărcat '{path}' ..."
+
+#: ../arronax/editor.py:167
+#, python-brace-format
+msgid ""
+"Can't load file '{path}':\n"
+" {error}"
+msgstr ""
+"Nu se poate încărca fișierul '{path}':\n"
+" {error}"
+
+#: ../arronax/editor.py:170
+#, python-brace-format
+msgid "Can't load file '{path}'"
+msgstr "Nu se poate încărca fișierul '{path}'"
+
+#: ../arronax/editor.py:224
+msgid "You need to provide a title."
+msgstr "Trebuie să furnizați un titlu."
+
+#: ../arronax/editor.py:227
+msgid "You need to provide a command."
+msgstr "Trebuie să furnizați o comandă."
+
+#: ../arronax/editor.py:229
+msgid "You need to provide a URL or file name."
+msgstr "Trebuie să furnizați o comandă."
+
+#: ../arronax/editor.py:239
+msgid "Save now?"
+msgstr "Salvează acum?"
+
+#: ../arronax/editor.py:240
+msgid "You have unsaved changes.  Do you want to save them now?"
+msgstr "Aveți modificări nesalvate. Vrei să le salvezi acum?"
+
+#: ../arronax/editor.py:290 ../data/ui/edit.ui.h:2 ../data/ui/icondlg.ui.h:1
+msgid "Select Icon"
+msgstr "Selectare pictogramă"
+
+#: ../arronax/editor.py:418
+#, python-brace-format
+msgid "Saving file '{path}' ..."
+msgstr "Se salvează fișierul '{path}' ..."
+
+#: ../arronax/editor.py:420
+#, python-brace-format
+msgid "File '{path}' saved."
+msgstr "Fișierul '{path}' a fost salvat."
+
+#: ../arronax/editor.py:431 ../arronax/editor.py:443
+msgid "File not saved."
+msgstr "Fișier nesalvat."
+
+#: ../arronax/editor.py:435
+#, python-brace-format
+msgid "Saved file '{path}'."
+msgstr "Fișier salvat '{path}'."
+
+#: ../arronax/editor.py:441
+msgid "Can not save starter"
+msgstr "Nu se poate salva pornirea"
+
+#: ../arronax/editor.py:538
+msgid "File or URL:"
+msgstr "Fișier sau URL:"
+
+#: ../arronax/editor.py:538 ../data/ui/edit.ui.h:30
+msgid "Command:"
+msgstr "Comandă:"
+
+#: ../arronax/editor.py:539
+msgid ""
+"The command you want to start.\n"
+"\n"
+"<tt>%f</tt> is replaced with a single file path, <tt>%F</tt> with multiple "
+"files, <tt>%u</tt> with a single URI, <tt>%U</tt> with multiple URIs."
+msgstr ""
+
+#: ../arronax/editor.py:543
+msgid "File or URI you want to open"
+msgstr ""
+
+#: ../arronax/editor.py:646
+msgid "This is not an image. Icon not changed."
+msgstr "Aceasta nu este o imagine. Pictograma nu a fost schimbată."
+
+#: ../arronax/editor.py:649
+msgid "This is not a local file. Icon not changed."
+msgstr "Acesta nu este un fișier local. Pictograma nu a fost schimbată."
+
+#: ../arronax/editor.py:701
+msgid "Created new starter."
+msgstr "Crează o nouă pornire."
+
 #: ../data/desktop/arronax.desktop.in.h:1 ../data/ui/edit.ui.h:12
 msgid "Arronax"
 msgstr "Arronax"
 
 #: ../data/desktop/arronax.desktop.in.h:2
-msgid "Create and edit application starters, .desktop files and"
-msgstr ""
-
-#: ../data/ui/mimetypes.ui.h:1
 msgid ""
-"<small>This are all MIME types that are registered on your system.\n"
-"You can drag files into the list to select their MIME types.</small>"
+"Create and edit application starters, .desktop files and desktop shortcuts"
 msgstr ""
-"<small>Acestea sunt toate tipurile MIME care sunt înregistrate pe sistemul "
-"dvs. \n"
-"Puteți trage fișiere în listă pentru a selecta tipurile MIME.</small>"
 
-#: ../data/ui/mimetypes.ui.h:3 ../data/ui/appbrowser.ui.h:2
-#: ../data/ui/icondlg.ui.h:3
+#: ../data/ui/appbrowser.ui.h:1
+msgid "Select Application"
+msgstr "Selectați aplicație"
+
+#: ../data/ui/appbrowser.ui.h:2 ../data/ui/icondlg.ui.h:3
+#: ../data/ui/mimetypes.ui.h:3
 msgid "Filter:"
 msgstr "Filtru:"
+
+#: ../data/ui/appbrowser.ui.h:3
+msgid ""
+"If you can't find your application here you have to create a .desktop file "
+"for it first."
+msgstr ""
+"Dacă nu găsiți aplicația dvs. aici, trebuie să creați mai întâi un fișier ."
+"desktop."
+
+#: ../data/ui/categoriesdlg.ui.h:1
+msgid "Choose categories"
+msgstr "Alegeți categoriile"
 
 #: ../data/ui/edit.ui.h:1
 msgid "Show informations about Arronax"
@@ -438,8 +443,7 @@ msgstr "Răsfoiți sistemul de fișiere pentru a selecta un folder"
 
 #: ../data/ui/edit.ui.h:26
 msgid "Hide this and any system wide starters with the same name."
-msgstr ""
-"Ascundeți acest lucru și orice sistem de pornire larg cu același nume."
+msgstr "Ascundeți acest lucru și orice sistem de pornire larg cu același nume."
 
 #: ../data/ui/edit.ui.h:27
 msgid "Tooltip for the entry"
@@ -676,14 +680,14 @@ msgid ""
 "application will be listed in \"Open with...\" dialogs for files of this "
 "types.\n"
 "Add MIME types one per line or separated by semicolons (\";\"), \n"
-"drag files into the text field to add their MIME types or use the \"Select "
-"...\" button.</small>"
+"drag files into the text field to add their MIME types or use the "
+"\"Select ...\" button.</small>"
 msgstr ""
 "<small>Acestea sunt tipurile MIME pe care aplicația dvs. le poate deschide. "
 "Aplicația dvs. va fi listată în dialogurile „Deschideți cu ...” pentru "
 "fișierele de acest tip.\n"
-"Adăugați tipuri MIME una pe linie sau separate prin punct și virgulă "
-"(\";\"), \n"
+"Adăugați tipuri MIME una pe linie sau separate prin punct și virgulă (\";"
+"\"), \n"
 "trageți fișierele în câmpul de text pentru a adăuga tipurile lor MIME sau "
 "utilizați butonul „Selectați ...”.</small>"
 
@@ -707,12 +711,11 @@ msgid ""
 msgstr ""
 "<small>Aceste cuvinte cheie sunt utilizate pentru unele funcții de căutare "
 "(cum ar fi Ubuntu Unity Dash) pentru a găsi aplicația dvs.\n"
-"Adăugați cuvinte cheie una pe linie sau separate prin punct și virgulă "
-"(\";\").</small>"
+"Adăugați cuvinte cheie una pe linie sau separate prin punct și virgulă (\";"
+"\").</small>"
 
 #: ../data/ui/edit.ui.h:87
-msgid ""
-"List of keywords that may be used for searching starters, e.g. in Unity"
+msgid "List of keywords that may be used for searching starters, e.g. in Unity"
 msgstr ""
 "Lista cuvintelor cheie care pot fi utilizate pentru căutarea inițiatorilor, "
 "de ex. în Unitate"
@@ -727,9 +730,18 @@ msgstr ""
 msgid "_Keywords"
 msgstr "_Cuvinte cheie"
 
-#: ../data/ui/categoriesdlg.ui.h:1
-msgid "Choose categories"
-msgstr "Alegeți categoriile"
+#: ../data/ui/icondlg.ui.h:2
+msgid "Loading icons..."
+msgstr "Se încarcă pictogramele..."
+
+#: ../data/ui/mimetypes.ui.h:1
+msgid ""
+"<small>This are all MIME types that are registered on your system.\n"
+"You can drag files into the list to select their MIME types.</small>"
+msgstr ""
+"<small>Acestea sunt toate tipurile MIME care sunt înregistrate pe sistemul "
+"dvs. \n"
+"Puteți trage fișiere în listă pentru a selecta tipurile MIME.</small>"
 
 #: ../data/ui/quicklist.ui.h:1
 msgid "Edit"
@@ -743,18 +755,5 @@ msgstr "_Comandă:"
 msgid "_Title:"
 msgstr "_Titlu:"
 
-#: ../data/ui/appbrowser.ui.h:1
-msgid "Select Application"
-msgstr "Selectați aplicație"
-
-#: ../data/ui/appbrowser.ui.h:3
-msgid ""
-"If you can't find your application here you have to create a .desktop file "
-"for it first."
-msgstr ""
-"Dacă nu găsiți aplicația dvs. aici, trebuie să creați mai întâi un fișier "
-".desktop."
-
-#: ../data/ui/icondlg.ui.h:2
-msgid "Loading icons..."
-msgstr "Se încarcă pictogramele..."
+#~ msgid "Donate via Flattr"
+#~ msgstr "Donează prin Flattr"

@@ -1,3 +1,13 @@
+arronax (0.8.1) focal; urgency=low
+
+  * Added Thunar plugin
+  * Some bugfixes
+  * Added Finnish translations
+  * Updated French, Catalan, German, Spanish, Russian,
+    Chinese (simplified) translations
+
+ -- Florian Diesch <devel@florian-diesch.de>  Wed, 22 Dec 2021 18:11:17 +0100
+
 arronax (0.8) focal; urgency=low
 
   * Some UI changes
