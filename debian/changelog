@@ -1,3 +1,10 @@
+arronax (0.9.0) noble; urgency=low
+
+  * Fork of original repository
+  * Fixed use of removed methods in Python 3.11 ( https://docs.python.org/3/whatsnew/3.11.html#removed )
+
+ -- Martin Lopatář <lop_in_github@dataplex.cz>  Tue, 08 Mar 2025 19:34:49 +0100
+
 arronax (0.8.1) focal; urgency=low
 
   * Added Thunar plugin

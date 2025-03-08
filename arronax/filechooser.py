@@ -9,7 +9,6 @@ from . import settings
 
 gettext.bindtextdomain(settings.GETTEXT_DOMAIN)
 gettext.textdomain(settings.GETTEXT_DOMAIN)
-gettext.bind_textdomain_codeset(settings.GETTEXT_DOMAIN, 'UTF-8')
 
 FILE_DLG_DEF = {
     'dlg_open': {'title': _('Open File'),

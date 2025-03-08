@@ -35,7 +35,6 @@ class Plugin(GObject.GObject):
     def __init__(self):
         gettext.bindtextdomain(settings.GETTEXT_DOMAIN)
         gettext.textdomain(settings.GETTEXT_DOMAIN)
-        gettext.bind_textdomain_codeset(settings.GETTEXT_DOMAIN, 'UTF-8')
         print(('Initializing Arronax v%s...' % settings.APP_VERSION))
 
     def _create_menu_item(self, label, path=None, basedir=None):

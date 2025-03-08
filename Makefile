@@ -1,21 +1,21 @@
+SHELL=/bin/bash
+
 NAME=arronax
 DEBVERSION=$(shell awk -F '[()]' '/^${NAME}/ {print $$2}'  debian/changelog|head -1)
 VERSION=$(shell echo '${DEBVERSION}' | egrep -o '[0-9.-]{3,}')
 
-WEBDIR=/home/diesch/florian-diesch.de/sphinx/neu/source/software/${NAME}/dist
+DEBUILD=debuild -sa -v${DEBVERSION} -us -uc -i'icon|.bzr'
 
-PPA=diesch/testing
-#PPA=diesch/test2
-
-DEBUILD=debuild -sa  -v${DEBVERSION} -kB57F5641 -i'icon|.bzr'
-
-.PHONY: clean deb sdist ppa deb
+.PHONY: clean deb sdist deb
 
 initdeb:
-	dh_make -e  devel@florian-diesch.de -p ${NAME}_${DEBVERSION} -c gpl -i --native
+	dh_make -e lop_in_github@dataplex.cz -p ${NAME}_${DEBVERSION} -c gpl -i --native
 
 clean:
-	rm -rf *.pyc build dist  ../*.deb ../*.changes ../*.build ${NAME}-${VERSION}.egg-info
+	dpkg-buildpackage -T clean
+	rm -rf locale/
+	rm -f ../${NAME}{,-nautilus,-caja,-thunar,-nemo}_${DEBVERSION}_all.deb
+	rm -f ../${NAME}_${DEBVERSION}{_amd64.buildinfo,.dsc,_source.buildinfo,_source.changes,_amd64.changes,.tar.xz}
 
 
 potfiles:
@@ -40,26 +40,11 @@ predeb: sdist
 sdeb: predeb
 	${DEBUILD} -S
 
-deb: 
+deb:
 	${DEBUILD} -b
-
-pypi:
-	python setup.py register
-
-ppa: sdeb
-	dput ppa:${PPA} ../${NAME}*_${DEBVERSION}_source.changes
-
 
 install: deb
 	sudo dpkg -i ../${NAME}*_${DEBVERSION}_all.deb
-
-share: deb
-	cp ../${NAME}*_${DEBVERSION}_all.deb ~/Shared/
-
-web: deb sdist
-	mkdir -p ${WEBDIR}
-	cp ../${NAME}*_${DEBVERSION}_all.deb dist/${NAME}-${VERSION}.tar.gz ${WEBDIR}
-
 
 unpackpo:
 	tar xzvf launchpad-export.tar.gz && \
@@ -67,3 +52,4 @@ unpackpo:
 	mmv '${NAME}-*.po' '#1.po' && \
 	cd .. && \
 	rm launchpad-export.tar.gz
+

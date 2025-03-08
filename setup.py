@@ -29,6 +29,8 @@ setup(
     packages=find_packages(),
     include_package_data=True,
 
+    install_requires=['PyGObject'],
+
     data_files=[
         ('share/man/man1',
          glob.glob('data/man/*.1')),
@@ -50,13 +52,15 @@ setup(
         [('share/locale/%s/LC_MESSAGES/'%mo.split('/')[2], [mo])
              for mo in glob.glob('data/mo/*/arronax.mo')] + \
         [('share/icons/hicolor/{s}x{s}'.format(s=i.split('/')[2]), [i])
-             for i in glob.glob('data/icons/*/arronax.png')], 
+             for i in glob.glob('data/icons/*/arronax.png')
+    ], 
 
     entry_points = {
-
         'console_scripts': ['arronax=arronax.editor:main'],
-        },
-    keywords = "Nautilus, Nemo, Caja, extension, plugin, starter, desktop", 
+    },
+
+    keywords = "Nautilus, Nemo, Caja, extension, plugin, starter, desktop",
+
     classifiers=[
         'Environment :: X11 Applications :: GTK',
         'Intended Audience :: End Users/Desktop',
@@ -66,5 +70,6 @@ setup(
         'Operating System :: POSIX :: Linux',
         'Programming Language :: Python :: 3',
         'Topic :: Utilities',
-        ],
-    )
+    ],
+)
+

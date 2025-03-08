@@ -1,12 +1,13 @@
 Source: arronax
 Section: utils
 Priority: optional
-Maintainer: Florian Diesch <devel@florian-diesch.de>
+Maintainer: Martin Lopatář <lop_in_github@dataplex.cz>
 Build-Depends: debhelper (>= 11.0.0),
 	       gettext,
 	       intltool,
 	       python3 (>= 3.4),
 	       python3-setuptools,
+	       python3-setuptools-gettext,
 	       dh-python,
 	       python3-gi (>= 2.90),
 	       gir1.2-glib-2.0,
@@ -14,7 +15,7 @@ Build-Depends: debhelper (>= 11.0.0),
 	       gir1.2-gdkpixbuf-2.0,
 	       gir1.2-wnck-3.0
 Standards-Version: 4.4.0
-Homepage:  http://www.florian-diesch.de/software/arronax/
+Homepage: https://github.com/loplex/arronax
 
 Package: arronax
 Architecture: all

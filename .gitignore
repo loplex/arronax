@@ -1,0 +1,14 @@
+/.idea/
+*.iml
+
+/arronax.egg-info/
+/.pybuild/
+/locale/
+
+/debian/arronax*/*
+/debian/arronax*.substvars
+/debian/arronax*.debhelper
+/debian/.debhelper/
+/debian/debhelper-build-stamp
+/debian/files
+/debian/tmp/

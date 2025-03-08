@@ -2,7 +2,7 @@
 
 NAME='arronax'
 TITLE='Arronax'
-VERSION='0.8.1'
+VERSION='0.9.0'
 AUTHOR_NAME='Florian Diesch'
 AUTHOR_EMAIL='devel@florian-diesch.de'
 DESC='Create and modify application, file and URI starters.'
