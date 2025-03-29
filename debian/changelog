@@ -1,9 +1,10 @@
-arronax (0.9.0) noble; urgency=low
+arronax (0.9.0+ubuntu2) UNRELEASED; urgency=low
 
   * Fork of original repository
   * Fixed use of removed methods in Python 3.11 ( https://docs.python.org/3/whatsnew/3.11.html#removed )
+  * Fixed missing .desktop file
 
- -- Martin Lopatář <lop_in_github@dataplex.cz>  Tue, 08 Mar 2025 19:34:49 +0100
+ -- Martin Lopatář <lopin@dataplex.cz>  Sat, 29 Mar 2025 15:04:53 +0100
 
 arronax (0.8.1) focal; urgency=low
 
